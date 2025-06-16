@@ -1,0 +1,67 @@
+const whatsappNumber = '9445676371'; 
+const phoneNumber = '+919445676371'; 
+
+const WhatsappCall = () => {
+    const whatsappLink = `https://wa.me/${whatsappNumber}`;
+    const callLink = `tel:${phoneNumber}`;
+
+    return (
+        <div style={{
+                position: 'fixed',
+                right: 20,
+                bottom: 80,
+                zIndex: 1000,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 12,
+                background: 'white',
+                borderRadius: 8,
+                boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+                padding: 12,
+            }}>
+            <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                    textDecoration: 'none',
+                    color: '#25D366',
+                    fontWeight: 'bold',
+                    display: 'flex',
+                    alignItems: 'center',
+                }}
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="WhatsApp"
+                    style={{ width: 24, height: 24, marginRight: 8 }}
+                />
+                Chat on WhatsApp
+            </a>
+            <a
+                href={callLink}
+                style={{
+                    textDecoration: 'none',
+                    color: '#075E54',
+                    fontWeight: 'bold',
+                    display: 'flex',
+                    alignItems: 'center',
+                }}
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="#075E54"
+                    viewBox="0 0 24 24"
+                    style={{ marginRight: 8 }}
+                >
+                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4.5a1 1 0 011-1H6.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/>
+                </svg>
+                Call Now
+            </a>
+        </div>
+    );
+};
+
+export default WhatsappCall;
