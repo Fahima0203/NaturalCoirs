@@ -5,14 +5,19 @@ import paypal from '../assets/paypal.webp'
 import mastercard from '../assets/mastercard.png'
 import {AccessTime, LocationOn, Facebook, YouTube, Twitter, Google } from '@mui/icons-material';
 
+const quickLinkStyle = {
+    textDecoration: "none",
+    cursor: "pointer"
+};
+
 function FooterContact() {
     return (
         <footer>
             <div className="container" style={{ padding: '15px' }}>
                 <div className="row row-40 row-md-50 justify-content-xl-between">
                     <div className="col-sm-6 col-lg-4 wow fadeInRight" style={{ padding: '10px' }}>
-                        <h2>Visit our farm</h2>
-                        <p><LocationOn /> 9, Sanjay's Fine Foods, <br /> Mosikeeranar Street 4th, <br /> Erode - 638001</p>
+                        <h2>Visit our factory</h2>
+                        <p><LocationOn /> 33/1,2,3, Dharmanagar 3rd Street,<br /> Suramangalam, Salem-636005, <br />Tamil Nadu, India</p>
                         <ul>
                             <li><AccessTime /> Open 24/7 – We're always available!</li>
                         </ul>
@@ -22,20 +27,17 @@ function FooterContact() {
                         <Container>
                             <Row>
                                 <Col>
-                                    <li>History</li>
-                                    <li>FAQ</li>
-                                    <li>Products</li>
-                                    <li>Events</li>
-                                    <li>Blog</li>
-                                </Col>
-                                <Col>
-                                    <ul>
-                                        <li>Blog</li>
-                                        <li>Organic Products</li>
-                                        <li>Our Smoothies</li>
-                                        <li>Gift Vouchers</li>
-                                        <li>Boxes</li>
-                                    </ul>
+                                    {/* History: Go one page back */}
+                                    <li>
+                                        <a style={quickLinkStyle} href="#" onClick={e => { e.preventDefault(); window.history.back(); }}>
+                                            History
+                                        </a>
+                                    </li>
+                                    {/* Replace these with your actual route paths */}
+                                    <li><a href="/" style={quickLinkStyle}>Home</a></li>
+                                    <li><a href="/about" style={quickLinkStyle}>About</a></li>
+                                    <li><a href="/products" style={quickLinkStyle}>Products</a></li>
+                                    <li><a href="/contact" style={quickLinkStyle}>Contact</a></li>
                                 </Col>
                             </Row>
                         </Container>
