@@ -9,10 +9,9 @@ const Home = () => {
             <p>Explore our range of products and services.</p>
             <div className="home-slider">
                 <h2>Warehouse Gallery</h2>
-                {/* Assuming HomeSlider is a component that displays a slider */}
                 <HomeSlider />
             </div>
-            <div id='contact1'><FooterContact /></div>
+            <FooterContact />
         </div>
     );
 };
