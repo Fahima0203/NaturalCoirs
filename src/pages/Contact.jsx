@@ -131,7 +131,7 @@ const Contact = () => {
                                 <Directions style={{color: "#1976d2" }} />
                                 <span style={contactTextStyle}>
                                     <a
-                                        href="https://www.google.com/maps?q=Natural+Coirs,+Chennai,+India"
+                                        href="https://www.google.co.in/maps/dir//11.671988,78.116388/@11.6719763,78.0339861,12z?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={iconLinkStyle}
@@ -144,7 +144,7 @@ const Contact = () => {
                             <div style={{ borderRadius: "8px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", width: "100%", maxWidth: 350 }}>
                                 <iframe
                                     title="Natural Coirs Location"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.847013857602!2d80.2209773152997!3d13.08268041672664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265c1b2e7b2e7%3A0x7e4e8bde7975d8e7!2sChennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+                                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d125034.05751044782!2d78.11625939912227!3d11.672123441354502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s33%2F1%2C2%2C3%2C%20Dharmanagar%203rd%20Street%2C%20Suramangalam%2C%20Salem-636005%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1750177834565!5m2!1sen!2sin"
                                     width="300"
                                     height="200"
                                     style={{ border: 0, width: "100%", minWidth: 220 }}

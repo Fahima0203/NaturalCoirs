@@ -1,5 +1,7 @@
 import FooterContact from "../components/FooterContact";
 import image1 from "../assets/coco_peat/image1.png";
+import React, { useState } from "react";
+import ProductSidebar from "../components/ProductSidebar";
 // Import other images as needed
 // import image2 from "../assets/coco_peat/image2.png";
 // import image3 from "../assets/coco_peat/image3.png";
@@ -62,35 +64,130 @@ const productSections = [
     },
 ];
 
-const Products = () => (
-    <>
-        <div style={styles.page}>
-            <h1 style={styles.pageTitle}>Products</h1>
-            {productSections.map((section, idx) => (
-                <div key={section.title} style={styles.section}>
-                    <div style={styles.sectionHeader}>
-                        <h2 style={styles.sectionTitle}>{section.title}</h2>
-                        <button style={styles.viewMoreBtn}>View More</button>
+const pageTitle = "Our Products";
+const pageDescription =
+    "Explore our range of premium coir products, including coco peat blocks and coir yarn, sourced and manufactured with the highest quality standards. Use the search box to quickly find products by name, description, or section.";
+
+const Products = () => {
+    const [search, setSearch] = useState("");
+
+    // Filter logic: match in section title, section description, or product name
+    const filteredSections = productSections
+        .map((section) => {
+            // Check if section matches search
+            const sectionMatch =
+                section.title.toLowerCase().includes(search.toLowerCase()) ||
+                section.description.toLowerCase().includes(search.toLowerCase());
+
+            // Filter products in section
+            const filteredProducts = section.products.filter((prod) =>
+                prod.name.toLowerCase().includes(search.toLowerCase())
+            );
+
+            // If section matches, show all products; else, only filtered products
+            if (sectionMatch) {
+                return { ...section, products: section.products };
+            } else if (filteredProducts.length > 0) {
+                return { ...section, products: filteredProducts };
+            } else {
+                return null;
+            }
+        })
+        .filter(Boolean);
+
+    return (
+        <>
+            <div style={styles.page}>
+                <h1 style={styles.pageTitle}>{pageTitle}</h1>
+                <p style={{ margin: "0 2rem 2rem 2rem", color: "#555", fontSize: "1.1rem" }}>
+                    {pageDescription}
+                </p>
+                 {/* Right-aligned Search Box at Top */}
+                    <div style={{ flex: 1, display: "flex", justifyContent: "flex-end", marginBottom: "2rem" }}>
+                        <div
+                            style={{
+                                background: "#fff",
+                                borderRadius: "8px",
+                                boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
+                                padding: "1.2rem 1.5rem",
+                                minWidth: 260,
+                            }}
+                        >
+                            <label
+                                htmlFor="product-search"
+                                style={{
+                                    fontWeight: "bold",
+                                    color: "#2d2d8c",
+                                    fontSize: "1.1rem",
+                                    display: "block",
+                                    marginBottom: "0.7rem",
+                                }}
+                            >
+                                Search Products
+                            </label>
+                            <input
+                                id="product-search"
+                                type="text"
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                placeholder="Search by name, description..."
+                                style={{
+                                    width: "100%",
+                                    padding: "0.7rem",
+                                    borderRadius: "5px",
+                                    border: "1px solid #bbb",
+                                    fontSize: "1rem",
+                                }}
+                            />
+                        </div>
                     </div>
-                    <p style={styles.sectionDesc}>{section.description}</p>
-                    <div style={styles.cardGrid}>
-                        {section.products.map((prod) => (
-                            <div key={prod.name} style={styles.card}>
-                                <img
-                                    src={prod.img}
-                                    alt={prod.name}
-                                    style={styles.cardImg}
-                                />
-                                <div style={styles.cardLabel}>{prod.name}</div>
+                <div style={{ display: "flex", maxWidth: "1200px", margin: "0 auto" }}>
+                    <ProductSidebar productSections={filteredSections} />
+                    <div style={{ flex: 1, paddingLeft: 24 }}>
+                        {filteredSections.length === 0 ? (
+                            <div style={{ color: "#b00", fontSize: "1.1rem", margin: "2rem" }}>
+                                No products found matching your search.
                             </div>
-                        ))}
+                        ) : (
+                            filteredSections.map((section, idx) => {
+                                const sectionId = section.title
+                                    ? section.title.toLowerCase().replace(/\s+/g, "-")
+                                    : `section-${idx}`;
+                                return (
+                                    <div key={section.title} id={sectionId} style={styles.section}>
+                                        <div style={styles.sectionHeader}>
+                                            <h2 style={styles.sectionTitle}>{section.title}</h2>
+                                            <button style={styles.viewMoreBtn}>View More</button>
+                                        </div>
+                                        <p style={styles.sectionDesc}>{section.description}</p>
+                                        <div style={styles.cardGrid}>
+                                            {section.products.map((prod, pidx) => {
+                                                const prodId = prod.name
+                                                    ? prod.name.toLowerCase().replace(/\s+/g, "-")
+                                                    : `product-${pidx}`;
+                                                return (
+                                                    <div key={prod.name} id={prodId} style={styles.card}>
+                                                        <img
+                                                            src={prod.img}
+                                                            alt={prod.name}
+                                                            style={styles.cardImg}
+                                                        />
+                                                        <div style={styles.cardLabel}>{prod.name}</div>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                );
+                            })
+                        )}
                     </div>
                 </div>
-            ))}
-        </div>
-        <FooterContact />
-    </>
-);
+            </div>
+            <FooterContact />
+        </>
+    );
+};
 
 const styles = {
     page: {
