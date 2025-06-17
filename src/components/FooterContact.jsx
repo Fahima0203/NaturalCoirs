@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import visa from '../assets/visa.png'
 import paypal from '../assets/paypal.webp'
 import mastercard from '../assets/mastercard.png'
-import {AccessTime, LocationOn, Facebook, YouTube, Twitter, Google, Instagram, LinkedIn, WhatsApp, Telegram } from '@mui/icons-material';
+import {AccessTime, LocationOn, Facebook, YouTube, Twitter, Instagram, LinkedIn, WhatsApp, Telegram } from '@mui/icons-material';
 
 const quickLinkStyle = {
     textDecoration: "none",
@@ -17,10 +17,16 @@ function FooterContact() {
                 <div className="row row-40 row-md-50 justify-content-xl-between">
                     <div className="col-sm-6 col-lg-4 wow fadeInRight" style={{ padding: '10px' }}>
                         <h2>Visit our factory</h2>
-                        <p><LocationOn /> 33/1,2,3, Dharmanagar 3rd Street,<br /> Suramangalam, Salem-636005, <br />Tamil Nadu, India</p>
-                        <ul>
-                            <li><AccessTime /> Open 24/7 – We're always available!</li>
-                        </ul>
+                        <p style={quickLinkStyle}> 
+                            <a target="_blank" href="https://www.google.co.in/maps/dir//11.671988,78.116388/@11.6719763,78.0339861,12z?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D">
+                            <LocationOn /> 33/1,2,3, Dharmanagar 3rd Street,<br /> Suramangalam, Salem-636005, <br />Tamil Nadu, India</a></p>
+                        <div style={{ marginTop: '10px' }}>
+                            <h4>Business Hours</h4>
+                            <ul style={{ listStyle: 'none', paddingLeft: 0, marginBottom: 0 }}>
+                                <li><AccessTime /> Open 24/7 – We're always available!</li>
+                                <li>Monday - Sunday: 24 Hours</li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="col-sm-6 col-lg-4" style={{ padding: '10px' }}>
                         <h2>Quick links</h2>

@@ -6,7 +6,8 @@ const WhatsappCall = () => {
     const callLink = `tel:${phoneNumber}`;
 
     return (
-        <div style={{
+        <div
+            style={{
                 position: 'fixed',
                 right: 20,
                 bottom: 80,
@@ -18,7 +19,9 @@ const WhatsappCall = () => {
                 borderRadius: 8,
                 boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
                 padding: 12,
-            }}>
+            }}
+            title="Chat or call with a real human (no bots!)"
+        >
             <a
                 href={whatsappLink}
                 target="_blank"
@@ -31,6 +34,7 @@ const WhatsappCall = () => {
                     alignItems: 'center',
                     cursor: 'pointer',
                 }}
+                title="Chat with Human (we promise, no bots!)"
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -49,6 +53,7 @@ const WhatsappCall = () => {
                     alignItems: 'center',
                     cursor: 'pointer',
                 }}
+                title="Talk to Human (real, friendly, and coffee-powered)"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
