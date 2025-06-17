@@ -29,6 +29,7 @@ const WhatsappCall = () => {
                     fontWeight: 'bold',
                     display: 'flex',
                     alignItems: 'center',
+                    cursor: 'pointer',
                 }}
             >
                 <img
@@ -46,6 +47,7 @@ const WhatsappCall = () => {
                     fontWeight: 'bold',
                     display: 'flex',
                     alignItems: 'center',
+                    cursor: 'pointer',
                 }}
             >
                 <svg

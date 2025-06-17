@@ -89,21 +89,21 @@ const Contact = () => {
                             </h2>
                             {/* English Support */}
                             <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", justifyContent: "center" }}>
-                                <span style={iconStyle} role="img" aria-label="phone">📞</span>
+                                <a href="tel:+919445676371"> <span style={iconStyle} role="img" aria-label="phone">📞</span> </a>
                                 <span style={contactTextStyle}>
                                     English Support: <a href="tel:+919445676371" style={iconLinkStyle}><strong>+91 94456 76371</strong></a>
                                 </span>
                             </div>
                             {/* Arabic, Hindi, Urdu Support */}
                             <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", justifyContent: "center" }}>
-                                <span style={iconStyle} role="img" aria-label="phone">📞</span>
+                                <a href="tel:+919445071614"> <span style={iconStyle} role="img" aria-label="phone">📞</span> </a>
                                 <span style={contactTextStyle}>
                                     Arabic, Hindi, Urdu Support: <a href="tel:+919445071614" style={iconLinkStyle}><strong>+91 94450 71614</strong></a>
                                 </span>
                             </div>
                             {/* Email */}
                             <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", justifyContent: "center" }}>
-                                <span style={iconStyle} role="img" aria-label="email">✉️</span>
+                                <a href="mailto:naturalcoirs786@gmail.com"> <span style={iconStyle} role="img" aria-label="email">✉️</span> </a>
                                 <span style={contactTextStyle}>
                                     <a href="mailto:naturalcoirs786@gmail.com" style={iconLinkStyle}><strong>naturalcoirs786@gmail.com</strong></a>
                                 </span>
@@ -113,13 +113,13 @@ const Contact = () => {
                                 Follow us on Social Networks to stay in touch with us
                             </div>
                             <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: "1.5rem", justifyContent: "center" }}>
-                                <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener noreferrer" style={{ ...iconLinkStyle, color: "#FF0000" }}>
+                                <a href="https://www.youtube.com/@NaturalCoirs" aria-label="YouTube" target="_blank" rel="noopener noreferrer" style={{ ...iconLinkStyle, color: "#FF0000" }}>
                                     <YouTube style={{ height: '35px', width: '35px', color: "#FF0000" }} />
                                 </a>
                                 <a href="https://www.indiamart.com/naturalcoirs" aria-label="IndiaMart" target="_blank" rel="noopener noreferrer" style={iconLinkStyle}>
                                     <span style={{ fontSize: 26 }}>🛒</span>
                                 </a>
-                                <a href="https://www.amazon.in/s?me=A1XYZEXAMPLE" aria-label="Amazon" target="_blank" rel="noopener noreferrer" style={iconLinkStyle}>
+                                <a href="https://www.amazon.in/gp/product/B0DT4NWV5L/ref=cx_skuctr_share_ls_srb?smid=A2813C0Z0Q7WMV&tag=ShopReferral_802e106a-fe9c-4e2b-b0bd-1b9e1e2e7aeb" aria-label="Amazon" target="_blank" rel="noopener noreferrer" style={iconLinkStyle}>
                                     <span style={{ fontSize: 26 }}>🛍️</span>
                                 </a>
                                 <a href="https://www.meesho.com/naturalcoirs" aria-label="Meesho" target="_blank" rel="noopener noreferrer" style={iconLinkStyle}>
@@ -157,7 +157,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <div id='contact1'><FooterContact /></div>
+            <FooterContact />
         </>
     );
 };
@@ -168,7 +168,8 @@ const iconStyle = {
     marginRight: 10,
     minWidth: 28,
     display: "inline-block",
-    textAlign: "center"
+    textAlign: "center",
+    cursor: "pointer",
 };
 const contactTextStyle = {
     fontSize: 16,
@@ -177,7 +178,8 @@ const contactTextStyle = {
 };
 const iconLinkStyle = {
     color: "#222",
-    textDecoration: "none"
+    textDecoration: "none",
+    cursor: "pointer",
 };
 
 const styles = {

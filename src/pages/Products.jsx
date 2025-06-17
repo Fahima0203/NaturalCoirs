@@ -1,4 +1,4 @@
-import React from "react";
+import FooterContact from "../components/FooterContact";
 import image1 from "../assets/coco_peat/image1.png";
 // Import other images as needed
 // import image2 from "../assets/coco_peat/image2.png";
@@ -63,30 +63,33 @@ const productSections = [
 ];
 
 const Products = () => (
-    <div style={styles.page}>
-        <h1 style={styles.pageTitle}>Products</h1>
-        {productSections.map((section, idx) => (
-            <div key={section.title} style={styles.section}>
-                <div style={styles.sectionHeader}>
-                    <h2 style={styles.sectionTitle}>{section.title}</h2>
-                    <button style={styles.viewMoreBtn}>View More</button>
+    <>
+        <div style={styles.page}>
+            <h1 style={styles.pageTitle}>Products</h1>
+            {productSections.map((section, idx) => (
+                <div key={section.title} style={styles.section}>
+                    <div style={styles.sectionHeader}>
+                        <h2 style={styles.sectionTitle}>{section.title}</h2>
+                        <button style={styles.viewMoreBtn}>View More</button>
+                    </div>
+                    <p style={styles.sectionDesc}>{section.description}</p>
+                    <div style={styles.cardGrid}>
+                        {section.products.map((prod) => (
+                            <div key={prod.name} style={styles.card}>
+                                <img
+                                    src={prod.img}
+                                    alt={prod.name}
+                                    style={styles.cardImg}
+                                />
+                                <div style={styles.cardLabel}>{prod.name}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <p style={styles.sectionDesc}>{section.description}</p>
-                <div style={styles.cardGrid}>
-                    {section.products.map((prod) => (
-                        <div key={prod.name} style={styles.card}>
-                            <img
-                                src={prod.img}
-                                alt={prod.name}
-                                style={styles.cardImg}
-                            />
-                            <div style={styles.cardLabel}>{prod.name}</div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        ))}
-    </div>
+            ))}
+        </div>
+        <FooterContact />
+    </>
 );
 
 const styles = {

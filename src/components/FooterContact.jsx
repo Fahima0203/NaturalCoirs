@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import visa from '../assets/visa.png'
 import paypal from '../assets/paypal.webp'
 import mastercard from '../assets/mastercard.png'
-import {AccessTime, LocationOn, Facebook, YouTube, Twitter, Google } from '@mui/icons-material';
+import {AccessTime, LocationOn, Facebook, YouTube, Twitter, Google, Instagram, LinkedIn, WhatsApp, Telegram } from '@mui/icons-material';
 
 const quickLinkStyle = {
     textDecoration: "none",
@@ -27,16 +27,14 @@ function FooterContact() {
                         <Container>
                             <Row>
                                 <Col>
-                                    {/* History: Go one page back */}
                                     <li>
                                         <a style={quickLinkStyle} href="#" onClick={e => { e.preventDefault(); window.history.back(); }}>
                                             History
                                         </a>
                                     </li>
-                                    {/* Replace these with your actual route paths */}
                                     <li><a href="/" style={quickLinkStyle}>Home</a></li>
-                                    <li><a href="/about" style={quickLinkStyle}>About</a></li>
                                     <li><a href="/products" style={quickLinkStyle}>Products</a></li>
+                                    <li><a href="/about" style={quickLinkStyle}>About</a></li>
                                     <li><a href="/contact" style={quickLinkStyle}>Contact</a></li>
                                 </Col>
                             </Row>
@@ -60,16 +58,33 @@ function FooterContact() {
                             </div>
                         </div>
                         <div className="col-sm-auto col-lg-4" style={{ padding: '15px 0px' }}>
-                            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                            <p>Share us on</p>
                             <style>
                                 {`a { all: unset; }`}
                             </style>
-                            <span>
-                                <a href=" https://www.facebook.com/"><Facebook style={{ height: '30px', width: '30px' }} /></a>
-                                <a href='https://www.youtube.com/@NaturalCoirs'><YouTube style={{ height: '30px', width: '30px' }} /></a>
-                                <a href='https://www.twitter.com/'><Twitter style={{ height: '30px', width: '30px' }} /></a>
-                                <a href='https://www.google.com/'><Google style={{ height: '30px', width: '30px' }} /></a>
-                            </span>
+                                <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+                                    <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                        <Facebook style={{...quickLinkStyle, height: '30px', width: '30px' }} />
+                                    </a>
+                                    <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                                        <YouTube style={{...quickLinkStyle, height: '30px', width: '30px' }} />
+                                    </a>
+                                    <a href="https://www.twitter.com/" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                        <Twitter style={{...quickLinkStyle, height: '30px', width: '30px' }} />
+                                    </a>
+                                    <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                        <Instagram style={{...quickLinkStyle, height: '30px', width: '30px' }} />
+                                    </a>
+                                    <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                        <LinkedIn style={{...quickLinkStyle, height: '30px', width: '30px' }} />
+                                    </a>
+                                    <a href="https://www.whatsapp.com/" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                                        <WhatsApp style={{...quickLinkStyle, height: '30px', width: '30px' }} />
+                                    </a>
+                                    <a href="https://www.telegram.org/" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+                                        <Telegram style={{...quickLinkStyle, height: '30px', width: '30px' }} />
+                                    </a>
+                            </div>
                         </div>
                         <div className="col-lg-4 ">
                             <p className="rights">
