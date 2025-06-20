@@ -18,7 +18,7 @@ function FooterContact() {
                     <div className="col-sm-6 col-lg-4 wow fadeInRight" style={{ padding: '10px' }}>
                         <h2>Visit our factory</h2>
                         <p style={quickLinkStyle}> 
-                            <a target="_blank" href="https://www.google.co.in/maps/dir//11.671988,78.116388/@11.6719763,78.0339861,12z?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D">
+                            <a target="_blank" rel="noreferrer" href="https://www.google.co.in/maps/dir//11.671988,78.116388/@11.6719763,78.0339861,12z?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D">
                             <LocationOn /> 33/1,2,3, Dharmanagar 3rd Street,<br /> Suramangalam, Salem-636005, <br />Tamil Nadu, India</a></p>
                         <div style={{ marginTop: '10px' }}>
                             <h4>Business Hours</h4>

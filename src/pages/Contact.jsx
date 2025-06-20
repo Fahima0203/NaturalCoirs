@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FooterContact from "../components/FooterContact";
-import {YouTube, Directions} from '@mui/icons-material';
+import { YouTube, Directions } from '@mui/icons-material';
+
 const Contact = () => {
     const [form, setForm] = useState({
         name: "",
@@ -15,7 +16,7 @@ const Contact = () => {
     return (
         <>
             <div style={styles.outerContainer}>
-                <div style={styles.flexContainer}>
+                <div className="contact-grid-container" style={styles.gridContainer}>
                     <div className="contact-container" style={styles.container}>
                         <h2 style={styles.heading}>Contact Us</h2>
                         <p style={styles.subheading}>
@@ -66,22 +67,8 @@ const Contact = () => {
                                 Send Message
                             </button>
                         </form>
-                        <style>
-                            {`
-                                @media (max-width: 900px) {
-                                    .contact-flex-container {
-                                        flex-direction: column;
-                                        align-items: center;
-                                    }
-                                    .contact-container {
-                                        width: 100%;
-                                        margin-left: 0;
-                                    }
-                                }
-                            `}
-                        </style>
                     </div>
-                    <div style={styles.left}>
+                    <div className="contact-left" style={styles.left}>
                         <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
                             <h3 style={{ marginBottom: "0.5rem", color: "#007b5e", fontWeight: 700, letterSpacing: 1.5 }}>Get In Touch</h3>
                             <h2 style={{ fontWeight: 400, fontSize: 24, margin: "0 0 1.5rem 0" }}>
@@ -128,7 +115,7 @@ const Contact = () => {
                             </div>
                             {/* Get Direction */}
                             <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", justifyContent: "center" }}>
-                                <Directions style={{color: "#1976d2" }} />
+                                <Directions style={{ color: "#1976d2" }} />
                                 <span style={contactTextStyle}>
                                     <a
                                         href="https://www.google.co.in/maps/dir//11.671988,78.116388/@11.6719763,78.0339861,12z?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D"
@@ -158,6 +145,27 @@ const Contact = () => {
                 </div>
             </div>
             <FooterContact />
+            <style>
+                {`
+                @media (max-width: 900px) {
+                    .contact-grid-container {
+                        display: flex !important;
+                        flex-direction: column !important;
+                        gap: 2rem !important;
+                    }
+                    .contact-container, .contact-left {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        padding: 1rem !important;
+                    }
+                }
+                @media (max-width: 600px) {
+                    .contact-container, .contact-left {
+                        padding: 0.5rem !important;
+                    }
+                }
+                `}
+            </style>
         </>
     );
 };
@@ -190,15 +198,17 @@ const styles = {
         minHeight: "80vh",
         background: "#fff",
     },
-    flexContainer: {
-        display: "flex",
-        flexDirection: "row",
+    gridContainer: {
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
         gap: "2rem",
         alignItems: "flex-start",
         margin: "2rem 0",
+        width: "100%",
+        maxWidth: "1200px",
     },
     left: {
-        flex: "0 0 750px",
+        width: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
