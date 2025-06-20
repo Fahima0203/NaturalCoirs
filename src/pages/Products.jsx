@@ -136,45 +136,86 @@ const Products = () => {
                         />
                     </div>
                 </div>
-                <div style={styles.mainContent}>
+                <div
+                    style={styles.mainContent}
+                    className="product-main-content"
+                >
                     <ProductSidebar productSections={filteredSections} />
-                    <div style={styles.productsContent}>
+                    <div
+                        style={styles.productsContent}
+                        className="products-content"
+                    >
                         {filteredSections.length === 0 ? (
                             <div style={{ color: "#b00", fontSize: "1.1rem", margin: "2rem" }}>
                                 No products found matching your search.
                             </div>
                         ) : (
-                            filteredSections.map((section, idx) => {
-                                const sectionId = section.title
-                                    ? section.title.toLowerCase().replace(/\s+/g, "-")
-                                    : `section-${idx}`;
-                                return (
-                                    <div key={section.title} id={sectionId} style={styles.section}>
-                                        <div style={styles.sectionHeader}>
-                                            <h2 style={styles.sectionTitle}>{section.title}</h2>
-                                            <button style={styles.viewMoreBtn}>View More</button>
-                                        </div>
-                                        <p style={styles.sectionDesc}>{section.description}</p>
-                                        <div style={styles.cardGridHorizontal}>
-                                            {section.products.map((prod, pidx) => {
-                                                const prodId = prod.name
-                                                    ? prod.name.toLowerCase().replace(/\s+/g, "-")
-                                                    : `product-${pidx}`;
-                                                return (
-                                                    <div key={prod.name} id={prodId} style={styles.card}>
-                                                        <img
-                                                            src={prod.img}
-                                                            alt={prod.name}
-                                                            style={styles.cardImg}
-                                                        />
-                                                        <div style={styles.cardLabel}>{prod.name}</div>
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-                                );
-                            })
+                            <>
+                                {/* Desktop/tablet view: show by category */}
+                                <div className="desktop-products-list">
+                                    {filteredSections.map((section, idx) => {
+                                        const sectionId = section.title
+                                            ? section.title.toLowerCase().replace(/\s+/g, "-")
+                                            : `section-${idx}`;
+                                        return (
+                                            <div key={section.title} id={sectionId} style={styles.section} className="product-section">
+                                                <div style={styles.sectionHeader} className="sectionHeader">
+                                                    <h2 style={styles.sectionTitle} className="sectionTitle">{section.title}</h2>
+                                                    <button style={styles.viewMoreBtn} className="viewMoreBtn">View More</button>
+                                                </div>
+                                                <p style={styles.sectionDesc} className="sectionDesc">{section.description}</p>
+                                                <div style={styles.cardGridHorizontal} className="cardGridHorizontal">
+                                                    {section.products.map((prod, pidx) => {
+                                                        const prodId = prod.name
+                                                            ? prod.name.toLowerCase().replace(/\s+/g, "-")
+                                                            : `product-${pidx}`;
+                                                        return (
+                                                            <div key={prod.name} id={prodId} style={styles.card} className="product-card">
+                                                                <img
+                                                                    src={prod.img}
+                                                                    alt={prod.name}
+                                                                    style={styles.cardImg}
+                                                                    className="product-card-img"
+                                                                />
+                                                                <div style={styles.cardLabel}>{prod.name}</div>
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                                {/* Mobile view: show one by one */}
+                                <div className="all-products-mobile-list">
+                                    {filteredSections.flatMap((section, idx) => {
+                                        const sectionId = section.title
+                                            ? section.title.toLowerCase().replace(/\s+/g, "-")
+                                            : `section-${idx}`;
+                                        return section.products.map((prod, pidx) => {
+                                            const prodId = prod.name
+                                                ? prod.name.toLowerCase().replace(/\s+/g, "-")
+                                                : `product-${pidx}`;
+                                            return (
+                                                <div
+                                                    key={section.title + prod.name}
+                                                    id={prodId}
+                                                    className="product-card-mobile"
+                                                    style={styles.cardMobile}
+                                                >
+                                                    <img
+                                                        src={prod.img}
+                                                        alt={prod.name}
+                                                        style={styles.cardImgMobile}
+                                                    />
+                                                    <div style={styles.cardLabelMobile}>{prod.name}</div>
+                                                    <div style={styles.sectionLabelMobile}>{section.title}</div>
+                                                </div>
+                                            );
+                                        });
+                                    })}
+                                </div>
+                            </>
                         )}
                     </div>
                 </div>
@@ -182,39 +223,52 @@ const Products = () => {
             <FooterContact />
             <style>
                 {`
-                @media (max-width: 900px) {
-                    .product-main-content {
-                        flex-direction: column !important;
-                    }
-                    .product-sidebar {
-                        width: 100% !important;
-                        min-width: 0 !important;
-                        border-right: none !important;
-                        border-bottom: 1px solid #eee !important;
-                        margin-bottom: 1.5rem;
-                    }
-                    .products-content {
-                        padding-left: 0 !important;
-                    }
-                    .product-section {
-                        padding: 1rem !important;
-                    }
-                    .product-card-grid-horizontal {
-                        gap: 1rem !important;
-                    }
+                /* Desktop/tablet: show desktop-products-list, hide mobile list */
+                @media (min-width: 701px) {
+                    .desktop-products-list { display: block !important; }
+                    .all-products-mobile-list, .product-card-mobile { display: none !important; }
                 }
-                @media (max-width: 600px) {
-                    .product-section {
-                        padding: 0.5rem !important;
+                /* Mobile: show mobile list, hide desktop grid/cards */
+                @media (max-width: 700px) {
+                    .desktop-products-list { display: none !important; }
+                    .all-products-mobile-list {
+                        display: flex !important;
+                        flex-direction: column !important;
+                        gap: 1.2rem !important;
+                        width: 100%;
                     }
-                    .product-card {
-                        min-width: 140px !important;
-                        max-width: 180px !important;
-                        padding: 0.5rem !important;
+                    .product-card-mobile {
+                        background: #fff;
+                        border-radius: 8px;
+                        box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 1rem;
+                        width: 100%;
+                        max-width: 350px;
+                        margin: 0 auto;
                     }
-                    .product-card-img {
-                        max-width: 100px !important;
-                        height: 80px !important;
+                    .product-card-mobile img {
+                        width: 100%;
+                        max-width: 180px;
+                        height: 120px;
+                        object-fit: cover;
+                        border-radius: 6px;
+                        margin-bottom: 0.8rem;
+                        background: #eaeaea;
+                    }
+                    .product-card-mobile .product-label-mobile {
+                        font-size: 1rem;
+                        color: #222;
+                        text-align: center;
+                        margin-top: 0.5rem;
+                    }
+                    .product-card-mobile .section-label-mobile {
+                        font-size: 0.9rem;
+                        color: #2d2d8c;
+                        margin-top: 0.3rem;
+                        font-weight: 500;
                     }
                 }
                 `}
@@ -253,7 +307,6 @@ const styles = {
     mainContent: {
         display: "flex",
         maxWidth: "1200px",
-        margin: "0 auto",
         gap: "1.5rem",
     },
     productsContent: {
@@ -337,6 +390,40 @@ const styles = {
         color: "#222",
         textAlign: "center",
         marginTop: "0.5rem",
+    },
+    // Mobile styles for product cards
+    cardMobile: {
+        background: "#fff",
+        borderRadius: "8px",
+        boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "1rem",
+        width: "100%",
+        maxWidth: 350,
+        margin: "0 auto",
+    },
+    cardImgMobile: {
+        width: "100%",
+        maxWidth: "180px",
+        height: "120px",
+        objectFit: "cover",
+        borderRadius: "6px",
+        marginBottom: "0.8rem",
+        background: "#eaeaea",
+    },
+    cardLabelMobile: {
+        fontSize: "1rem",
+        color: "#222",
+        textAlign: "center",
+        marginTop: "0.5rem",
+    },
+    sectionLabelMobile: {
+        fontSize: "0.9rem",
+        color: "#2d2d8c",
+        marginTop: "0.3rem",
+        fontWeight: 500,
     },
 };
 
