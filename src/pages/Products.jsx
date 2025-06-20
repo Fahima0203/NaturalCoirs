@@ -37,6 +37,10 @@ const productSections = [
                 name: "High ec Coco Peat 5kg block (Unseived)",
                 img: "../assets/coco_peat/image5.png",
             },
+            {
+                name: "High ec Coco Peat 5kg block (Unseived)",
+                img: "../assets/coco_peat/image5.png",
+            },
         ],
     },
     {
@@ -102,48 +106,39 @@ const Products = () => {
                 <p style={{ margin: "0 2rem 2rem 2rem", color: "#555", fontSize: "1.1rem" }}>
                     {pageDescription}
                 </p>
-                 {/* Right-aligned Search Box at Top */}
-                    <div style={{ flex: 1, display: "flex", justifyContent: "flex-end", marginBottom: "2rem" }}>
-                        <div
+                <div style={styles.searchBoxWrap}>
+                    <div style={styles.searchBox}>
+                        <label
+                            htmlFor="product-search"
                             style={{
-                                background: "#fff",
-                                borderRadius: "8px",
-                                boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
-                                padding: "1.2rem 1.5rem",
-                                minWidth: 260,
+                                fontWeight: "bold",
+                                color: "#2d2d8c",
+                                fontSize: "1.1rem",
+                                display: "block",
+                                marginBottom: "0.7rem",
                             }}
                         >
-                            <label
-                                htmlFor="product-search"
-                                style={{
-                                    fontWeight: "bold",
-                                    color: "#2d2d8c",
-                                    fontSize: "1.1rem",
-                                    display: "block",
-                                    marginBottom: "0.7rem",
-                                }}
-                            >
-                                Search Products
-                            </label>
-                            <input
-                                id="product-search"
-                                type="text"
-                                value={search}
-                                onChange={(e) => setSearch(e.target.value)}
-                                placeholder="Search by name, description..."
-                                style={{
-                                    width: "100%",
-                                    padding: "0.7rem",
-                                    borderRadius: "5px",
-                                    border: "1px solid #bbb",
-                                    fontSize: "1rem",
-                                }}
-                            />
-                        </div>
+                            Search Products
+                        </label>
+                        <input
+                            id="product-search"
+                            type="text"
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                            placeholder="Search by name, description..."
+                            style={{
+                                width: "100%",
+                                padding: "0.7rem",
+                                borderRadius: "5px",
+                                border: "1px solid #bbb",
+                                fontSize: "1rem",
+                            }}
+                        />
                     </div>
-                <div style={{ display: "flex", maxWidth: "1200px", margin: "0 auto" }}>
+                </div>
+                <div style={styles.mainContent}>
                     <ProductSidebar productSections={filteredSections} />
-                    <div style={{ flex: 1, paddingLeft: 24 }}>
+                    <div style={styles.productsContent}>
                         {filteredSections.length === 0 ? (
                             <div style={{ color: "#b00", fontSize: "1.1rem", margin: "2rem" }}>
                                 No products found matching your search.
@@ -160,7 +155,7 @@ const Products = () => {
                                             <button style={styles.viewMoreBtn}>View More</button>
                                         </div>
                                         <p style={styles.sectionDesc}>{section.description}</p>
-                                        <div style={styles.cardGrid}>
+                                        <div style={styles.cardGridHorizontal}>
                                             {section.products.map((prod, pidx) => {
                                                 const prodId = prod.name
                                                     ? prod.name.toLowerCase().replace(/\s+/g, "-")
@@ -185,6 +180,45 @@ const Products = () => {
                 </div>
             </div>
             <FooterContact />
+            <style>
+                {`
+                @media (max-width: 900px) {
+                    .product-main-content {
+                        flex-direction: column !important;
+                    }
+                    .product-sidebar {
+                        width: 100% !important;
+                        min-width: 0 !important;
+                        border-right: none !important;
+                        border-bottom: 1px solid #eee !important;
+                        margin-bottom: 1.5rem;
+                    }
+                    .products-content {
+                        padding-left: 0 !important;
+                    }
+                    .product-section {
+                        padding: 1rem !important;
+                    }
+                    .product-card-grid-horizontal {
+                        gap: 1rem !important;
+                    }
+                }
+                @media (max-width: 600px) {
+                    .product-section {
+                        padding: 0.5rem !important;
+                    }
+                    .product-card {
+                        min-width: 140px !important;
+                        max-width: 180px !important;
+                        padding: 0.5rem !important;
+                    }
+                    .product-card-img {
+                        max-width: 100px !important;
+                        height: 80px !important;
+                    }
+                }
+                `}
+            </style>
         </>
     );
 };
@@ -199,6 +233,32 @@ const styles = {
         fontSize: "2rem",
         fontWeight: "bold",
         margin: "1rem 2rem",
+    },
+    searchBoxWrap: {
+        flex: 1,
+        display: "flex",
+        justifyContent: "flex-end",
+        marginBottom: "2rem",
+        padding: "0 1rem",
+    },
+    searchBox: {
+        background: "#fff",
+        borderRadius: "8px",
+        boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
+        padding: "1.2rem 1.5rem",
+        minWidth: 260,
+        width: "100%",
+        maxWidth: 400,
+    },
+    mainContent: {
+        display: "flex",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        gap: "1.5rem",
+    },
+    productsContent: {
+        flex: 1,
+        paddingLeft: 24,
     },
     section: {
         background: "#fff",
@@ -240,6 +300,16 @@ const styles = {
         gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
         gap: "1.5rem",
     },
+    cardGridHorizontal: {
+        display: "flex",
+        flexDirection: "row",
+        gap: "1.5rem",
+        overflowX: "auto",
+        paddingBottom: "1rem",
+        scrollbarWidth: "thin",
+        scrollbarColor: "#bbb #f8f8fa",
+        minWidth: 0,
+    },
     card: {
         background: "#f8f8fa",
         borderRadius: "8px",
@@ -249,6 +319,9 @@ const styles = {
         alignItems: "center",
         padding: "1rem",
         transition: "box-shadow 0.2s",
+        minWidth: 180,
+        maxWidth: 220,
+        flex: "0 0 auto",
     },
     cardImg: {
         width: "100%",

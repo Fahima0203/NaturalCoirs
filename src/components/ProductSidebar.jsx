@@ -18,7 +18,16 @@ export default function ProductSidebar({ productSections }) {
     };
 
     return (
-        <div style={{ width: 250, borderRight: "1px solid #eee", padding: 16 }}>
+        <div
+            className="product-sidebar"
+            style={{
+                minWidth: "270px",
+                borderRight: "1px solid #eee",
+                padding: 16,
+                width: "270px",
+                boxSizing: "border-box",
+            }}
+        >
             {productSections.map((section, idx) => {
                 // Generate a section id based on title for scrolling
                 const sectionId = section.title
@@ -58,6 +67,20 @@ export default function ProductSidebar({ productSections }) {
                     </div>
                 );
             })}
+            <style>
+                {`
+                @media (max-width: 900px) {
+                    .product-sidebar {
+                        width: 100% !important;
+                        min-width: 0 !important;
+                        border-right: none !important;
+                        border-bottom: 1px solid #eee !important;
+                        margin-bottom: 1.5rem;
+                        padding: 10px !important;
+                    }
+                }
+                `}
+            </style>
         </div>
     );
 }
