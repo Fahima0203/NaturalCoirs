@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Fahima0203/NaturalCoirs/static/css/main.d6253dfa.css",
+    "main.js": "/Fahima0203/NaturalCoirs/static/js/main.ed4b5272.js",
+    "static/media/image8.jpg": "/Fahima0203/NaturalCoirs/static/media/image8.e1126b06c54dc99cace1.jpg",
+    "static/media/image7.png": "/Fahima0203/NaturalCoirs/static/media/image7.4e6c82c5cd522b5dcc85.png",
+    "static/media/image1.png": "/Fahima0203/NaturalCoirs/static/media/image1.bf9f8f3acf6c692f79f0.png",
+    "static/media/image2.png": "/Fahima0203/NaturalCoirs/static/media/image2.edc692a7b5f0e3ff371b.png",
+    "static/media/image5.jpg": "/Fahima0203/NaturalCoirs/static/media/image5.11cef3005c2fc0947186.jpg",
+    "static/media/image4.png": "/Fahima0203/NaturalCoirs/static/media/image4.8da9a37731d45b6200c4.png",
+    "static/media/image3.png": "/Fahima0203/NaturalCoirs/static/media/image3.e4b86be6d3f407058eea.png",
+    "static/media/image6.png": "/Fahima0203/NaturalCoirs/static/media/image6.3dd73c3f041ec3b9d4e4.png",
+    "static/media/nc_logo.png": "/Fahima0203/NaturalCoirs/static/media/nc_logo.68d460cf9849e5b38fee.png",
+    "static/media/paypal.webp": "/Fahima0203/NaturalCoirs/static/media/paypal.5833c0bccd66b48ca226.webp",
+    "index.html": "/Fahima0203/NaturalCoirs/index.html",
+    "main.d6253dfa.css.map": "/Fahima0203/NaturalCoirs/static/css/main.d6253dfa.css.map",
+    "main.ed4b5272.js.map": "/Fahima0203/NaturalCoirs/static/js/main.ed4b5272.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6253dfa.css",
+    "static/js/main.ed4b5272.js"
+  ]
+}
