@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import FooterContact from "../components/FooterContact";
 import { productSections } from "../data/productSections";
+import { useState } from "react";
 
 const ProductDetails = () => {
     const { section: sectionParam, product: productParam } = useParams();
@@ -14,6 +15,10 @@ const ProductDetails = () => {
               (p) => p.name.toLowerCase() === decodeURIComponent(productParam).toLowerCase()
           )
         : null;
+
+    const [mainImg, setMainImg] = useState(product.images[0]);
+    const [zoom, setZoom] = useState(false);
+    const [zoomPos, setZoomPos] = useState({ x: 0, y: 0 });
 
     if (!section || !product) {
         return <div style={{ padding: 40 }}>Product not found.</div>;
@@ -32,29 +37,100 @@ const ProductDetails = () => {
 
     return (
         <>
-            <div style={{
-                maxWidth: 1100,
-                margin: "2rem auto",
-                background: "#fff",
-                borderRadius: 8,
-                boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
-                padding: 24,
-                display: "flex",
-                gap: 32,
-                flexDirection: "row"
-            }} className="product-details-main">
+            <div
+                style={{
+                    maxWidth: 1100,
+                    margin: "2rem auto",
+                    background: "#fff",
+                    borderRadius: 8,
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
+                    padding: 24,
+                    display: "flex",
+                    gap: 32,
+                    flexDirection: "row"
+                }}
+                className="product-details-main"
+            >
                 {/* Left: Image gallery */}
-                <div style={{
-                    minWidth: 320,
-                    maxWidth: 400,
-                    flex: "0 0 380px"
-                }} className="product-details-gallery">
-                    <img src={product.img} alt={product.name} style={{ width: "100%", borderRadius: 8, marginBottom: 16 }} />
-                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                        <img src={product.img} alt="" style={{ width: 60, height: 60, borderRadius: 4, objectFit: "cover", border: "1px solid #eee" }} />
-                        {/* Add more thumbnails if available */}
+                <div
+                    style={{
+                        minWidth: 320,
+                        maxWidth: 400,
+                        flex: "0 0 380px"
+                    }}
+                    className="product-details-gallery"
+                >
+                    <div
+                        style={{
+                            position: "relative",
+                            width: "100%",
+                            height: 320,
+                            overflow: "hidden",
+                            borderRadius: 8,
+                            marginBottom: 16,
+                            background: "#f7f7f7",
+                            cursor: zoom ? "zoom-in" : "pointer"
+                        }}
+                        onMouseEnter={() => setZoom(true)}
+                        onMouseLeave={() => setZoom(false)}
+                        onMouseMove={e => {
+                            const rect = e.currentTarget.getBoundingClientRect();
+                            setZoomPos({
+                                x: ((e.clientX - rect.left) / rect.width) * 100,
+                                y: ((e.clientY - rect.top) / rect.height) * 100,
+                            });
+                        }}
+                        // Mobile: disable zoom, allow swipe to change image
+                        onTouchStart={() => setZoom(false)}
+                    >
+                        <img
+                            src={mainImg}
+                            alt={product.name}
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "contain",
+                                borderRadius: 8,
+                                transition: "transform 0.2s",
+                                ...(zoom && window.innerWidth > 700
+                                    ? {
+                                        transform: `scale(2)`,
+                                        transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`
+                                    }
+                                    : {})
+                            }}
+                        />
                     </div>
-                    <button style={{ marginTop: 16, border: "1.5px solid #009688", color: "#009688", background: "#fff", borderRadius: 20, padding: "0.5rem 1.2rem", fontWeight: 600, cursor: "pointer" }}>
+                    {/* Thumbnails */}
+                    <div
+                        className="product-thumbnails"
+                        style={{
+                            display: "flex",
+                            gap: 12,
+                            marginBottom: 12,
+                            overflowX: "auto"
+                        }}
+                    >
+                        {product.images.map((img, idx) => (
+                            <img
+                                key={img}
+                                src={img}
+                                alt=""
+                                style={{
+                                    width: 60,
+                                    height: 60,
+                                    borderRadius: 4,
+                                    objectFit: "cover",
+                                    border: mainImg === img ? "2px solid #009688" : "1px solid #eee",
+                                    cursor: "pointer",
+                                    background: "#fafafa",
+                                    flex: "0 0 auto"
+                                }}
+                                onClick={() => setMainImg(img)}
+                            />
+                        ))}
+                    </div>
+                    <button style={{ marginTop: 8, border: "1.5px solid #009688", color: "#009688", background: "#fff", borderRadius: 20, padding: "0.5rem 1.2rem", fontWeight: 600, cursor: "pointer" }}>
                         Get More Photos
                     </button>
                 </div>
@@ -113,10 +189,23 @@ const ProductDetails = () => {
                         flex: none !important;
                         margin-bottom: 1.5rem !important;
                     }
+                    .product-details-gallery > div:first-child {
+                        height: 220px !important;
+                    }
                     .product-details-gallery img {
                         width: 100% !important;
                         max-width: 100% !important;
                         height: auto !important;
+                    }
+                    .product-thumbnails {
+                        gap: 8px !important;
+                        margin-bottom: 10px !important;
+                        overflow-x: auto !important;
+                        padding-bottom: 4px;
+                    }
+                    .product-thumbnails img {
+                        width: 48px !important;
+                        height: 48px !important;
                     }
                     .product-details-info {
                         padding: 0 !important;

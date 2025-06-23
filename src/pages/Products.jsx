@@ -114,7 +114,7 @@ const Products = () => {
                                                                     role="button"
                                                                 >
                                                                     <img
-                                                                        src={prod.img}
+                                                                        src={prod.images[0]}
                                                                         alt={prod.name}
                                                                         style={styles.cardImg}
                                                                         className="product-card-img"
@@ -146,7 +146,7 @@ const Products = () => {
                                                         role="button"
                                                     >
                                                         <img
-                                                            src={prod.img}
+                                                            src={prod.images[0]}
                                                             alt={prod.name}
                                                             style={styles.cardImgMobile}
                                                         />
