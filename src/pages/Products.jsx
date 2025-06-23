@@ -1,188 +1,8 @@
 import FooterContact from "../components/FooterContact";
-import image1 from "../assets/coco_peat/image1.png";
 import React, { useState } from "react";
 import ProductSidebar from "../components/ProductSidebar";
-// Import other images as needed
-// import image2 from "../assets/coco_peat/image2.png";
-// import image3 from "../assets/coco_peat/image3.png";
-// import image4 from "../assets/coco_peat/image4.png";
-// import image5 from "../assets/coco_peat/image5.png";
-// import image6 from "../assets/coir_yarn/image1.jpg";
-// import image7 from "../assets/coir_yarn/image2.jpg";
-// import image8 from "../assets/coir_yarn/image3.jpg";
-
-const productSections = [
-    {
-        title: "Coir Pith Block",
-        description:
-            "Pioneers in the industry, we offer 5 Kg High Ec Cocopeat Block, 5kg Low EC Coir Pith Block, Coco Peat 650 Grams Low EC, Coco Peat 650 Grams High EC and High ec Coco Peat 5kg block (Unseived) from India.",
-        products: [
-            {
-                name: "5 Kg High Ec Cocopeat Block",
-                img: image1,
-            },
-            {
-                name: "5kg Low EC Coir Pith Block",
-                img: "../assets/coco_peat/image2.png",
-            },
-            {
-                name: "Coco Peat 650 Grams Low EC",
-                img: "../assets/coco_peat/image3.png",
-            },
-            {
-                name: "Coco Peat 650 Grams High EC",
-                img: "../assets/coco_peat/image4.png",
-            },
-            {
-                name: "High ec Coco Peat 5kg block (Unseived)",
-                img: "../assets/coco_peat/image5.png",
-            },
-            {
-                name: "High ec Coco Peat 5kg block (Unseived)",
-                img: "../assets/coco_peat/image5.png",
-            },
-        ],
-    },
-    {
-        title: "Coir Yarn",
-        description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
-        products: [
-            {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
-                img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
-            },
-        ],
-    },
-     {
-        title: "Coir Yarn",
-        description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
-        products: [
-            {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
-                img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
-            },
-        ],
-    },
-     {
-        title: "Coir Yarn",
-        description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
-        products: [
-            {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
-                img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
-            },
-        ],
-    },
-     {
-        title: "Coir Yarn",
-        description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
-        products: [
-            {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
-                img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
-            },
-        ],
-    },
-     {
-        title: "Coir Yarn",
-        description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
-        products: [
-            {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
-                img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
-            },
-        ],
-    },
-     {
-        title: "Coir Yarn",
-        description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
-        products: [
-            {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
-                img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
-            },
-        ],
-    },
-
-];
+import { useNavigate } from "react-router-dom";
+import { productSections } from "../data/productSections";
 
 const pageTitle = "Our Products";
 const pageDescription =
@@ -190,6 +10,7 @@ const pageDescription =
 
 const Products = () => {
     const [search, setSearch] = useState("");
+    const navigate = useNavigate();
 
     // Filter logic: match in section title, section description, or product name
     const filteredSections = productSections
@@ -215,6 +36,18 @@ const Products = () => {
         })
         .filter(Boolean);
 
+    const handleViewMore = (section) => {
+        // Go to first product in section
+        if (section.products && section.products.length > 0) {
+            const prod = section.products[0];
+            navigate(`/products/${encodeURIComponent(section.title)}/${encodeURIComponent(prod.name)}`);
+        }
+    };
+
+    const handleProductClick = (section, prod) => {
+        navigate(`/products/${encodeURIComponent(section.title)}/${encodeURIComponent(prod.name)}`);
+    };
+
     return (
         <>
             <div style={styles.page}>
@@ -224,7 +57,7 @@ const Products = () => {
                 </p>
                 <div style={styles.mainRow}>
                     {/* Sidebar left */}
-                    <div style={styles.sidebarCol}>
+                    <div style={styles.sidebarCol} className="product-sidebar-col">
                         <ProductSidebar productSections={filteredSections} />
                     </div>
                     {/* Right: search above product content */}
@@ -256,7 +89,13 @@ const Products = () => {
                                                 <div key={section.title} id={sectionId} style={styles.section} className="product-section">
                                                     <div style={styles.sectionHeader} className="sectionHeader">
                                                         <h2 style={styles.sectionTitle} className="sectionTitle">{section.title}</h2>
-                                                        <button style={styles.viewMoreBtn} className="viewMoreBtn">View More</button>
+                                                        <button
+                                                            style={styles.viewMoreBtn}
+                                                            className="viewMoreBtn"
+                                                            onClick={() => handleViewMore(section)}
+                                                        >
+                                                            View More
+                                                        </button>
                                                     </div>
                                                     <p style={styles.sectionDesc} className="sectionDesc">{section.description}</p>
                                                     <div style={styles.cardGridHorizontal} className="cardGridHorizontal">
@@ -265,7 +104,15 @@ const Products = () => {
                                                                 ? prod.name.toLowerCase().replace(/\s+/g, "-")
                                                                 : `product-${pidx}`;
                                                             return (
-                                                                <div key={prod.name} id={prodId} style={styles.card} className="product-card">
+                                                                <div
+                                                                    key={prod.name}
+                                                                    id={prodId}
+                                                                    style={styles.card}
+                                                                    className="product-card"
+                                                                    onClick={() => handleProductClick(section, prod)}
+                                                                    tabIndex={0}
+                                                                    role="button"
+                                                                >
                                                                     <img
                                                                         src={prod.img}
                                                                         alt={prod.name}
@@ -297,6 +144,9 @@ const Products = () => {
                                                         id={prodId}
                                                         className="product-card-mobile"
                                                         style={styles.cardMobile}
+                                                        onClick={() => handleProductClick(section, prod)}
+                                                        tabIndex={0}
+                                                        role="button"
                                                     >
                                                         <img
                                                             src={prod.img}
@@ -365,6 +215,9 @@ const Products = () => {
                         color: #2d2d8c;
                         margin-top: 0.3rem;
                         font-weight: 500;
+                    }
+                    .product-sidebar-col {
+                        display: none !important;
                     }
                 }
                 `}
