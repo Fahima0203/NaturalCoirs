@@ -1,5 +1,5 @@
 import FooterContact from "../components/FooterContact";
-import React, { useState } from "react";
+import { useState } from "react";
 import ProductSidebar from "../components/ProductSidebar";
 import { useNavigate } from "react-router-dom";
 import { productSections } from "../data/productSections";
@@ -131,9 +131,6 @@ const Products = () => {
                                     {/* Mobile view: show one by one */}
                                     <div className="all-products-mobile-list">
                                         {filteredSections.flatMap((section, idx) => {
-                                            const sectionId = section.title
-                                                ? section.title.toLowerCase().replace(/\s+/g, "-")
-                                                : `section-${idx}`;
                                             return section.products.map((prod, pidx) => {
                                                 const prodId = prod.name
                                                     ? prod.name.toLowerCase().replace(/\s+/g, "-")

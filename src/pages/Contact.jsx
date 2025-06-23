@@ -113,6 +113,9 @@ const Contact = () => {
                                     <span style={{ fontSize: 26 }}>👜</span>
                                 </a>
                             </div>
+                            <div style={{ margin: "1rem 0", color: "#222" }}>
+                                <span role="img" aria-label="truck">🚚</span> Bulk Orders | <span role="img" aria-label="seedling">🌱</span> Custom Mixes | <span role="img" aria-label="label">🏷️</span> OEM Labels
+                            </div>
                             {/* Get Direction */}
                             <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", justifyContent: "center" }}>
                                 <Directions style={{ color: "#1976d2" }} />

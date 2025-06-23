@@ -1,10 +1,9 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import FooterContact from "../components/FooterContact";
 import { productSections } from "../data/productSections";
 
 const ProductDetails = () => {
     const { section: sectionParam, product: productParam } = useParams();
-    const navigate = useNavigate();
 
     // Find section and product
     const section = productSections.find(
