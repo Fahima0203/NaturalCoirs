@@ -66,6 +66,122 @@ const productSections = [
             },
         ],
     },
+     {
+        title: "Coir Yarn",
+        description:
+            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+        products: [
+            {
+                name: "6Mm 30Inches Coir Rope (Rollmudi)",
+                img: "../assets/coir_yarn/image1.jpg",
+            },
+            {
+                name: "5Mm 48 Inches CoirYarn (Magadan)",
+                img: "../assets/coir_yarn/image2.jpg",
+            },
+            {
+                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
+                img: "../assets/coir_yarn/image3.jpg",
+            },
+            {
+                name: "2 Ply Golden Brown Coir Yarn",
+                img: "../assets/coir_yarn/image4.jpg",
+            },
+        ],
+    },
+     {
+        title: "Coir Yarn",
+        description:
+            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+        products: [
+            {
+                name: "6Mm 30Inches Coir Rope (Rollmudi)",
+                img: "../assets/coir_yarn/image1.jpg",
+            },
+            {
+                name: "5Mm 48 Inches CoirYarn (Magadan)",
+                img: "../assets/coir_yarn/image2.jpg",
+            },
+            {
+                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
+                img: "../assets/coir_yarn/image3.jpg",
+            },
+            {
+                name: "2 Ply Golden Brown Coir Yarn",
+                img: "../assets/coir_yarn/image4.jpg",
+            },
+        ],
+    },
+     {
+        title: "Coir Yarn",
+        description:
+            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+        products: [
+            {
+                name: "6Mm 30Inches Coir Rope (Rollmudi)",
+                img: "../assets/coir_yarn/image1.jpg",
+            },
+            {
+                name: "5Mm 48 Inches CoirYarn (Magadan)",
+                img: "../assets/coir_yarn/image2.jpg",
+            },
+            {
+                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
+                img: "../assets/coir_yarn/image3.jpg",
+            },
+            {
+                name: "2 Ply Golden Brown Coir Yarn",
+                img: "../assets/coir_yarn/image4.jpg",
+            },
+        ],
+    },
+     {
+        title: "Coir Yarn",
+        description:
+            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+        products: [
+            {
+                name: "6Mm 30Inches Coir Rope (Rollmudi)",
+                img: "../assets/coir_yarn/image1.jpg",
+            },
+            {
+                name: "5Mm 48 Inches CoirYarn (Magadan)",
+                img: "../assets/coir_yarn/image2.jpg",
+            },
+            {
+                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
+                img: "../assets/coir_yarn/image3.jpg",
+            },
+            {
+                name: "2 Ply Golden Brown Coir Yarn",
+                img: "../assets/coir_yarn/image4.jpg",
+            },
+        ],
+    },
+     {
+        title: "Coir Yarn",
+        description:
+            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+        products: [
+            {
+                name: "6Mm 30Inches Coir Rope (Rollmudi)",
+                img: "../assets/coir_yarn/image1.jpg",
+            },
+            {
+                name: "5Mm 48 Inches CoirYarn (Magadan)",
+                img: "../assets/coir_yarn/image2.jpg",
+            },
+            {
+                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
+                img: "../assets/coir_yarn/image3.jpg",
+            },
+            {
+                name: "2 Ply Golden Brown Coir Yarn",
+                img: "../assets/coir_yarn/image4.jpg",
+            },
+        ],
+    },
+
 ];
 
 const pageTitle = "Our Products";
@@ -106,117 +222,97 @@ const Products = () => {
                 <p style={{ margin: "0 2rem 2rem 2rem", color: "#555", fontSize: "1.1rem" }}>
                     {pageDescription}
                 </p>
-                <div style={styles.searchBoxWrap}>
-                    <div style={styles.searchBox}>
-                        <label
-                            htmlFor="product-search"
-                            style={{
-                                fontWeight: "bold",
-                                color: "#2d2d8c",
-                                fontSize: "1.1rem",
-                                display: "block",
-                                marginBottom: "0.7rem",
-                            }}
-                        >
-                            Search Products
-                        </label>
-                        <input
-                            id="product-search"
-                            type="text"
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
-                            placeholder="Search by name, description..."
-                            style={{
-                                width: "100%",
-                                padding: "0.7rem",
-                                borderRadius: "5px",
-                                border: "1px solid #bbb",
-                                fontSize: "1rem",
-                            }}
-                        />
+                <div style={styles.mainRow}>
+                    {/* Sidebar left */}
+                    <div style={styles.sidebarCol}>
+                        <ProductSidebar productSections={filteredSections} />
                     </div>
-                </div>
-                <div
-                    style={styles.mainContent}
-                    className="product-main-content"
-                >
-                    <ProductSidebar productSections={filteredSections} />
-                    <div
-                        style={styles.productsContent}
-                        className="products-content"
-                    >
-                        {filteredSections.length === 0 ? (
-                            <div style={{ color: "#b00", fontSize: "1.1rem", margin: "2rem" }}>
-                                No products found matching your search.
-                            </div>
-                        ) : (
-                            <>
-                                {/* Desktop/tablet view: show by category */}
-                                <div className="desktop-products-list">
-                                    {filteredSections.map((section, idx) => {
-                                        const sectionId = section.title
-                                            ? section.title.toLowerCase().replace(/\s+/g, "-")
-                                            : `section-${idx}`;
-                                        return (
-                                            <div key={section.title} id={sectionId} style={styles.section} className="product-section">
-                                                <div style={styles.sectionHeader} className="sectionHeader">
-                                                    <h2 style={styles.sectionTitle} className="sectionTitle">{section.title}</h2>
-                                                    <button style={styles.viewMoreBtn} className="viewMoreBtn">View More</button>
-                                                </div>
-                                                <p style={styles.sectionDesc} className="sectionDesc">{section.description}</p>
-                                                <div style={styles.cardGridHorizontal} className="cardGridHorizontal">
-                                                    {section.products.map((prod, pidx) => {
-                                                        const prodId = prod.name
-                                                            ? prod.name.toLowerCase().replace(/\s+/g, "-")
-                                                            : `product-${pidx}`;
-                                                        return (
-                                                            <div key={prod.name} id={prodId} style={styles.card} className="product-card">
-                                                                <img
-                                                                    src={prod.img}
-                                                                    alt={prod.name}
-                                                                    style={styles.cardImg}
-                                                                    className="product-card-img"
-                                                                />
-                                                                <div style={styles.cardLabel}>{prod.name}</div>
-                                                            </div>
-                                                        );
-                                                    })}
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
+                    {/* Right: search above product content */}
+                    <div style={styles.rightCol}>
+                        <div style={styles.searchBoxWrap}>
+                            <input
+                                id="product-search"
+                                type="text"
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                placeholder="What are you looking for?"
+                                style={styles.simpleSearchBox}
+                            />
+                        </div>
+                        <div style={styles.productsContent} className="products-content">
+                            {filteredSections.length === 0 ? (
+                                <div style={{ color: "#b00", fontSize: "1.1rem", margin: "2rem" }}>
+                                    No products found matching your search.
                                 </div>
-                                {/* Mobile view: show one by one */}
-                                <div className="all-products-mobile-list">
-                                    {filteredSections.flatMap((section, idx) => {
-                                        const sectionId = section.title
-                                            ? section.title.toLowerCase().replace(/\s+/g, "-")
-                                            : `section-${idx}`;
-                                        return section.products.map((prod, pidx) => {
-                                            const prodId = prod.name
-                                                ? prod.name.toLowerCase().replace(/\s+/g, "-")
-                                                : `product-${pidx}`;
+                            ) : (
+                                <>
+                                    {/* Desktop/tablet view: show by category */}
+                                    <div className="desktop-products-list">
+                                        {filteredSections.map((section, idx) => {
+                                            const sectionId = section.title
+                                                ? section.title.toLowerCase().replace(/\s+/g, "-")
+                                                : `section-${idx}`;
                                             return (
-                                                <div
-                                                    key={section.title + prod.name}
-                                                    id={prodId}
-                                                    className="product-card-mobile"
-                                                    style={styles.cardMobile}
-                                                >
-                                                    <img
-                                                        src={prod.img}
-                                                        alt={prod.name}
-                                                        style={styles.cardImgMobile}
-                                                    />
-                                                    <div style={styles.cardLabelMobile}>{prod.name}</div>
-                                                    <div style={styles.sectionLabelMobile}>{section.title}</div>
+                                                <div key={section.title} id={sectionId} style={styles.section} className="product-section">
+                                                    <div style={styles.sectionHeader} className="sectionHeader">
+                                                        <h2 style={styles.sectionTitle} className="sectionTitle">{section.title}</h2>
+                                                        <button style={styles.viewMoreBtn} className="viewMoreBtn">View More</button>
+                                                    </div>
+                                                    <p style={styles.sectionDesc} className="sectionDesc">{section.description}</p>
+                                                    <div style={styles.cardGridHorizontal} className="cardGridHorizontal">
+                                                        {section.products.map((prod, pidx) => {
+                                                            const prodId = prod.name
+                                                                ? prod.name.toLowerCase().replace(/\s+/g, "-")
+                                                                : `product-${pidx}`;
+                                                            return (
+                                                                <div key={prod.name} id={prodId} style={styles.card} className="product-card">
+                                                                    <img
+                                                                        src={prod.img}
+                                                                        alt={prod.name}
+                                                                        style={styles.cardImg}
+                                                                        className="product-card-img"
+                                                                    />
+                                                                    <div style={styles.cardLabel}>{prod.name}</div>
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
                                                 </div>
                                             );
-                                        });
-                                    })}
-                                </div>
-                            </>
-                        )}
+                                        })}
+                                    </div>
+                                    {/* Mobile view: show one by one */}
+                                    <div className="all-products-mobile-list">
+                                        {filteredSections.flatMap((section, idx) => {
+                                            const sectionId = section.title
+                                                ? section.title.toLowerCase().replace(/\s+/g, "-")
+                                                : `section-${idx}`;
+                                            return section.products.map((prod, pidx) => {
+                                                const prodId = prod.name
+                                                    ? prod.name.toLowerCase().replace(/\s+/g, "-")
+                                                    : `product-${pidx}`;
+                                                return (
+                                                    <div
+                                                        key={section.title + prod.name}
+                                                        id={prodId}
+                                                        className="product-card-mobile"
+                                                        style={styles.cardMobile}
+                                                    >
+                                                        <img
+                                                            src={prod.img}
+                                                            alt={prod.name}
+                                                            style={styles.cardImgMobile}
+                                                        />
+                                                        <div style={styles.cardLabelMobile}>{prod.name}</div>
+                                                        <div style={styles.sectionLabelMobile}>{section.title}</div>
+                                                    </div>
+                                                );
+                                            });
+                                        })}
+                                    </div>
+                                </>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -288,30 +384,48 @@ const styles = {
         fontWeight: "bold",
         margin: "1rem 2rem",
     },
-    searchBoxWrap: {
-        flex: 1,
+    mainRow: {
         display: "flex",
-        justifyContent: "flex-end",
-        marginBottom: "2rem",
+        flexDirection: "row",
+        maxWidth: "1200px",
+        gap: "2rem",
+        alignItems: "flex-start",
+        width: "100%",
         padding: "0 1rem",
     },
-    searchBox: {
-        background: "#fff",
-        borderRadius: "8px",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
-        padding: "1.2rem 1.5rem",
+    sidebarCol: {
         minWidth: 260,
-        width: "100%",
-        maxWidth: 400,
+        maxWidth: 340,
+        width: "25%",
     },
-    mainContent: {
+    rightCol: {
+        flex: 1,
         display: "flex",
-        maxWidth: "1200px",
+        flexDirection: "column",
         gap: "1.5rem",
+    },
+    searchBoxWrap: {
+        width: "100%",
+        marginBottom: "0.5rem",
+        display: "flex",
+        justifyContent: "flex-start",
+    },
+    simpleSearchBox: {
+        width: "100%",
+        maxWidth: 900,
+        padding: "0.5rem",
+        borderRadius: "9px",
+        border: "2px solid #9797b7",
+        outline: "none",
+        background: "#fff",
+        color: "#444",
+        boxShadow: "none",
+        fontWeight: 400,
+        transition: "border 0.2s",
     },
     productsContent: {
         flex: 1,
-        paddingLeft: 24,
+        paddingLeft: 0,
     },
     section: {
         background: "#fff",
