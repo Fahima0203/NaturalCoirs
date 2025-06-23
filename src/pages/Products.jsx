@@ -13,33 +13,44 @@ import ProductSidebar from "../components/ProductSidebar";
 
 const productSections = [
     {
-        title: "Coir Pith Block",
+        title: "Coco Pith Blocks",
         description:
             "Pioneers in the industry, we offer 5 Kg High Ec Cocopeat Block, 5kg Low EC Coir Pith Block, Coco Peat 650 Grams Low EC, Coco Peat 650 Grams High EC and High ec Coco Peat 5kg block (Unseived) from India.",
         products: [
             {
-                name: "5 Kg High Ec Cocopeat Block",
+                name: "5 Kg",
                 img: image1,
             },
             {
-                name: "5kg Low EC Coir Pith Block",
+                name: "2 Kg",
                 img: "../assets/coco_peat/image2.png",
             },
             {
-                name: "Coco Peat 650 Grams Low EC",
+                name: "1 Kg",
                 img: "../assets/coco_peat/image3.png",
             },
             {
-                name: "Coco Peat 650 Grams High EC",
+                name: "650g",
                 img: "../assets/coco_peat/image4.png",
             },
+        ],
+    },
+    {
+        title: "Coir Rope",
+        description:
+            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+        products: [
             {
-                name: "High ec Coco Peat 5kg block (Unseived)",
-                img: "../assets/coco_peat/image5.png",
+                name: "2ply",
+                img: "../assets/coir_yarn/image1.jpg",
             },
             {
-                name: "High ec Coco Peat 5kg block (Unseived)",
-                img: "../assets/coco_peat/image5.png",
+                name: "3ply",
+                img: "../assets/coir_yarn/image2.jpg",
+            },
+            {
+                name: "3 - 10 mm",
+                img: "../assets/coir_yarn/image3.jpg",
             },
         ],
     },
@@ -49,135 +60,56 @@ const productSections = [
             "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
         products: [
             {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
+                name: "120 Kg Bale",
                 img: "../assets/coir_yarn/image1.jpg",
             },
             {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
+                name: "30 Kg",
                 img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
             },
         ],
     },
      {
-        title: "Coir Yarn",
+        title: "Grow Bags/Slabs",
         description:
             "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
         products: [
             {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
+                name: "Grow Bags/Slabs",
                 img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
             },
         ],
     },
      {
-        title: "Coir Yarn",
+        title: "Coir Pots",
         description:
             "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
         products: [
             {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
+                name: "Coir Pots",
                 img: "../assets/coir_yarn/image1.jpg",
             },
+        ],
+    },
+    {
+        title: "Coco Peat Discs",
+        description:
+            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+        products: [
             {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
+                name: "Coco Peat Discs",
+                img: "../assets/coir_yarn/image1.jpg",
             },
         ],
     },
      {
-        title: "Coir Yarn",
+        title: "Loose Powder",
         description:
             "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
         products: [
             {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
+                name: "Loose Powder",
                 img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
-            },
-        ],
-    },
-     {
-        title: "Coir Yarn",
-        description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
-        products: [
-            {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
-                img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
-            },
-        ],
-    },
-     {
-        title: "Coir Yarn",
-        description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
-        products: [
-            {
-                name: "6Mm 30Inches Coir Rope (Rollmudi)",
-                img: "../assets/coir_yarn/image1.jpg",
-            },
-            {
-                name: "5Mm 48 Inches CoirYarn (Magadan)",
-                img: "../assets/coir_yarn/image2.jpg",
-            },
-            {
-                name: "2Ply 6Mm Coir Yarn (Rollmudi)",
-                img: "../assets/coir_yarn/image3.jpg",
-            },
-            {
-                name: "2 Ply Golden Brown Coir Yarn",
-                img: "../assets/coir_yarn/image4.jpg",
             },
         ],
     },
@@ -224,7 +156,7 @@ const Products = () => {
                 </p>
                 <div style={styles.mainRow}>
                     {/* Sidebar left */}
-                    <div style={styles.sidebarCol}>
+                    <div style={styles.sidebarCol} className="product-sidebar-col">
                         <ProductSidebar productSections={filteredSections} />
                     </div>
                     {/* Right: search above product content */}
@@ -365,6 +297,9 @@ const Products = () => {
                         color: #2d2d8c;
                         margin-top: 0.3rem;
                         font-weight: 500;
+                    }
+                    .product-sidebar-col {
+                        display: none !important;
                     }
                 }
                 `}
