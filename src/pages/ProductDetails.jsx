@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom";
 import FooterContact from "../components/FooterContact";
 import { productSections } from "../data/productSections";
+import { productDetails } from "../data/productDetails";
 import { useState } from "react";
 
 const ProductDetails = () => {
     const { section: sectionParam, product: productParam } = useParams();
 
-    // Find section and product
+    // Find section and product (for images)
     const section = productSections.find(
         (s) => s.title.toLowerCase() === decodeURIComponent(sectionParam).toLowerCase()
     );
@@ -16,7 +17,14 @@ const ProductDetails = () => {
           )
         : null;
 
-    const [mainImg, setMainImg] = useState(product.images[0]);
+    // Find product details from JSON
+    const detailsData = productDetails.find(
+        (d) =>
+            d.section.toLowerCase() === decodeURIComponent(sectionParam).toLowerCase() &&
+            d.name.toLowerCase() === decodeURIComponent(productParam).toLowerCase()
+    );
+
+    const [mainImg, setMainImg] = useState(product?.images[0]);
     const [zoom, setZoom] = useState(false);
     const [zoomPos, setZoomPos] = useState({ x: 0, y: 0 });
 
@@ -24,9 +32,9 @@ const ProductDetails = () => {
         return <div style={{ padding: 40 }}>Product not found.</div>;
     }
 
-    // Dummy data for details table and description (replace with real data)
-    const details = [
-        { label: "Type", value: "High EC" },
+    // Use details from JSON if available, else fallback
+    const details = detailsData?.details || [
+        { label: "Type", value: "High EC dummy" },
         { label: "Packaging Size", value: "5 kg" },
         { label: "Shape", value: "Square" },
         { label: "Product Type", value: "Coir Pith" },
@@ -34,6 +42,17 @@ const ProductDetails = () => {
         { label: "Colour", value: "Brown" },
         { label: "Country of Origin", value: "Made in India" },
     ];
+    const description = detailsData?.description || `
+        <strong>${product.name}</strong><br />
+        <b>Compressed & Expandable</b> – Expands significantly when hydrated.<br />
+        <b>Excellent Water Retention</b> – Absorbs and retains moisture.<br />
+        <b>Aeration & Drainage</b> – Maintains proper air circulation.<br />
+        <b>Eco-Friendly & Sustainable</b> – 100% natural and biodegradable.
+    `;
+    const price = detailsData?.price || "₹ 26/kg";
+    const minOrder = detailsData?.minOrder || "5000 Kg";
+    const brochure = detailsData?.brochure || "#";
+    const video = detailsData?.video || "#";
 
     return (
         <>
@@ -136,12 +155,19 @@ const ProductDetails = () => {
                 </div>
                 {/* Right: Info */}
                 <div style={{ flex: 1 }} className="product-details-info">
-                    <h2 style={{ fontWeight: 700, fontSize: "1.5rem", marginBottom: 8 }}>{product.name} {section.title ? `- ${section.title}` : ""}</h2>
-                    <div style={{ fontSize: "1.2rem", color: "#222", marginBottom: 8 }}>₹ 26/kg <a href="#" style={{ color: "#1976d2", fontWeight: 500, marginLeft: 8 }}>Get Latest Price</a></div>
-                    <div style={{ fontWeight: 600, marginBottom: 8 }}>Minimum Order Quantity: <span style={{ fontWeight: 700 }}>5000 Kg</span></div>
+                    <h2 style={{ fontWeight: 700, fontSize: "1.5rem", marginBottom: 8 }}>
+                        {product.name} {section.title ? `- ${section.title}` : ""}
+                    </h2>
+                    <div style={{ fontSize: "1.2rem", color: "#222", marginBottom: 8 }}>
+                        {price}
+                        <a href="#" style={{ color: "#1976d2", fontWeight: 500, marginLeft: 8 }}>Get Latest Price</a>
+                    </div>
+                    <div style={{ fontWeight: 600, marginBottom: 8 }}>
+                        Minimum Order Quantity: <span style={{ fontWeight: 700 }}>{minOrder}</span>
+                    </div>
                     <div style={{ display: "flex", gap: 16, marginBottom: 12 }}>
-                        <button style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</button>
-                        <button style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</button>
+                        <a href={brochure} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
+                        <a href={video} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
                     </div>
                     {/* Details Table */}
                     <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 16 }}>
@@ -155,14 +181,7 @@ const ProductDetails = () => {
                         </tbody>
                     </table>
                     {/* Description */}
-                    <div style={{ marginBottom: 16 }}>
-                        <strong>5Kg High EC Coir Pith Block</strong><br />
-                        <b>Compressed & Expandable</b> – A 5Kg block expands significantly when hydrated, providing a large volume of growing medium upto 85 Litres.<br />
-                        <b>Excellent Water Retention</b> – Absorbs and retains moisture effectively, ensuring a steady water supply for plants.<br />
-                        <b>Aeration & Drainage</b> – Maintains proper air circulation around roots while preventing waterlogging.<br />
-                        <b>Suitable For All</b> – Ideal for indoor plants, outdoor gardening and seed starting. Suitable for all types of plants—vegetables, flowers, herbs, and more.<br />
-                        <b>Eco-Friendly & Sustainable</b> – 100% natural, biodegradable, and an environmentally friendly alternative to soil.
-                    </div>
+                    <div style={{ marginBottom: 16 }} dangerouslySetInnerHTML={{ __html: description }} />
                     {/* CTA */}
                     <div style={{ marginBottom: 16 }}>
                         <span style={{ fontWeight: 500 }}>Interested in this product?</span>
