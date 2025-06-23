@@ -1,4 +1,8 @@
 import image1 from "../assets/coco_peat/image1.png";
+import image2 from "../assets/coco_peat/image2.png";
+import image3 from "../assets/coco_peat/image3.png";
+import image4 from "../assets/coco_peat/image4.png";
+
 export const productSections = [
     {
         title: "Coco Pith Blocks",
@@ -7,19 +11,19 @@ export const productSections = [
         products: [
             {
                 name: "5 Kg",
-                img: image1,
+                images: [image1, image2, image3, image4],
             },
             {
                 name: "2 Kg",
-                img: "../assets/coco_peat/image2.png",
+                images: [image2],
             },
             {
                 name: "1 Kg",
-                img: "../assets/coco_peat/image3.png",
+                images: [image3],
             },
             {
                 name: "650g",
-                img: "../assets/coco_peat/image4.png",
+                images: [image4],
             },
         ],
     },
@@ -30,15 +34,15 @@ export const productSections = [
         products: [
             {
                 name: "2ply",
-                img: "../assets/coir_yarn/image1.jpg",
+                images: [image1, image2],
             },
             {
                 name: "3ply",
-                img: "../assets/coir_yarn/image2.jpg",
+                images: [image2],
             },
             {
                 name: "3 - 10 mm",
-                img: "../assets/coir_yarn/image3.jpg",
+                images: [image3],
             },
         ],
     },
@@ -49,11 +53,11 @@ export const productSections = [
         products: [
             {
                 name: "120 Kg Bale",
-                img: "../assets/coir_yarn/image1.jpg",
+                images: [image1],
             },
             {
                 name: "30 Kg",
-                img: "../assets/coir_yarn/image2.jpg",
+                images: [image2],
             },
         ],
     },
@@ -64,7 +68,7 @@ export const productSections = [
         products: [
             {
                 name: "Grow Bags/Slabs",
-                img: "../assets/coir_yarn/image1.jpg",
+                images: [image1],
             },
         ],
     },
@@ -75,7 +79,7 @@ export const productSections = [
         products: [
             {
                 name: "Coir Pots",
-                img: "../assets/coir_yarn/image1.jpg",
+                images: [image1],
             },
         ],
     },
@@ -86,7 +90,7 @@ export const productSections = [
         products: [
             {
                 name: "Coco Peat Discs",
-                img: "../assets/coir_yarn/image1.jpg",
+                images: [image1],
             },
         ],
     },
@@ -97,7 +101,7 @@ export const productSections = [
         products: [
             {
                 name: "Loose Powder",
-                img: "../assets/coir_yarn/image1.jpg",
+                images: [image1],
             },
         ],
     },

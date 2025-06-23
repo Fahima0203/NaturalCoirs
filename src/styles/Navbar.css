@@ -6,8 +6,5 @@
 .my-navbar .navbar-brand,
 .my-navbar .nav-link {
   color: white !important;
-}
-
-.my-navbar .nav-link:hover {
-  text-decoration: underline;
+  cursor: pointer !important;
 }
