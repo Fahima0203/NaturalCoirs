@@ -28,32 +28,20 @@ const ProductDetails = () => {
     const [zoom, setZoom] = useState(false);
     const [zoomPos, setZoomPos] = useState({ x: 0, y: 0 });
 
+    // Collapsible state
+    const [openSpec, setOpenSpec] = useState(true);
+    const [openDesc, setOpenDesc] = useState(false);
+
     if (!section || !product) {
         return <div style={{ padding: 40 }}>Product not found.</div>;
     }
 
     // Use details from JSON if available, else fallback
-    const details = detailsData?.details || [
-        { label: "Type", value: "High EC dummy" },
-        { label: "Packaging Size", value: "5 kg" },
-        { label: "Shape", value: "Square" },
-        { label: "Product Type", value: "Coir Pith" },
-        { label: "Moisture Content", value: "16%" },
-        { label: "Colour", value: "Brown" },
-        { label: "Country of Origin", value: "Made in India" },
-    ];
-    const description = detailsData?.description || `
-        <strong>${product.name}</strong><br />
-        <b>Compressed & Expandable</b> – Expands significantly when hydrated.<br />
-        <b>Excellent Water Retention</b> – Absorbs and retains moisture.<br />
-        <b>Aeration & Drainage</b> – Maintains proper air circulation.<br />
-        <b>Eco-Friendly & Sustainable</b> – 100% natural and biodegradable.
-    `;
-    const price = detailsData?.price || "₹ 26/kg";
-    const minOrder = detailsData?.minOrder || "5000 Kg";
+    const specification = detailsData?.specification || [];
+    const description = detailsData?.description || ``;
     const brochure = detailsData?.brochure || "#";
     const video = detailsData?.video || "#";
-
+    
     return (
         <>
             <div
@@ -149,47 +137,76 @@ const ProductDetails = () => {
                             />
                         ))}
                     </div>
-                    <button style={{ marginTop: 8, border: "1.5px solid #009688", color: "#009688", background: "#fff", borderRadius: 20, padding: "0.5rem 1.2rem", fontWeight: 600, cursor: "pointer" }}>
-                        Get More Photos
-                    </button>
                 </div>
                 {/* Right: Info */}
                 <div style={{ flex: 1 }} className="product-details-info">
+                    {/* Basic Info */}
                     <h2 style={{ fontWeight: 700, fontSize: "1.5rem", marginBottom: 8 }}>
                         {product.name} {section.title ? `- ${section.title}` : ""}
                     </h2>
-                    <div style={{ fontSize: "1.2rem", color: "#222", marginBottom: 8 }}>
-                        {price}
-                        <a href="#" style={{ color: "#1976d2", fontWeight: 500, marginLeft: 8 }}>Get Latest Price</a>
-                    </div>
-                    <div style={{ fontWeight: 600, marginBottom: 8 }}>
-                        Minimum Order Quantity: <span style={{ fontWeight: 700 }}>{minOrder}</span>
-                    </div>
                     <div style={{ display: "flex", gap: 16, marginBottom: 12 }}>
                         <a href={brochure} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
                         <a href={video} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
                     </div>
-                    {/* Details Table */}
-                    <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 16 }}>
-                        <tbody>
-                            {details.map((row) => (
-                                <tr key={row.label}>
-                                    <td style={{ border: "1px solid #eee", padding: "6px 12px", fontWeight: 500, background: "#fafbfc", width: 180 }}>{row.label}</td>
-                                    <td style={{ border: "1px solid #eee", padding: "6px 12px" }}>{row.value}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                    {/* Description */}
-                    <div style={{ marginBottom: 16 }} dangerouslySetInnerHTML={{ __html: description }} />
-                    {/* CTA */}
-                    <div style={{ marginBottom: 16 }}>
-                        <span style={{ fontWeight: 500 }}>Interested in this product?</span>
-                        <a href="#" style={{ marginLeft: 8, color: "#009688", fontWeight: 600, textDecoration: "underline" }}>Get Best Quote</a>
+                    {/* Collapsible Specification */}
+                    <div className="collapsible-section">
+                        <button
+                            onClick={() => setOpenSpec((v) => !v)}
+                            className="collapsible-header"
+                            aria-expanded={openSpec}
+                        >
+                            <span>Specification</span>
+                            <span
+                                className="chevron"
+                                style={{
+                                    transform: openSpec ? "rotate(180deg)" : "rotate(0deg)"
+                                }}
+                            >
+                                <svg width="28" height="28" viewBox="0 0 24 24" style={{ display: "block" }}>
+                                    <polyline points="6 9 12 15 18 9" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        {openSpec && (
+                            <div className="collapsible-content">
+                                <table style={{ width: "100%", borderCollapse: "collapse", margin: "0 0 16px 0" }}>
+                                    <tbody>
+                                        {specification.map((row) => (
+                                            <tr key={row.label}>
+                                                <td style={{ border: "1px solid #eee", padding: "6px 12px", fontWeight: 500, background: "#fafbfc", width: 180 }}>{row.label}</td>
+                                                <td style={{ border: "1px solid #eee", padding: "6px 12px" }}>{row.value}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        )}
                     </div>
-                    <button style={{ background: "#009688", color: "#fff", border: "none", borderRadius: 6, padding: "0.9rem 2.2rem", fontWeight: 600, fontSize: "1.1rem", cursor: "pointer" }}>
-                        Yes, I am interested!
-                    </button>
+                    {/* Collapsible Description */}
+                    <div className="collapsible-section">
+                        <button
+                            onClick={() => setOpenDesc((v) => !v)}
+                            className="collapsible-header"
+                            aria-expanded={openDesc}
+                        >
+                            <span>Description</span>
+                            <span
+                                className="chevron"
+                                style={{
+                                    transform: openDesc ? "rotate(180deg)" : "rotate(0deg)"
+                                }}
+                            >
+                                <svg width="28" height="28" viewBox="0 0 24 24" style={{ display: "block" }}>
+                                    <polyline points="6 9 12 15 18 9" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        {openDesc && (
+                            <div className="collapsible-content">
+                                <div dangerouslySetInnerHTML={{ __html: description }} />
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
             <FooterContact />
@@ -242,6 +259,43 @@ const ProductDetails = () => {
                         margin-top: 10px !important;
                         padding: 0.7rem 0 !important;
                     }
+                }
+                .product-details-info button:focus {
+                    outline: 2px solid #009688;
+                }
+                .collapsible-section {
+                    border-top: 1.5px solid #e0e0e0;
+                    margin-top: 18px;
+                    margin-bottom: 0;
+                }
+                .collapsible-header {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background: none;
+                    border: none;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: #181818;
+                    padding: 18px 0 12px 0;
+                    margin: 0;
+                    cursor: pointer;
+                    transition: background 0.15s;
+                }
+                .collapsible-header:focus {
+                    outline: 2px solid #009688;
+                }
+                .chevron {
+                    transition: transform 0.2s;
+                    margin-left: 8px;
+                    display: flex;
+                    align-items: center;
+                }
+                .collapsible-content {
+                    padding-left: 2px;
+                    padding-bottom: 12px;
+                    font-size: 1.08rem;
                 }
                 `}
             </style>

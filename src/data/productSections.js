@@ -61,18 +61,18 @@ export const productSections = [
             },
         ],
     },
-     {
-        title: "Grow Bags/Slabs",
-        description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
-        products: [
-            {
-                name: "Grow Bags/Slabs",
-                images: [image1],
-            },
-        ],
-    },
-     {
+    // {
+    //     title: "Grow Bags/Slabs",
+    //     description:
+    //         "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+    //     products: [
+    //         {
+    //             name: "Grow Bags/Slabs",
+    //             images: [image1],
+    //         },
+    //     ],
+    // },
+    {
         title: "Coir Pots",
         description:
             "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
@@ -94,7 +94,7 @@ export const productSections = [
             },
         ],
     },
-     {
+    {
         title: "Loose Powder",
         description:
             "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
@@ -105,5 +105,4 @@ export const productSections = [
             },
         ],
     },
-
 ];
