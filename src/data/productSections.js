@@ -86,10 +86,10 @@ export const productSections = [
     {
         title: "Coco Peat Discs",
         description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+            "Coir discs, also known as coir coins or coir pith discs, are small, round discs made from coconut coir fiber.",
         products: [
             {
-                name: "Coco Peat Discs",
+                name: "Coir Discs (Coins)",
                 images: [image1],
             },
         ],

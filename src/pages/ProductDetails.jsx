@@ -31,6 +31,7 @@ const ProductDetails = () => {
     // Collapsible state
     const [openSpec, setOpenSpec] = useState(true);
     const [openDesc, setOpenDesc] = useState(false);
+    const [openBenefits, setOpenBenefits] = useState(false);
 
     if (!section || !product) {
         return <div style={{ padding: 40 }}>Product not found.</div>;
@@ -39,6 +40,7 @@ const ProductDetails = () => {
     // Use details from JSON if available, else fallback
     const specification = detailsData?.specification || [];
     const description = detailsData?.description || ``;
+    const benefits = detailsData?.benefits || [];
     const brochure = detailsData?.brochure || "#";
     const video = detailsData?.video || "#";
     
@@ -148,65 +150,100 @@ const ProductDetails = () => {
                         <a href={brochure} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
                         <a href={video} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
                     </div>
-                    {/* Collapsible Specification */}
-                    <div className="collapsible-section">
-                        <button
-                            onClick={() => setOpenSpec((v) => !v)}
-                            className="collapsible-header"
-                            aria-expanded={openSpec}
-                        >
-                            <span>Specification</span>
-                            <span
-                                className="chevron"
-                                style={{
-                                    transform: openSpec ? "rotate(180deg)" : "rotate(0deg)"
-                                }}
+                    {/* Collapsible Benefits */}
+                    {benefits && Array.isArray(benefits) && benefits.length > 0 && (
+                        <div className="collapsible-section">
+                            <button
+                                onClick={() => setOpenBenefits((v) => !v)}
+                                className="collapsible-header"
+                                aria-expanded={openBenefits}
                             >
-                                <svg width="28" height="28" viewBox="0 0 24 24" style={{ display: "block" }}>
-                                    <polyline points="6 9 12 15 18 9" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                            </span>
-                        </button>
-                        {openSpec && (
-                            <div className="collapsible-content">
-                                <table style={{ width: "100%", borderCollapse: "collapse", margin: "0 0 16px 0" }}>
-                                    <tbody>
-                                        {specification.map((row) => (
-                                            <tr key={row.label}>
-                                                <td style={{ border: "1px solid #eee", padding: "6px 12px", fontWeight: 500, background: "#fafbfc", width: 180 }}>{row.label}</td>
-                                                <td style={{ border: "1px solid #eee", padding: "6px 12px" }}>{row.value}</td>
-                                            </tr>
+                                <span>Benefits</span>
+                                <span
+                                    className="chevron"
+                                    style={{
+                                        transform: openBenefits ? "rotate(180deg)" : "rotate(0deg)"
+                                    }}
+                                >
+                                    <svg width="28" height="28" viewBox="0 0 24 24" style={{ display: "block" }}>
+                                        <polyline points="6 9 12 15 18 9" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            {openBenefits && (
+                                <div className="collapsible-content">
+                                    <ul style={{ margin: 0, paddingLeft: 22 }}>
+                                        {benefits.map((b, i) => (
+                                            <li key={i} style={{ marginBottom: 6 }}>{b}</li>
                                         ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        )}
-                    </div>
-                    {/* Collapsible Description */}
-                    <div className="collapsible-section">
-                        <button
-                            onClick={() => setOpenDesc((v) => !v)}
-                            className="collapsible-header"
-                            aria-expanded={openDesc}
-                        >
-                            <span>Description</span>
-                            <span
-                                className="chevron"
-                                style={{
-                                    transform: openDesc ? "rotate(180deg)" : "rotate(0deg)"
-                                }}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+                    )}
+                    {/* Collapsible Specification */}
+                    {specification.length > 0 && (
+                        <div className="collapsible-section">
+                            <button
+                                onClick={() => setOpenSpec((v) => !v)}
+                                className="collapsible-header"
+                                aria-expanded={openSpec}
                             >
-                                <svg width="28" height="28" viewBox="0 0 24 24" style={{ display: "block" }}>
-                                    <polyline points="6 9 12 15 18 9" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                            </span>
-                        </button>
-                        {openDesc && (
-                            <div className="collapsible-content">
-                                <div dangerouslySetInnerHTML={{ __html: description }} />
-                            </div>
-                        )}
-                    </div>
+                                <span>Specification</span>
+                                <span
+                                    className="chevron"
+                                    style={{
+                                        transform: openSpec ? "rotate(180deg)" : "rotate(0deg)"
+                                    }}
+                                >
+                                    <svg width="28" height="28" viewBox="0 0 24 24" style={{ display: "block" }}>
+                                        <polyline points="6 9 12 15 18 9" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            {openSpec && (
+                                <div className="collapsible-content">
+                                    <table style={{ width: "100%", borderCollapse: "collapse", margin: "0 0 16px 0" }}>
+                                        <tbody>
+                                            {specification.map((row) => (
+                                                <tr key={row.label}>
+                                                    <td style={{ border: "1px solid #eee", padding: "6px 12px", fontWeight: 500, background: "#fafbfc", width: 180 }}>{row.label}</td>
+                                                    <td style={{ border: "1px solid #eee", padding: "6px 12px" }}>{row.value}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            )}
+                        </div>
+                    )}
+                    {/* Collapsible Description */}
+                    {description && description.trim() && (
+                        <div className="collapsible-section">
+                            <button
+                                onClick={() => setOpenDesc((v) => !v)}
+                                className="collapsible-header"
+                                aria-expanded={openDesc}
+                            >
+                                <span>Description</span>
+                                <span
+                                    className="chevron"
+                                    style={{
+                                        transform: openDesc ? "rotate(180deg)" : "rotate(0deg)"
+                                    }}
+                                >
+                                    <svg width="28" height="28" viewBox="0 0 24 24" style={{ display: "block" }}>
+                                        <polyline points="6 9 12 15 18 9" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            {openDesc && (
+                                <div className="collapsible-content">
+                                    <div dangerouslySetInnerHTML={{ __html: description }} />
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
             <FooterContact />
@@ -275,8 +312,8 @@ const ProductDetails = () => {
                     justify-content: space-between;
                     background: none;
                     border: none;
-                    font-size: 1.5rem;
-                    font-weight: 500;
+                    font-size: 1.2rem;
+                    font-weight: 600;
                     color: #181818;
                     padding: 18px 0 12px 0;
                     margin: 0;
