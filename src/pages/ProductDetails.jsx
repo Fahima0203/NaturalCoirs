@@ -149,8 +149,8 @@ const ProductDetails = () => {
                         {product.name} {section.title ? `- ${section.title}` : ""}
                     </h2>
                     <div style={{ display: "flex", gap: 16, marginBottom: 12 }}>
-                        <a href={brochure} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
-                        <a href={video} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
+                        <a href={brochure} target="_blank" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
+                        <a href={video} target="_blank" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
                     </div>
                     {/* Collapsible Specification */}
                     {specification.length > 0 && (
