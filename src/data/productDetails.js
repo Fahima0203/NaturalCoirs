@@ -63,7 +63,33 @@ export const productDetails = [
             "Digestive Aid: High fiber content supports digestion and gut health.",
             "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
         ],
-        //chips blocks
+        chips_blocks: {
+            text: `Coconut husk chips are either dried directly or washed and dried or buffered and dried according 
+            to our customer’s need. The dried husk chip is then compressed with extra care in 5 kg compacting machines.`,
+            table: [
+                {
+                    product_code: "210",
+                    product_name: "5Kg Chips Unwashed Regular",
+                    size: "28 X 28 X 12",
+                    mixture: "100% Husk Chips",
+                    expansion_volume: "60-65"
+                },
+                {
+                    product_code: "211",
+                    product_name: "5Kg Chips washed",
+                    size: "28 X 28 X 12",
+                    mixture: "100% Husk Chips",
+                    expansion_volume: "65-70"
+                },
+                {
+                    product_code: "212",
+                    product_name: "5Kg Chips Buffered",
+                    size: "28 X 28 X 12",
+                    mixture: "100% Husk Chips",
+                    expansion_volume: "65-70"
+                }
+            ]
+        }
     },
     {
         section: "Cocopeat Blocks",
