@@ -106,12 +106,12 @@ const Contact = () => {
                                 <a href="https://www.indiamart.com/naturalcoirs" aria-label="IndiaMart" target="_blank" rel="noopener noreferrer" style={iconLinkStyle}>
                                     <span style={{ fontSize: 26 }}>🛒</span>
                                 </a>
-                                <a href="https://www.amazon.in/gp/product/B0DT4NWV5L/ref=cx_skuctr_share_ls_srb?smid=A2813C0Z0Q7WMV&tag=ShopReferral_802e106a-fe9c-4e2b-b0bd-1b9e1e2e7aeb" aria-label="Amazon" target="_blank" rel="noopener noreferrer" style={iconLinkStyle}>
+                                {/* <a href="https://www.amazon.in/gp/product/B0DT4NWV5L/ref=cx_skuctr_share_ls_srb?smid=A2813C0Z0Q7WMV&tag=ShopReferral_802e106a-fe9c-4e2b-b0bd-1b9e1e2e7aeb" aria-label="Amazon" target="_blank" rel="noopener noreferrer" style={iconLinkStyle}>
                                     <span style={{ fontSize: 26 }}>🛍️</span>
                                 </a>
                                 <a href="https://www.meesho.com/naturalcoirs" aria-label="Meesho" target="_blank" rel="noopener noreferrer" style={iconLinkStyle}>
                                     <span style={{ fontSize: 26 }}>👜</span>
-                                </a>
+                                </a> */}
                             </div>
                             <div style={{ margin: "1rem 0", color: "#222" }}>
                                 <span role="img" aria-label="truck">🚚</span> Bulk Orders | <span role="img" aria-label="seedling">🌱</span> Custom Mixes | <span role="img" aria-label="label">🏷️</span> OEM Labels
