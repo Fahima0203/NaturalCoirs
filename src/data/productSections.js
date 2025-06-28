@@ -48,11 +48,11 @@ export const productSections = [
             "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
         products: [
             {
-                name: "2ply",
+                name: "2 Ply",
                 images: [image1, image2],
             },
             {
-                name: "3ply",
+                name: "3 Ply",
                 images: [image2],
             },
             {

@@ -223,7 +223,7 @@ const ProductDetails = () => {
                                 className="collapsible-header"
                                 aria-expanded={openChipsBlocks}
                             >
-                                <span>Chips Blocks</span>
+                                <span>Husk Chips Blocks</span>
                                 <span
                                     className="chevron"
                                     style={{
