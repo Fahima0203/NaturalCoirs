@@ -1,6 +1,6 @@
 export const productDetails = [
     {
-        section: "Coco Pith Blocks",
+        section: "Cocopeat Blocks dummy",
         name: "5 Kg",
         brochure: "#",
         video: "#",
@@ -27,6 +27,154 @@ export const productDetails = [
             heat-treated, screened and graded before being processed into coco peat products of various granularity 
             and density. Also used mostly in food waste treatment plant to cover them in to compost.<br /><br />
         `
+    },
+    {
+        section: "Cocopeat Blocks",
+        name: "5 Kg",
+        brochure: "#",
+        video: "#",
+        specification: [
+            { label: "Packaging Size", value: "5 kg" },
+            { label: "Dimensions", value: "30 x 30 x 12 cm" },
+            { label: "Shape", value: "Cube/Cuboid" },
+            { label: "Product Type", value: "Coir Pith" },
+            { label: "Moisture Content", value: "10% - 20%" },
+            { label: "Electrical Conductivity", value: "As per request" },
+            { label: "pH Level", value: "5.5 - 6.5" },
+            { label: "Particulate Size", value: "Fine to Coarse" },
+            { label: "Compression Ratio", value: "Typically compressed to 1/5 of original volume" },
+            { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
+            { label: "Air Porosity", value: "High, allowing for good aeration" },
+            { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
+            { label: "Country of Origin", value: "Made in India" },
+        ],
+        description: `
+            Coco Peat is available as Natural (regular), Washed & Buffered Material (Calcium Nitrate Treated). 
+            This Coco peat is Compressed in 1:5 ratio to form 5kg blocks of bearing measurement 28X28X12 cm.<br /><br />
+            This compression is done for the convenience of transportation. 
+            Coco peat has an unique future to with stand high compaction without changing its properties. 
+            When one kg of this block is hydrated with 3lts of water, you get a yield of 15 lts and above. 
+            So, approximately you get 75 lts of yield from a 5kg coco peat block, which can be mixed with soil 
+            or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
+        `,
+        benefits: [
+            "Nutrient-rich: Coconut blocks provide vitamins, minerals, and healthy fats for overall health.",
+            "Versatile: Can be used in cooking, baking, and beverages for a rich coconut flavor.",
+            "Digestive Aid: High fiber content supports digestion and gut health.",
+            "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
+        ],
+        //chips blocks
+    },
+    {
+        section: "Cocopeat Blocks",
+        name: "2 Kg",
+        brochure: "#",
+        video: "#",
+        specification: [
+            { label: "Packaging Size", value: "2 kg" },
+            { label: "Dimensions", value: "30 x 15 x 12 cm" },
+            { label: "Shape", value: "Cube/Cuboid" },
+            { label: "Product Type", value: "Coir Pith" },
+            { label: "Moisture Content", value: "10% - 20%" },
+            { label: "Electrical Conductivity", value: "As per request" },
+            { label: "pH Level", value: "5.5 - 6.5" },
+            { label: "Particulate Size", value: "Fine to Coarse" },
+            { label: "Compression Ratio", value: "Typically compressed to 1/5 of original volume" },
+            { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
+            { label: "Air Porosity", value: "High, allowing for good aeration" },
+            { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
+            { label: "Country of Origin", value: "Made in India" },
+        ],
+        description: `
+            Coco Peat is available as Natural (regular), Washed & Buffered Material (Calcium Nitrate Treated). 
+            This Coco peat is Compressed in 1:5 ratio to form 5kg blocks of bearing measurement 28X28X12 cm.<br /><br />
+            This compression is done for the convenience of transportation. 
+            Coco peat has an unique future to with stand high compaction without changing its properties. 
+            When one kg of this block is hydrated with 3lts of water, you get a yield of 15 lts and above. 
+            So, approximately you get 75 lts of yield from a 5kg coco peat block, which can be mixed with soil 
+            or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
+        `,
+        benefits: [
+            "Nutrient-rich: Coconut blocks provide vitamins, minerals, and healthy fats for overall health.",
+            "Versatile: Can be used in cooking, baking, and beverages for a rich coconut flavor.",
+            "Digestive Aid: High fiber content supports digestion and gut health.",
+            "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
+        ],
+        //chips blocks
+    },
+    {
+        section: "Cocopeat Blocks",
+        name: "1 Kg",
+        brochure: "#",
+        video: "#",
+        specification: [
+            { label: "Packaging Size", value: "1 kg" },
+            { label: "Dimensions", value: "15 x 15 x 12 cm" },
+            { label: "Shape", value: "Cube/Cuboid" },
+            { label: "Product Type", value: "Coir Pith" },
+            { label: "Moisture Content", value: "10% - 20%" },
+            { label: "Electrical Conductivity", value: "As per request" },
+            { label: "pH Level", value: "5.5 - 6.5" },
+            { label: "Particulate Size", value: "Fine to Coarse" },
+            { label: "Compression Ratio", value: "Typically compressed to 1/5 of original volume" },
+            { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
+            { label: "Air Porosity", value: "High, allowing for good aeration" },
+            { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
+            { label: "Country of Origin", value: "Made in India" },
+        ],
+        description: `
+            Coco Peat is available as Natural (regular), Washed & Buffered Material (Calcium Nitrate Treated). 
+            This Coco peat is Compressed in 1:5 ratio to form 1kg blocks of bearing measurement 28X28X12 cm.<br /><br />
+            This compression is done for the convenience of transportation. 
+            Coco peat has an unique future to with stand high compaction without changing its properties. 
+            When one kg of this block is hydrated with 3lts of water, you get a yield of 15 lts and above. 
+            So, approximately you get 75 lts of yield from a 1kg coco peat block, which can be mixed with soil 
+            or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
+        `,
+        benefits: [
+            "Nutrient-rich: Coconut blocks provide vitamins, minerals, and healthy fats for overall health.",
+            "Versatile: Can be used in cooking, baking, and beverages for a rich coconut flavor.",
+            "Digestive Aid: High fiber content supports digestion and gut health.",
+            "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
+        ],
+        //chips blocks
+    },
+    {
+        section: "Cocopeat Blocks",
+        name: "650g",
+        brochure: "#",
+        video: "#",
+        specification: [
+            { label: "Packaging Size", value: "650 g" },
+            { label: "Dimensions", value: "30 x 30 x 12 cm" },
+            { label: "Shape", value: "Cube/Cuboid" },
+            { label: "Product Type", value: "Coir Pith" },
+            { label: "Moisture Content", value: "10% - 20%" },
+            { label: "Expansion Volume", value: "8-9 liter" },
+            { label: "pH Level", value: "5.5 - 6.5" },
+            { label: "Particulate Size", value: "Fine to Coarse" },
+            { label: "Compression Ratio", value: "8 : 1" },
+            { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
+            { label: "Air Porosity", value: "High, allowing for good aeration" },
+            { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
+            { label: "Country of Origin", value: "Made in India" },
+        ],
+        description: `
+            Coco Peat is available as Natural (regular), Washed & Buffered Material (Calcium Nitrate Treated). 
+            This Coco peat is Compressed in 1:5 ratio to form 5kg blocks of bearing measurement 28X28X12 cm.<br /><br />
+            This compression is done for the convenience of transportation. 
+            Coco peat has an unique future to with stand high compaction without changing its properties. 
+            When one kg of this block is hydrated with 3lts of water, you get a yield of 15 lts and above. 
+            So, approximately you get 75 lts of yield from a 5kg coco peat block, which can be mixed with soil 
+            or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
+        `,
+        benefits: [
+            "Nutrient-rich: Coconut blocks provide vitamins, minerals, and healthy fats for overall health.",
+            "Versatile: Can be used in cooking, baking, and beverages for a rich coconut flavor.",
+            "Digestive Aid: High fiber content supports digestion and gut health.",
+            "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
+        ],
+        //chips blocks
     },
     {
         section: "Coco Pith Blocks",

@@ -150,37 +150,6 @@ const ProductDetails = () => {
                         <a href={brochure} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
                         <a href={video} style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
                     </div>
-                    {/* Collapsible Benefits */}
-                    {benefits && Array.isArray(benefits) && benefits.length > 0 && (
-                        <div className="collapsible-section">
-                            <button
-                                onClick={() => setOpenBenefits((v) => !v)}
-                                className="collapsible-header"
-                                aria-expanded={openBenefits}
-                            >
-                                <span>Benefits</span>
-                                <span
-                                    className="chevron"
-                                    style={{
-                                        transform: openBenefits ? "rotate(180deg)" : "rotate(0deg)"
-                                    }}
-                                >
-                                    <svg width="28" height="28" viewBox="0 0 24 24" style={{ display: "block" }}>
-                                        <polyline points="6 9 12 15 18 9" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    </svg>
-                                </span>
-                            </button>
-                            {openBenefits && (
-                                <div className="collapsible-content">
-                                    <ul style={{ margin: 0, paddingLeft: 22 }}>
-                                        {benefits.map((b, i) => (
-                                            <li key={i} style={{ marginBottom: 6 }}>{b}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-                        </div>
-                    )}
                     {/* Collapsible Specification */}
                     {specification.length > 0 && (
                         <div className="collapsible-section">
@@ -240,6 +209,37 @@ const ProductDetails = () => {
                             {openDesc && (
                                 <div className="collapsible-content">
                                     <div dangerouslySetInnerHTML={{ __html: description }} />
+                                </div>
+                            )}
+                        </div>
+                    )}
+                    {/* Collapsible Benefits */}
+                    {benefits && Array.isArray(benefits) && benefits.length > 0 && (
+                        <div className="collapsible-section">
+                            <button
+                                onClick={() => setOpenBenefits((v) => !v)}
+                                className="collapsible-header"
+                                aria-expanded={openBenefits}
+                            >
+                                <span>Benefits</span>
+                                <span
+                                    className="chevron"
+                                    style={{
+                                        transform: openBenefits ? "rotate(180deg)" : "rotate(0deg)"
+                                    }}
+                                >
+                                    <svg width="28" height="28" viewBox="0 0 24 24" style={{ display: "block" }}>
+                                        <polyline points="6 9 12 15 18 9" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            {openBenefits && (
+                                <div className="collapsible-content">
+                                    <ul style={{ margin: 0, paddingLeft: 22 }}>
+                                        {benefits.map((b, i) => (
+                                            <li key={i} style={{ marginBottom: 6 }}>{b}</li>
+                                        ))}
+                                    </ul>
                                 </div>
                             )}
                         </div>
