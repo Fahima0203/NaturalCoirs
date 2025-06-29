@@ -20,7 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         {/* Add more routes as needed */}
       </Routes>
-      <WhatsappCall />
+      <WhatsappCall message="Hi, I would like to order a custom product!" />
     </Router>
   );
 }

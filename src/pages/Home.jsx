@@ -1,5 +1,6 @@
 import HomeSlider from "../components/HomeSlider";
 import FooterContact from "../components/FooterContact";
+import AboutTab from "../components/AboutTab";
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
                 <h2>Warehouse Gallery</h2>
                 <HomeSlider />
             </div>
+            <AboutTab />
             <FooterContact />
         </div>
     );
