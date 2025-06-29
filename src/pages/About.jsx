@@ -1,14 +1,69 @@
 import FooterContact from "../components/FooterContact";
+import { useRef, useEffect } from "react";
+
+const runningText = "🌿 Welcome to the Global Leader in Cocopeat Solutions | 🌱 Trusted by Farmers & Growers Worldwide | 🚚 Fast Shipping & Custom Packaging Available | 💡 24/7 Expert Advisory for Your Success | 🌍 Sustainable, High-Performance Cocopeat Exports";
+
+const RunningBadge = () => {
+    const scrollRef = useRef(null);
+
+    useEffect(() => {
+        const el = scrollRef.current;
+        let animation;
+        if (el) {
+            const scroll = () => {
+                el.scrollLeft += 1;
+                if (el.scrollLeft >= el.scrollWidth - el.clientWidth) {
+                    el.scrollLeft = 0;
+                }
+                animation = requestAnimationFrame(scroll);
+            };
+            animation = requestAnimationFrame(scroll);
+        }
+        return () => animation && cancelAnimationFrame(animation);
+    }, []);
+
+    return (
+        <div
+            style={{
+                margin: "0 auto 2.5rem auto",
+                background: "linear-gradient(90deg, #e0f2f1 0%, #b2dfdb 100%)",
+                boxShadow: "0 2px 12px rgba(34,99,92,0.07)",
+            }}
+        >
+            <div
+                ref={scrollRef}
+                style={{
+                    whiteSpace: "nowrap",
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    color: "#22635c",
+                    padding: "0.7rem 0",
+                    overflow: "hidden"
+                }}
+            >
+                <span style={{ paddingRight: 60 }}>{runningText}</span>
+                <span>{runningText}</span>
+            </div>
+            <style>
+                {`
+                @media (max-width: 700px) {
+                    div[style*="font-size: 1.25rem"] {
+                        font-size: 1rem !important;
+                    }
+                }
+                `}
+            </style>
+        </div>
+    );
+};
+
 const About = () => (
     <>
         <div style={{
-            maxWidth: "900px",
-            margin: "0 auto",
             padding: "2rem",
             fontFamily: "Segoe UI, sans-serif",
-            color: "#2d2d2d"
         }}>
-            <h1 style={{ fontSize: "2.5rem", color: "#00695c", marginBottom: 8 }}>🌿 Welcome to the Global Leader in Cocopeat Solutions</h1>
+            <RunningBadge />
             <p style={{ fontSize: "1.2rem", margin: "1rem 0 2rem 0" }}>
                 With decades of hands-on experience in agriculture and coir-based products since the 1970s, we are proud to stand as a global leader in the manufacturing and export of premium quality cocopeat. As pioneers in modern agriculture solutions, we cater to a worldwide clientele spanning Saudi Arabia, UAE (Dubai), Qatar, Kuwait, Oman, USA, Canada, Germany, China, Japan, UK, Iran, and many more.
             </p>

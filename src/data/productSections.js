@@ -64,7 +64,7 @@ export const productSections = [
     {
         title: "Loose Powder",
         description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+            "Give your 🌴plants/trees the best care with our Coco Peat Powder, made from natural coconut husks. It’s soft, clean, and full of goodness for the soil. Whether you are a farmer, gardener, or home grower – this is the perfect helper for growing strong, green plants.",
         products: [
             {
                 name: "Loose Powder",

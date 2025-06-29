@@ -9,8 +9,13 @@
 .home-slider-wrapper {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  zoom: 0.5;
 }
-
+/* @media (max-width: 700px){
+  .home-slider-wrapper {
+    zoom: 0.5;
+  }
+}
 @media (min-width: 1440px) {
   .home-slider-wrapper {
     zoom: 0.5;
@@ -27,7 +32,7 @@
   .home-slider-wrapper {
     zoom: 0.5;
   }
-}
+} */
 
 .home-slider-wrappe ::-webkit-scrollbar {
   width: 0.5rem;

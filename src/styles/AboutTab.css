@@ -1,0 +1,76 @@
+.about {
+	text-align: center;
+}
+
+.about h5 {
+	color: #621708;
+	letter-spacing: .2rem;
+	text-transform: uppercase;
+	font-size: 23px;
+	line-height: 1.66667;
+	font-weight: 600;
+	font-family: Poppins;
+	margin-block-start: 1.67rem;
+	animation: fadeIn 5s;
+}
+
+.about h2 {
+	color: #8d99ae;
+	letter-spacing: .15rem;
+	font-size: 26px;
+	animation: fadeIn 7s;
+}
+
+.about h3{
+	margin: 6px 0px;
+	letter-spacing: .075rem;
+	font-size: 22px;
+	line-height: 1.33333;
+	 font-family: Poppins;
+	 color:#013a63;
+	 animation: fadeIn 9s;
+}
+
+.about-left{
+	margin-top: 10%;
+}
+
+.tabs-custom .nav-link {
+	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	color: #01497c;
+	font-size: 16px;
+	animation: fadeIn 11s;
+}
+
+.nav-tabs button {
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	background: none;
+}
+
+.tabs-custom .nav-tabs {
+	line-height: 0;
+	border: 0;
+}
+
+p hr {
+	border: 2px solid #000000;
+	opacity: 1;
+	border-radius: 2px;
+	width:80%;
+	margin-left:20px;
+	animation: fadeIn 11s;
+}
+
+.tab-content{
+	margin-top: 4%;
+	letter-spacing: 0.8px;
+	color: #421005;
+	margin: 15px 0px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 1.6;
+	font-family: Lato;
+	animation: fadeIn 12s;
+}
