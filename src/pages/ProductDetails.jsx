@@ -45,7 +45,14 @@ const ProductDetails = () => {
     const chipsBlocks = detailsData?.chips_blocks || null;
     const brochure = detailsData?.brochure || "#";
     const video = detailsData?.video || "#";
-    
+
+    // Example values, you can fetch from detailsData if available
+    const price = detailsData?.price || "₹ 26/kg";
+    const minOrder = detailsData?.minOrder || "5000 Kg";
+    const whatsappNumber = "9445676371";
+    const whatsappMsg = `Hi, I'm interested in ${product.name} (${section.title})`;
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
+
     return (
         <>
             <div
@@ -148,9 +155,32 @@ const ProductDetails = () => {
                     <h2 style={{ fontWeight: 700, fontSize: "1.5rem", marginBottom: 8 }}>
                         {product.name} {section.title ? `- ${section.title}` : ""}
                     </h2>
+                    {/* Price, Get Latest Price, MOQ */}
+                    <div style={{ fontSize: "1.18rem", marginBottom: 4, display: "flex", alignItems: "center", gap: 12 }}>
+                        <span style={{ fontWeight: 500 }}>{price}</span>
+                        <a
+                            href={whatsappLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                color: "#009688",
+                                fontWeight: 600,
+                                fontSize: "1.05rem",
+                                textDecoration: "underline",
+                                marginLeft: 6,
+                                cursor: "pointer"
+                            }}
+                        >
+                            Get Latest Price
+                        </a>
+                    </div>
+                    <div style={{ fontSize: "1.05rem", color: "#222", marginBottom: 8 }}>
+                        <span style={{ fontWeight: 600 }}>Minimum Order Quantity:</span>{" "}
+                        <span style={{ fontWeight: 700 }}>{minOrder}</span>
+                    </div>
                     <div style={{ display: "flex", gap: 16, marginBottom: 12 }}>
-                        <a href={brochure} target="_blank" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
-                        <a href={video} target="_blank" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
+                        <a href={brochure} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
+                        <a href={video} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
                     </div>
                     {/* Collapsible Specification */}
                     {specification.length > 0 && (
@@ -301,6 +331,47 @@ const ProductDetails = () => {
                             )}
                         </div>
                     )}
+                    <div style={{ marginTop: 18, fontSize: "1.08rem" }}>
+                        Interested in this product?{" "}
+                        <a
+                            href={whatsappLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                color: "#009688",
+                                fontWeight: 600,
+                                textDecoration: "underline",
+                                marginLeft: 2,
+                                cursor: "pointer",
+                            }}
+                        >
+                            Get Best Quote
+                        </a>
+                    </div>
+                    {/* Yes, I am interested button */}
+                    <div style={{ marginTop: 28, display: "flex", justifyContent: "flex-end" }}>
+                        <a
+                            href={whatsappLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                background: "#009688",
+                                color: "#fff",
+                                fontWeight: 700,
+                                fontSize: "1.13rem",
+                                border: "none",
+                                borderRadius: 7,
+                                padding: "0.85rem 2.2rem",
+                                boxShadow: "0 2px 8px rgba(0,150,136,0.08)",
+                                cursor: "pointer",
+                                textDecoration: "none",
+                                transition: "background 0.18s"
+                            }}
+                            className="yes-interested-btn"
+                        >
+                            Yes, I am interested!
+                        </a>
+                    </div>
                 </div>
             </div>
             <FooterContact />
@@ -360,9 +431,6 @@ const ProductDetails = () => {
                         padding: 0.7rem 0 !important;
                     }
                 }
-                .product-details-info button:focus {
-                    outline: 2px solid #009688;
-                }
                 .collapsible-section {
                     border-top: 1.5px solid #e0e0e0;
                     margin-top: 18px;
@@ -383,8 +451,15 @@ const ProductDetails = () => {
                     cursor: pointer;
                     transition: background 0.15s;
                 }
+                .collapsible-header:hover {
+                    background: RGB(248, 248, 250);
+                    background: radial-gradient(circle, rgba(248, 248, 250, 0.59) 0%, rgba(199, 199, 199, 0.63) 58%, rgba(199, 199, 199, 1) 85%);  
+                    transform: translateY(-4px) scale(1.025);  
+                }
                 .collapsible-header:focus {
-                    outline: 2px solid #009688;
+                    background: RGB(8,108,92);
+                    background: linear-gradient(328deg, rgba(8, 108, 92, 0.8) 0%, rgba(248, 248, 250, 1) 30%, rgba(248, 248, 250, 1) 70%, rgba(8, 108, 92, 0.63) 100%);
+                    transform: translateY(-4px) scale(1.025);
                 }
                 .chevron {
                     transition: transform 0.2s;
@@ -404,6 +479,10 @@ const ProductDetails = () => {
                         z-index: 2;
                         align-self: flex-start;
                     }
+                }
+                .yes-interested-btn:hover, .yes-interested-btn:focus {
+                    background: #00796b !important;
+                    color: #fff !important;
                 }
                 `}
             </style>

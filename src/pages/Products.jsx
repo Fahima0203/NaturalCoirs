@@ -170,6 +170,22 @@ const Products = () => {
                 @media (min-width: 701px) {
                     .desktop-products-list { display: block !important; }
                     .all-products-mobile-list, .product-card-mobile { display: none !important; }
+                    .product-sidebar-col {
+                        position: sticky;
+                        top: 32px;
+                        z-index: 2;
+                        align-self: flex-start;
+                    }
+                    .product-card:hover, .product-card:focus {
+                        background: #53EDDE !important;
+                        background: radial-gradient(circle, rgba(83, 237, 222, 0.8) 0%, rgba(248, 248, 250, 1) 30%, rgba(248, 248, 250, 1) 70%, rgba(83, 237, 222, 0.63) 100%) !important;
+                        transform: translateY(-4px) scale(1.025);
+                    }
+                    .viewMoreBtn:hover, .viewMoreBtn:focus {
+                        background: #53EDDE !important;
+                        background: linear-gradient(328deg, rgba(83, 237, 222, 0.8) 0%, rgba(248, 248, 250, 1) 40%, rgba(248, 248, 250, 1) 60%, rgba(83, 237, 222, 0.63) 100%) !important;
+                        transform: translateY(-4px) scale(1.025);           
+                    }
                 }
                 /* Mobile: show mobile list, hide desktop grid/cards */
                 @media (max-width: 700px) {

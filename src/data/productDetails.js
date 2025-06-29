@@ -20,8 +20,10 @@ export const productDetails = [
     {
         section: "Cocopeat Blocks",
         name: "5 Kg",
-        brochure: "#",
-        video: "#",
+        price: "₹ 28/kg",
+        minOrder: "5000 Kg",
+        brochure: "https://pdf.indiamart.com/impdf/2855083288212/MY-186662221/5-kg-high-ec-cocopeat-block.pdf",
+        video: "https://www.youtube.com/watch?v=XaRSPjKTw0A",
         specification: [
             { label: "Packaging Size", value: "5 kg" },
             { label: "Dimensions", value: "30 x 30 x 12 cm" },
@@ -83,8 +85,10 @@ export const productDetails = [
     {
         section: "Cocopeat Blocks",
         name: "2 Kg",
-        brochure: "#",
-        video: "#",
+        price: "₹ 24/kg",
+        minOrder: "5000 Kg",
+        brochure: "https://pdf.indiamart.com/impdf/2856701719997/MY-186662221/high-ec-2kg-cocopeat-blocks.pdf",
+        video: "https://www.youtube.com/shorts/Mgd8mD9srT8",
         specification: [
             { label: "Packaging Size", value: "2 kg" },
             { label: "Dimensions", value: "30 x 15 x 12 cm" },
@@ -120,6 +124,8 @@ export const productDetails = [
     {
         section: "Cocopeat Blocks",
         name: "1 Kg",
+        price: "₹ 24/kg",
+        minOrder: "5000 Kg",
         brochure: "#",
         video: "#",
         specification: [
@@ -156,21 +162,20 @@ export const productDetails = [
     {
         section: "Cocopeat Blocks",
         name: "650g",
+        price: "₹ 19/kg",
+        minOrder: "22000 Kg",
         brochure: "#",
-        video: "#",
+        video: "https://www.youtube.com/watch?v=3g2ew-PWeSE",
         specification: [
             { label: "Packing", value: "Individual Shrink Wrapped with labels on both sides. Bricks in (pallet) carton Box with 20 nos in one box" },
-            { label: "Briquette dimension (± 0.5 cm)", value: "20 x 10 x 5 cm" },
+            { label: "Dimensions", value: "19 x 9 x 5 cm " },
             { label: "Shape", value: "Cube/Cuboid" },
-            { label: "Product", value: "1800 gram Blocks" },
-            { label: "Unit Weight (± 5%)", value: "650 Gms" },
+            { label: "Unit Weight", value: "650 gm. (+ / - 50g.)" },
             { label: "Moisture", value: "15-20% Change" },
-            { label: "Electro Conductivity", value: ">1.0 ms/cm (High EC block) & < 0.5 ms/cm (Low EC block)" },
-            { label: "pH Level", value: "5.5 to 6.5 (remove ms / cm)" },
-            { label: "Compression Ratio", value: "8:1" },
-            { label: "Dehydrated yield (Litters)", value: "9 to 10 liters" },
-            { label: "Min. Order", value: "1×40 HC." },
-            { label: "Manufacturing Capacity", value: "4×40 HC per month" },
+            { label: "Electro Conductivity", value: "Below 0.5 mS / cm" },
+            { label: "pH Level", value: "6.5 - 7.5" },
+            { label: "Compression Ratio", value: "8 : 1" },
+            { label: "Expansion Volume", value: "8-9 liters" },
             { label: "Country of Origin", value: "Made in India" },
         ],
         description: `
@@ -216,6 +221,8 @@ export const productDetails = [
     {
         section: "Coir Fibre",
         name: "120 Kg Bale",
+        price: "₹ 19/kg",
+        minOrder: "22000 Kg",
         brochure: "#",
         video: "#",
         specification: [
@@ -259,6 +266,8 @@ export const productDetails = [
     {
         section: "Coir Fibre",
         name: "30 Kg Bale",
+        price: "₹ 19/kg",
+        minOrder: "22000 Kg",
         brochure: "#",
         video: "#",
         specification: [
@@ -308,8 +317,10 @@ export const productDetails = [
     {
         section: "Coir Yarn/Rope",
         name: "2 Ply",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
         brochure: "#",
-        video: "#",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
             { label: "Length", value: "20 m" },
             { label: "Rope Type", value: "Twisted" },
@@ -334,7 +345,10 @@ export const productDetails = [
     {
         section: "Coir Yarn/Rope",
         name: "3 Ply",
-        brochure: "#",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
             { label: "Length", value: "20 m" },
             { label: "Rope Type", value: "Twisted" },
@@ -359,7 +373,10 @@ export const productDetails = [
     {
         section: "Coir Yarn/Rope",
         name: "3 - 10 mm",
-        brochure: "#",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
             { label: "Length", value: "20 m" },
             { label: "Rope Type", value: "Twisted" },
@@ -384,9 +401,36 @@ export const productDetails = [
     {
         section: "Loose Powder",
         name: "Loose Powder",
-        brochure: "#",
-        video: "#",
-        specification: [],
+        price: "₹ 20/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://pdf.indiamart.com/impdf/2855465090948/MY-186662221/cocopeat-powder-high-ec.pdf",
+        video: "https://www.youtube.com/watch?v=jDu_-xBgFrM",
+        specification: [
+            { label: "Packaging Size", value: "25 Kg" },
+            { label: "Packing Type", value: "Loose" },
+            { label: "Moisture Content", value: "10% - 20%"},
+            { label: "Electrical Conductivity", value: "As per request" },
+            { label: "pH Level", value: "5.5 - 6.5" },
+            { label: "Particulate Size", value: "Fine to Coarse" },
+            { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
+            { label: "Air Porosity", value: "High, allowing for good aeration" },
+            { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
+            { label: "Country of Origin", value: "Made in India" }
+        ],
+        description: `
+            Mixes well with any soil and feels like smooth powder.<br /><br />
+            🌱 Use it for vegetables, flowers, fruits, home gardens, pots, or big farms – Coco Peat Powder makes growing simple and successful!<br /><br />
+        `,
+        benefits: [
+            "Right pH for Plants: Not too acidic, not too alkaline – just right for most crops (5.5 to 6.5).",
+            "Holds Water Like a Sponge: Keeps soil moist longer – saves water and helps during dry days.",
+            "Gives Air to Roots: Stops soil from getting too hard. Roots can breathe and grow better.",
+            "100% Natural & Safe: Made from coconuts, no chemicals. Safe for people, plants, and Earth.",
+            "Boosts Growth: Helps plants absorb water and nutrients better.",
+            "No Weeds or Pests: Naturally clean – keeps your soil free from bugs and fungus.",
+            "Lightweight & Easy to Use: Easy to carry, spread, and store – perfect for everyone.",
+        ]
+
     }
     // {
     //     section: "Coco Pith Blocks",
