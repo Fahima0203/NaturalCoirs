@@ -33,7 +33,6 @@ footer {
     display: block;
     color: #ffffff;
     text-align: center;
-    /* background: rgb(0, 123, 94);  */
     background: rgb(8, 108, 92);/* Uses theme color if set, otherwise fallback */ 
 }
 .fade-in-image { animation: fadeIn 5s; }

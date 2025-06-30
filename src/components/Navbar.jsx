@@ -57,8 +57,8 @@ function Nbar() {
                             ))}
                         </NavDropdown>
                         <Nav.Link href="/About">About</Nav.Link>
+                        <Nav.Link href="/info">About Our Cocopeat</Nav.Link>
                         <Nav.Link href="/Contact">Contact</Nav.Link>
-                        <Nav.Link href="/info">Info</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
