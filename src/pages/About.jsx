@@ -1,7 +1,65 @@
 import FooterContact from "../components/FooterContact";
 import { useRef, useEffect } from "react";
-
+import React from 'react'
+import img1 from "../assets/coco_peat/image2.png";
+import img2 from "../assets/coco_peat/image4.png";
+import img3 from "../assets/coco_peat/image8.jpg";
 const runningText = "🌿 Welcome to the Global Leader in Cocopeat Solutions | 🌱 Trusted by Farmers & Growers Worldwide | 🚚 Fast Shipping & Custom Packaging Available | 💡 24/7 Expert Advisory for Your Success | 🌍 Sustainable, High-Performance Cocopeat Exports";
+
+const AboutSlider = () => {
+    const images = [img1, img2, img3];
+    const [index, setIndex] = React.useState(0);
+    const timeoutRef = React.useRef(null);
+
+    function resetTimeout() {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    }
+
+    useEffect(() => {
+        resetTimeout();
+        timeoutRef.current = setTimeout(
+            () => setIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1)),
+            2500
+        );
+        return () => resetTimeout();
+    }, [index, images.length]);
+
+    return (
+        <div style={{position: "relative"}}>
+            <img
+                src={images[index]}
+                alt=""
+                style={{
+                    width: "100%",
+                    height: "400px",
+                    borderRadius: 12,
+                }}
+            />
+            <div style={{
+                position: "absolute",
+                bottom: 10,
+                left: "50%",
+                transform: "translateX(-50%)",
+                display: "flex",
+                gap: 8
+            }}>
+                {images.map((_, i) => (
+                    <span
+                        key={i}
+                        style={{
+                            width: 10,
+                            height: 10,
+                            borderRadius: "50%",
+                            background: i === index ? "#009688" : "#e0e0e0",
+                            cursor: "pointer"
+                        }}
+                        onClick={() => setIndex(i)}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+};
 
 const RunningBadge = () => {
     const scrollRef = useRef(null);
@@ -25,7 +83,7 @@ const RunningBadge = () => {
     return (
         <div
             style={{
-                margin: "0 auto 2.5rem auto",
+                margin: "20px auto 2.5rem auto",
                 background: "linear-gradient(90deg, #e0f2f1 0%, #b2dfdb 100%)",
                 boxShadow: "0 2px 12px rgba(34,99,92,0.07)",
             }}
@@ -37,7 +95,7 @@ const RunningBadge = () => {
                     fontSize: "1.25rem",
                     fontWeight: 600,
                     color: "#22635c",
-                    padding: "0.7rem 0",
+                    padding: "0.1rem 0",
                     overflow: "hidden"
                 }}
             >
@@ -59,54 +117,64 @@ const RunningBadge = () => {
 
 const About = () => (
     <>
-        <div style={{
-            padding: "2rem",
-            fontFamily: "Segoe UI, sans-serif",
-        }}>
-            <RunningBadge />
-            <p style={{ fontSize: "1.2rem", margin: "1rem 0 2rem 0" }}>
-                With decades of hands-on experience in agriculture and coir-based products since the 1970s, we are proud to stand as a global leader in the manufacturing and export of premium quality cocopeat. As pioneers in modern agriculture solutions, we cater to a worldwide clientele spanning Saudi Arabia, UAE (Dubai), Qatar, Kuwait, Oman, USA, Canada, Germany, China, Japan, UK, Iran, and many more.
-            </p>
-            <img src="https://via.placeholder.com/1200x400?text=Cover+Photo" alt="Cover" style={{ width: "100%", borderRadius: 12, marginBottom: 32 }} />
-            <section style={{ marginTop: "2rem" }}>
-                <h2 style={{ color: "#00695c" }}>👋 About Us</h2>
-                <p>
-                    Our passion lies in providing sustainable and effective growing mediums that significantly enhance agricultural productivity while remaining environmentally conscious. We combine deep-rooted traditional expertise with cutting-edge production processes to deliver high-quality cocopeat that meets international standards for performance, purity, and consistency.
-                </p>
-                <img src="https://via.placeholder.com/600x300?text=Our+Factory" alt="Factory" style={{ width: "100%", borderRadius: 10, margin: "20px 0" }} />
+        <RunningBadge />
+        <div style={{ padding: "2rem" }}>
+            <div
+                style={{ display: "flex", gap: 32 }}
+            >
+                {/* Left: Content */}
+                <div>
+                    <h2 style={{ color: "#00695c", fontWeight: 700, marginBottom: 16, fontSize: "1.45rem" }}>
+                        🌿 Welcome to the Global Leader in Cocopeat Solutions
+                    </h2>
+                    <p style={{ fontSize: "1.2rem", margin: "1rem 0 2rem 0", textAlign: "justify", textIndent: "4em" }}>
+                        With decades of hands-on experience in agriculture and coir-based products since the 1970s, we are proud to stand as a global leader in the manufacturing and export of premium quality cocopeat. As pioneers in modern agriculture solutions, we cater to a worldwide clientele spanning Saudi Arabia, UAE (Dubai), Qatar, Kuwait, Oman, USA, Canada, Germany, China, Japan, UK, Iran, and many more.
+                    </p>
+                    <p style={{ fontSize: "1.2rem", margin: "1rem 0 2rem 0", textAlign: "justify", textIndent: "4em" }}>
+                        Our passion lies in providing sustainable and effective growing mediums that significantly enhance agricultural productivity while remaining environmentally conscious. We combine deep-rooted traditional expertise with cutting-edge production processes to deliver high-quality cocopeat that meets international standards for performance, purity, and consistency.
+                    </p>
+                </div>
+                {/* Right: Image slider */}
+                <div style={{ flex: "0 0 528px"}}>
+                    <AboutSlider />
+                </div>
+            </div>
+            {/* Why Choose Our Cocopeat Section */}
+            <section style={{ marginTop: "2.5rem", marginBottom: "2.5rem", background: "#f7fafc", borderRadius: 14, boxShadow: "0 2px 12px rgba(8,108,92,0.07)", padding: "2rem 1.5rem" }}>
+                <h2 style={{ color: "#00695c", fontWeight: 700, marginBottom: 16, fontSize: "1.45rem" }}>
+                    Why Choose Our Cocopeat?
+                </h2>
+                <ul style={{ fontSize: "1.13rem", lineHeight: 2}}>
+                    <li><b>Raw Materials:</b> Extracted only from handpicked, mature coconut husks for optimum fiber and peat content.</li>
+                    <li><b>Purity Guaranteed:</b> Washed with clean water, filtered with 6 mm mesh, and double-sieved to eliminate sand, fine dust, and fiber contaminants.</li>
+                    <li><b>High Expansion Ratio:</b> 1 kg yields up to 15 liters of ready-to-use growing medium.</li>
+                    <li><b>Sterile & Safe:</b> Naturally sterilized by solar drying; free from chemical additives.</li>
+                    <li><b>Consistent Quality:</b> Every batch is tested for EC, pH, moisture, and impurities.</li>
+                    <li><b>Global Logistics:</b> Ability to ship over 1000+ tonnes/month with on-time delivery.</li>
+                    <li><b>Tailored Solutions:</b> Mixtures, sizes, and packaging customized for retail, greenhouse, or commercial farms.</li>
+                </ul>
             </section>
             <section style={{ marginTop: "2rem" }}>
-                <h2 style={{ color: "#00695c" }}>📦 Packaging Options with Custom Labeling</h2>
-                <p>
-                    We understand that packaging plays a vital role in logistics, retail, and branding. That’s why we offer flexible packaging options with custom labeling and private labeling services to help you build your brand in your market.
-                </p>
-                <ol style={{ margin: "1rem 0 1rem 1.5rem" }}>
-                    <li><b>Individual Shrink Wrap – </b>moisture-protected and tamper-proof.</li>
-                    <li><b>3/4/5 Bundle Packs with Nylon Straps – </b>compact and economical.</li>
-                    <li><b>Poly Bag Packs – </b>suitable for retail distribution.</li>
-                    <li><b>Pallet Packing – </b>optimized for container shipping and bulk orders.</li>
-                </ol>
-                <p>
-                    Each unit is tightly packed to prevent moisture loss, contamination, or compression during shipping. Packaging sizes can also be customized upon request.
-                </p>
-                <img src="https://via.placeholder.com/600x300?text=Packaging" alt="Packaging" style={{ width: "100%", borderRadius: 10, margin: "20px 0" }} />
-            </section>
-            <section style={{ marginTop: "2rem" }}>
-                <h2 style={{ color: "#00695c" }}>🌍 Our Vision</h2>
+                <h2 style={{ color: "#00695c", fontWeight: 700, marginBottom: 16, fontSize: "1.45rem" }}>🌍 Our Vision</h2>
                 <p>
                     We aim to make the world greener and more productive through sustainable farming practices, helping prevent desertification and boosting food security globally.
                 </p>
+                <p>
+                    We envision a <b>green revolution powered by innovation and sustainability.</b> Our mission is to:
+                </p>
                 <ul style={{ lineHeight: "2" }}>
-                    <li>Promote soil-free cultivation methods to combat soil degradation.</li>
-                    <li>Address global water scarcity through smart irrigation and moisture-retentive substrates.</li>
-                    <li>Help eradicate famine and poverty by enabling farmers to achieve 3x faster yields.</li>
-                    <li>Create a carbon-negative ecosystem by encouraging the use of biodegradable inputs.</li>
-                    <li>Prevent desertification and restore green cover across the globe.</li>
+                    <li>Promote soil-free cultivation methods to combat <b>soil degradation.</b></li>
+                    <li>Address <b>global water scarcity</b> through smart irrigation and moisture-retentive substrates.</li>
+                    <li>Help eradicate <b>famine and poverty</b> by enabling farmers to achieve <b>3x faster yields.</b></li>
+                    <li>Create a <b>carbon-negative</b> ecosystem by encouraging the use of biodegradable inputs.</li>
+                    <li>Prevent <b>desertification</b> and restore green cover across the globe.</li>
                 </ul>
-                <img src="https://via.placeholder.com/600x300?text=Green+Vision" alt="Vision" style={{ width: "100%", borderRadius: 10, margin: "20px 0" }} />
+                <p>
+                    We are dedicated to making <b>premium cocopeat accessible, affordable, and adaptable</b> for every grower, from a home gardener to an international agribusiness.
+                </p>
             </section>
             <section style={{ marginTop: "2rem" }}>
-                <h2 style={{ color: "#00695c" }}>💡 Expert Advisory Services – 24/7 Support</h2>
+                <h2 style={{ color: "#00695c", fontWeight: 700, marginBottom: 16, fontSize: "1.45rem" }}>💡 Expert Advisory Services – 24/7 Support</h2>
                 <p>
                     Our expert agricultural consultants are available around-the-clock to guide you through your cocopeat journey. Whether you're a backyard gardener, a hydroponic grower, or a large-scale farm operator, we offer personalized recommendations on:
                 </p>
@@ -120,11 +188,21 @@ const About = () => (
                     <li>How to achieve high yields even in extreme climates using sustainable methods?</li>
                 </ol>
             </section>
-            <footer style={{ marginTop: "3rem", fontSize: "1rem", color: "#888" }}>
+            <p style={{ marginTop: "3rem", fontSize: "1.2rem", fontWeight: "800", color: "rgb(8, 108, 92)", textAlign: "center" }}>
                 Let’s grow the future, together — with Certified, Sustainable, and High-Performance Cocopeat.
-            </footer>
+            </p>
         </div>
         <FooterContact />
+        <style>
+            {`
+            @media (max-width: 700px) {
+                .about-company-row {
+                    flex-direction: column !important;
+                    gap: 18px !important;
+                }
+            }
+            `}
+        </style>
     </>
 );
 
