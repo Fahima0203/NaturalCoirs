@@ -31,7 +31,7 @@ const AboutSlider = () => {
                 alt=""
                 style={{
                     width: "100%",
-                    height: "400px",
+                    height: "350px",
                     borderRadius: 12,
                 }}
             />
@@ -118,24 +118,29 @@ const RunningBadge = () => {
 const About = () => (
     <>
         <RunningBadge />
-        <div style={{ padding: "2rem" }}>
+        <div style={{ padding: "2rem" }} className="about-main-content">
             <div
-                style={{ display: "flex", gap: 32 }}
+                className="about-company-row"
+                style={{ display: "flex", gap: 32, alignItems: "flex-start" }}
             >
                 {/* Left: Content */}
-                <div>
+                <div style={{ flex: 1 }}>
                     <h2 style={{ color: "#00695c", fontWeight: 700, marginBottom: 16, fontSize: "1.45rem" }}>
                         🌿 Welcome to the Global Leader in Cocopeat Solutions
                     </h2>
-                    <p style={{ fontSize: "1.2rem", margin: "1rem 0 2rem 0", textAlign: "justify", textIndent: "4em" }}>
+                    <p style={{margin: "1rem 0 2rem 0", textAlign: "justify", textIndent: "4em", fontSize: "1.1rem" }}>
                         With decades of hands-on experience in agriculture and coir-based products since the 1970s, we are proud to stand as a global leader in the manufacturing and export of premium quality cocopeat. As pioneers in modern agriculture solutions, we cater to a worldwide clientele spanning Saudi Arabia, UAE (Dubai), Qatar, Kuwait, Oman, USA, Canada, Germany, China, Japan, UK, Iran, and many more.
                     </p>
-                    <p style={{ fontSize: "1.2rem", margin: "1rem 0 2rem 0", textAlign: "justify", textIndent: "4em" }}>
+                    <p style={{ margin: "1rem 0 2rem 0", textAlign: "justify", textIndent: "4em", fontSize: "1.1rem" }}>
                         Our passion lies in providing sustainable and effective growing mediums that significantly enhance agricultural productivity while remaining environmentally conscious. We combine deep-rooted traditional expertise with cutting-edge production processes to deliver high-quality cocopeat that meets international standards for performance, purity, and consistency.
                     </p>
+                    {/* AboutSlider for mobile */}
+                    <div className="about-slider-mobile">
+                        <AboutSlider />
+                    </div>
                 </div>
-                {/* Right: Image slider */}
-                <div style={{ flex: "0 0 528px"}}>
+                {/* Right: Image slider (desktop/tablet only) */}
+                <div className="about-slider-desktop" style={{ flex: "0 0 528px" }}>
                     <AboutSlider />
                 </div>
             </div>
@@ -144,7 +149,7 @@ const About = () => (
                 <h2 style={{ color: "#00695c", fontWeight: 700, marginBottom: 16, fontSize: "1.45rem" }}>
                     Why Choose Our Cocopeat?
                 </h2>
-                <ul style={{ fontSize: "1.13rem", lineHeight: 2}}>
+                <ul style={{ fontSize: "1.1rem", lineHeight: 2}}>
                     <li><b>Raw Materials:</b> Extracted only from handpicked, mature coconut husks for optimum fiber and peat content.</li>
                     <li><b>Purity Guaranteed:</b> Washed with clean water, filtered with 6 mm mesh, and double-sieved to eliminate sand, fine dust, and fiber contaminants.</li>
                     <li><b>High Expansion Ratio:</b> 1 kg yields up to 15 liters of ready-to-use growing medium.</li>
@@ -195,10 +200,69 @@ const About = () => (
         <FooterContact />
         <style>
             {`
-            @media (max-width: 700px) {
+            @media (max-width: 900px) {
                 .about-company-row {
                     flex-direction: column !important;
                     gap: 18px !important;
+                }
+                .about-slider-desktop {
+                    display: none !important;
+                }
+                .about-slider-mobile {
+                    display: block !important;
+                    margin-top: 18px;
+                }
+            }
+            @media (min-width: 901px) {
+                .about-slider-desktop {
+                    display: block !important;
+                }
+                .about-slider-mobile {
+                    display: none !important;
+                }
+            }
+            @media (max-width: 600px) {
+                .about-main-content {
+                    padding: 0.7rem !important;
+                }
+                .about-company-row {
+                    gap: 10px !important;
+                }
+                .about-company-row h2,
+                .about-company-row h1 {
+                    font-size: 1rem !important;
+                    margin-bottom: 8px !important;
+                }
+                .about-company-row p,
+                .about-company-row ul,
+                .about-company-row ol,
+                .about-company-row li {
+                    font-size: 0.98rem !important;
+                    margin: 0.5rem 0 1rem 0 !important;
+                    line-height: 1.6 !important;
+                }
+                .about-company-row section,
+                .about-main-content section {
+                    margin-top: 1.2rem !important;
+                    margin-bottom: 1.2rem !important;
+                    padding: 0.5rem 0 !important;
+                }
+                .about-main-content section h2 {
+                    font-size: 1rem !important;
+                    margin-bottom: 8px !important;
+                }
+                .about-main-content section ul,
+                .about-main-content section ol {
+                    padding-left: 1.1rem !important;
+                    font-size: 1rem !important;
+                }
+                .about-main-content img {
+                    border-radius: 8px !important;
+                    margin: 10px 0 !important;
+                }
+                .about-slider-mobile img,
+                .about-slider-desktop img {
+                    height: 180px !important;
                 }
             }
             `}
