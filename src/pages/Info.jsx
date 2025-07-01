@@ -2,8 +2,45 @@ import FooterContact from "../components/FooterContact";
 
 const Info = () => (
     <>
-        <div style={{padding: "2rem"}}>
-            <section
+        {/* Responsive styles for mobile */}
+        <style>
+            {`
+            @media (max-width: 600px) {
+                .info-root {
+                    padding: 0.7rem !important;
+                }
+                .info-section {
+                    padding: 1.1rem 0.6rem !important;
+                    border-radius: 8px !important;
+                }
+                .info-section h2, .info-section h3 {
+                    font-size: 1.05rem !important;
+                }
+                .info-section p, .info-section ul, .info-section ol, .info-section li, .info-section table, .info-section th, .info-section td {
+                    font-size: 0.97rem !important;
+                }
+                .info-flex-row {
+                    flex-direction: column !important;
+                    gap: 18px !important;
+                    padding: 1.1rem 0.6rem !important;
+                }
+                .info-flex-img {
+                    max-width: 110px !important;
+                    min-width: 80px !important;
+                }
+                .info-table {
+                    font-size: 0.93rem !important;
+                }
+            }
+            /* Table row hover effect */
+            .info-table tbody tr:hover {
+                background: #e0f2f1 !important;
+                transition: background 0.2s;
+            }
+            `}
+        </style>
+        <div className="info-root" style={{padding: "2rem"}}>
+            <section className="info-section"
                 style={{
                     background: "#f7fafc",
                     borderRadius: 14,
@@ -18,12 +55,12 @@ const Info = () => (
                     Cocopeat, also known as coir pith or coir dust, is a 100% organic, biodegradable, and renewable by-product derived from coconut husks. It is widely recognized as a superior alternative to soil or peat moss, offering high porosity, excellent water-holding capacity, and optimal air circulation. These unique features make cocopeat ideal for seed germination, hydroponics, nursery plantations, and large-scale agriculture.
                 </p>
                 {/* --- Cocopeat vs Soil Table Section --- */}
-                <section style={{ margin: "2.2rem 0 1.5rem 0" }}>
+                <section className="info-section" style={{ margin: "2.2rem 0 1.5rem 0" }}>
                     <h3 style={{ color: "#1976d2", fontWeight: 600, marginBottom: 12, fontSize: "1.18rem" }}>
                         Advantages of Cocopeat Growing Medium vs. Traditional Soil
                     </h3>
                     <div style={{ overflowX: "auto" }}>
-                        <table style={{
+                        <table className="info-table" style={{
                             borderCollapse: "collapse",
                             width: "100%",
                             background: "#fff",
@@ -103,6 +140,7 @@ const Info = () => (
 
                 {/* --- Why Choose Our Cocopeat Section --- */}
                 <section
+                    className="info-section info-flex-row"
                     style={{
                         margin: "2.5rem 0 1.5rem 0",
                         background: "linear-gradient(90deg, #f1f8e9 0%, #e0f7fa 100%)",
@@ -180,13 +218,14 @@ const Info = () => (
                             </li>
                         </ul>
                     </div>
-                    <div style={{
-                        flex: "0 0 180px",
-                        minWidth: 140,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center"
-                    }}>
+                    <div
+                        className="info-flex-img"
+                        style={{
+                            minWidth: 140,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center"
+                        }}>
                         <img
                             src="/choose-cocopeat.svg"
                             alt="Why Choose Our Cocopeat"
@@ -229,6 +268,7 @@ const Info = () => (
             <hr />
             {/* Custom Cocopeat Mixes Section */}
             <section
+                className="info-section info-flex-row"
                 style={{
                     margin: "2.5rem 0",
                     background: "linear-gradient(90deg, #e0f7fa 0%, #f7fafc 100%)",
@@ -275,13 +315,14 @@ const Info = () => (
                         <span role="img" aria-label="tip">💡</span> <span>Get the perfect blend for your crop and climate—just ask our experts!</span>
                     </div>
                 </div>
-                <div style={{
-                    flex: "0 0 220px",
-                    minWidth: 180,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center"
-                }}>
+                <div
+                    className="info-flex-img"
+                    style={{
+                        minWidth: 180,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
+                    }}>
                     <img
                         src="/mix-cocopeat-chips.svg"
                         alt="Custom Cocopeat Mix"

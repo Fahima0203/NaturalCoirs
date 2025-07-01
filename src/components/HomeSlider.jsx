@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { West, East} from '@mui/icons-material';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -70,10 +70,10 @@ function HomeSlider() {
         </SwiperSlide>
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+            <West style={{ width: '2.2rem', color: '#fff' }}/>
           </div>
           <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
+            <East style={{ width: '2.2rem', color: '#fff' }}/>
           </div>
           <div className="swiper-pagination"></div>
         </div>
