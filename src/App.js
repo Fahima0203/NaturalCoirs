@@ -15,9 +15,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:section/:product" element={<ProductDetails />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/info" element={<Info />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/AboutOurCocoProducts" element={<Info />} />
+        <Route path="/AboutUs" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
         {/* Add more routes as needed */}
       </Routes>
       <WhatsappCall message="Hi, I would like to order a custom product!" />
