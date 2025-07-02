@@ -40,8 +40,8 @@ function FooterContact() {
                                     </li>
                                     <li><a href="/" style={quickLinkStyle}>Home</a></li>
                                     <li><a href="/products" style={quickLinkStyle}>Products</a></li>
-                                    <li><a href="/about" style={quickLinkStyle}>About</a></li>
-                                    <li><a href="/info" style={quickLinkStyle}>About Our Coco Products</a></li>
+                                    <li><a href="/aboutourcocoproducts" style={quickLinkStyle}>About Our Coco Products</a></li>
+                                    <li><a href="/aboutus" style={quickLinkStyle}>About Us</a></li>
                                     <li><a href="/contact" style={quickLinkStyle}>Contact</a></li>
                                 </Col>
                             </Row>
