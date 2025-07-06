@@ -71,6 +71,60 @@ import cocopeatPowder25Kg2 from "../assets/products/Cocopeat Powder/25 Kg Bale/i
 import cocopeatPowder25Kg3 from "../assets/products/Cocopeat Powder/25 Kg Bale/image3.jpg";
 import cocopeatPowder25Kg4 from "../assets/products/Cocopeat Powder/25 Kg Bale/image4.jpg";
 
+// Coir Yarn/Rope - 2 Ply 7 mm
+import ply7mm22_1 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 17.jpg";
+import ply7mm22_2 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 20.jpg";
+import ply7mm22_3 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 21.jpg";
+import ply7mm22_4 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 23.jpg";
+import ply7mm22_5 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 25.jpg";
+import ply7mm22_6 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 26.jpg";
+import ply7mm22_7 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 27.jpg";
+import ply7mm22_8 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 28.jpg";
+import ply7mm22_9 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 30.jpg";
+import ply7mm22_10 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 31.jpg";
+import ply7mm22_11 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 32.jpg";
+import ply7mm22_12 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS).jpg";
+import ply7mm22_13 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (One Kg PCS) 1.jpg";
+import ply7mm22_14 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches 1.jpg";
+import ply7mm22_15 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches.jpg";
+import ply7mm30_1 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches (HALF Kg PCS) 7.jpg";
+import ply7mm30_2 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches.jpg";
+import ply7mm30_3 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 1.jpg";
+import ply7mm30_4 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 2.jpg";
+import ply7mm30_5 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 3.jpg";
+
+// Coir Yarn/Rope - 2 Ply 5 mm
+import ply5mm_1 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 2.jpg";
+import ply5mm_2 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 3.jpg";
+import ply5mm_3 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 5.jpg";
+import ply5mm_4 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 7.jpg";
+import ply5mm_5 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet.jpg";
+
+// Coir Yarn/Rope - 2 Ply 4 mm
+import ply4mm_1 from "../assets/products/Coir Yarn:Rope/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 1.jpg";
+import ply4mm_2 from "../assets/products/Coir Yarn:Rope/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 8.jpg";
+import ply4mm_3 from "../assets/products/Coir Yarn:Rope/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet.jpg";
+
+// Coir Yarn/Rope - 2 Ply 3 mm
+import ply3mm_1 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 1.jpg";
+import ply3mm_2 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 6.jpg";
+import ply3mm_3 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 7.jpg";
+import ply3mm_4 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 8.jpg";
+import ply3mm_5 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 9.jpg";
+import ply3mm_6 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 10.jpg";
+import ply3mm_7 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 11.jpg";
+import ply3mm_8 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 12.jpg";
+import ply3mm_9 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 13.jpg";
+import ply3mm_10 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 14.jpg";
+
+// Coir Yarn/Rope - Double Piece
+import doublePiece from "../assets/products/Coir Yarn:Rope/Double Piece/Double Piece.jpg";
+
+// Coir Yarn/Rope - Loose Twisted Spooling
+import looseTwisted1 from "../assets/products/Coir Yarn:Rope/Loose Twisted Spooling/Loose Twisted Spooling 1.jpg";
+import looseTwisted2 from "../assets/products/Coir Yarn:Rope/Loose Twisted Spooling/Loose Twisted Spooling 2.jpg";
+import looseTwisted3 from "../assets/products/Coir Yarn:Rope/Loose Twisted Spooling/Loose Twisted Spooling.jpg";
+
 export const productSections = [
     {
         title: "Cocopeat Blocks",
@@ -115,16 +169,33 @@ export const productSections = [
         description:
             "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
         products: [
-            { name: "2 Ply 7mm Coir Yarn", images: [] },
-            { name: "2 Ply 4mm Coir Yarn", images: [] },
-            { name: "2 Ply 3mm Coir Yarn", images: [] },
-            { name: "2 Ply 5mm Coir Yarn", images: [] },
-            { name: "2 Ply Coir Yarn 15 Feet / 18 Fee", images: [] },
-            { name: "3 Ply Coir Yarn 15 Feet / 18 Feet", images: [] },
-            { name: "Double Piece Coir Yarn", images: [] },
-            { name: "Hand Made Coir Rope Loose Twisted Spooling", images: [] },
-            { name: "Loose Twisted Spooling", images: [] },
-            { name: "Coir Rope (Vadam) 8ply / 10ply", images: [] },
+            {
+                name: "2 Ply 7 mm",
+                images: [
+                    ply7mm22_2, ply7mm22_1, ply7mm22_3, ply7mm22_4, ply7mm22_5, ply7mm22_6, ply7mm22_7, ply7mm22_8, ply7mm22_9, ply7mm22_10, ply7mm22_11, ply7mm22_12, ply7mm22_13, ply7mm22_14, ply7mm22_15,
+                    ply7mm30_1, ply7mm30_2, ply7mm30_3, ply7mm30_4, ply7mm30_5
+                ],
+            },
+            {
+                name: "2 Ply 5 mm",
+                images: [ply5mm_1, ply5mm_2, ply5mm_3, ply5mm_4, ply5mm_5],
+            },
+            {
+                name: "2 Ply 4 mm",
+                images: [ply4mm_1, ply4mm_2, ply4mm_3],
+            },
+            {
+                name: "2 Ply 3 mm",
+                images: [ply3mm_1, ply3mm_2, ply3mm_3, ply3mm_4, ply3mm_5, ply3mm_6, ply3mm_7, ply3mm_8, ply3mm_9, ply3mm_10],
+            },
+            {
+                name: "Double Piece",
+                images: [doublePiece],
+            },
+            {
+                name: "Loose Twisted Spooling",
+                images: [looseTwisted1, looseTwisted2, looseTwisted3],
+            },
         ],
     },
     {

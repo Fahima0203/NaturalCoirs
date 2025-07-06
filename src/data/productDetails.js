@@ -1,13 +1,4 @@
 export const productDetails = [
-    // {
-    //     section: "Cocopeat Blocks dummy",
-    //     name: "5 Kg",
-    //     brochure: "#",
-    //     video: "#",
-    //     specification: [
-    //         { label: "Expansion Volume", value: "8-9 liter" },
-    //     ],
-    //     description: `
     //         Coco peat, also known as coir pith, coir fibre pith, coir dust, or simply coir, is a by-product 
     //         of de-fabricated coconut husks from Coir Industries. Coir pith is an ideal soil re-conditioner, 
     //         soil structure improver and soil substrate with excellent water holding capacity.<br /><br />
@@ -15,8 +6,6 @@ export const productDetails = [
     //         5kg Blocks and 650gram Bricks according to customer's requirement. Coir Pith / Coco peat is washed, 
     //         heat-treated, screened and graded before being processed into coco peat products of various granularity 
     //         and density. Also used mostly in food waste treatment plant to cover them in to compost.<br /><br />
-    //     `
-    // },
     {
         section: "Cocopeat Blocks",
         name: "5 Kg",
@@ -49,10 +38,12 @@ export const productDetails = [
             or without any soil as growing medium for flowers, vegetables and fruits etc.,<br /><br />
         `,
         benefits: [
-            "Nutrient-rich: Coconut blocks provide vitamins, minerals, and healthy fats for overall health.",
-            "Versatile: Can be used in cooking, baking, and beverages for a rich coconut flavor.",
-            "Digestive Aid: High fiber content supports digestion and gut health.",
-            "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
+            "💧 High Water Retention – Holds up to 8–9× its weight in water.",
+            "🌬️ Excellent Aeration – Prevents compaction; promotes strong root growth.",
+            "🛡️ Disease Resistant – Naturally guards against root-borne diseases.",
+            "💪 Nutrient-Rich – High CEC for better nutrient absorption.",
+            "🚀 Boosts Growth – Supports fast germination and healthy growth.",
+            "🧼 Clean & Sterile – Free from weeds, pests, and contaminants.",
         ],
         chips_blocks: {
             text: `Coconut husk chips are either dried directly or washed and dried or buffered and dried according
@@ -117,10 +108,10 @@ export const productDetails = [
             or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
         `,
         benefits: [
-            "Nutrient-rich: Coconut blocks provide vitamins, minerals, and healthy fats for overall health.",
-            "Versatile: Can be used in cooking, baking, and beverages for a rich coconut flavor.",
-            "Digestive Aid: High fiber content supports digestion and gut health.",
-            "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
+            "Great for Water Retention and Airflow: Coconut coir holds water well and also allows air to reach plant roots, helping them grow strong.",
+            "Eco-Friendly: Made from coconut husks, it's a natural and sustainable product that helps reduce the use of peat moss, which is harmful to the environment.",
+            "Good for Plant Health: It has a neutral pH, suitable for many plants, and provides essential nutrients to the soil.",
+            "Resistant to Pests and Diseases: Coconut coir naturally fights off pests and diseases, which means fewer chemicals are needed to protect plants."
         ],
     },
     {
@@ -154,10 +145,12 @@ export const productDetails = [
             which can be mixed with soil or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
         `,
         benefits: [
-            "Nutrient-rich: Coconut blocks provide vitamins, minerals, and healthy fats for overall health.",
-            "Versatile: Can be used in cooking, baking, and beverages for a rich coconut flavor.",
-            "Digestive Aid: High fiber content supports digestion and gut health.",
-            "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
+            "💧 High Water Retention – Holds up to 8–9× its weight in water.",
+            "🌬️ Excellent Aeration – Prevents compaction; promotes strong root growth.",
+            "🛡️ Disease Resistant – Naturally guards against root-borne diseases.",
+            "💪 Nutrient-Rich – High CEC for better nutrient absorption.",
+            "🚀 Boosts Growth – Supports fast germination and healthy growth.",
+            "🧼 Clean & Sterile – Free from weeds, pests, and contaminants.",
         ],
         //chips blocks
     },
@@ -186,10 +179,12 @@ export const productDetails = [
             Rest are same as 5 Kg Block<br /><br />
         `,
         benefits: [
-            "Great for Water Retention and Airflow: Coconut coir holds water well and also allows air to reach plant roots, helping them grow strong.",
-            "Eco-Friendly: Made from coconut husks, it's a natural and sustainable product that helps reduce the use of peat moss, which is harmful to the environment.",
-            "Good for Plant Health: It has a neutral pH, suitable for many plants, and provides essential nutrients to the soil.",
-            "Resistant to Pests and Diseases: Coconut coir naturally fights off pests and diseases, which means fewer chemicals are needed to protect plants."
+            "💧 High Water Retention – Holds up to 8–9× its weight in water.",
+            "🌬️ Excellent Aeration – Prevents compaction; promotes strong root growth.",
+            "🛡️ Disease Resistant – Naturally guards against root-borne diseases.",
+            "💪 Nutrient-Rich – High CEC for better nutrient absorption.",
+            "🚀 Boosts Growth – Supports fast germination and healthy growth.",
+            "🧼 Clean & Sterile – Free from weeds, pests, and contaminants.",
         ],
         chips_blocks: {
             text: `Coconut husk chips are either dried directly or washed and dried or buffered and dried according 
@@ -236,15 +231,11 @@ export const productDetails = [
             { label: "Packing", value: "Steel Strap" },
             { label: "Min. Order", value: "1 × 20 HC" },
             { label: "Manufacturing Capacity", value: "8 × 40 HC per month" },
-            { label: "Country of Origin", value: "Made in India" },
             { label: "Own Production Capacity", value: "9Mt tones / day" },
-            { label: "Bale Weight", value: "105 +/- 3 Kg" },
             { label: "Loadability of 40Hc", value: "200 bales" },
             { label: "Colour", value: "Brown / white" },
             { label: "Impurities", value: "<5%" },
             { label: "Length", value: "7 - 10cm 20%" },
-            { label: "10-25cm", value: "80%" },
-            { label: "Packing", value: "Steel Strap" },
             { label: "Random EC", value: "0.21, 0.43" },
             { label: "Individual EC", value: "0.23, 0.47" },
             { label: "Moisture Before Blocking", value: "35-37%" },
@@ -254,7 +245,9 @@ export const productDetails = [
             { label: "Fiber", value: "250 ml / Kg" },
             { label: "Sand", value: "1.384% (18 gm) / Kg" },
             { label: "UV Bag", value: "550gg (Inner Black color, Outer White Color)" },
-            { label: "Dimensions", value: "30 x 35 x 65 cm" }
+            { label: "Dimensions", value: "30 x 35 x 65 cm" },
+            { label: "Country of Origin", value: "Made in India" },
+
         ],
         description: `
             Coir Fibre is a natural fiber extracted from the outer husk of coconuts. It is known for its durability, 
@@ -299,7 +292,17 @@ export const productDetails = [
             { label: "Impurities", value: "<5%" },
             { label: "Length", value: "7 - 10cm 20%" },
             { label: "10-25cm", value: "80%" },
-            { label: "Packing", value: "Steel Strap" }
+            { label: "Packing", value: "Steel Strap" },
+            { label: "Random EC", value: "0.21, 0.43" },
+            { label: "Individual EC", value: "0.23, 0.47" },
+            { label: "Moisture Before Blocking", value: "35-37%" },
+            { label: "Moisture After Blocking", value: "40%" },
+            { label: "Expansion", value: "9.5+ L/ Kg" },
+            { label: "Bale Weight (Approx)", value: "23 Kg" },
+            { label: "Fiber", value: "250 ml / Kg" },
+            { label: "Sand", value: "1.384% (18 gm) / Kg" },
+            { label: "UV Bag", value: "550gg (Inner Black color, Outer White Color)" },
+            { label: "Dimensions", value: "30 x 35 x 65 cm" },
         ],
         description: `
             Coir Fibre is a natural fiber extracted from the outer husk of coconuts. It is known for its durability, 
@@ -326,7 +329,7 @@ export const productDetails = [
     }, 
     {
         section: "Coir Yarn/Rope",
-        name: "2 Ply",
+        name: "2 Ply 7 mm",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
         brochure: "#",
@@ -334,7 +337,63 @@ export const productDetails = [
         specification: [
             { label: "Length", value: "20 m" },
             { label: "Rope Type", value: "Twisted" },
-            { label: "Strand Structure", value: "2 Ply" },
+            { label: "Strand Structure", value: "2 Ply 7 mm" },
+            { label: "Diameter", value: "7 mm" },
+            { label: "Color", value: "Light Brown" },
+            { label: "Usage/ Application", value: "Logging Industry" }
+        ],
+        description: `
+            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
+            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
+            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
+            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
+            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
+            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
+            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
+            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
+            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
+            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
+        `
+    },
+    {
+        section: "Coir Yarn/Rope",
+        name: "2 Ply 5 mm",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
+        specification: [
+            { label: "Length", value: "20 m" },
+            { label: "Rope Type", value: "Twisted" },
+            { label: "Strand Structure", value: "2 Ply 5 mm" },
+            { label: "Diameter", value: "5 mm" },
+            { label: "Color", value: "Light Brown" },
+            { label: "Usage/ Application", value: "Logging Industry" }
+        ],
+        description: `
+            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
+            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
+            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
+            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
+            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
+            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
+            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
+            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
+            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
+            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
+        `
+    },
+    {
+        section: "Coir Yarn/Rope",
+        name: "2 Ply 4 mm",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
+        specification: [
+            { label: "Length", value: "20 m" },
+            { label: "Rope Type", value: "Twisted" },
+            { label: "Strand Structure", value: "2 Ply 4 mm" },
             { label: "Diameter", value: "4 mm" },
             { label: "Color", value: "Light Brown" },
             { label: "Usage/ Application", value: "Logging Industry" }
@@ -354,7 +413,7 @@ export const productDetails = [
     },
     {
         section: "Coir Yarn/Rope",
-        name: "3 Ply",
+        name: "2 Ply 3 mm",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
         brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
@@ -362,7 +421,35 @@ export const productDetails = [
         specification: [
             { label: "Length", value: "20 m" },
             { label: "Rope Type", value: "Twisted" },
-            { label: "Strand Structure", value: "2 Ply" },
+            { label: "Strand Structure", value: "2 Ply 3 mm" },
+            { label: "Diameter", value: "3 mm" },
+            { label: "Color", value: "Light Brown" },
+            { label: "Usage/ Application", value: "Logging Industry" }
+        ],
+        description: `
+            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
+            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
+            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
+            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
+            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
+            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
+            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
+            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
+            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
+            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
+        `
+    },
+    {
+        section: "Coir Yarn/Rope",
+        name: "2 Ply 15 Feet / 18 Feet",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
+        specification: [
+            { label: "Length", value: "20 m" },
+            { label: "Rope Type", value: "Twisted" },
+            { label: "Strand Structure", value: "2 Ply 15 Feet / 18 Feet" },
             { label: "Diameter", value: "4 mm" },
             { label: "Color", value: "Light Brown" },
             { label: "Usage/ Application", value: "Logging Industry" }
@@ -382,15 +469,15 @@ export const productDetails = [
     },
     {
         section: "Coir Yarn/Rope",
-        name: "3 - 10 mm",
+        name: "3 Ply 15 Feet / 18 Feet",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
         brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
         video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
-            { label: "Length", value: "20 m" },
+            { label: "Length", value: "30 m" },
             { label: "Rope Type", value: "Twisted" },
-            { label: "Strand Structure", value: "2 Ply" },
+            { label: "Strand Structure", value: "3 Ply 15 Feet / 18 Feet" },
             { label: "Diameter", value: "4 mm" },
             { label: "Color", value: "Light Brown" },
             { label: "Usage/ Application", value: "Logging Industry" }
@@ -409,8 +496,153 @@ export const productDetails = [
         `
     },
     {
-        section: "Loose Powder",
+        section: "Coir Yarn/Rope",
+        name: "Double Piece",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
+        specification: [
+            { label: "Length", value: "20 m" },
+            { label: "Rope Type", value: "Twisted" },
+            { label: "Strand Structure", value: "Double Piece" },
+            { label: "Diameter", value: "4 mm" },
+            { label: "Color", value: "Light Brown" },
+            { label: "Usage/ Application", value: "Logging Industry" }
+        ],
+        description: `
+            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
+            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
+            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
+            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
+            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
+            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
+            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
+            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
+            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
+            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
+        `
+    },
+    {
+        section: "Coir Yarn/Rope",
+        name: "Hand Made Coir Rope Loose Twisted Spooling",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
+        specification: [
+            { label: "Length", value: "20 m" },
+            { label: "Rope Type", value: "Twisted" },
+            { label: "Strand Structure", value: "Hand Made Coir Rope Loose Twisted Spooling" },
+            { label: "Diameter", value: "4 mm" },
+            { label: "Color", value: "Light Brown" },
+            { label: "Usage/ Application", value: "Logging Industry" }
+        ],
+        description: `
+            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
+            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
+            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
+            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
+            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
+            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
+            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
+            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
+            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
+            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
+        `
+    },
+    {
+        section: "Coir Yarn/Rope",
+        name: "Loose Twisted Spooling",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
+        specification: [
+            { label: "Length", value: "20 m" },
+            { label: "Rope Type", value: "Twisted" },
+            { label: "Strand Structure", value: "Loose Twisted Spooling" },
+            { label: "Diameter", value: "4 mm" },
+            { label: "Color", value: "Light Brown" },
+            { label: "Usage/ Application", value: "Logging Industry" }
+        ],
+        description: `
+            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
+            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
+            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
+            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
+            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
+            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
+            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
+            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
+            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
+            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
+        `
+    },
+    {
+        section: "Coir Yarn/Rope",
+        name: "8ply / 10ply  (Vadam)",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
+        specification: [
+            { label: "Length", value: "20 m" },
+            { label: "Rope Type", value: "Twisted" },
+            { label: "Strand Structure", value: "8ply / 10ply  (Vadam)" },
+            { label: "Diameter", value: "4 mm" },
+            { label: "Color", value: "Light Brown" },
+            { label: "Usage/ Application", value: "Logging Industry" }
+        ],
+        description: `
+            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
+            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
+            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
+            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
+            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
+            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
+            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
+            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
+            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
+            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
+        `
+    },
+    {
+        section: "Cocopeat Powder",
         name: "Loose Powder",
+        price: "₹ 20/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://pdf.indiamart.com/impdf/2855465090948/MY-186662221/cocopeat-powder-high-ec.pdf",
+        video: "https://www.youtube.com/watch?v=jDu_-xBgFrM",
+        specification: [
+            { label: "Packaging Size", value: "25 Kg" },
+            { label: "Packing Type", value: "Loose" },
+            { label: "Moisture Content", value: "10% - 20%"},
+            { label: "Electrical Conductivity", value: "As per request" },
+            { label: "pH Level", value: "5.5 - 6.5" },
+            { label: "Particulate Size", value: "Fine to Coarse" },
+            { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
+            { label: "Air Porosity", value: "High, allowing for good aeration" },
+            { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
+            { label: "Country of Origin", value: "Made in India" }
+        ],
+        description: `
+            Mixes well with any soil and feels like smooth powder.<br /><br />
+            🌱 Use it for vegetables, flowers, fruits, home gardens, pots, or big farms – Coco Peat Powder makes growing simple and successful!<br /><br />
+        `,
+        benefits: [
+            "Right pH for Plants: Not too acidic, not too alkaline – just right for most crops (5.5 to 6.5).",
+            "Holds Water Like a Sponge: Keeps soil moist longer – saves water and helps during dry days.",
+            "Gives Air to Roots: Stops soil from getting too hard. Roots can breathe and grow better.",
+            "100% Natural & Safe: Made from coconuts, no chemicals. Safe for people, plants, and Earth.",
+            "Boosts Growth: Helps plants absorb water and nutrients better.",
+            "No Weeds or Pests: Naturally clean – keeps your soil free from bugs and fungus.",
+            "Lightweight & Easy to Use: Easy to carry, spread, and store – perfect for everyone.",
+        ]
+    },
+    {
+        section: "Cocopeat Powder",
+        name: "25 Kg Bale",
         price: "₹ 20/kg",
         minOrder: "2000 Kg",
         brochure: "https://pdf.indiamart.com/impdf/2855465090948/MY-186662221/cocopeat-powder-high-ec.pdf",

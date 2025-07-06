@@ -90,6 +90,30 @@ const ProductDetails = () => {
     const whatsappMsg = `Hi, I'm interested in ${product.name} (${section.title})`;
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
 
+    const coirYarnVariants = {
+        "2 Ply 7 mm": [
+            "2 Ply 7 mm 22 Inches (HALF Kg PCS)",
+            "2 Ply 7 mm 30 Inches (HALF Kg PCS)",
+            "2 Ply 7 mm 15 inches (250g PCS)"
+        ],
+        "2 Ply 4 mm": [
+            "2 Ply 4 mm 18 Inches 40 Feet (Per Kg 9 pcs)"
+        ],
+        "2 Ply 3 mm": [
+            "2 Ply 3 mm 18 Inches 40 Feet (Per Kg 13 Pcs)"
+        ],
+        "2 Ply 5 mm": [
+            "2 Ply 5 mm 48 Inches 40 Feet (Per Kg 7 pcs)",
+            "2 Ply 5 mm 40 Inches",
+            "2 Ply 5 mm Hand Made"
+        ],
+        "Double Piece": [
+            "Double Piece 15 Feet",
+            "Double Piece 18 Feet",
+            "Double Piece 24 Feet"
+        ]
+    };
+
     return (
         <>
             <div
@@ -285,6 +309,25 @@ const ProductDetails = () => {
                         <a href={brochure} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
                         <a href={video} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
                     </div>
+                    {/* --- Show sub-variants for Coir Yarn/Rope --- */}
+                    {section.title === "Coir Yarn/Rope" && coirYarnVariants[product.name] && (
+                        <div style={{
+                            margin: "18px 0 18px 0",
+                            padding: "18px 18px 12px 18px",
+                            background: "linear-gradient(90deg, #e0f2f1 0%, #f1f8e9 100%)",
+                            borderRadius: 10,
+                            boxShadow: "0 2px 8px rgba(8,108,92,0.07)"
+                        }}>
+                            <div style={{ fontWeight: 600, color: "#00695c", marginBottom: 8, fontSize: "1.13rem" }}>
+                                Available Variants:
+                            </div>
+                            <ul style={{ margin: 0, paddingLeft: 22, fontSize: "1.08rem", color: "#234" }}>
+                                {coirYarnVariants[product.name].map((variant, idx) => (
+                                    <li key={idx} style={{ marginBottom: 6 }}>{variant}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                     {/* Collapsible Specification */}
                     {specification.length > 0 && (
                         <div className="collapsible-section">
