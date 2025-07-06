@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import FooterContact from "../components/FooterContact";
 import { productSections } from "../data/productSections";
 import { productDetails } from "../data/productDetails";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const ProductDetails = () => {
     const { section: sectionParam, product: productParam } = useParams();
@@ -33,6 +33,43 @@ const ProductDetails = () => {
     const [openDesc, setOpenDesc] = useState(false);
     const [openBenefits, setOpenBenefits] = useState(false);
     const [openChipsBlocks, setOpenChipsBlocks] = useState(false);
+
+    const thumbnailsRef = useRef(null);
+    const [showLeftArrow, setShowLeftArrow] = useState(false);
+    const [showRightArrow, setShowRightArrow] = useState(false);
+
+    // Helper to scroll thumbnails
+    const scrollThumbnails = (dir) => {
+        const el = thumbnailsRef.current;
+        if (!el) return;
+        const scrollAmount = 80; // px per click
+        if (dir === "left") {
+            el.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        } else {
+            el.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+    };
+
+    // Check if arrows should be shown (thumbnails overflow)
+    const updateArrows = () => {
+        const el = thumbnailsRef.current;
+        if (!el) return;
+        setShowLeftArrow(el.scrollLeft > 0);
+        setShowRightArrow(el.scrollLeft + el.clientWidth < el.scrollWidth - 2);
+    };
+
+    // Attach scroll/resize listeners
+    useEffect(() => {
+        updateArrows();
+        const el = thumbnailsRef.current;
+        if (!el) return;
+        el.addEventListener("scroll", updateArrows);
+        window.addEventListener("resize", updateArrows);
+        return () => {
+            el.removeEventListener("scroll", updateArrows);
+            window.removeEventListener("resize", updateArrows);
+        };
+    }, [product?.images?.length]);
 
     if (!section || !product) {
         return <div style={{ padding: 40 }}>Product not found.</div>;
@@ -119,34 +156,101 @@ const ProductDetails = () => {
                             }}
                         />
                     </div>
-                    {/* Thumbnails */}
-                    <div
-                        className="product-thumbnails"
-                        style={{
-                            display: "flex",
-                            gap: 12,
-                            marginBottom: 12,
-                            overflowX: "auto"
-                        }}
-                    >
-                        {product.images.map((img, idx) => (
-                            <img
-                                key={img}
-                                src={img}
-                                alt=""
+                    {/* Thumbnails with arrows and scroll */}
+                    <div style={{ position: "relative", width: "100%" }}>
+                        {/* Left Arrow */}
+                        {showLeftArrow && (
+                            <button
+                                type="button"
+                                aria-label="Scroll thumbnails left"
+                                onClick={() => scrollThumbnails("left")}
                                 style={{
-                                    width: 60,
-                                    height: 60,
-                                    borderRadius: 4,
-                                    objectFit: "cover",
-                                    border: mainImg === img ? "2px solid #009688" : "1px solid #eee",
+                                    position: "absolute",
+                                    left: -18,
+                                    top: "50%",
+                                    transform: "translateY(-50%)",
+                                    zIndex: 2,
+                                    background: "#fff",
+                                    border: "1px solid #ccc",
+                                    borderRadius: "50%",
+                                    width: 32,
+                                    height: 32,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
                                     cursor: "pointer",
-                                    background: "#fafafa",
-                                    flex: "0 0 auto"
+                                    opacity: 0.85,
                                 }}
-                                onClick={() => setMainImg(img)}
-                            />
-                        ))}
+                            >
+                                <svg width="18" height="18" viewBox="0 0 24 24">
+                                    <polyline points="15 18 9 12 15 6" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </button>
+                        )}
+                        <div
+                            className="product-thumbnails"
+                            ref={thumbnailsRef}
+                            style={{
+                                display: "flex",
+                                gap: 12,
+                                marginBottom: 12,
+                                overflowX: "auto",
+                                scrollBehavior: "smooth",
+                                padding: "2px 0",
+                                scrollbarWidth: "none"
+                            }}
+                            tabIndex={0}
+                        >
+                            {product.images.map((img, idx) => (
+                                <img
+                                    key={img}
+                                    src={img}
+                                    alt=""
+                                    style={{
+                                        width: 60,
+                                        height: 60,
+                                        borderRadius: 4,
+                                        objectFit: "cover",
+                                        border: mainImg === img ? "2px solid #009688" : "1px solid #eee",
+                                        cursor: "pointer",
+                                        background: "#fafafa",
+                                        flex: "0 0 auto"
+                                    }}
+                                    onClick={() => setMainImg(img)}
+                                />
+                            ))}
+                        </div>
+                        {/* Right Arrow */}
+                        {showRightArrow && (
+                            <button
+                                type="button"
+                                aria-label="Scroll thumbnails right"
+                                onClick={() => scrollThumbnails("right")}
+                                style={{
+                                    position: "absolute",
+                                    right: -18,
+                                    top: "50%",
+                                    transform: "translateY(-50%)",
+                                    zIndex: 2,
+                                    background: "#fff",
+                                    border: "1px solid #ccc",
+                                    borderRadius: "50%",
+                                    width: 32,
+                                    height: 32,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+                                    cursor: "pointer",
+                                    opacity: 0.85,
+                                }}
+                            >
+                                <svg width="18" height="18" viewBox="0 0 24 24">
+                                    <polyline points="9 6 15 12 9 18" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </button>
+                        )}
                     </div>
                 </div>
                 {/* Right: Info */}
@@ -157,7 +261,7 @@ const ProductDetails = () => {
                     </h2>
                     {/* Price, Get Latest Price, MOQ */}
                     <div style={{ fontSize: "1.18rem", marginBottom: 4, display: "flex", alignItems: "center", gap: 12 }}>
-                        <span style={{ fontWeight: 500 }}>{price}</span>
+                        {/* <span style={{ fontWeight: 500 }}>{price}</span> */}
                         <a
                             href={whatsappLink}
                             target="_blank"
@@ -167,7 +271,6 @@ const ProductDetails = () => {
                                 fontWeight: 600,
                                 fontSize: "1.05rem",
                                 textDecoration: "underline",
-                                marginLeft: 6,
                                 cursor: "pointer"
                             }}
                         >
@@ -253,7 +356,7 @@ const ProductDetails = () => {
                                 className="collapsible-header"
                                 aria-expanded={openChipsBlocks}
                             >
-                                <span>Husk Chips Blocks</span>
+                                <span>Coco Husk Chips Blocks</span>
                                 <span
                                     className="chevron"
                                     style={{
@@ -277,9 +380,10 @@ const ProductDetails = () => {
                                                     <tr style={{ background: "rgb(8, 108, 92)" }}>
                                                         <th style={{ color: "#fff", padding: "10px 8px", border: "1px solid #388e3c" }}>Product Code</th>
                                                         <th style={{ color: "#fff", padding: "10px 8px", border: "1px solid #388e3c" }}>Product Name</th>
-                                                        <th style={{ color: "#fff", padding: "10px 8px", border: "1px solid #388e3c" }}>Size (cms)</th>
+                                                        <th style={{ color: "#fff", padding: "10px 8px", border: "1px solid #388e3c" }}>Block Size(cm) (±5%)</th>
+                                                        <th style={{ color: "#fff", padding: "10px 8px", border: "1px solid #388e3c" }}>Particle Size(mm) (±5%)</th>
                                                         <th style={{ color: "#fff", padding: "10px 8px", border: "1px solid #388e3c" }}>Mixture</th>
-                                                        <th style={{ color: "#fff", padding: "10px 8px", border: "1px solid #388e3c" }}>Approx Expansion Volume(lts)</th>
+                                                        <th style={{ color: "#fff", padding: "10px 8px", border: "1px solid #388e3c" }}>Approx Expansion Volume</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -288,6 +392,7 @@ const ProductDetails = () => {
                                                             <td style={{ border: "1px solid #e0e0e0", padding: "10px 8px"}}>{row.product_code}</td>
                                                             <td style={{ border: "1px solid #e0e0e0", padding: "10px 8px", color: "#888", fontWeight: 600 }}>{row.product_name}</td>
                                                             <td style={{ border: "1px solid #e0e0e0", padding: "10px 8px"}}>{row.size}</td>
+                                                            <td style={{ border: "1px solid #e0e0e0", padding: "10px 8px"}}>{row.particle_size}</td>
                                                             <td style={{ border: "1px solid #e0e0e0", padding: "10px 8px"}}>{row.mixture}</td>
                                                             <td style={{ border: "1px solid #e0e0e0", padding: "10px 8px"}}>{row.expansion_volume}</td>
                                                         </tr>
@@ -483,6 +588,9 @@ const ProductDetails = () => {
                 .yes-interested-btn:hover, .yes-interested-btn:focus {
                     background: #00796b !important;
                     color: #fff !important;
+                }
+                .product-thumbnails::-webkit-scrollbar {
+                    display: none;
                 }
                 `}
             </style>

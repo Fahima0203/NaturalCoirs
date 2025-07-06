@@ -25,28 +25,28 @@ export const productDetails = [
         brochure: "https://pdf.indiamart.com/impdf/2855083288212/MY-186662221/5-kg-high-ec-cocopeat-block.pdf",
         video: "https://www.youtube.com/watch?v=XaRSPjKTw0A",
         specification: [
-            { label: "Packaging Size", value: "5 kg" },
-            { label: "Dimensions", value: "30 x 30 x 12 cm" },
+            { label: "Packaging Size", value: "5 Kg (±5%)" },
+            { label: "Dimensions", value: "30 x 30 x 12 cm (±5%)" },
             { label: "Shape", value: "Cube/Cuboid" },
             { label: "Product Type", value: "Coir Pith" },
             { label: "Moisture Content", value: "10% - 20%" },
-            { label: "Electrical Conductivity", value: "As per request" },
+            { label: "Electrical Conductivity", value: "0.2 to 3.0 mS/cm" },
             { label: "pH Level", value: "5.5 - 6.5" },
-            { label: "Particulate Size", value: "Fine to Coarse" },
-            { label: "Compression Ratio", value: "Typically compressed to 1/5 of original volume" },
+            { label: "Particle Size", value: "Fine to Coarse" },
+            { label: "Compression Ratio", value: "1:5 or 1:6" },
             { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
             { label: "Air Porosity", value: "High, allowing for good aeration" },
             { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
             { label: "Country of Origin", value: "Made in India" },
         ],
         description: `
-            Coco Peat is available as Natural (regular), Washed & Buffered Material (Calcium Nitrate Treated). 
-            This Coco peat is Compressed in 1:5 ratio to form 5kg blocks of bearing measurement 30 x 30 x 12 cm.<br /><br />
+            Coco Peat is available as Natural (regular), Washed and Buffered (Calcium Nitrate Treated) Material. 
+            This Coco peat is Compressed in 1:5 or 1:6 ratio to form 5 Kg (±5%) blocks of bearing measurement 30 x 30 x 12 cm (±5%).<br /><br />
             This compression is done for the convenience of transportation. 
             Coco peat has an unique future to with stand high compaction without changing its properties. 
-            When one kg of this block is hydrated with 3lts of water, you get a yield of 15 lts and above. 
-            So, approximately you will get 75 lts of yield from a 5kg coco peat block, which can be mixed with soil 
-            or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
+            When one Kg of this block is hydrated with 4 liters of water, you get a yield of upto 18 liters and above. 
+            So, approximately you will get upto 85 liters of yield from a 5 Kg coco peat block, which can be mixed with soil 
+            or without any soil as growing medium for flowers, vegetables and fruits etc.,<br /><br />
         `,
         benefits: [
             "Nutrient-rich: Coconut blocks provide vitamins, minerals, and healthy fats for overall health.",
@@ -55,29 +55,32 @@ export const productDetails = [
             "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
         ],
         chips_blocks: {
-            text: `Coconut husk chips are either dried directly or washed and dried or buffered and dried according 
-            to our customer’s need. The dried husk chip is then compressed with extra care in 5 kg compacting machines.`,
+            text: `Coconut husk chips are either dried directly or washed and dried or buffered and dried according
+            to our customer’s need. The dried husk chip is then compressed with extra care in 5 Kg compacting machines.`,
             table: [
                 {
                     product_code: "210",
                     product_name: "5Kg Chips Unwashed Regular",
                     size: "30 x 30 x 12",
+                    particle_size: "4-14 or 10-20 mm",
                     mixture: "100% Husk Chips",
-                    expansion_volume: "60-65"
+                    expansion_volume: "upto 65 liters"
                 },
                 {
                     product_code: "211",
                     product_name: "5Kg Chips washed",
                     size: "30 x 30 x 12",
+                    particle_size: "4-14 or 10-20 mm",
                     mixture: "100% Husk Chips",
-                    expansion_volume: "65-70"
+                    expansion_volume: "upto 65 liters"
                 },
                 {
                     product_code: "212",
                     product_name: "5Kg Chips Buffered",
                     size: "30 x 30 x 12",
+                    particle_size: "4-14 or 10-20 mm",
                     mixture: "100% Husk Chips",
-                    expansion_volume: "65-70"
+                    expansion_volume: "upto 65 liters"
                 }
             ]
         }
@@ -90,27 +93,27 @@ export const productDetails = [
         brochure: "https://pdf.indiamart.com/impdf/2856701719997/MY-186662221/high-ec-2kg-cocopeat-blocks.pdf",
         video: "https://www.youtube.com/shorts/Mgd8mD9srT8",
         specification: [
-            { label: "Packaging Size", value: "2 kg" },
-            { label: "Dimensions", value: "30 x 15 x 12 cm" },
+            { label: "Packaging Size", value: "2 kg (±5%)" },
+            { label: "Dimensions", value: "30 x 15 x 12 cm (±5%)" },
             { label: "Shape", value: "Cube/Cuboid" },
             { label: "Product Type", value: "Coir Pith" },
             { label: "Moisture Content", value: "10% - 20%" },
-            { label: "Electrical Conductivity", value: "As per request" },
+            { label: "Electrical Conductivity", value: "0.2 to 3.0 mS/cm" },
             { label: "pH Level", value: "5.5 - 6.5" },
-            { label: "Particulate Size", value: "Fine to Coarse" },
-            { label: "Compression Ratio", value: "Typically compressed to 1/5 of original volume" },
+            { label: "Particle Size", value: "Fine to Coarse" },
+            { label: "Compression Ratio", value: "1:5 or 1:6" },
             { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
             { label: "Air Porosity", value: "High, allowing for good aeration" },
             { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
             { label: "Country of Origin", value: "Made in India" },
         ],
         description: `
-            Coco Peat is available as Natural (regular), Washed & Buffered Material (Calcium Nitrate Treated). 
-            This Coco peat is Compressed in 1:5 ratio to form 5kg blocks of bearing measurement 30 x 15 x 12 cm.<br /><br />
+            Coco Peat is available as Natural (regular), Washed and Buffered (Calcium Nitrate Treated) Material. 
+            This Coco peat is Compressed in 1:5 or 1:6 ratio to form 2 Kg (±5%) blocks of bearing measurement 30 x 15 x 12 cm (±5%).<br /><br />
             This compression is done for the convenience of transportation. 
             Coco peat has an unique future to with stand high compaction without changing its properties. 
-            When one kg of this block is hydrated with 3lts of water, you get a yield of 15 lts and above. 
-            So, approximately you will get 30 lts of yield from a 2kg coco peat block, which can be mixed with soil 
+            When one Kg of this block is hydrated with 4 liters of water, you get a yield of 18 liters and above. 
+            So, approximately you will get 36 liters of yield from a 2 Kg coco peat block, which can be mixed with soil 
             or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
         `,
         benefits: [
@@ -119,7 +122,6 @@ export const productDetails = [
             "Digestive Aid: High fiber content supports digestion and gut health.",
             "Skin and Hair Care: Moisturizing properties benefit skin and hair when used topically."
         ],
-        //chips blocks
     },
     {
         section: "Cocopeat Blocks",
@@ -129,26 +131,26 @@ export const productDetails = [
         brochure: "#",
         video: "#",
         specification: [
-            { label: "Packaging Size", value: "1 kg" },
-            { label: "Dimensions", value: "15 x 15 x 12 cm" },
+            { label: "Packaging Size", value: "1 Kg (±5%)" },
+            { label: "Dimensions", value: "15 x 15 x 12 cm (±5%)" },
             { label: "Shape", value: "Cube/Cuboid" },
             { label: "Product Type", value: "Coir Pith" },
             { label: "Moisture Content", value: "10% - 20%" },
-            { label: "Electrical Conductivity", value: "As per request" },
+            { label: "Electrical Conductivity", value: "0.2 to 3.0 mS/cm" },
             { label: "pH Level", value: "5.5 - 6.5" },
-            { label: "Particulate Size", value: "Fine to Coarse" },
-            { label: "Compression Ratio", value: "Typically compressed to 1/5 of original volume" },
+            { label: "Particle Size", value: "Fine to Coarse" },
+            { label: "Compression Ratio", value: "1:5 or 1:6" },
             { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
             { label: "Air Porosity", value: "High, allowing for good aeration" },
             { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
             { label: "Country of Origin", value: "Made in India" },
         ],
         description: `
-            Coco Peat is available as Natural (regular), Washed & Buffered Material (Calcium Nitrate Treated). 
-            This Coco peat is Compressed in 1:5 ratio to form 1kg blocks of bearing measurement 15 x 15 x 12 cm.<br /><br />
+            Coco Peat is available as Natural (regular), Washed and Buffered (Calcium Nitrate Treated) Material . 
+            This Coco peat is Compressed in 1:5 or 1:6 ratio to form 1 Kg (±5%) blocks of bearing measurement 15 x 15 x 12 cm (±5%).<br /><br />
             This compression is done for the convenience of transportation. 
             Coco peat has an unique future to with stand high compaction without changing its properties. 
-            One kg of this block is hydrated with 3lts of water, so approximately you will get a yield of 15 lts and above, 
+            One kg of this block is hydrated with 4 liters of water, so approximately you will get a yield of 18 liters and above, 
             which can be mixed with soil or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
         `,
         benefits: [
@@ -167,21 +169,21 @@ export const productDetails = [
         brochure: "#",
         video: "https://www.youtube.com/watch?v=3g2ew-PWeSE",
         specification: [
-            { label: "Packing", value: "Individual Shrink Wrapped with labels on both sides. Bricks in (pallet) carton Box with 20 nos in one box" },
-            { label: "Dimensions", value: "19 x 9 x 5 cm " },
+            { label: "Unit Weight", value: "650 gm (±50g)" },
+            { label: "Dimensions", value: "19 x 9 x 5 cm (±5%)" },
             { label: "Shape", value: "Cube/Cuboid" },
-            { label: "Unit Weight", value: "650 gm. (+ / - 50g.)" },
-            { label: "Moisture", value: "15-20% Change" },
-            { label: "Electro Conductivity", value: "Below 0.5 mS / cm" },
+            { label: "Packing", value: "Individual Shrink Wrapped with labels on both sides. Bricks in (pallet) carton Box with 20 nos in one box" },
+            { label: "Moisture", value: "10% - 20%" },
+            { label: "Electrical Conductivity", value: "0.2 to 3.0 mS/cm" },
             { label: "pH Level", value: "6.5 - 7.5" },
-            { label: "Compression Ratio", value: "8 : 1" },
+            { label: "Compression Ratio", value: "1 : 8" },
             { label: "Expansion Volume", value: "8-9 liters" },
             { label: "Country of Origin", value: "Made in India" },
         ],
         description: `
-            Coco Peat is available as Natural (regular/un-washed), Washed & Buffered Material (Calcium Nitrate Treated). 
-            This Coco peat is Compressed in 1:8 ratio to form 650kg blocks of bearing measurement 28X28X12 cm.<br /><br />
-            Rest are same as 5Kg<br /><br />
+            Coco Peat is available as Natural (regular/un-washed), Washed and Buffered (Calcium Nitrate Treated) Material. 
+            This Coco peat is Compressed in 1:8 ratio to form 650 gm (±50g) blocks of bearing measurement 28 X 28 X 12 cm (±5%).<br /><br />
+            Rest are same as 5 Kg Block<br /><br />
         `,
         benefits: [
             "Great for Water Retention and Airflow: Coconut coir holds water well and also allows air to reach plant roots, helping them grow strong.",
@@ -197,54 +199,62 @@ export const productDetails = [
                     product_code: "310",
                     product_name: "Chips Regular",
                     size: "20 X 10 X 15",
+                    particle_size: "4-14 or 10-20 mm",
                     mixture: "100% Husk Chips",
-                    expansion_volume: "7"
+                    expansion_volume: "8-9 liters"
                 },
                 {
                     product_code: "311",
                     product_name: "650g Chips washed",
                     size: "20 X 10 X 15",
+                    particle_size: "4-14 or 10-20 mm",
                     mixture: "100% Husk Chips",
-                    expansion_volume: "8-9"
+                    expansion_volume: "8-9 liters"
                 },
                 {
                     product_code: "312",
                     product_name: "650g Chips Buffered",
                     size: "20 X 10 X 15",
+                    particle_size: "4-14 or 10-20 mm",
                     mixture: "100% Husk Chips",
-                    expansion_volume: "8-9"
+                    expansion_volume: "8-9 liters"
                 }
             ]
         }
-        //chips blocks
     },
     {
         section: "Coir Fibre",
         name: "120 Kg Bale",
         price: "₹ 19/kg",
-        minOrder: "22000 Kg",
+        minOrder: "11000 Kg",
         brochure: "#",
         video: "#",
         specification: [
             { label: "Bale Size", value: "120 x 60 x 60 cm" },
-            { label: "Unit Weight (± 5%)", value: "120 kgs" },
-            { label: "Moisture", value: "15-20%" },
-            { label: "pH Level", value: "5.5 to 6.5" },
-            { label: "Electro Conductivity", value: ">1.0 ms/cm (High EC block) & < 0.5 ms/cm (Low EC block)" },
-            { label: "Hydrated Yield (Liters)", value: "900 to 1000 liters" },
-            { label: "Packing", value: "UV bag with 550 gg thickness. Palletized: 20 nos per 40 HC." },
-            { label: "Min. Order", value: "1×40 HC" },
-            { label: "Manufacturing Capacity", value: "8×40 HC per month" },
+            { label: "Unit Weight (± 5%)", value: "120 Kg" },
+            { label: "Moisture", value: " < 15 %" },
+            { label: "Packing", value: "Steel Strap" },
+            { label: "Min. Order", value: "1 × 20 HC" },
+            { label: "Manufacturing Capacity", value: "8 × 40 HC per month" },
             { label: "Country of Origin", value: "Made in India" },
             { label: "Own Production Capacity", value: "9Mt tones / day" },
-            { label: "Bale Weight", value: "105 +/- 3 kgs." },
+            { label: "Bale Weight", value: "105 +/- 3 Kg" },
             { label: "Loadability of 40Hc", value: "200 bales" },
-            { label: "Moisture", value: "< 20%" },
             { label: "Colour", value: "Brown / white" },
             { label: "Impurities", value: "<5%" },
             { label: "Length", value: "7 - 10cm 20%" },
             { label: "10-25cm", value: "80%" },
-            { label: "Packing", value: "Steel Strap" }
+            { label: "Packing", value: "Steel Strap" },
+            { label: "Random EC", value: "0.21, 0.43" },
+            { label: "Individual EC", value: "0.23, 0.47" },
+            { label: "Moisture Before Blocking", value: "35-37%" },
+            { label: "Moisture After Blocking", value: "40%" },
+            { label: "Expansion", value: "9.5+ L/ Kg" },
+            { label: "Bale Weight (Approx)", value: "23 Kg" },
+            { label: "Fiber", value: "250 ml / Kg" },
+            { label: "Sand", value: "1.384% (18 gm) / Kg" },
+            { label: "UV Bag", value: "550gg (Inner Black color, Outer White Color)" },
+            { label: "Dimensions", value: "30 x 35 x 65 cm" }
         ],
         description: `
             Coir Fibre is a natural fiber extracted from the outer husk of coconuts. It is known for its durability, 

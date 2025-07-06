@@ -516,4 +516,5 @@ const About = () => (
     </>
 );
 
+export { RunningBadge };
 export default About;
