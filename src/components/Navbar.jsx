@@ -4,36 +4,74 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../assets/nc_logo.png';
 import '../styles/Navbar.css';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { productSections } from "../data/productSections";
 
-const productMenu = [
-    { label: "Cocopeat Blocks 5 Kg", to: "/products/Cocopeat Blocks/5 Kg" },
-    { label: "Cocopeat Blocks 2 Kg", to: "/products/Cocopeat Blocks/2 Kg" },
-    { label: "Cocopeat Blocks 1 Kg", to: "/products/Cocopeat Blocks/1 Kg" },
-    { label: "Cocopeat Blocks 650g", to: "/products/Cocopeat Blocks/650g" },
-    { label: "Coir Fibre 120 Kg Bale", to: "/products/Coir Fibre/120 Kg Bale" },
-    { label: "Coir Fibre 30 Kg Bale", to: "/products/Coir Fibre/30 Kg Bale" },
-    { label: "Coir Yarn/Rope 2 Ply", to: "/products/Coir Yarn%2FRope/2 Ply" },
-    { label: "Coir Yarn/Rope 3 Ply", to: "/products/Coir Yarn%2FRope/3 Ply" },
-    { label: "Coir Yarn/Rope 3 - 10 mm", to: "/products/Coir Yarn%2FRope/3 - 10 mm" },
-    { label: "Loose Powder", to: "/products/Loose Powder/Loose Powder" },
-];
 
 function Nbar() {
     const navigate = useNavigate();
+    const location = useLocation();
+
+    // Helper to check if a path is active
+    const isActive = (path) => location.pathname === path;
 
     return (
-        <Navbar expand="lg" className="my-navbar">
-            <Container>
-                <img src={logo} style={{ width: "70px", borderRadius: "30px", height:"60px", marginRight: "25px" }} alt="" />
-                <Navbar.Brand href="/">Natural Coirs</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar
+            expand="lg"
+            className="my-navbar enhanced-navbar"
+            style={{
+                borderRadius: 18,
+                margin: "18px 18px 28px 18px",
+                boxShadow: "0 4px 24px #00968822",
+                padding: "0.4rem 0.7rem",
+                background: "linear-gradient(90deg, #00695c 0%, #43a047 100%)"
+            }}
+            sticky="top"
+        >
+            <Container fluid style={{paddingLeft: 0, paddingRight: 0}}>
+                <Link to="/" style={{display: "flex", alignItems: "center", textDecoration: "none"}}>
+                    <img
+                        src={logo}
+                        style={{
+                            width: "58px",
+                            height: "48px",
+                            borderRadius: "18px",
+                            marginRight: "16px",
+                            boxShadow: "0 2px 8px #00968833"
+                        }}
+                        alt="Natural Coirs Logo"
+                    />
+                    <Navbar.Brand
+                        as="span"
+                        style={{
+                            color: "#fff",
+                            fontWeight: 800,
+                            fontSize: "1.45rem",
+                            letterSpacing: "0.03em",
+                            textShadow: "0 2px 8px #00968833"
+                        }}
+                    >
+                        Natural Coirs
+                    </Navbar.Brand>
+                </Link>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" style={{border: "none", background: "#fff", color: "#009688"}} />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
+                    <Nav className="ms-auto" style={{alignItems: "center", gap: "0.5rem"}}>
+                        <Nav.Link
+                            as={Link}
+                            to="/"
+                            className={isActive("/") ? "nav-link-active" : ""}
+                        >
+                            Home
+                        </Nav.Link>
                         <NavDropdown
                             title={
                                 <span
+                                    style={{
+                                        fontWeight: 600,
+                                        color: "#fff",
+                                        letterSpacing: "0.01em"
+                                    }}
                                     onClick={e => {
                                         e.preventDefault();
                                         navigate("/Products");
@@ -42,23 +80,60 @@ function Nbar() {
                                     Products
                                 </span>
                             }
+                            id="products-nav-dropdown"
+                            menuVariant="light"
+                            className={location.pathname.startsWith("/products") ? "nav-link-active" : ""}
                         >
-                            {productMenu.map((item) => (
-                                <NavDropdown.Item
-                                    as={Link}
-                                    to={item.to}
-                                    key={item.label}
-                                    style={{
-                                        cursor: "pointer"
-                                    }}
+                            {productSections.map((section) => (
+                                <NavDropdown
+                                    key={section.title}
+                                    title={
+                                        <span style={{fontWeight: 600, color: "#00695c"}}>
+                                            {section.title}
+                                        </span>
+                                    }
+                                    id={`nav-dropdown-${section.title.replace(/\s+/g, "-").toLowerCase()}`}
+                                    drop="end"
+                                    className="products-category-dropdown"
                                 >
-                                    {item.label}
-                                </NavDropdown.Item>
+                                    {section.products.map((prod) => (
+                                        <NavDropdown.Item
+                                            as={Link}
+                                            to={`/products/${encodeURIComponent(section.title)}/${encodeURIComponent(prod.name)}`}
+                                            key={prod.name}
+                                            style={{
+                                                fontWeight: 500,
+                                                color: "#1976d2",
+                                                background: "none"
+                                            }}
+                                        >
+                                            {prod.name}
+                                        </NavDropdown.Item>
+                                    ))}
+                                </NavDropdown>
                             ))}
                         </NavDropdown>
-                        <Nav.Link href="/AboutOurCocoProducts">About Our Coco Products</Nav.Link>
-                        <Nav.Link href="/AboutUs">About Us</Nav.Link>
-                        <Nav.Link href="/Contact">Contact</Nav.Link>
+                        <Nav.Link
+                            as={Link}
+                            to="/AboutOurCocoProducts"
+                            className={isActive("/AboutOurCocoProducts") ? "nav-link-active" : ""}
+                        >
+                            About Our Coco Products
+                        </Nav.Link>
+                        <Nav.Link
+                            as={Link}
+                            to="/AboutUs"
+                            className={isActive("/AboutUs") ? "nav-link-active" : ""}
+                        >
+                            About Us
+                        </Nav.Link>
+                        <Nav.Link
+                            as={Link}
+                            to="/Contact"
+                            className={isActive("/Contact") ? "nav-link-active" : ""}
+                        >
+                            Contact
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

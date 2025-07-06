@@ -369,6 +369,32 @@ const Products = () => {
                     .product-sidebar-col {
                         display: none !important;
                     }
+                    .products-page-description {
+                        font-size: 0.97rem !important;
+                        padding: 0.6rem 0.7rem !important;
+                        margin: 0 0.5rem 1.2rem 0.5rem !important;
+                    }
+                    .search-bar-enhanced {
+                        padding: 0.07rem 0.5rem !important;
+                        max-width: 100% !important;
+                    }
+                    .search-bar-enhanced input {
+                        font-size: 0.93rem !important;
+                        padding: 0.22rem 0 !important;
+                    }
+                }
+                @media (max-width: 430px) {
+                    .products-page-description {
+                        font-size: 0.92rem !important;
+                        padding: 0.45rem 0.4rem !important;
+                        margin: 0 0.2rem 1rem 0.2rem !important;
+                    }
+                    .search-bar-enhanced {
+                        padding: 0.04rem 0.3rem !important;
+                    }
+                    .search-bar-enhanced input {
+                        font-size: 0.89rem !important;
+                    }
                 }
                 `}
             </style>
