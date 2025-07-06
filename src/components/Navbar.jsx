@@ -6,9 +6,24 @@ import logo from '../assets/nc_logo.png';
 import '../styles/Navbar.css';
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { productSections } from "../data/productSections";
-
+import React, { useState, useCallback } from 'react';
 
 function Nbar() {
+    const [showProducts, setShowProducts] = useState(false);
+    const [hoveredSection, setHoveredSection] = useState(null);
+
+    const showDropdown = useCallback(() => setShowProducts(true), []);
+    const hideDropdown = useCallback(() => setShowProducts(false), []);
+
+    const showNestedDropdown = useCallback((section) => {
+        setHoveredSection(section);
+        setShowProducts(true);
+    }, []);
+    const hideNestedDropdown = useCallback(() => {
+        setHoveredSection(null);
+        setShowProducts(false);
+    }, []);
+
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -83,6 +98,9 @@ function Nbar() {
                             id="products-nav-dropdown"
                             menuVariant="light"
                             className={location.pathname.startsWith("/products") ? "nav-link-active" : ""}
+                            show={showProducts}
+                            onMouseEnter={showDropdown}
+                            onMouseLeave={hideDropdown}
                         >
                             {productSections.map((section) => (
                                 <NavDropdown
@@ -95,6 +113,9 @@ function Nbar() {
                                     id={`nav-dropdown-${section.title.replace(/\s+/g, "-").toLowerCase()}`}
                                     drop="end"
                                     className="products-category-dropdown"
+                                    show={hoveredSection === section}
+                                    onMouseEnter={() => showNestedDropdown(section)}
+                                    onMouseLeave={hideNestedDropdown}
                                 >
                                     {section.products.map((prod) => (
                                         <NavDropdown.Item
