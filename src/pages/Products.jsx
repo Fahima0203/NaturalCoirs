@@ -6,7 +6,7 @@ import { productSections } from "../data/productSections";
 
 const pageTitle = "Our Products";
 const pageDescription =
-    "Explore our range of premium coir products, including coco peat blocks and coir yarn, sourced and manufactured with the highest quality standards. Use the search box to quickly find products by name, description, or section.";
+    "Explore our range of premium coir products, including coco peat blocks, coir fibre, and coir yarn, sourced and manufactured with the highest quality standards. Use the search box to quickly find products by name, description, or section. 🌱 Whether you are a home gardener, commercial grower, or wholesaler, we have the perfect solution for your needs. Discover best sellers, eco-friendly options, and innovative coir solutions for every application.";
 
 const Products = () => {
     const [search, setSearch] = useState("");
@@ -52,9 +52,22 @@ const Products = () => {
         <>
             <div style={styles.page}>
                 <h1 style={styles.pageTitle}>{pageTitle}</h1>
-                <p style={{ margin: "0 2rem 2rem 2rem", color: "#555", fontSize: "1.1rem" }}>
+                <div
+                    style={{
+                        margin: "0 2rem 2rem 2rem",
+                        color: "#555",
+                        fontSize: "1.13rem",
+                        background: "linear-gradient(90deg, #e0f2f1 0%, #f1f8e9 100%)",
+                        borderRadius: 12,
+                        padding: "1.1rem 1.5rem",
+                        boxShadow: "0 2px 8px #00968811",
+                        fontWeight: 500,
+                        lineHeight: 1.7,
+                        letterSpacing: "0.01em"
+                    }}
+                >
                     {pageDescription}
-                </p>
+                </div>
                 <div style={styles.mainRow}>
                     {/* Sidebar left */}
                     <div style={styles.sidebarCol} className="product-sidebar-col">
@@ -107,7 +120,15 @@ const Products = () => {
                                                                 <div
                                                                     key={prod.name}
                                                                     id={prodId}
-                                                                    style={styles.card}
+                                                                    style={{
+                                                                        ...styles.card,
+                                                                        background: "#f8f8fa",
+                                                                        border: "1.5px solid #e0f2f1",
+                                                                        boxShadow: "0 2px 12px rgba(8,108,92,0.07)",
+                                                                        transition: "box-shadow 0.22s, transform 0.22s, border 0.22s",
+                                                                        cursor: "pointer",
+                                                                        position: "relative"
+                                                                    }}
                                                                     className="product-card"
                                                                     onClick={() => handleProductClick(section, prod)}
                                                                     tabIndex={0}
@@ -116,10 +137,43 @@ const Products = () => {
                                                                     <img
                                                                         src={prod.images[0]}
                                                                         alt={prod.name}
-                                                                        style={styles.cardImg}
+                                                                        style={{
+                                                                            ...styles.cardImg,
+                                                                            border: "2px solid #b2dfdb",
+                                                                            boxShadow: "0 2px 8px #00968811"
+                                                                        }}
                                                                         className="product-card-img"
                                                                     />
-                                                                    <div style={styles.cardLabel}>{prod.name}</div>
+                                                                    <div style={{
+                                                                        ...styles.cardLabel,
+                                                                        fontWeight: 700,
+                                                                        color: "#00695c",
+                                                                        fontSize: "1.09rem",
+                                                                        marginBottom: 4
+                                                                    }}>
+                                                                        {prod.name}
+                                                                    </div>
+                                                                    <div style={{
+                                                                        fontSize: "0.95rem",
+                                                                        color: "#1976d2",
+                                                                        fontWeight: 500,
+                                                                        marginBottom: 2
+                                                                    }}>
+                                                                        {section.title}
+                                                                    </div>
+                                                                    <span style={{
+                                                                        position: "absolute",
+                                                                        top: 10,
+                                                                        right: 10,
+                                                                        background: "linear-gradient(90deg,#e0f2f1 0%,#f1f8e9 100%)",
+                                                                        color: "#43a047",
+                                                                        fontWeight: 700,
+                                                                        fontSize: "0.85rem",
+                                                                        borderRadius: 6,
+                                                                        padding: "2px 10px"
+                                                                    }}>
+                                                                        {pidx === 0 ? "Best Seller" : ""}
+                                                                    </span>
                                                                 </div>
                                                             );
                                                         })}
@@ -140,7 +194,11 @@ const Products = () => {
                                                         key={section.title + prod.name}
                                                         id={prodId}
                                                         className="product-card-mobile"
-                                                        style={styles.cardMobile}
+                                                        style={{
+                                                            ...styles.cardMobile,
+                                                            border: "1.5px solid #e0f2f1",
+                                                            boxShadow: "0 2px 8px #00968811"
+                                                        }}
                                                         onClick={() => handleProductClick(section, prod)}
                                                         tabIndex={0}
                                                         role="button"
@@ -148,10 +206,33 @@ const Products = () => {
                                                         <img
                                                             src={prod.images[0]}
                                                             alt={prod.name}
-                                                            style={styles.cardImgMobile}
+                                                            style={{
+                                                                ...styles.cardImgMobile,
+                                                                border: "2px solid #b2dfdb"
+                                                            }}
                                                         />
-                                                        <div style={styles.cardLabelMobile}>{prod.name}</div>
-                                                        <div style={styles.sectionLabelMobile}>{section.title}</div>
+                                                        <div style={{
+                                                            ...styles.cardLabelMobile,
+                                                            fontWeight: 700,
+                                                            color: "#00695c"
+                                                        }}>{prod.name}</div>
+                                                        <div style={{
+                                                            ...styles.sectionLabelMobile,
+                                                            color: "#1976d2"
+                                                        }}>{section.title}</div>
+                                                        <span style={{
+                                                            position: "absolute",
+                                                            top: 10,
+                                                            right: 10,
+                                                            background: "linear-gradient(90deg,#e0f2f1 0%,#f1f8e9 100%)",
+                                                            color: "#43a047",
+                                                            fontWeight: 700,
+                                                            fontSize: "0.85rem",
+                                                            borderRadius: 6,
+                                                            padding: "2px 10px"
+                                                        }}>
+                                                            {pidx === 0 ? "Best Seller" : ""}
+                                                        </span>
                                                     </div>
                                                 );
                                             });
@@ -166,7 +247,6 @@ const Products = () => {
             <FooterContact />
             <style>
                 {`
-                /* Desktop/tablet: show desktop-products-list, hide mobile list */
                 @media (min-width: 701px) {
                     .desktop-products-list { display: block !important; }
                     .all-products-mobile-list, .product-card-mobile { display: none !important; }
@@ -177,17 +257,23 @@ const Products = () => {
                         align-self: flex-start;
                     }
                     .product-card:hover, .product-card:focus {
-                        background: #53EDDE !important;
-                        background: radial-gradient(circle, rgba(83, 237, 222, 0.8) 0%, rgba(248, 248, 250, 1) 30%, rgba(248, 248, 250, 1) 70%, rgba(83, 237, 222, 0.63) 100%) !important;
-                        transform: translateY(-4px) scale(1.025);
+                        background: linear-gradient(90deg, #e0f7fa 0%, #e8f5e9 100%) !important;
+                        border: 2px solid #009688 !important;
+                        box-shadow: 0 6px 24px #00968822 !important;
+                        transform: translateY(-6px) scale(1.045);
+                    }
+                    .product-card:hover .product-card-img,
+                    .product-card:focus .product-card-img {
+                        border: 2.5px solid #009688 !important;
+                        box-shadow: 0 4px 16px #00968833 !important;
                     }
                     .viewMoreBtn:hover, .viewMoreBtn:focus {
-                        background: #53EDDE !important;
-                        background: linear-gradient(328deg, rgba(83, 237, 222, 0.8) 0%, rgba(248, 248, 250, 1) 40%, rgba(248, 248, 250, 1) 60%, rgba(83, 237, 222, 0.63) 100%) !important;
-                        transform: translateY(-4px) scale(1.025);           
+                        background: linear-gradient(90deg, #009688 0%, #43a047 100%) !important;
+                        color: #fff !important;
+                        border: 1.5px solid #43a047 !important;
+                        transform: translateY(-2px) scale(1.04);           
                     }
                 }
-                /* Mobile: show mobile list, hide desktop grid/cards */
                 @media (max-width: 700px) {
                     .desktop-products-list { display: none !important; }
                     .all-products-mobile-list {
@@ -198,24 +284,33 @@ const Products = () => {
                     }
                     .product-card-mobile {
                         background: #fff;
-                        border-radius: 8px;
-                        box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+                        border-radius: 12px;
+                        box-shadow: 0 2px 8px #00968811;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        padding: 1rem;
+                        padding: 1.2rem;
                         width: 100%;
                         max-width: 350px;
                         margin: 0 auto;
+                        position: relative;
+                        border: 1.5px solid #e0f2f1;
+                        transition: box-shadow 0.22s, border 0.22s;
+                    }
+                    .product-card-mobile:active {
+                        border: 2px solid #009688;
+                        box-shadow: 0 4px 16px #00968833;
                     }
                     .product-card-mobile img {
                         width: 100%;
                         max-width: 180px;
                         height: 120px;
                         object-fit: cover;
-                        border-radius: 6px;
+                        border-radius: 8px;
                         margin-bottom: 0.8rem;
                         background: #eaeaea;
+                        border: 2px solid #b2dfdb;
+                        transition: border 0.18s, box-shadow 0.18s;
                     }
                     .product-card-mobile .product-label-mobile {
                         font-size: 1rem;
