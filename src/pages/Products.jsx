@@ -1,5 +1,6 @@
 import FooterContact from "../components/FooterContact";
 import { useState } from "react";
+import { RunningBadge } from "../pages/About";
 import ProductSidebar from "../components/ProductSidebar";
 import { useNavigate } from "react-router-dom";
 import { productSections } from "../data/productSections";
@@ -50,9 +51,10 @@ const Products = () => {
 
     return (
         <>
+            <RunningBadge />
             <div style={styles.page}>
-                <h1 style={styles.pageTitle}>{pageTitle}</h1>
                 <div
+                    className="products-page-description"
                     style={{
                         margin: "0 2rem 2rem 2rem",
                         color: "#555",
@@ -76,14 +78,54 @@ const Products = () => {
                     {/* Right: search above product content */}
                     <div style={styles.rightCol}>
                         <div style={styles.searchBoxWrap}>
-                            <input
-                                id="product-search"
-                                type="text"
-                                value={search}
-                                onChange={(e) => setSearch(e.target.value)}
-                                placeholder="What are you looking for?"
-                                style={styles.simpleSearchBox}
-                            />
+                            <div className="search-bar-enhanced" style={{
+                                display: "flex",
+                                alignItems: "center",
+                                width: "100%",
+                                background: "#fff",
+                                borderRadius: "12px",
+                                border: "2px solid #b2dfdb",
+                                padding: "0.2rem 1rem",
+                                maxWidth: 500,
+                            }}>
+                                <svg width="22" height="22" fill="none" stroke="#009688" strokeWidth="2" style={{marginRight: 8}}>
+                                    <circle cx="10" cy="10" r="8" />
+                                    <line x1="16" y1="16" x2="21" y2="21" />
+                                </svg>
+                                <input
+                                    id="product-search"
+                                    type="text"
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
+                                    placeholder="Search by product, section, or keyword..."
+                                    style={{
+                                        border: "none",
+                                        outline: "none",
+                                        // background: "transparent",
+                                        fontSize: "1.09rem",
+                                        // color: "#333",
+                                        width: "100%",
+                                        padding: "0.4rem 0",
+                                        // fontWeight: 500,
+                                        // letterSpacing: "0.01em"
+                                    }}
+                                />
+                                {search && (
+                                    <button
+                                        aria-label="Clear search"
+                                        onClick={() => setSearch("")}
+                                        style={{
+                                            background: "none",
+                                            border: "none",
+                                            cursor: "pointer",
+                                            color: "#bbb",
+                                            fontSize: "1.2rem"
+                                        }}
+                                    >
+                                        ×
+                                    </button>
+                                )}
+                            </div>
                         </div>
                         <div style={styles.productsContent} className="products-content">
                             {filteredSections.length === 0 ? (
