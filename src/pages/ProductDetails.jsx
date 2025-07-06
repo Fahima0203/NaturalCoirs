@@ -118,15 +118,16 @@ const ProductDetails = () => {
         <>
             <div
                 style={{
-                    maxWidth: 1100,
+                    maxWidth: 1200,
                     margin: "2rem auto",
                     background: "#fff",
-                    borderRadius: 8,
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
-                    padding: 24,
+                    borderRadius: 16,
+                    boxShadow: "0 4px 24px rgba(8,108,92,0.10)",
+                    padding: 32,
                     display: "flex",
-                    gap: 32,
-                    flexDirection: "row"
+                    gap: 40,
+                    flexDirection: "row",
+                    alignItems: "flex-start"
                 }}
                 className="product-details-main"
             >
@@ -134,8 +135,8 @@ const ProductDetails = () => {
                 <div
                     style={{
                         minWidth: 320,
-                        maxWidth: 400,
-                        flex: "0 0 380px"
+                        maxWidth: 420,
+                        flex: "0 0 400px"
                     }}
                     className="product-details-gallery sticky-gallery"
                 >
@@ -143,12 +144,13 @@ const ProductDetails = () => {
                         style={{
                             position: "relative",
                             width: "100%",
-                            height: 320,
+                            height: 340,
                             overflow: "hidden",
-                            borderRadius: 8,
-                            marginBottom: 16,
+                            borderRadius: 14,
+                            marginBottom: 18,
                             background: "#f7f7f7",
-                            cursor: zoom ? "zoom-in" : "pointer"
+                            cursor: zoom ? "zoom-in" : "pointer",
+                            boxShadow: "0 2px 12px rgba(8,108,92,0.07)"
                         }}
                         onMouseEnter={() => setZoom(true)}
                         onMouseLeave={() => setZoom(false)}
@@ -159,7 +161,6 @@ const ProductDetails = () => {
                                 y: ((e.clientY - rect.top) / rect.height) * 100,
                             });
                         }}
-                        // Mobile: disable zoom, allow swipe to change image
                         onTouchStart={() => setZoom(false)}
                     >
                         <img
@@ -169,16 +170,27 @@ const ProductDetails = () => {
                                 width: "100%",
                                 height: "100%",
                                 objectFit: "contain",
-                                borderRadius: 8,
+                                borderRadius: 14,
                                 transition: "transform 0.2s",
+                                background: "#fff",
                                 ...(zoom && window.innerWidth > 700
                                     ? {
-                                        transform: `scale(2)`,
+                                        transform: `scale(2.1)`,
                                         transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`
                                     }
                                     : {})
                             }}
                         />
+                        {/* Zoom lens effect for desktop */}
+                        {zoom && window.innerWidth > 700 && (
+                            <div style={{
+                                position: "absolute",
+                                top: 0, left: 0, right: 0, bottom: 0,
+                                border: "2px solid #00968844",
+                                borderRadius: 14,
+                                pointerEvents: "none"
+                            }} />
+                        )}
                     </div>
                     {/* Thumbnails with arrows and scroll */}
                     <div style={{ position: "relative", width: "100%" }}>
@@ -195,20 +207,20 @@ const ProductDetails = () => {
                                     transform: "translateY(-50%)",
                                     zIndex: 2,
                                     background: "#fff",
-                                    border: "1px solid #ccc",
+                                    border: "1.5px solid #009688",
                                     borderRadius: "50%",
                                     width: 32,
                                     height: 32,
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+                                    boxShadow: "0 1px 6px rgba(8,108,92,0.10)",
                                     cursor: "pointer",
-                                    opacity: 0.85,
+                                    opacity: 0.92,
                                 }}
                             >
                                 <svg width="18" height="18" viewBox="0 0 24 24">
-                                    <polyline points="15 18 9 12 15 6" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <polyline points="15 18 9 12 15 6" fill="none" stroke="#009688" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </button>
                         )}
@@ -217,8 +229,8 @@ const ProductDetails = () => {
                             ref={thumbnailsRef}
                             style={{
                                 display: "flex",
-                                gap: 12,
-                                marginBottom: 12,
+                                gap: 14,
+                                marginBottom: 14,
                                 overflowX: "auto",
                                 scrollBehavior: "smooth",
                                 padding: "2px 0",
@@ -232,14 +244,16 @@ const ProductDetails = () => {
                                     src={img}
                                     alt=""
                                     style={{
-                                        width: 60,
-                                        height: 60,
-                                        borderRadius: 4,
+                                        width: 64,
+                                        height: 64,
+                                        borderRadius: 8,
                                         objectFit: "cover",
-                                        border: mainImg === img ? "2px solid #009688" : "1px solid #eee",
+                                        border: mainImg === img ? "2.5px solid #009688" : "1.5px solid #eee",
                                         cursor: "pointer",
                                         background: "#fafafa",
-                                        flex: "0 0 auto"
+                                        flex: "0 0 auto",
+                                        boxShadow: mainImg === img ? "0 2px 8px #00968822" : "none",
+                                        transition: "border 0.18s, box-shadow 0.18s"
                                     }}
                                     onClick={() => setMainImg(img)}
                                 />
@@ -258,56 +272,85 @@ const ProductDetails = () => {
                                     transform: "translateY(-50%)",
                                     zIndex: 2,
                                     background: "#fff",
-                                    border: "1px solid #ccc",
+                                    border: "1.5px solid #009688",
                                     borderRadius: "50%",
                                     width: 32,
                                     height: 32,
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+                                    boxShadow: "0 1px 6px rgba(8,108,92,0.10)",
                                     cursor: "pointer",
-                                    opacity: 0.85,
+                                    opacity: 0.92,
                                 }}
                             >
                                 <svg width="18" height="18" viewBox="0 0 24 24">
-                                    <polyline points="9 6 15 12 9 18" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <polyline points="9 6 15 12 9 18" fill="none" stroke="#009688" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </button>
                         )}
                     </div>
                 </div>
                 {/* Right: Info */}
-                <div style={{ flex: 1 }} className="product-details-info">
+                <div style={{
+                    flex: 1,
+                    padding: "0 0 0 0",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 0
+                }} className="product-details-info">
                     {/* Basic Info */}
-                    <h2 style={{ fontWeight: 700, fontSize: "1.5rem", marginBottom: 8 }}>
-                        {product.name} {section.title ? `- ${section.title}` : ""}
+                    <h2 style={{
+                        fontWeight: 800,
+                        fontSize: "2.1rem",
+                        marginBottom: 8,
+                        color: "#00695c",
+                        letterSpacing: "0.5px"
+                    }}>
+                        {product.name} {section.title ? <span style={{fontWeight: 500, color: "#009688"}}>- {section.title}</span> : ""}
                     </h2>
                     {/* Price, Get Latest Price, MOQ */}
-                    <div style={{ fontSize: "1.18rem", marginBottom: 4, display: "flex", alignItems: "center", gap: 12 }}>
-                        {/* <span style={{ fontWeight: 500 }}>{price}</span> */}
+                    <div style={{
+                        fontSize: "1.22rem",
+                        marginBottom: 8,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 18
+                    }}>
+                        <span style={{ fontWeight: 600, color: "#222" }}>{price}</span>
                         <a
                             href={whatsappLink}
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{
-                                color: "#009688",
-                                fontWeight: 600,
-                                fontSize: "1.05rem",
-                                textDecoration: "underline",
-                                cursor: "pointer"
+                                color: "#fff",
+                                background: "#009688",
+                                fontWeight: 700,
+                                fontSize: "1.09rem",
+                                textDecoration: "none",
+                                borderRadius: 6,
+                                padding: "6px 18px",
+                                marginLeft: 6,
+                                cursor: "pointer",
+                                boxShadow: "0 2px 8px #00968822",
+                                transition: "background 0.18s"
                             }}
                         >
                             Get Latest Price
                         </a>
                     </div>
-                    <div style={{ fontSize: "1.05rem", color: "#222", marginBottom: 8 }}>
+                    <div style={{
+                        fontSize: "1.09rem",
+                        color: "#222",
+                        marginBottom: 10,
+                        fontWeight: 500
+                    }}>
                         <span style={{ fontWeight: 600 }}>Minimum Order Quantity:</span>{" "}
-                        <span style={{ fontWeight: 700 }}>{minOrder}</span>
+                        <span style={{ fontWeight: 700, color: "#009688" }}>{minOrder}</span>
                     </div>
-                    <div style={{ display: "flex", gap: 16, marginBottom: 12 }}>
-                        <a href={brochure} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Product Brochure</a>
-                        <a href={video} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "none", color: "#1976d2", fontWeight: 500, cursor: "pointer" }}>Watch Video</a>
+                    <div style={{ display: "flex", gap: 18, marginBottom: 16 }}>
+                        <a href={brochure} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "#e0f2f1", color: "#1976d2", fontWeight: 600, borderRadius: 6, padding: "5px 14px", textDecoration: "none", cursor: "pointer" }}>Product Brochure</a>
+                        <a href={video} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "#e0f2f1", color: "#1976d2", fontWeight: 600, borderRadius: 6, padding: "5px 14px", textDecoration: "none", cursor: "pointer" }}>Watch Video</a>
                     </div>
                     {/* --- Show sub-variants for Coir Yarn/Rope --- */}
                     {section.title === "Coir Yarn/Rope" && coirYarnVariants[product.name] && (
@@ -315,13 +358,13 @@ const ProductDetails = () => {
                             margin: "18px 0 18px 0",
                             padding: "18px 18px 12px 18px",
                             background: "linear-gradient(90deg, #e0f2f1 0%, #f1f8e9 100%)",
-                            borderRadius: 10,
+                            borderRadius: 12,
                             boxShadow: "0 2px 8px rgba(8,108,92,0.07)"
                         }}>
-                            <div style={{ fontWeight: 600, color: "#00695c", marginBottom: 8, fontSize: "1.13rem" }}>
+                            <div style={{ fontWeight: 700, color: "#00695c", marginBottom: 8, fontSize: "1.18rem" }}>
                                 Available Variants:
                             </div>
-                            <ul style={{ margin: 0, paddingLeft: 22, fontSize: "1.08rem", color: "#234" }}>
+                            <ul style={{ margin: 0, paddingLeft: 22, fontSize: "1.13rem", color: "#234" }}>
                                 {coirYarnVariants[product.name].map((variant, idx) => (
                                     <li key={idx} style={{ marginBottom: 6 }}>{variant}</li>
                                 ))}
@@ -350,12 +393,12 @@ const ProductDetails = () => {
                             </button>
                             {openSpec && (
                                 <div className="collapsible-content">
-                                    <table style={{ width: "100%", borderCollapse: "collapse", margin: "0 0 16px 0" }}>
+                                    <table style={{ width: "100%", borderCollapse: "collapse", margin: "0 0 16px 0", fontSize: "1.08rem" }}>
                                         <tbody>
                                             {specification.map((row) => (
                                                 <tr key={row.label}>
-                                                    <td style={{ border: "1px solid #eee", padding: "6px 12px", fontWeight: 500, background: "#fafbfc", width: 180 }}>{row.label}</td>
-                                                    <td style={{ border: "1px solid #eee", padding: "6px 12px" }}>{row.value}</td>
+                                                    <td style={{ border: "1px solid #eee", padding: "7px 14px", fontWeight: 600, background: "#e0f2f1", width: 200 }}>{row.label}</td>
+                                                    <td style={{ border: "1px solid #eee", padding: "7px 14px" }}>{row.value}</td>
                                                 </tr>
                                             ))}
                                         </tbody>
@@ -386,7 +429,7 @@ const ProductDetails = () => {
                             </button>
                             {openDesc && (
                                 <div className="collapsible-content">
-                                    <div dangerouslySetInnerHTML={{ __html: description }} />
+                                    <div style={{ fontSize: "1.09rem", color: "#333", lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: description }} />
                                 </div>
                             )}
                         </div>
@@ -414,11 +457,11 @@ const ProductDetails = () => {
                             {openChipsBlocks && (
                                 <div className="collapsible-content">
                                     {chipsBlocks.text && (
-                                        <div style={{ marginBottom: 18 }} dangerouslySetInnerHTML={{ __html: chipsBlocks.text }} />
+                                        <div style={{ marginBottom: 18, fontSize: "1.07rem" }} dangerouslySetInnerHTML={{ __html: chipsBlocks.text }} />
                                     )}
                                     {chipsBlocks.table && chipsBlocks.table.length > 0 && (
                                         <div style={{ overflowX: "auto" }}>
-                                            <table>
+                                            <table style={{ minWidth: 600, fontSize: "1.07rem" }}>
                                                 <thead>
                                                     <tr style={{ background: "rgb(8, 108, 92)" }}>
                                                         <th style={{ color: "#fff", padding: "10px 8px", border: "1px solid #388e3c" }}>Product Code</th>
@@ -470,7 +513,7 @@ const ProductDetails = () => {
                             </button>
                             {openBenefits && (
                                 <div className="collapsible-content">
-                                    <ul style={{ margin: 0, paddingLeft: 22 }}>
+                                    <ul style={{ margin: 0, paddingLeft: 22, fontSize: "1.09rem" }}>
                                         {benefits.map((b, i) => (
                                             <li key={i} style={{ marginBottom: 6 }}>{b}</li>
                                         ))}
@@ -479,7 +522,16 @@ const ProductDetails = () => {
                             )}
                         </div>
                     )}
-                    <div style={{ marginTop: 18, fontSize: "1.08rem" }}>
+                    <div style={{
+                        marginTop: 22,
+                        fontSize: "1.13rem",
+                        background: "#e0f2f1",
+                        borderRadius: 8,
+                        padding: "12px 18px",
+                        color: "#00695c",
+                        fontWeight: 600,
+                        boxShadow: "0 1px 6px #00968811"
+                    }}>
                         Interested in this product?{" "}
                         <a
                             href={whatsappLink}
@@ -487,7 +539,7 @@ const ProductDetails = () => {
                             rel="noopener noreferrer"
                             style={{
                                 color: "#009688",
-                                fontWeight: 600,
+                                fontWeight: 700,
                                 textDecoration: "underline",
                                 marginLeft: 2,
                                 cursor: "pointer",
@@ -497,20 +549,20 @@ const ProductDetails = () => {
                         </a>
                     </div>
                     {/* Yes, I am interested button */}
-                    <div style={{ marginTop: 28, display: "flex", justifyContent: "flex-end" }}>
+                    <div style={{ marginTop: 32, display: "flex", justifyContent: "flex-end" }}>
                         <a
                             href={whatsappLink}
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{
-                                background: "#009688",
+                                background: "linear-gradient(90deg, #009688 0%, #43a047 100%)",
                                 color: "#fff",
-                                fontWeight: 700,
-                                fontSize: "1.13rem",
+                                fontWeight: 800,
+                                fontSize: "1.18rem",
                                 border: "none",
-                                borderRadius: 7,
-                                padding: "0.85rem 2.2rem",
-                                boxShadow: "0 2px 8px rgba(0,150,136,0.08)",
+                                borderRadius: 9,
+                                padding: "1.05rem 2.5rem",
+                                boxShadow: "0 2px 12px rgba(0,150,136,0.13)",
                                 cursor: "pointer",
                                 textDecoration: "none",
                                 transition: "background 0.18s"
@@ -525,12 +577,12 @@ const ProductDetails = () => {
             <FooterContact />
             <style>
                 {`
-                @media (max-width: 700px) {
+                @media (max-width: 1100px) {
                     .product-details-main {
                         flex-direction: column !important;
-                        padding: 10px !important;
-                        gap: 18px !important;
-                        max-width: 98vw !important;
+                        padding: 16px !important;
+                        gap: 22px !important;
+                        max-width: 99vw !important;
                     }
                     .product-details-gallery {
                         min-width: 0 !important;
@@ -566,7 +618,7 @@ const ProductDetails = () => {
                         padding: 0 !important;
                     }
                     .product-details-info h2 {
-                        font-size: 1.15rem !important;
+                        font-size: 1.25rem !important;
                     }
                     .product-details-info table {
                         font-size: 0.98rem !important;
@@ -576,6 +628,33 @@ const ProductDetails = () => {
                         width: 100% !important;
                         font-size: 1rem !important;
                         margin-top: 10px !important;
+                        padding: 0.7rem 0 !important;
+                    }
+                    .yes-interested-btn {
+                        width: 100% !important;
+                        font-size: 1.05rem !important;
+                        padding: 0.8rem 0 !important;
+                    }
+                }
+                @media (max-width: 700px) {
+                    .product-details-main {
+                        flex-direction: column !important;
+                        padding: 8px !important;
+                        gap: 12px !important;
+                        max-width: 100vw !important;
+                    }
+                    .product-details-gallery > div:first-child {
+                        height: 160px !important;
+                    }
+                    .product-thumbnails img {
+                        width: 38px !important;
+                        height: 38px !important;
+                    }
+                    .product-details-info h2 {
+                        font-size: 1.07rem !important;
+                    }
+                    .yes-interested-btn {
+                        font-size: 0.98rem !important;
                         padding: 0.7rem 0 !important;
                     }
                 }
@@ -591,29 +670,34 @@ const ProductDetails = () => {
                     justify-content: space-between;
                     background: none;
                     border: none;
-                    font-size: 1.2rem;
-                    font-weight: 600;
+                    font-size: 1.22rem;
+                    font-weight: 700;
                     color: #181818;
                     padding: 18px 0 12px 0;
                     margin: 0;
                     cursor: pointer;
-                    transition: background 0.15s;
+                    transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+                    border-radius: 10px;
+                    outline: none;
+                    position: relative;
+                    z-index: 1;
                 }
-                .collapsible-header:hover {
-                    background: RGB(248, 248, 250);
-                    background: radial-gradient(circle, rgba(248, 248, 250, 0.59) 0%, rgba(199, 199, 199, 0.63) 58%, rgba(199, 199, 199, 1) 85%);  
-                    transform: translateY(-4px) scale(1.025);  
+                .collapsible-header:hover, .collapsible-header:focus {
+                    background: linear-gradient(90deg, #e0f7fa 0%, #e8f5e9 100%);
+                    color: #009688;
+                    box-shadow: 0 2px 12px #00968822;
                 }
-                .collapsible-header:focus {
-                    background: RGB(8,108,92);
-                    background: linear-gradient(328deg, rgba(8, 108, 92, 0.8) 0%, rgba(248, 248, 250, 1) 30%, rgba(248, 248, 250, 1) 70%, rgba(8, 108, 92, 0.63) 100%);
-                    transform: translateY(-4px) scale(1.025);
+                .collapsible-header:active {
+                    background: linear-gradient(90deg, #b2dfdb 0%, #c8e6c9 100%);
+                    color: #00695c;
                 }
-                .chevron {
-                    transition: transform 0.2s;
-                    margin-left: 8px;
-                    display: flex;
-                    align-items: center;
+                .collapsible-header .chevron svg {
+                    transition: transform 0.2s, stroke 0.18s;
+                    stroke: #009688;
+                }
+                .collapsible-header:hover .chevron svg,
+                .collapsible-header:focus .chevron svg {
+                    stroke: #00695c;
                 }
                 .collapsible-content {
                     padding-left: 2px;
