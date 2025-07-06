@@ -268,7 +268,7 @@ const styles = {
     },
     button: {
         padding: "0.75rem",
-        background: "#007b5e",
+        background: "linear-gradient(90deg, rgb(0, 105, 92) 0%, rgb(67, 160, 71) 100%)",
         color: "#fff",
         border: "none",
         borderRadius: "4px",

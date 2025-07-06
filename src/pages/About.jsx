@@ -83,7 +83,7 @@ const RunningBadge = () => {
     return (
         <div
             style={{
-                margin: "20px auto 2.5rem auto",
+                margin: "20px auto 20px auto",
                 background: "linear-gradient(90deg, #e0f2f1 0%, #b2dfdb 100%)",
                 boxShadow: "0 2px 12px rgba(34,99,92,0.07)",
             }}
@@ -516,4 +516,5 @@ const About = () => (
     </>
 );
 
+export { RunningBadge };
 export default About;
