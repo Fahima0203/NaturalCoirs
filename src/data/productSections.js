@@ -129,8 +129,9 @@ export const productSections = [
     {
         title: "Cocopeat Blocks",
         description:
-            "Pioneers in the industry, we offer 5 Kg High Ec Cocopeat Block, 5kg Low EC Coir Pith Block, Coco Peat 650 Grams Low EC, Coco Peat 650 Grams High EC and High ec Coco Peat 5kg block (Unseived) from India.",
-        products: [
+            "We at Natural Coirs manufacture and market Cocopeat various sizes according to customer's requirement. CoirPith / Cocopeat is washed, heat-treated, screened and graded before being processed into cocopeat products of various granularity and density.",
+            //"Pioneers in the industry, we offer 5 Kg High Ec Cocopeat Block, 5kg Low EC Coir Pith Block, Coco Peat 650 Grams Low EC, Coco Peat 650 Grams High EC and High ec Coco Peat 5kg block (Unseived) from India.",
+            products: [
             {
                 name: "5 Kg", //husk chips blocks
                 images: [block5a, block5b, block5c, block5d, block5e, block5f, block5g, block5h, block5i, chips1, chips2, chips3, chips4, chips5, chips6],
@@ -152,7 +153,7 @@ export const productSections = [
     {
         title: "Coir Fibre",
         description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+            "We at Natural Coirs manufacture and supply high-quality Coir Fibre in various grades and bale sizes as per customer requirements. Our Coir Fibre is extracted from matured coconut husks, thoroughly cleaned, and processed to ensure strength, durability, and consistency. It is widely used in rope making, mattress and brush manufacturing, erosion control, and as a natural soil amendment for horticulture and agriculture.",
         products: [
             {
                 name: "120 Kg Bale",
@@ -165,9 +166,9 @@ export const productSections = [
         ],
     },
     {
-        title: "Coir Yarn/Rope", //try to genaralize the content
+        title: "Coir Yarn/Rope",
         description:
-            "Prominent & Leading Wholesaler from Salem, we offer 6Mm 30Inches Coir Rope (Rollmudi), 5Mm 48 Inches CoirYarn (Magadan), 2Ply 6Mm Coir Yarn (Rollmudi) and 2 Ply Golden Brown Coir Yarn.",
+            "We at Natural Coirs manufacture and supply a wide range of Coir Yarn and Rope products, crafted from high-quality coconut coir fiber. Our coir yarns and ropes are available in various ply, thicknesses, and lengths to suit diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir yarn/rope is an eco-friendly solution for tying, binding, weaving, and more.",
         products: [
             {
                 name: "2 Ply 7 mm",
@@ -189,8 +190,24 @@ export const productSections = [
                 images: [ply3mm_1, ply3mm_2, ply3mm_3, ply3mm_4, ply3mm_5, ply3mm_6, ply3mm_7, ply3mm_8, ply3mm_9, ply3mm_10],
             },
             {
+                name: "2 Ply 15 Feet / 18 Feet",
+                images: [],
+            },
+            {
+                name: "3 Ply 15 Feet / 18 Feet",
+                images: [],
+            },
+            {
+                name: "8ply / 10ply (Vadam)",
+                images: [],
+            },
+            {
                 name: "Double Piece",
                 images: [doublePiece],
+            },
+            {
+                name: "Hand Made Coir Rope Loose Twisted Spooling",
+                images: [],
             },
             {
                 name: "Loose Twisted Spooling",
