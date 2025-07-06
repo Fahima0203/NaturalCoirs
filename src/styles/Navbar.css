@@ -58,6 +58,18 @@
     font-weight: 600 !important;
   }
 }
+.nav-item .dropend:hover {
+  border-left: 3px solid transparent;
+}
+
+.my-navbar .dropdown-menu .dropdown-menu .dropdown-item:hover,
+.my-navbar .dropdown-menu .dropdown-menu .dropdown-item:focus {
+  background: linear-gradient(90deg, #e0f7fa 0%, #e8f5e9 100%);
+  color: #00695c !important;
+  transform: scale(1.06) translateX(3px);
+  box-shadow: 0 2px 12px #00968822;
+  z-index: 2;
+}
 @media (max-width: 900px) {
   .enhanced-navbar {
     margin: 0 0 18px 0 !important;

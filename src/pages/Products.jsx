@@ -56,7 +56,7 @@ const Products = () => {
                 <div
                     className="products-page-description"
                     style={{
-                        margin: "0 2rem 2rem 2rem",
+                        margin: "0 2rem 1.5rem 2rem",
                         color: "#555",
                         fontSize: "1.13rem",
                         background: "linear-gradient(90deg, #e0f2f1 0%, #f1f8e9 100%)",
@@ -141,7 +141,7 @@ const Products = () => {
                                                 ? section.title.toLowerCase().replace(/\s+/g, "-")
                                                 : `section-${idx}`;
                                             return (
-                                                <div key={section.title} id={sectionId} style={styles.section} className="product-section">
+                                                <div key={section.title} id={sectionId} style={styles.section} >
                                                     <div style={styles.sectionHeader} className="sectionHeader">
                                                         <h2 style={styles.sectionTitle} className="sectionTitle">{section.title}</h2>
                                                         <button
@@ -406,7 +406,7 @@ const styles = {
     page: {
         background: "#fafbfc",
         minHeight: "100vh",
-        padding: "2rem 0",
+        padding: "1rem 0",
     },
     pageTitle: {
         fontSize: "2rem",
@@ -460,7 +460,7 @@ const styles = {
         background: "#fff",
         borderRadius: "8px",
         boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
-        margin: "2rem auto",
+        marginBottom: "2rem",
         maxWidth: "1100px",
         padding: "2rem",
     },
