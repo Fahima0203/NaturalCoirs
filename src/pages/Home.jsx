@@ -12,10 +12,7 @@ const Home = () => {
             <p>Your source for quality coir products.</p>
             <p>Explore our range of products and services.</p>
             <HomeSlideshow />
-            <div className="home-slider">
-                <h2>Warehouse Gallery</h2>
-                <HomeSlider />
-            </div>
+            <HomeSlider />
             <AboutTab />
             <FooterContact />
         </div>

@@ -588,16 +588,15 @@ const ProductDetails = () => {
                         min-width: 0 !important;
                         max-width: 100% !important;
                         flex: none !important;
-                        margin-bottom: 1.5rem !important;
-                        position: static !important;
-                        top: unset !important;
                         z-index: unset !important;
                     }
                     .sticky-gallery {
                         position: static !important;
                     }
                     .product-details-gallery > div:first-child {
-                        height: 220px !important;
+                        height: 400px !important;
+                        margin-bottom: 0px !important;
+                        display: flex !important;
                     }
                     .product-details-gallery img {
                         width: 100% !important;
@@ -625,7 +624,6 @@ const ProductDetails = () => {
                     }
                     .product-details-info button,
                     .product-details-gallery button {
-                        width: 100% !important;
                         font-size: 1rem !important;
                         margin-top: 10px !important;
                         padding: 0.7rem 0 !important;
@@ -634,6 +632,7 @@ const ProductDetails = () => {
                         width: 100% !important;
                         font-size: 1.05rem !important;
                         padding: 0.8rem 0 !important;
+                        text-align: center !important;
                     }
                 }
                 @media (max-width: 700px) {
@@ -644,7 +643,9 @@ const ProductDetails = () => {
                         max-width: 100vw !important;
                     }
                     .product-details-gallery > div:first-child {
-                        height: 160px !important;
+                        height: 300px !important;
+                        margin-bottom: 0px !important;
+                        display: flex !important;
                     }
                     .product-thumbnails img {
                         width: 38px !important;
@@ -656,6 +657,7 @@ const ProductDetails = () => {
                     .yes-interested-btn {
                         font-size: 0.98rem !important;
                         padding: 0.7rem 0 !important;
+                        text-align: center !important;
                     }
                 }
                 .collapsible-section {
@@ -706,9 +708,6 @@ const ProductDetails = () => {
                 /* Sticky gallery for desktop */
                 @media (min-width: 701px) {
                     .sticky-gallery {
-                        position: sticky;
-                        top: 32px;
-                        z-index: 2;
                         align-self: flex-start;
                     }
                 }

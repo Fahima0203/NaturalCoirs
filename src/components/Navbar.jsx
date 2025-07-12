@@ -35,8 +35,6 @@ function Nbar() {
             expand="lg"
             className="my-navbar enhanced-navbar"
             style={{
-                borderRadius: 18,
-                margin: "18px 18px 28px 18px",
                 boxShadow: "0 4px 24px #00968822",
                 padding: "0.4rem 0.7rem",
                 background: "linear-gradient(90deg, #00695c 0%, #43a047 100%)"
@@ -48,11 +46,8 @@ function Nbar() {
                     <img
                         src={logo}
                         style={{
-                            width: "58px",
                             height: "48px",
-                            borderRadius: "18px",
                             marginRight: "16px",
-                            boxShadow: "0 2px 8px #00968833"
                         }}
                         alt="Natural Coirs Logo"
                     />
@@ -126,6 +121,10 @@ function Nbar() {
                                                 fontWeight: 500,
                                                 color: "#1976d2",
                                                 background: "none"
+                                            }}
+                                            onClick={() => {
+                                                setShowProducts(false);
+                                                setHoveredSection(null);
                                             }}
                                         >
                                             {prod.name}
