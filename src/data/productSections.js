@@ -9,8 +9,9 @@ import block5d from "../assets/products/Cocopeat Blocks/5Kg/single_watermark.png
 import block5e from "../assets/products/Cocopeat Blocks/5Kg/1_block.jpg";
 import block5f from "../assets/products/Cocopeat Blocks/5Kg/2_blocks.jpg";
 import block5g from "../assets/products/Cocopeat Blocks/5Kg/mini_rows.jpg";
-import block5h from "../assets/products/Cocopeat Blocks/5Kg/coir pith block 2.jpg";
-import block5i from "../assets/products/Cocopeat Blocks/5Kg/packed.jpg";
+import block5h from "../assets/products/Cocopeat Blocks/5Kg/rows_copy.jpg";
+import block5i from "../assets/products/Cocopeat Blocks/5Kg/coir pith block 2.jpg";
+import block5j from "../assets/products/Cocopeat Blocks/5Kg/packed.jpg";
 
 
 //Coco Chips Blocks
@@ -22,10 +23,9 @@ import chips5 from "../assets/products/Coco Chips Blocks/packed.jpg";
 import chips6 from "../assets/products/Coco Chips Blocks/packed_with_powder.jpg"; 
 
 //Cocopeat Blocks 2Kg
-import block2a from "../assets/products/Cocopeat Blocks/2Kg/rows.jpg";
-import block2b from "../assets/products/Cocopeat Blocks/2Kg/packed.jpg";
-import block2c from "../assets/products/Cocopeat Blocks/2Kg/row.png";
-import block2d from "../assets/products/Cocopeat Blocks/2Kg/blocks.png";
+import block2a from "../assets/products/Cocopeat Blocks/2Kg/blocks.png";
+import block2b from "../assets/products/Cocopeat Blocks/2Kg/row.png";
+import block2c from "../assets/products/Cocopeat Blocks/2Kg/packed.jpg";
 
 //Cocopeat Blocks 1Kg
 import block1a from "../assets/products/Cocopeat Blocks/1Kg/image2.jpg";
@@ -57,7 +57,7 @@ import coirFibre30Kg3 from "../assets/products/Coir Fibre/30 Kg Bale/image3.jpg"
 import coirFibre30Kg4 from "../assets/products/Coir Fibre/30 Kg Bale/image4.jpg";
 
 // Coir Yarn - 2 Ply 7 mm
-import ply7mm22_1 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 17.jpg";
+import ply7mm22_1 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 32.jpg";
 import ply7mm22_2 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 20.jpg";
 import ply7mm22_3 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 21.jpg";
 import ply7mm22_4 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 23.jpg";
@@ -67,7 +67,7 @@ import ply7mm22_7 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inch
 import ply7mm22_8 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 28.jpg";
 import ply7mm22_9 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 30.jpg";
 import ply7mm22_10 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 31.jpg";
-import ply7mm22_11 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 32.jpg";
+import ply7mm22_11 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 17.jpg";
 import ply7mm22_12 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS).jpg";
 import ply7mm22_13 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (One Kg PCS) 1.jpg";
 import ply7mm22_14 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches 1.jpg";
@@ -162,11 +162,11 @@ export const productSections = [
             products: [
             {
                 name: "5 Kg", //husk chips blocks
-                images: [image1, block5a, block5b, block5c, block5d, block5e, block5f, block5g, block5h, block5i, chips1, chips2, chips3, chips4, chips5, chips6],
+                images: [image1, block5a, block5b, block5c, block5d, block5e, block5f, block5g, block5h, block5i, block5j, chips1, chips2, chips3, chips4, chips5, chips6],
             },
             {
                 name: "2 Kg",
-                images: [block2a, block2b, block2c, block2d],
+                images: [block2a, block2b, block2c],
             },
             {
                 name: "1 Kg",
