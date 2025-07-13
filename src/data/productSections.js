@@ -196,7 +196,7 @@ export const productSections = [
     {
         title: "Coir Yarn",
         description:
-            "We at Natural Coirs manufacture and supply a wide range of Coir Yarn and Rope products, crafted from high-quality coconut coir fiber. Our coir yarns and ropes are available in various ply, thicknesses, and lengths to suit diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir yarn/rope is an eco-friendly solution for tying, binding, weaving, and more.",
+            "We at Natural Coirs manufacture and supply a wide range of Coir Yarn products, crafted from high-quality coconut coir fiber. Our coir yarns are available in various ply, thicknesses, and lengths to suit diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir yarn is an eco-friendly solution for tying, binding, weaving, and more.",
         products: [
             {
                 name: "2 Ply 7 mm",
@@ -218,7 +218,7 @@ export const productSections = [
                 images: [ply3mm_1, ply3mm_2, ply3mm_3, ply3mm_4, ply3mm_5, ply3mm_6, ply3mm_7, ply3mm_8, ply3mm_9, ply3mm_10],
             },
             {
-                name: "2 Ply 15 Feet / 18 Feet or Double Piece",
+                name: "2 Ply 15 Feet / 18 Feet (Double Piece)",
                 images: [doublePiece1, doublePiece2, doublePiece3, doublePiece4, doublePiece5, doublePiece6, doublePiece7, doublePiece8, doublePiece9, doublePiece10, doublePiece11, doublePiece12],
             },
             {
@@ -234,7 +234,7 @@ export const productSections = [
     {
         title: "Coir Rope",
         description:
-            "We at Natural Coirs manufacture and supply high-quality Coir Rope, crafted from natural coconut coir fiber. Our coir ropes are available in various thicknesses and lengths, suitable forr",
+            "We at Natural Coirs manufacture and supply high-quality Coir Rope, crafted from natural coconut coir fiber. Our coir ropes are available in various thicknesses and lengths, suitable for diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir rope is an eco-friendly solution for tying, binding, weaving, and more.",
         products: [
             {
                 name: "8 Ply / 10 Ply (Vadam)",

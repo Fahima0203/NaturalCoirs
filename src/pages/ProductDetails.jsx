@@ -317,7 +317,7 @@ const ProductDetails = () => {
                         alignItems: "center",
                         gap: 18
                     }}>
-                        <span style={{ fontWeight: 600, color: "#222" }}>{price}</span>
+                        {/* <span style={{ fontWeight: 600, color: "#222" }}>{price}</span> */}
                         <a
                             href={whatsappLink}
                             target="_blank"
@@ -330,7 +330,6 @@ const ProductDetails = () => {
                                 textDecoration: "none",
                                 borderRadius: 6,
                                 padding: "6px 18px",
-                                marginLeft: 6,
                                 cursor: "pointer",
                                 boxShadow: "0 2px 8px #00968822",
                                 transition: "background 0.18s"
@@ -352,8 +351,8 @@ const ProductDetails = () => {
                         <a href={brochure} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "#e0f2f1", color: "#1976d2", fontWeight: 600, borderRadius: 6, padding: "5px 14px", textDecoration: "none", cursor: "pointer" }}>Product Brochure</a>
                         <a href={video} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "#e0f2f1", color: "#1976d2", fontWeight: 600, borderRadius: 6, padding: "5px 14px", textDecoration: "none", cursor: "pointer" }}>Watch Video</a>
                     </div>
-                    {/* --- Show sub-variants for Coir Yarn/Rope --- */}
-                    {section.title === "Coir Yarn/Rope" && coirYarnVariants[product.name] && (
+                    {/* --- Show sub-variants for Coir Yarn --- */}
+                    {section.title === "Coir Yarn" && coirYarnVariants[product.name] && (
                         <div style={{
                             margin: "18px 0 18px 0",
                             padding: "18px 18px 12px 18px",
