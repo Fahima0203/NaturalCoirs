@@ -323,15 +323,15 @@ export const productDetails = [
         brochure: "#",
         video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
-            { label: "Material", value: "100% natural coconut coir fiber" },
-            { label: "Ply Structure", value: "2 Ply twisted" },
+            { label: "Material", value: "100% Natural Coconut Coir Fiber" },
+            { label: "Ply Structure", value: "2 Ply Twisted" },
             { label: "Diameter|Thickness", value: "7 mm" },
             { label: "Length", value: "Custom (typically 15-30 feet)" },
-            { label: "Color", value: "Natural golden brown" },
-            { label: "Eco-Friendly", value: "Biodegradable & chemical-free" },
-            { label: "Tensile Strength", value: "Moderate to high" },
-            { label: "Twist", value: "Machine twisted" },
-            { label: "Water Resistance", value: "Excellent, resists rot and mold" },
+            { label: "Color", value: "Natural Golden Brown" },
+            { label: "Eco-Friendly", value: "Biodegradable & Chemical-Free" },
+            { label: "Tensile Strength", value: "Moderate to High" },
+            { label: "Twist", value: "Machine Twisted" },
+            { label: "Water Resistance", value: "Excellent, Resists Rot & Mold" },
             { label: "Applications", value: "Agriculture, Horticulture, Packaging, Landscaping, Gardening, Crafts, Marine" }
         ],
         description: `

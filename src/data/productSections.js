@@ -13,7 +13,6 @@ import block5h from "../assets/products/Cocopeat Blocks/5Kg/rows_copy.jpg";
 import block5i from "../assets/products/Cocopeat Blocks/5Kg/coir pith block 2.jpg";
 import block5j from "../assets/products/Cocopeat Blocks/5Kg/packed.jpg";
 
-
 //Coco Chips Blocks
 import chips1 from "../assets/products/Coco Chips Blocks/single.jpg";
 import chips2 from "../assets/products/Coco Chips Blocks/rows.jpg";
@@ -95,7 +94,6 @@ import ply4mm_6 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inche
 import ply4mm_7 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 7.png";
 import ply4mm_8 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 8.png";
 import ply4mm_9 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 9.png";
-
 
 // Coir Yarn - 2 Ply 3 mm
 import ply3mm_1 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 1.jpg";

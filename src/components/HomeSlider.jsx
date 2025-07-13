@@ -10,13 +10,22 @@ import '../styles/HomeSlider.css'
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 import slide_image_1 from '../assets/coco_peat/image1.png';
-import slide_image_2 from '../assets/coco_peat/image2.png';
+// import slide_image_2 from '../assets/coco_peat/image2.png';
 import slide_image_3 from '../assets/coco_peat/image3.png';
-import slide_image_4 from '../assets/coco_peat/image4.png';
-import slide_image_5 from '../assets/coco_peat/image5.jpg';
+// import slide_image_4 from '../assets/coco_peat/image4.png';
 import slide_image_6 from '../assets/coco_peat/image6.png';
 import slide_image_7 from '../assets/coco_peat/image7.png';
 import slide_image_8 from '../assets/coco_peat/image8.jpg';
+import chips6 from "../assets/products/Coco Chips Blocks/packed.jpg"; 
+import block1d from "../assets/products/Cocopeat Blocks/1Kg/image5.jpg";
+import block5a from "../assets/products/Cocopeat Blocks/5Kg/3inarow.png";
+import block5b from "../assets/products/Cocopeat Blocks/5Kg/rows.png";
+import block5j from "../assets/products/Cocopeat Blocks/5Kg/packed.jpg";
+import block650g8 from "../assets/products/Cocopeat Blocks/650g/image8.png";
+import coirFibre30Kg from "../assets/products/Coir Fibre/30 Kg Bale/image1.jpg";
+import coirFibre120Kg3 from "../assets/products/Coir Fibre/120 Kg Bale/image3.png";
+import ply4mm_6 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 6.png";
+
 
 function HomeSlider() {
   return (
@@ -48,16 +57,7 @@ function HomeSlider() {
           <img src={slide_image_1} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide_image_2} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
           <img src={slide_image_3} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_4} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_5} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
           <img src={slide_image_6} alt="slide_image" />
@@ -67,6 +67,33 @@ function HomeSlider() {
         </SwiperSlide>
         <SwiperSlide>
           <img src={slide_image_8} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={block1d} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={chips6} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={block5a} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={block5b} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={block5j} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={block650g8} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={coirFibre30Kg} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={coirFibre120Kg3} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={ply4mm_6} alt="slide_image" />
         </SwiperSlide>
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">

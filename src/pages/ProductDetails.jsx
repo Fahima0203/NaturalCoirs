@@ -708,6 +708,8 @@ const ProductDetails = () => {
                 @media (min-width: 701px) {
                     .sticky-gallery {
                         align-self: flex-start;
+                        position: sticky;
+                        top: 32px;
                     }
                 }
                 .yes-interested-btn:hover, .yes-interested-btn:focus {
