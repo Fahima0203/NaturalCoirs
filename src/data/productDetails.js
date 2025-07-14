@@ -240,7 +240,7 @@ export const productDetails = [
             { label: "Individual EC", value: "0.23, 0.47" },
             { label: "Moisture Before Blocking", value: "35-37%" },
             { label: "Moisture After Blocking", value: "40%" },
-            { label: "Expansion", value: "9.5+ L/ Kg" },
+            { label: "Expansion", value: "9.5+ L / Kg" },
             { label: "Fiber", value: "250 ml / Kg" },
             { label: "Sand", value: "1.384% (18 gm) / Kg" },
             { label: "UV Bag", value: "550gg (Inner Black color, Outer White Color)" },
@@ -316,40 +316,38 @@ export const productDetails = [
         ]
     }, 
     {
-        section: "Coir Yarn/Rope",
+        section: "Coir Yarn",
         name: "2 Ply 7 mm",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
         brochure: "#",
         video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
-            { label: "Material", value: "100% natural coconut coir fiber" },
-            { label: "Ply Structure", value: "2 Ply twisted" },
-            { label: "Diameter", value: "7 mm" },
-            { label: "Length", value: "Custom (typically 15-30 feet)" },
-            { label: "Color", value: "Natural golden brown" },
-            { label: "Eco-Friendly", value: "Biodegradable & chemical-free" },
-            { label: "Tensile Strength", value: "Moderate to high" },
-            { label: "Water Resistance", value: "Excellent, resists rot and mold" },
-            { label: "Applications", value: "Agriculture, gardening, crafts, marine, packaging" }
+            { label: "Material", value: "100% Natural Coconut Coir Fiber" },
+            { label: "Ply Structure", value: "2 Ply Twisted" },
+            { label: "Diameter|Thickness", value: "7 mm" },
+            { label: "Length", value: "Customizable (typically 15-30 feet)" },
+            { label: "Color", value: "Natural Golden Brown" },
+            { label: "Eco-Friendly", value: "Biodegradable & Chemical-Free" },
+            { label: "Tensile Strength", value: "Moderate to High" },
+            { label: "Twist", value: "Machine Twisted" },
+            { label: "Water Resistance", value: "Excellent, Resists Rot & Mold" },
+            { label: "Applications", value: "Agriculture, Horticulture, Packaging, Landscaping, Crafts, Marine" }
         ],
         description: `
-            2 Ply 7 mm Coir Rope is made from high-quality coconut coir fibers, twisted into two strong 
-            strands for a balance of strength and flexibility. Naturally biodegradable and chemical-free, 
-            this rope is ideal for eco-conscious users. Its natural resistance to water, mold, and decay 
-            makes it suitable for both indoor and outdoor applications. <br /><br />
-            Widely used in agriculture, gardening, packaging, and crafts, this rope offers reliable performance and easy handling.
+            Crafted from high-grade coconut coir, this 2 Ply 7 mm rope offers the perfect mix of strength, flexibility, and eco-friendliness. 
+            Its machine-twisted form resists water, mold, and rot — making it ideal for both indoor and outdoor use.<br /><br />
+            Perfect for tying plants, bundling produce, or even for rustic decor. A rope that works hard and stays strong.
         `,
         benefits: [
-            "🌱 Eco-friendly & sustainable – made from renewable coconut husks.",
-            "💪 Good strength & flexibility – suitable for tying, binding, and general use.",
-            "💧 Water and rot resistant – long-lasting even in humid conditions.",
-            "🧵 Soft texture – easy to handle and knot.",
-            "🔄 Multi-purpose – ideal for agriculture, crafts, marine, and packaging."
+            "🧵 Durable & Strong – Perfect for heavy-duty bundling",
+            "🌿 Eco-Conscious – 100% biodegradable & safe",
+            "💧 Moisture-Resistant – Withstands rain & humidity",
+            "🔄 Multi-Use – One rope, many roles: farm, garden, marine, decor",
         ]
     },
     {
-        section: "Coir Yarn/Rope",
+        section: "Coir Yarn",
         name: "2 Ply 5 mm",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
@@ -357,27 +355,29 @@ export const productDetails = [
         video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
             { label: "Length", value: "20 m" },
+            { label: "Thickness", value: "5 mm" },
             { label: "Rope Type", value: "Twisted" },
             { label: "Strand Structure", value: "2 Ply 5 mm" },
-            { label: "Diameter", value: "5 mm" },
+            { label: "Diameter|Thickness", value: "5 mm" },
             { label: "Color", value: "Light Brown" },
-            { label: "Usage/ Application", value: "Logging Industry" }
+            { label: "Type", value: "Twisted Natural Coir"},
+            { label: "Usage", value: "Logging Industry, Nursery, Farming, Craftwork" }
         ],
         description: `
-            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
-            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
-            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
-            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
-            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
-            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
-            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
-            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
-            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
-            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
-        `
+            Made from 100% coconut coir fiber, this 2 Ply 5 mm yarn offers the ideal mix of flexibility, 
+            grip, and eco-friendliness. Lightweight and easy to work with, it's perfect for gardening, 
+            bundling, tying saplings, and crafting — without harming your plants or the planet.
+        `,
+        benefits: [
+            "🌱 Eco-Safe & Biodegradable – A clean alternative to plastic rope",
+            "💧 Moisture-Resistant – Withstands outdoor conditions",
+            "🧵 Soft & Durable – Easy on hands, firm on knots",
+            "🔄 Multi-Use – Great for agriculture, decor, crafts & more",
+            "✂️ Easy to Handle – Lightweight, strong, and tangle-free",
+        ]
     },
     {
-        section: "Coir Yarn/Rope",
+        section: "Coir Yarn",
         name: "2 Ply 4 mm",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
@@ -385,27 +385,28 @@ export const productDetails = [
         video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
             { label: "Length", value: "20 m" },
+            { label: "Diameter|Thickness", value: "4 mm" },
+            { label: "Packaging Type", value: "Roll" },
             { label: "Rope Type", value: "Twisted" },
             { label: "Strand Structure", value: "2 Ply 4 mm" },
-            { label: "Diameter", value: "4 mm" },
             { label: "Color", value: "Light Brown" },
-            { label: "Usage/ Application", value: "Logging Industry" }
+            { label: "Usage", value: "Logging Industry, Agricultural tie-down, Craft decoration, Nursery Work, Small-Scale Packaging" }
         ],
         description: `
-            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
-            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
-            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
-            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
-            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
-            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
-            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
-            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
-            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
-            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
-        `
+            This lightweight yet sturdy 2 Ply 4 mm Coir Yarn is perfect for eco-conscious packaging, small crafts, and gentle binding tasks. 
+            Made from 100% coconut coir, it's biodegradable, hand-friendly, and naturally resistant to water and decay.<br /><br />
+            Ideal for those who want practical performance with a natural touch.
+        `,
+        benefits: [
+            "🌿 Eco-Safe & Compostable – 100% natural coir fiber",
+            "✋ Soft on Hands – No burns or rough edges",
+            "🎁 Perfect for Crafts & Packaging – Adds a rustic, organic charm",
+            "💪 Strong Yet Lightweight – Easy to tie, firm to hold",
+            "🔄 Multi-Use – Nursery, decoration, tying, and more",
+        ]
     },
     {
-        section: "Coir Yarn/Rope",
+        section: "Coir Yarn",
         name: "2 Ply 3 mm",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
@@ -413,117 +414,89 @@ export const productDetails = [
         video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
             { label: "Length", value: "20 m" },
-            { label: "Rope Type", value: "Twisted" },
+            { label: "Rope Type", value: "Twisted Natural Coir" },
             { label: "Strand Structure", value: "2 Ply 3 mm" },
-            { label: "Diameter", value: "3 mm" },
+            { label: "Diameter|Thickness", value: "3 mm" },
+            { label: "Length", value: "20 m (Custom cuts available)" },
             { label: "Color", value: "Light Brown" },
-            { label: "Usage/ Application", value: "Logging Industry" }
+            { label: "Usage/ Application", value: "Logging Industry, Handicraft, Floral binding, Crafts, Light bundling, Decorative Work" }
         ],
         description: `
-            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
-            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
-            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
-            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
-            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
-            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
-            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
-            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
-            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
-            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
-        `
+            Crafted for precision and light use, this fine 3 mm coir yarn delivers natural strength in a soft, flexible form. 
+            Whether you’re wrapping flowers, making handicrafts, or tying small bundles, it adds a 
+            rustic charm and holds beautifully — all while being eco-friendly and biodegradable.`,
+        benefits: [
+            "🌿 Eco-Safe & Biodegradable – 100% natural coconut fiber",
+            "🧶 Delicate Yet Durable – Perfect for florists, artisans & nurseries",
+            "✋ Soft Texture – Won’t scratch or damage delicate materials",
+            "🔄 Multi-Use – Great for decorative tying, braiding, or erosion control",
+            "💰 Cost-Effective – Budget-friendly for bulk and daily use",
+        ]
     },
     {
-        section: "Coir Yarn/Rope",
-        name: "2 Ply 15 Feet / 18 Feet",
+        section: "Coir Yarn",
+        name: "2 Ply 15 Feet / 18 Feet (Double Piece)",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
         brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
         video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
-            { label: "Length", value: "20 m" },
+            { label: "Length", value: "15 ft / 18 ft (Pre-cut)" },
             { label: "Rope Type", value: "Twisted" },
-            { label: "Strand Structure", value: "2 Ply 15 Feet / 18 Feet" },
+            { label: "Strand Structure", value: "2 Ply Twisted" },
             { label: "Diameter", value: "4 mm" },
+            { label: "Twist", value: "Strong & Uniformt" },
             { label: "Color", value: "Light Brown" },
-            { label: "Usage/ Application", value: "Logging Industry" }
+            { label: "Usage", value: "Agriculture, Nursery Binding, Farm Bundling, General Packaging" }
         ],
         description: `
-            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
-            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
-            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
-            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
-            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
-            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
-            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
-            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
-            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
-            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
-        `
+            Save time with our pre-cut 2 Ply Coir Yarn — perfect for farms, nurseries, and packers. Made from 100% coconut 
+            fiber, these double pieces offer consistent strength, soft handling, and eco-safe performance in every tie.<br /><br />
+            No cutting, no waste — just grab, bind, and go.
+        `,
+        benefits: [
+            "✂️ Pre-cut for Convenience – Quick use, zero prep",
+            "🌿 Eco-Friendly & Biodegradable – 100% coconut coir",
+            "💪 Strong & Flexible – Perfect for bundling or supporting plants",
+            "💧 Resists Water & Rot – Long-lasting even in the rain",
+            "🧵 Soft Texture – Gentle on hands and crops",
+        ]
     },
     {
-        section: "Coir Yarn/Rope",
+        section: "Coir Yarn",
         name: "3 Ply 15 Feet / 18 Feet",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
         brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
         video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
-            { label: "Material", value: "100% natural coconut coir fiber" },
+            { label: "Material", value: "100% Natural Coconut Coir Fiber" },
             { label: "Ply Structure", value: "3 Ply twisted" },
             { label: "Length", value: "15 Feet / 18 Feet" },
-            { label: "Diameter", value: "Custom (typically 4-8 mm)" },
-            { label: "Color", value: "Natural golden brown" },
+            { label: "Diameter", value: "Customizable (typically 4-8 mm)" },
+            { label: "Thickness", value: "Heavier than 2 Ply" },
+            { label: "Color", value: "Natural Golden Brown" },
+            { label: "Packaging", value: "Bundled Rolls" },
             { label: "Eco-Friendly", value: "Biodegradable & chemical-free" },
             { label: "Tensile Strength", value: "High, suitable for medium to heavy-duty use" },
             { label: "Water Resistance", value: "Excellent, naturally resists rot and mold" },
-            { label: "Applications", value: "Agriculture, marine, crafts, packaging, construction" }
+            { label: "Applications", value: "Heavy-duty applications (Marine, Agricultural, Cargo, Crafts, Construction, Packaging)" },
         ],
         description: `
-            3 Ply Coir Rope (15/18 Feet) is crafted from premium coconut coir fibers, twisted into three 
-            strong strands for enhanced durability and flexibility. This rope is naturally biodegradable, 
-            eco-friendly, and free from harmful chemicals, making it a sustainable choice for a wide range of uses.<br /><br /> 
-            Its robust construction ensures excellent resistance to water, mold, and decay, while maintaining 
-            a soft texture for easy handling. Ideal for agriculture, marine, crafts, and construction, 
-            this rope combines traditional strength with modern versatility.
+            Built for tougher tasks, this 3 Ply Coir Yarn offers extra durability and grip. Whether it’s bundling, 
+            anchoring, or marine tying, this rope handles it all — with the natural charm of coconut fiber.<br /><br />
+            Pre-cut and ready to use, it’s your go-to for strength, flexibility, and eco-friendliness.
         `,
         benefits: [
-            "🌱 Eco-friendly & biodegradable – safe for the environment and sustainable.",
-            "💪 Superior strength – 3-ply twist provides extra durability for demanding tasks.",
-            "💧 Naturally water and rot resistant – ideal for outdoor and marine use.",
-            "🧵 Flexible & easy to handle – soft texture, suitable for braiding, tying, and crafts.",
-            "🔄 Versatile – perfect for agriculture, packaging, gardening, marine, and construction applications."
+            "💪 Heavy-Duty Strength – 3-ply twist for maximum load support",
+            "🌿 Eco-Friendly & Biodegradable – Safe for Earth and strong for use",
+            "💧 Water & Rot Resistant – Perfect for outdoor and wet conditions",
+            "🔁 Reusable & Long-Lasting – Ideal for rough use, from farms to boats",
+            "✋ Soft Yet Strong – Gentle on hands, tough on tasks",
         ]
     },
     {
-        section: "Coir Yarn/Rope",
-        name: "Double Piece",
-        price: "₹ 40/kg",
-        minOrder: "2000 Kg",
-        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
-        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
-        specification: [
-            { label: "Length", value: "20 m" },
-            { label: "Rope Type", value: "Twisted" },
-            { label: "Strand Structure", value: "Double Piece" },
-            { label: "Diameter", value: "4 mm" },
-            { label: "Color", value: "Light Brown" },
-            { label: "Usage/ Application", value: "Logging Industry" }
-        ],
-        description: `
-            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
-            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
-            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
-            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
-            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
-            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
-            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
-            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
-            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
-            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
-        `
-    },
-    {
-        section: "Coir Yarn/Rope",
+        section: "Coir Yarn",
         name: "Hand Made Coir Rope Loose Twisted Spooling",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
@@ -534,24 +507,65 @@ export const productDetails = [
             { label: "Rope Type", value: "Twisted" },
             { label: "Strand Structure", value: "Hand Made Coir Rope Loose Twisted Spooling" },
             { label: "Diameter", value: "4 mm" },
-            { label: "Color", value: "Light Brown" },
-            { label: "Usage/ Application", value: "Logging Industry" }
+            { label: "Color", value: "Natural Light Brown" },
+            { label: "Usage/ Application", value: "Logging Industry" },
+            { label: "Type", value: "Handcrafted, Loose Twisted" },
+            { label: "Twist", value: "Loose & flexible" },
+            { label: "Material", value: "100% Coconut Fiber" },
+            { label: "Application", value: "Craft, Home Décor, Soft Tying needs, Packaging" }
         ],
         description: `
-            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
-            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
-            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
-            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
-            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
-            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
-            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
-            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
-            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
-            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
-        `
+            This handmade coir rope features a soft, loose twist – ideal for craft lovers, 
+            eco-conscious decorators, and gentle binding. Lightweight and flexible, it brings 
+            a natural touch to every project, from rustic wrapping to boho décor.
+        `,
+        benefits: [
+            "🎨 Artisanal Feel – Handmade texture adds charm to every use",
+            "🌿 Eco-Friendly & Biodegradable – 100% natural coconut fiber",
+            "✋ Soft & Flexible – Easy to knot, tie, and shape",
+            "🎁 Perfect for Crafts & Gifts – Rustic, elegant, and reusable",
+            "🔄 Versatile Use – From floral wrapping to creative home décor",
+        ]
+    },
+
+    {
+        section: "Coir Rope",
+        name: "8 Ply / 10 Ply (Vadam)",
+        price: "₹ 40/kg",
+        minOrder: "2000 Kg",
+        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
+        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
+        specification: [
+            { label: "Length", value: "20 m" },
+            { label: "Rope Type", value: "Twisted" },
+            { label: "Ply Optionsr", value: "8 Ply / 10 Ply" },
+            { label: "Diameter", value: "4 mm (Customizable)" },
+            { label: "Color", value: "Light Brown" },
+            { label: "Usage/ Application", value: "Logging Industry" },
+            { label: "Ply Options", value: "8 Ply / 10 Ply" },
+            { label: "Type", value: "Vadam Style, Hand/Machine Twisted" },
+            { label: "Material", value: "100% Natural Coconut Coir Fiber" },
+            { label: "Construction", value: "Hand-twisted or machine spun" },
+            { label: "Color", value: "Natural Brown / Golden" },
+            { label: "Diameter", value: "Customizable" },
+            { label: "Packaging", value: "Coil or Bundle" },
+            { label: "Usage/Application", value: "Agriculture, Boats, Temple Chariots, Weight-bearing uses, Rural construction" }
+        ],
+        description: `
+           Trusted for generations, our 8 & 10 Ply Coir Ropes are perfect for heavy-duty and cultural applications 
+           like temple pulling, bundling, and anchoring. With a tight twist, high strength, and natural grip, 
+           these ropes offer unmatched durability—all while staying eco-friendly and biodegradable.
+        `,
+        benefits: [
+            "💪 Extreme Strength – For pulling, lifting, or weight-bearing",
+            "🌧️ Weather Resistant – Stands up to rain, sun & wear",
+            "🌀 Non-slip Texture – Strong hold, even when wet",
+            "🌿 Eco-Friendly – 100% biodegradable coconut fiber",
+            "🛕 Culturally Trusted – Used in temple chariots & rural crafts",
+        ]
     },
     {
-        section: "Coir Yarn/Rope",
+        section: "Coir Rope",
         name: "Loose Twisted Spooling",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
@@ -562,49 +576,32 @@ export const productDetails = [
             { label: "Rope Type", value: "Twisted" },
             { label: "Strand Structure", value: "Loose Twisted Spooling" },
             { label: "Diameter", value: "4 mm" },
-            { label: "Color", value: "Light Brown" },
-            { label: "Usage/ Application", value: "Logging Industry" }
+            { label: "Usage/ Application", value: "Logging Industry" },
+            { label: "Material", value: "100% Coconut Coir Fiber" },
+            { label: "Twist", value: "Loose & flexible" },
+            { label: "Application", value: "Craft, Home décor, Soft tying needs" },
+            { label: "Type", value: "Loose Twisted | Handmade | Spool-Ready" },
+            { label: "Construction", value: "Handmade / Soft twist" },
+            { label: "Material", value: "100% Natural Coconut Coir Fiber" },
+            { label: "Color", value: "Light Brown to Golden" },
+            { label: "Length", value: "Spool-ready, custom lengths available" },
+            { label: "Packaging", value: "Roll / Coil / Bundle" },
+            { label: "Usage", value: "Handicrafts, Decorative Binding, Garden Tying, Home Decor, Floristry, Eco-Packaging" }
         ],
         description: `
-            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
-            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
-            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
-            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
-            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
-            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
-            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
-            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
-            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
-            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
-        `
-    },
-    {
-        section: "Coir Yarn/Rope",
-        name: "8ply / 10ply  (Vadam)",
-        price: "₹ 40/kg",
-        minOrder: "2000 Kg",
-        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
-        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
-        specification: [
-            { label: "Length", value: "20 m" },
-            { label: "Rope Type", value: "Twisted" },
-            { label: "Strand Structure", value: "8ply / 10ply  (Vadam)" },
-            { label: "Diameter", value: "4 mm" },
-            { label: "Color", value: "Light Brown" },
-            { label: "Usage/ Application", value: "Logging Industry" }
-        ],
-        description: `
-            <b>Material:</b> Made from 100% natural coconut coir fiber<br />
-            <b>Ply Strength:</b> 2-ply construction provides moderate strength with flexibility.<br />
-            <b>Color:</b> Natural golden brown, derived from matured coconut husks.<br />
-            <b>Eco-Friendly:</b> Biodegradable, sustainable, and environmentally safe.<br />
-            <b>Moisture & Rot Resistance:</b> Naturally resistant to water, mold, and bacterial decay.<br />
-            <b>Tensile Strength:</b> Strong enough for medium-duty applications like binding and packaging.<br />
-            <b>Lightweight & Flexible:</b> Easy to handle, making it ideal for various uses.<br />
-            <b>Applications:</b> Commonly used in gardening, handicrafts, packaging, agriculture, and marine industries.<br />
-            <b>Soft Texture & Good Durability:</b> Suitable for braiding, weaving, and tying applications.<br />
-            <b>Chemical-Free Processing:</b> No harmful chemicals, ensuring it’s safe for organic and industrial use.<br />
-        `
+            Our Loose Twisted Spooling Coir Rope blends natural beauty with gentle functionality. 
+            Made from 100% coconut coir, this rope features a soft, loose twist—ideal for delicate 
+            tasks like garden tying, floristry, DIY crafts, or eco-friendly packaging.<br /><br />
+            Its rustic look and handmade charm add warmth to any décor or gift wrap. 
+            Flexible, biodegradable, and easy to spool, it’s a must-have for conscious creators, artisans, and green brands.
+        `,
+        benefits: [
+            "🎨 Rustic & Elegant – Adds natural charm to décor and packaging",
+            "🪴 Plant-Friendly – Gentle for soft tying in gardens & nurseries",
+            "♻️ 100% Eco-Friendly – Plastic-free, biodegradable, and sustainable",
+            "✂️ Flexible & Easy to Use/Cut – Great for spooling, crafts, or quick wraps",
+            "🤲 Soft & Handmade – Comfortable to handle, crafted by skilled hands",
+        ]
     },
     {
         section: "Cocopeat Powder",
@@ -615,7 +612,7 @@ export const productDetails = [
         video: "https://www.youtube.com/watch?v=jDu_-xBgFrM",
         specification: [
             { label: "Packaging Size", value: "25 Kg" },
-            { label: "Packing Type", value: "Loose" },
+            { label: "Packing Type", value: "Available in loose form and bagged" },
             { label: "Moisture Content", value: "10% - 20%"},
             { label: "Electrical Conductivity", value: "As per request" },
             { label: "pH Level", value: "5.5 - 6.5" },
@@ -623,20 +620,22 @@ export const productDetails = [
             { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
             { label: "Air Porosity", value: "High, allowing for good aeration" },
             { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
+            { label: "Usage", value: "Nurseries, home gardens, grow bags, greenhouse cultivation, pots, and large farms." },
             { label: "Country of Origin", value: "Made in India" }
         ],
         description: `
-            Mixes well with any soil and feels like smooth powder.<br /><br />
-            🌱 Use it for vegetables, flowers, fruits, home gardens, pots, or big farms – Coco Peat Powder makes growing simple and successful!<br /><br />
+            Upgrade your garden with our Loose Coco Peat Powder – a ready-to-use, eco-friendly soil enhancer made from 100% natural coconut husks. 
+            With its soft texture and excellent water-holding capacity, it keeps roots moist and breathing—perfect for nurseries, pots, grow bags, or full-scale farms.<br /><br />
+            No soaking or breaking required—just mix and grow!
         `,
         benefits: [
-            "Right pH for Plants: Not too acidic, not too alkaline – just right for most crops (5.5 to 6.5).",
-            "Holds Water Like a Sponge: Keeps soil moist longer – saves water and helps during dry days.",
-            "Gives Air to Roots: Stops soil from getting too hard. Roots can breathe and grow better.",
-            "100% Natural & Safe: Made from coconuts, no chemicals. Safe for people, plants, and Earth.",
-            "Boosts Growth: Helps plants absorb water and nutrients better.",
-            "No Weeds or Pests: Naturally clean – keeps your soil free from bugs and fungus.",
-            "Lightweight & Easy to Use: Easy to carry, spread, and store – perfect for everyone.",
+            "✅ Instant Use – No expansion needed",
+            "💧 Moisture-Rich – Holds 8–10x its weight in water",
+            "🌬️ Fluffy & Airy – Prevents root suffocation",
+            "🌱 Plant-Friendly pH (5.5–6.5) – Ideal for most crops",
+            "🌿 100% Natural & Clean – No pests, no chemicals",
+            "👜 Lightweight & Easy to Carry – Available loose or in 25 Kg bags",
+            "🌻 Perfect for All Setups – Home gardens, greenhouses, farms"
         ]
     },
     {
@@ -657,20 +656,25 @@ export const productDetails = [
             { label: "Fiber", value: "250 ml / Kg" },
             { label: "Sand", value: "1.384% (18 gm) / Kg" },
             { label: "UV Bag", value: "550gg (Inner Black color, Outer White Color)" },
+            { label: "Water Retention", value: "Expands up to 3x–5x in volume" },
+            { label: "Usage", value: "Greenhouses, farms, nurseries, potting media, hydroponics" },
             { label: "Country of Origin", value: "Made in India" },
         ],
         description: `
-            Mixes well with any soil and feels like smooth powder.<br /><br />
-            🌱 Use it for vegetables, flowers, fruits, home gardens, pots, or big farms – Coco Peat Powder makes growing simple and successful!<br /><br />
+            Our 25 Kg Cocopeat Bale is a high-performance, space-saving growing medium — perfect for greenhouses, nurseries, and large farms. 
+            Compact for shipping, it expands 3–5x when hydrated, delivering fluffy, rich cocopeat that improves soil texture, moisture retention, and root health.<br /><br />
+            Whether you're growing in pots, beds, or hydroponics — this bale delivers results.
         `,
         benefits: [
-            "Right pH for Plants: Not too acidic, not too alkaline – just right for most crops (5.5 to 6.5).",
-            "Holds Water Like a Sponge: Keeps soil moist longer – saves water and helps during dry days.",
-            "Gives Air to Roots: Stops soil from getting too hard. Roots can breathe and grow better.",
-            "100% Natural & Safe: Made from coconuts, no chemicals. Safe for people, plants, and Earth.",
-            "Boosts Growth: Helps plants absorb water and nutrients better.",
-            "No Weeds or Pests: Naturally clean – keeps your soil free from bugs and fungus.",
-            "Lightweight & Easy to Use: Easy to carry, spread, and store – perfect for everyone.",        ]
+            "✅ Massive Expansion – Yields 9.5+ liters per kg!",
+            "💧 Holds Water Like a Sponge – Reduces watering needs",
+            "🌬️ Aerates Soil Naturally – Promotes stronger root growth",
+            "🌱 Perfect pH (5.5–6.5) – Ideal for most plants",
+            "🛡️ Weed-Free & Clean – Safe for seedlings & hydroponics",
+            "📦 Compact & Cost-Efficient – Saves space, stores well",
+            "🌿 100% Organic – No chemicals, just pure coconut husk",
+            "🔄 Long Shelf Life – Use when ready, no spoilage"
+        ]
 
     }
     // {

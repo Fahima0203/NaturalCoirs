@@ -1,6 +1,4 @@
 import image1 from "../assets/coco_peat/image1.png";
-import image2 from "../assets/coco_peat/image2.png";
-import image3 from "../assets/coco_peat/image3.png";
 import image7 from "../assets/coco_peat/image7.png";
 
 //Cocopeat Blocks 5Kg
@@ -11,9 +9,9 @@ import block5d from "../assets/products/Cocopeat Blocks/5Kg/single_watermark.png
 import block5e from "../assets/products/Cocopeat Blocks/5Kg/1_block.jpg";
 import block5f from "../assets/products/Cocopeat Blocks/5Kg/2_blocks.jpg";
 import block5g from "../assets/products/Cocopeat Blocks/5Kg/mini_rows.jpg";
-import block5h from "../assets/products/Cocopeat Blocks/5Kg/coir pith block 2.jpg";
-import block5i from "../assets/products/Cocopeat Blocks/5Kg/packed.jpg";
-
+import block5h from "../assets/products/Cocopeat Blocks/5Kg/rows_copy.jpg";
+import block5i from "../assets/products/Cocopeat Blocks/5Kg/coir pith block 2.jpg";
+import block5j from "../assets/products/Cocopeat Blocks/5Kg/packed.jpg";
 
 //Coco Chips Blocks
 import chips1 from "../assets/products/Coco Chips Blocks/single.jpg";
@@ -24,10 +22,9 @@ import chips5 from "../assets/products/Coco Chips Blocks/packed.jpg";
 import chips6 from "../assets/products/Coco Chips Blocks/packed_with_powder.jpg"; 
 
 //Cocopeat Blocks 2Kg
-import block2a from "../assets/products/Cocopeat Blocks/2Kg/rows.jpg";
-import block2b from "../assets/products/Cocopeat Blocks/2Kg/packed.jpg";
-import block2c from "../assets/products/Cocopeat Blocks/2Kg/row.png";
-import block2d from "../assets/products/Cocopeat Blocks/2Kg/blocks.png";
+import block2a from "../assets/products/Cocopeat Blocks/2Kg/blocks.png";
+import block2b from "../assets/products/Cocopeat Blocks/2Kg/row.png";
+import block2c from "../assets/products/Cocopeat Blocks/2Kg/packed.jpg";
 
 //Cocopeat Blocks 1Kg
 import block1a from "../assets/products/Cocopeat Blocks/1Kg/image2.jpg";
@@ -46,6 +43,11 @@ import block650g6 from "../assets/products/Cocopeat Blocks/650g/image6.png";
 import block650g7 from "../assets/products/Cocopeat Blocks/650g/image7.png";
 import block650g8 from "../assets/products/Cocopeat Blocks/650g/image8.png";
 
+//Coir Fibre 120 Kg Bale
+import coirFibre120Kg from "../assets/products/Coir Fibre/120 Kg Bale/image1.png";
+import coirFibre120Kg2 from "../assets/products/Coir Fibre/120 Kg Bale/image2.png";
+import coirFibre120Kg3 from "../assets/products/Coir Fibre/120 Kg Bale/image3.png";
+import coirFibre120Kg4 from "../assets/products/Coir Fibre/120 Kg Bale/image4.png";
 
 //Coir Fibre 30Kg Bale
 import coirFibre30Kg from "../assets/products/Coir Fibre/30 Kg Bale/image1.jpg";
@@ -53,11 +55,89 @@ import coirFibre30Kg2 from "../assets/products/Coir Fibre/30 Kg Bale/image2.jpg"
 import coirFibre30Kg3 from "../assets/products/Coir Fibre/30 Kg Bale/image3.jpg";
 import coirFibre30Kg4 from "../assets/products/Coir Fibre/30 Kg Bale/image4.jpg";
 
-//Coir Fibre 120 Kg Bale
-import coirFibre120Kg from "../assets/products/Coir Fibre/120 Kg Bale/image1.png";
-import coirFibre120Kg2 from "../assets/products/Coir Fibre/120 Kg Bale/image2.png";
-import coirFibre120Kg3 from "../assets/products/Coir Fibre/120 Kg Bale/image3.png";
-import coirFibre120Kg4 from "../assets/products/Coir Fibre/120 Kg Bale/image4.png";
+// Coir Yarn - 2 Ply 7 mm
+import ply7mm22_1 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 32.jpg";
+import ply7mm22_2 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 20.jpg";
+import ply7mm22_3 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 21.jpg";
+import ply7mm22_4 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 23.jpg";
+import ply7mm22_5 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 25.jpg";
+import ply7mm22_6 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 26.jpg";
+import ply7mm22_7 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 27.jpg";
+import ply7mm22_8 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 28.jpg";
+import ply7mm22_9 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 30.jpg";
+import ply7mm22_10 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 31.jpg";
+import ply7mm22_11 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 17.jpg";
+import ply7mm22_12 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS).jpg";
+import ply7mm22_13 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (One Kg PCS) 1.jpg";
+import ply7mm22_14 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches 1.jpg";
+import ply7mm22_15 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches.jpg";
+import ply7mm30_1 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches (HALF Kg PCS) 7.jpg";
+import ply7mm30_2 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches.jpg";
+import ply7mm30_3 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 1.jpg";
+import ply7mm30_4 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 2.jpg";
+import ply7mm30_5 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 3.jpg";
+
+// Coir Yarn - 2 Ply 5 mm
+import ply5mm_1 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 2.jpg";
+import ply5mm_2 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 3.jpg";
+import ply5mm_3 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 5.jpg";
+import ply5mm_4 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 7.jpg";
+import ply5mm_5 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet.jpg";
+
+// Coir Yarn - 2 Ply 4 mm
+import ply4mm_1 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 1.jpg";
+import ply4mm_2 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 2.jpg";
+import ply4mm_3 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 3.jpg";
+import ply4mm_4 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 4.png";
+import ply4mm_5 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 5.png";
+import ply4mm_6 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 6.png";
+import ply4mm_7 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 7.png";
+import ply4mm_8 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 8.png";
+import ply4mm_9 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 9.png";
+
+// Coir Yarn - 2 Ply 3 mm
+import ply3mm_1 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 1.jpg";
+import ply3mm_2 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 6.jpg";
+import ply3mm_3 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 7.jpg";
+import ply3mm_4 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 8.jpg";
+import ply3mm_5 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 9.jpg";
+import ply3mm_6 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 10.jpg";
+import ply3mm_7 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 11.jpg";
+import ply3mm_8 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 12.jpg";
+import ply3mm_9 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 13.jpg";
+import ply3mm_10 from "../assets/products/Coir Yarn/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 14.jpg";
+
+// Coir Yarn - 2 Ply 15 Feet / 18 Feet or Double Piece
+import doublePiece1 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 1.png";
+import doublePiece2 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 2.png";
+import doublePiece3 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 3.png";
+import doublePiece4 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 4.png";
+import doublePiece5 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 5.png";
+import doublePiece6 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 6.png";
+import doublePiece7 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 7.png";
+import doublePiece8 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 8.png";
+import doublePiece9 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 9.png";
+import doublePiece10 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 10.png";
+import doublePiece11 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 11.jpg";
+import doublePiece12 from "../assets/products/Coir Yarn/2 Ply 15 Feet : 18 Feet_Double Piece/Double Piece 12.png";
+
+// Coir Yarn - 3 Ply 15 Feet / 18 Feet
+import ply3_15_18_1 from "../assets/products/Coir Yarn/3 Ply 15 Feet : 18 Feet/3 Ply 15 Feet 1.png";
+import ply3_15_18_2 from "../assets/products/Coir Yarn/3 Ply 15 Feet : 18 Feet/3 Ply 15 Feet 2.png";
+import ply3_15_18_3 from "../assets/products/Coir Yarn/3 Ply 15 Feet : 18 Feet/3 Ply 15 Feet 3.png";
+import ply3_15_18_4 from "../assets/products/Coir Yarn/3 Ply 15 Feet : 18 Feet/3 Ply 15 Feet 4.png";
+import ply3_15_18_5 from "../assets/products/Coir Yarn/3 Ply 15 Feet : 18 Feet/3 Ply 15 Feet 5.png";
+import ply3_15_18_6 from "../assets/products/Coir Yarn/3 Ply 15 Feet : 18 Feet/3 Ply 15 Feet 6.png";
+
+// Coir Rope - 8 Ply / 10 Ply (Vadam)
+import vadam1 from "../assets/products/Coir Rope/8 Ply : 10 Ply (Vadam)/8 Ply 1.jpg";
+import vadam2 from "../assets/products/Coir Rope/8 Ply : 10 Ply (Vadam)/8 Ply 2.jpg";
+import vadam3 from "../assets/products/Coir Rope/8 Ply : 10 Ply (Vadam)/8 Ply 3.jpg";
+
+// Coir Rope - Loose Twisted Spooling
+import looseTwisted1 from "../assets/products/Coir Rope/Loose Twisted Spooling/Loose Twisted Spooling 1.jpg";
+import looseTwisted2 from "../assets/products/Coir Rope/Loose Twisted Spooling/Loose Twisted Spooling 2.jpg";
+import looseTwisted3 from "../assets/products/Coir Rope/Loose Twisted Spooling/Loose Twisted Spooling.jpg";
 
 //Cocopeat Loose Powder
 import loosePowder from "../assets/products/Cocopeat Powder/Loose Powder/image1.png";
@@ -71,60 +151,6 @@ import cocopeatPowder25Kg2 from "../assets/products/Cocopeat Powder/25 Kg Bale/i
 import cocopeatPowder25Kg3 from "../assets/products/Cocopeat Powder/25 Kg Bale/image3.jpg";
 import cocopeatPowder25Kg4 from "../assets/products/Cocopeat Powder/25 Kg Bale/image4.jpg";
 
-// Coir Yarn/Rope - 2 Ply 7 mm
-import ply7mm22_1 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 17.jpg";
-import ply7mm22_2 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 20.jpg";
-import ply7mm22_3 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 21.jpg";
-import ply7mm22_4 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 23.jpg";
-import ply7mm22_5 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 25.jpg";
-import ply7mm22_6 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 26.jpg";
-import ply7mm22_7 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 27.jpg";
-import ply7mm22_8 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 28.jpg";
-import ply7mm22_9 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 30.jpg";
-import ply7mm22_10 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 31.jpg";
-import ply7mm22_11 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 32.jpg";
-import ply7mm22_12 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS).jpg";
-import ply7mm22_13 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches (One Kg PCS) 1.jpg";
-import ply7mm22_14 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches 1.jpg";
-import ply7mm22_15 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 22Inches.jpg";
-import ply7mm30_1 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches (HALF Kg PCS) 7.jpg";
-import ply7mm30_2 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches.jpg";
-import ply7mm30_3 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 1.jpg";
-import ply7mm30_4 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 2.jpg";
-import ply7mm30_5 from "../assets/products/Coir Yarn:Rope/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 3.jpg";
-
-// Coir Yarn/Rope - 2 Ply 5 mm
-import ply5mm_1 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 2.jpg";
-import ply5mm_2 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 3.jpg";
-import ply5mm_3 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 5.jpg";
-import ply5mm_4 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 7.jpg";
-import ply5mm_5 from "../assets/products/Coir Yarn:Rope/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet.jpg";
-
-// Coir Yarn/Rope - 2 Ply 4 mm
-import ply4mm_1 from "../assets/products/Coir Yarn:Rope/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 1.jpg";
-import ply4mm_2 from "../assets/products/Coir Yarn:Rope/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 8.jpg";
-import ply4mm_3 from "../assets/products/Coir Yarn:Rope/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet.jpg";
-
-// Coir Yarn/Rope - 2 Ply 3 mm
-import ply3mm_1 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 1.jpg";
-import ply3mm_2 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 6.jpg";
-import ply3mm_3 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 7.jpg";
-import ply3mm_4 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 8.jpg";
-import ply3mm_5 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 9.jpg";
-import ply3mm_6 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 10.jpg";
-import ply3mm_7 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 11.jpg";
-import ply3mm_8 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 12.jpg";
-import ply3mm_9 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 13.jpg";
-import ply3mm_10 from "../assets/products/Coir Yarn:Rope/2 Ply 3 mm/2 Ply 3mm 18 Inches 40 Feet 14.jpg";
-
-// Coir Yarn/Rope - Double Piece
-import doublePiece from "../assets/products/Coir Yarn:Rope/Double Piece/Double Piece.jpg";
-
-// Coir Yarn/Rope - Loose Twisted Spooling
-import looseTwisted1 from "../assets/products/Coir Yarn:Rope/Loose Twisted Spooling/Loose Twisted Spooling 1.jpg";
-import looseTwisted2 from "../assets/products/Coir Yarn:Rope/Loose Twisted Spooling/Loose Twisted Spooling 2.jpg";
-import looseTwisted3 from "../assets/products/Coir Yarn:Rope/Loose Twisted Spooling/Loose Twisted Spooling.jpg";
-
 export const productSections = [
     {
         title: "Cocopeat Blocks",
@@ -134,11 +160,11 @@ export const productSections = [
             products: [
             {
                 name: "5 Kg", //husk chips blocks
-                images: [block5a, block5b, block5c, block5d, block5e, block5f, block5g, block5h, block5i, chips1, chips2, chips3, chips4, chips5, chips6],
+                images: [image1, block5a, block5b, block5c, block5d, block5e, block5f, block5g, block5h, block5i, block5j, chips1, chips2, chips3, chips4, chips5, chips6],
             },
             {
                 name: "2 Kg",
-                images: [image1, block2a, block2b, block2c, block2d],
+                images: [block2a, block2b, block2c],
             },
             {
                 name: "1 Kg",
@@ -166,9 +192,9 @@ export const productSections = [
         ],
     },
     {
-        title: "Coir Yarn/Rope",
+        title: "Coir Yarn",
         description:
-            "We at Natural Coirs manufacture and supply a wide range of Coir Yarn and Rope products, crafted from high-quality coconut coir fiber. Our coir yarns and ropes are available in various ply, thicknesses, and lengths to suit diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir yarn/rope is an eco-friendly solution for tying, binding, weaving, and more.",
+            "We at Natural Coirs manufacture and supply a wide range of Coir Yarn products, crafted from high-quality coconut coir fiber. Our coir yarns are available in various ply, thicknesses, and lengths to suit diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir yarn is an eco-friendly solution for tying, binding, weaving, and more.",
         products: [
             {
                 name: "2 Ply 7 mm",
@@ -183,37 +209,40 @@ export const productSections = [
             },
             {
                 name: "2 Ply 4 mm",
-                images: [ply4mm_1, ply4mm_2, ply4mm_3],
+                images: [ply4mm_1, ply4mm_2, ply4mm_3, ply4mm_4, ply4mm_5, ply4mm_6, ply4mm_7, ply4mm_8, ply4mm_9],
             },
             {
                 name: "2 Ply 3 mm",
                 images: [ply3mm_1, ply3mm_2, ply3mm_3, ply3mm_4, ply3mm_5, ply3mm_6, ply3mm_7, ply3mm_8, ply3mm_9, ply3mm_10],
             },
             {
-                name: "2 Ply 15 Feet / 18 Feet",
-                images: [],
+                name: "2 Ply 15 Feet / 18 Feet (Double Piece)",
+                images: [doublePiece1, doublePiece2, doublePiece3, doublePiece4, doublePiece5, doublePiece6, doublePiece7, doublePiece8, doublePiece9, doublePiece10, doublePiece11, doublePiece12],
             },
             {
                 name: "3 Ply 15 Feet / 18 Feet",
-                images: [],
-            },
-            {
-                name: "8ply / 10ply (Vadam)",
-                images: [],
-            },
-            {
-                name: "Double Piece",
-                images: [doublePiece],
+                images: [ply3_15_18_1, ply3_15_18_2, ply3_15_18_3, ply3_15_18_4, ply3_15_18_5, ply3_15_18_6],
             },
             {
                 name: "Hand Made Coir Rope Loose Twisted Spooling",
                 images: [],
             },
+        ],
+    },
+    {
+        title: "Coir Rope",
+        description:
+            "We at Natural Coirs manufacture and supply high-quality Coir Rope, crafted from natural coconut coir fiber. Our coir ropes are available in various thicknesses and lengths, suitable for diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir rope is an eco-friendly solution for tying, binding, weaving, and more.",
+        products: [
+            {
+                name: "8 Ply / 10 Ply (Vadam)",
+                images: [vadam1, vadam2, vadam3],
+            },
             {
                 name: "Loose Twisted Spooling",
                 images: [looseTwisted1, looseTwisted2, looseTwisted3],
             },
-        ],
+        ]
     },
     {
         title: "Cocopeat Powder",

@@ -3,7 +3,8 @@
 /products
 /products_with_watermarks
 /products_with_watermarks1
-
+/12_july_products
+/12_july_products_watermarked
 # dependencies
 /node_modules
 /.pnp

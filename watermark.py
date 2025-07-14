@@ -12,8 +12,8 @@ def reduce_opacity(image, opacity=0.3):
     image.putalpha(alpha)
     return image
 
-input_folder = "/Users/fahima.begum/personal/NC/Website/NaturalCoirs/Products"
-output_folder = "/Users/fahima.begum/personal/NC/Website/NaturalCoirs/Products_with_watermarks1"
+input_folder = "/Users/fahima.begum/personal/NC/Website/NaturalCoirs/12_july_products/enhance_image"
+output_folder = "/Users/fahima.begum/personal/NC/Website/NaturalCoirs/12_july_products_watermarked/enhance_image"
 watermark_path = "/Users/fahima.begum/personal/NC/Website/NaturalCoirs/Products/Copy of NC Package Label - 1 (6)-Photoroom.png"  # Path to your watermark image
 
 # Load watermark and ensure it's RGBA

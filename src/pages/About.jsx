@@ -4,10 +4,17 @@ import React from 'react'
 import img1 from "../assets/coco_peat/image2.png";
 import img2 from "../assets/coco_peat/image4.png";
 import img3 from "../assets/coco_peat/image8.jpg";
+import ply7mm22_8 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 28.jpg";
+import ply7mm22_10 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 31.jpg";
+import ply7mm30_1 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches (HALF Kg PCS) 7.jpg";
+import ply7mm30_3 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 1.jpg";
+import ply7mm30_4 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 2.jpg";
+import ply7mm30_5 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 3.jpg";
+
 const runningText = "🌿 Welcome to the Global Leader in Cocopeat Solutions | 🌱 Trusted by Farmers & Growers Worldwide | 🚚 Fast Shipping & Custom Packaging Available | 💡 24/7 Expert Advisory for Your Success | 🌍 Sustainable, High-Performance Cocopeat Exports";
 
 const AboutSlider = () => {
-    const images = [img1, img2, img3];
+    const images = [img1, img3, ply7mm22_8, ply7mm22_10, ply7mm30_1, ply7mm30_3, ply7mm30_4, ply7mm30_5];
     const [index, setIndex] = React.useState(0);
     const timeoutRef = React.useRef(null);
 
@@ -131,7 +138,7 @@ const About = () => (
                 <a href="/contact" className="about-cta-btn">Get a Free Consultation</a>
             </div>
             <div className="about-hero-img">
-                <img src={img1} alt="Premium Cocopeat" />
+                <img src={img2} alt="Premium Cocopeat" />
             </div>
         </section>
         <div style={{ padding: "2rem" }} className="about-main-content">
