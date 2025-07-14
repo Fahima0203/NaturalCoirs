@@ -79,3 +79,191 @@
     font-size: 1.1rem !important;
   }
 }
+
+/* MOBIILE VIEW */
+
+/* .mobile-menu-button {
+  background: white;
+  color: #00695c;
+  border: none;
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.mobile-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.mobile-sidebar {
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.close-button {
+  align-self: flex-end;
+  background: #00695c;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.mobile-link {
+  color: #00695c;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-submenu {
+  padding-left: 12px;
+  margin-top: 5px;
+}
+
+.mobile-submenu-title {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #2e7d32;
+}
+
+.mobile-sublink {
+  color: #1976d2;
+  font-weight: 500;
+  display: block;
+  padding: 4px 0;
+  text-decoration: none;
+} */
+
+/* 📱 Mobile Sidebar Overlay */
+.mobile-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* Slight backdrop */
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-start;
+  transition: background 0.3s ease-in-out;
+}
+
+/* 🧾 Sidebar Container */
+.mobile-sidebar {
+  width: 80vw;
+  max-width: 320px;
+  background: #ffffff;
+  height: 100%;
+  padding: 24px 18px;
+  box-shadow: 2px 0 20px rgba(0, 150, 136, 0.25);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* ✨ Animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ❌ Close Button */
+.close-button, .mobile-menu-button {
+  align-self: flex-end;
+  background: #43a047;
+  color: white;
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* 📋 Main Links */
+.mobile-link {
+  color: #00695c;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: block;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.mobile-link:hover {
+  color: #2e7d32;
+}
+
+/* 🔽 Dropdown Toggle */
+.mobile-dropdown button {
+  background: none;
+  border: none;
+  color: #00695c;
+  font-weight: 600;
+  text-align: left;
+  width: 100%;
+  font-size: 1.05rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* 📁 Section Titles */
+.mobile-submenu-title {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin: 10px 0 6px;
+  color: #2e7d32;
+  text-transform: uppercase;
+}
+
+/* ➡️ Sub Links */
+.mobile-sublink {
+  color: #548b1a;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 5px 0 5px 16px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.mobile-sublink:hover {
+  color: #0d47a1;
+  transform: translateX(4px);
+}
+
+/* ✅ Optional active highlight */
+.mobile-link-active {
+  color: #43a047;
+  font-weight: 700;
+}
+
