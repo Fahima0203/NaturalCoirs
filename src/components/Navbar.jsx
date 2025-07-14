@@ -7,8 +7,18 @@ import '../styles/Navbar.css';
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { productSections } from "../data/productSections";
 import React, { useState, useCallback } from 'react';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 function Nbar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [mobileProductOpen, setMobileProductOpen] = useState(false);
+
+    const isMobile = window.innerWidth <= 900;
+
+    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+    const toggleMobileProduct = () => setMobileProductOpen(!mobileProductOpen);
+
+
     const [showProducts, setShowProducts] = useState(false);
     const [hoveredSection, setHoveredSection] = useState(null);
 
@@ -64,7 +74,51 @@ function Nbar() {
                         Natural Coirs
                     </Navbar.Brand>
                 </Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" style={{border: "none", background: "#fff", color: "#009688"}} />
+                {/* <Navbar.Toggle aria-controls="basic-navbar-nav" style={{border: "none", background: "#fff", color: "#009688"}} /> */}
+                {isMobile && (
+                    <button onClick={toggleMobileMenu} className="mobile-menu-button">
+                        ☰
+                    </button>
+                )}
+                {isMobile && isMobileMenuOpen && (
+                    <div className="mobile-sidebar-overlay">
+                        <div className="mobile-sidebar">
+                            <button onClick={toggleMobileMenu} className="close-button">×</button>
+
+                            <Link to="/" onClick={toggleMobileMenu} className="mobile-link">Home</Link>
+
+                            <div className="mobile-dropdown">
+                                <button onClick={toggleMobileProduct} className="mobile-link">
+                                    Products {mobileProductOpen ? "▲" : "▼"}
+                                </button>
+                                {mobileProductOpen && (
+                                    <div className="mobile-submenu">
+                                        {productSections.map(section => (
+                                            <div key={section.title}>
+                                                <div className="mobile-submenu-title">{section.title}</div>
+                                                {section.products.map(prod => (
+                                                    <Link
+                                                        to={`/products/${encodeURIComponent(section.title)}/${encodeURIComponent(prod.name)}`}
+                                                        onClick={toggleMobileMenu}
+                                                        key={prod.name}
+                                                        className="mobile-sublink"
+                                                    >
+                                                       <LaunchIcon></LaunchIcon> {prod.name}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+
+                            <Link to="/AboutOurCocoProducts" onClick={toggleMobileMenu} className="mobile-link">About Our Coco Products</Link>
+                            <Link to="/AboutUs" onClick={toggleMobileMenu} className="mobile-link">About Us</Link>
+                            <Link to="/Contact" onClick={toggleMobileMenu} className="mobile-link">Contact</Link>
+                        </div>
+                    </div>
+                )}
+
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto" style={{alignItems: "center", gap: "0.5rem"}}>
                         <Nav.Link
