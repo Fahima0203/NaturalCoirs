@@ -93,20 +93,37 @@ function Nbar() {
                                 </button>
                                 {mobileProductOpen && (
                                     <div className="mobile-submenu">
+                                        <Link
+                                        to="/Products"
+                                        onClick={toggleMobileMenu}
+                                        className="mobile-sublink highlight"
+                                        style={{
+                                            fontWeight: 600,
+                                            color: "#00695c",
+                                            padding: "0.5rem 0",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            gap: "6px",
+                                            borderBottom: "1px solid #ccc"
+                                        }}
+                                        >
+                                        <LaunchIcon fontSize="small" />
+                                        View All Products
+                                        </Link>
                                         {productSections.map(section => (
-                                            <div key={section.title}>
-                                                <div className="mobile-submenu-title">{section.title}</div>
-                                                {section.products.map(prod => (
-                                                    <Link
-                                                        to={`/products/${encodeURIComponent(section.title)}/${encodeURIComponent(prod.name)}`}
-                                                        onClick={toggleMobileMenu}
-                                                        key={prod.name}
-                                                        className="mobile-sublink"
-                                                    >
-                                                       <LaunchIcon></LaunchIcon> {prod.name}
-                                                    </Link>
-                                                ))}
-                                            </div>
+                                        <div key={section.title}>
+                                            <div className="mobile-submenu-title">{section.title}</div>
+                                            {section.products.map(prod => (
+                                            <Link
+                                                to={`/products/${encodeURIComponent(section.title)}/${encodeURIComponent(prod.name)}`}
+                                                onClick={toggleMobileMenu}
+                                                key={prod.name}
+                                                className="mobile-sublink"
+                                            >
+                                                <LaunchIcon fontSize="small" /> {prod.name}
+                                            </Link>
+                                            ))}
+                                        </div>
                                         ))}
                                     </div>
                                 )}

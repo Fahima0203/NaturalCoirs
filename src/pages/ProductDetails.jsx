@@ -25,6 +25,12 @@ const ProductDetails = () => {
     );
 
     const [mainImg, setMainImg] = useState(product?.images[0]);
+    useEffect(() => {
+        if (product?.images?.[0]) {
+            setMainImg(product.images[0]);
+        }
+    }, [product]);
+
     const [zoom, setZoom] = useState(false);
     const [zoomPos, setZoomPos] = useState({ x: 0, y: 0 });
 
