@@ -20,7 +20,7 @@ import chips6 from "../assets/products/Coco Chips Blocks/packed.jpg";
 import block1d from "../assets/products/Cocopeat Blocks/1Kg/image5.jpg";
 import block5a from "../assets/products/Cocopeat Blocks/5Kg/3inarow.png";
 import block5b from "../assets/products/Cocopeat Blocks/5Kg/rows.png";
-import block5j from "../assets/products/Cocopeat Blocks/5Kg/packed.jpg";
+// import block5j from "../assets/products/Cocopeat Blocks/5Kg/packed.jpg";
 import block650g8 from "../assets/products/Cocopeat Blocks/650g/image8.png";
 import coirFibre30Kg from "../assets/products/Coir Fibre/30 Kg Bale/image1.jpg";
 import coirFibre120Kg3 from "../assets/products/Coir Fibre/120 Kg Bale/image3.png";
@@ -80,9 +80,9 @@ function HomeSlider() {
         <SwiperSlide>
           <img src={block5b} alt="slide_image" />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img src={block5j} alt="slide_image" />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <img src={block650g8} alt="slide_image" />
         </SwiperSlide>

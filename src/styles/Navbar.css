@@ -267,3 +267,9 @@
   font-weight: 700;
 }
 
+.mobile-sublink.highlight {
+  background-color: #e0f2f1;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
