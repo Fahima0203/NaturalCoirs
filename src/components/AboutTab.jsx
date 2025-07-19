@@ -37,7 +37,7 @@ function Slideshow() {
     }, [index]);
 
     return (
-        <div className="slideshow">
+        <div className="about-slideshow">
             <div
                 className="slideshowSlider"
                 style={{ transform: `translate3d(${-index * 100}%, 0, 0)`, height: "250px", }}
@@ -126,7 +126,6 @@ function AboutTab() {
                 /* ...existing code or import your AboutTab.css... */
                 @media (max-width: 700px) {
                     .tabs-custom .nav.nav-tabs.row {
-                        flex-direction: column !important;
                         display: flex !important;
                         gap: 0 !important;
                         align-items: stretch !important;

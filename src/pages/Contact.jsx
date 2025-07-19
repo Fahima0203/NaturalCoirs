@@ -70,26 +70,26 @@ const Contact = () => {
                     </div>
                     <div className="contact-left" style={styles.left}>
                         <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-                            <h3 style={{ marginBottom: "0.5rem", color: "#007b5e", fontWeight: 700, letterSpacing: 1.5 }}>Get In Touch</h3>
+                            <h3 style={{ color: "#007b5e", fontWeight: 700, letterSpacing: 1.5 }}>Get In Touch</h3>
                             <h2 style={{ fontWeight: 400, fontSize: 24, margin: "0 0 1.5rem 0" }}>
                                 We are always connected to support your Business!
                             </h2>
                             {/* English Support */}
-                            <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", justifyContent: "center" }}>
+                            <div style={{ display: "flex", alignItems: "center"}}>
                                 <a href="tel:+919445676371"> <span style={iconStyle} role="img" aria-label="phone">📞</span> </a>
                                 <span style={contactTextStyle}>
                                     English Support: <a href="tel:+919445676371" style={iconLinkStyle}><strong>+91 94456 76371</strong></a>
                                 </span>
                             </div>
                             {/* Arabic, Hindi, Urdu Support */}
-                            <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", justifyContent: "center" }}>
+                            <div style={{ display: "flex", alignItems: "center"}}>
                                 <a href="tel:+919445071614"> <span style={iconStyle} role="img" aria-label="phone">📞</span> </a>
                                 <span style={contactTextStyle}>
                                     Arabic, Hindi, Urdu Support: <a href="tel:+919445071614" style={iconLinkStyle}><strong>+91 94450 71614</strong></a>
                                 </span>
                             </div>
                             {/* Email */}
-                            <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", justifyContent: "center" }}>
+                            <div style={{ display: "flex", alignItems: "center"}}>
                                 <a href="mailto:naturalcoirs786@gmail.com"> <span style={iconStyle} role="img" aria-label="email">✉️</span> </a>
                                 <span style={contactTextStyle}>
                                     <a href="mailto:naturalcoirs786@gmail.com" style={iconLinkStyle}><strong>naturalcoirs786@gmail.com</strong></a>
@@ -99,7 +99,7 @@ const Contact = () => {
                             <div style={{ margin: "1.5rem 0 0.5rem 0", fontWeight: 600 }}>
                                 Follow us on Social Networks to stay in touch with us
                             </div>
-                            <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: "1.5rem", justifyContent: "center" }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: 18}}>
                                 <a href="https://www.youtube.com/@NaturalCoirs" aria-label="YouTube" target="_blank" rel="noopener noreferrer" style={{ ...iconLinkStyle, color: "#FF0000" }}>
                                     <YouTube style={{ height: '35px', width: '35px', color: "#FF0000" }} />
                                 </a>

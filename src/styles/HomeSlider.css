@@ -4,25 +4,26 @@
   zoom: 0.5;
 }
 
-.home-slider-wrapper {
+/* .home-slider-wrapper {
   font-size: 1.6rem;
   background: var(--bg);
-}
+} */
 
 .home-slider-wrapper .container {
-  max-width: 124rem;
-  padding: 4rem 1rem;
+  max-width: 180rem;
+  /* padding: 4rem 1rem; */
 }
 
 .home-slider-wrapper .heading {
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
+  margin-bottom: 0px;
   font-size: 3.5rem;
   text-align: center;
 }
 
 .home-slider-wrapper .swiper_container {
   height: 52rem;
-  padding: 2rem 0;
+  padding: 0px 0px 2rem 0px;
   position: relative;
 }
 
