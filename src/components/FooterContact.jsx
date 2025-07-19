@@ -13,7 +13,7 @@ const quickLinkStyle = {
 function FooterContact() {
     return (
         <footer>
-            <div className="container" style={{ padding: '15px' }}>
+            <div className="container">
                 <div className="row row-40 row-md-50 justify-content-xl-between">
                     <div className="col-sm-6 col-lg-4 wow fadeInRight" style={{ padding: '10px' }}>
                         <h2>Visit Us</h2>
