@@ -224,8 +224,8 @@ export const productSections = [
                 images: [ply3_15_18_1, ply3_15_18_2, ply3_15_18_3, ply3_15_18_4, ply3_15_18_5, ply3_15_18_6],
             },
             {
-                name: "Hand Made Coir Rope Loose Twisted Spooling",
-                images: [],
+                name: "Hand Made Coir Yarn Loose Twisted Spooling",
+                images: [looseTwisted1, looseTwisted2, looseTwisted3],
             },
         ],
     },
@@ -237,10 +237,6 @@ export const productSections = [
             {
                 name: "8 Ply / 10 Ply (Vadam)",
                 images: [vadam1, vadam2, vadam3],
-            },
-            {
-                name: "Loose Twisted Spooling",
-                images: [looseTwisted1, looseTwisted2, looseTwisted3],
             },
         ]
     },
