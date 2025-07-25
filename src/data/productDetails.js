@@ -497,36 +497,38 @@ export const productDetails = [
     },
     {
         section: "Coir Yarn",
-        name: "Hand Made Coir Rope Loose Twisted Spooling",
+        name: "Hand Made Coir Yarn Loose Twisted Spooling",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
         brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
         video: "https://www.youtube.com/shorts/BHHvU8mgan8",
         specification: [
-            { label: "Length", value: "20 m" },
-            { label: "Rope Type", value: "Twisted" },
-            { label: "Strand Structure", value: "Hand Made Coir Rope Loose Twisted Spooling" },
+            { label: "Length", value: "Spool-ready, custom lengths available" },
+            { label: "Yarn Type", value: "Loose Twisted | Handmade | Spool-Ready" },
+            { label: "Strand Structure", value: "Hand Made Coir Yarn Loose Twisted Spooling" },
             { label: "Diameter", value: "4 mm" },
             { label: "Color", value: "Natural Light Brown" },
             { label: "Type", value: "Handcrafted, Loose Twisted" },
             { label: "Twist", value: "Loose & flexible" },
             { label: "Material", value: "100% Coconut Fiber" },
-            { label: "Application", value: "Craft, Home Décor, Soft Tying needs, Packaging, Logging Industry" }
+            { label: "Packaging", value: "Roll / Coil / Bundle" },
+            { label: "Usage", value: "Handicrafts, Decorative Binding, Garden Tying, Craft, Home décor, Soft tying needs, Floristry, Eco-Packaging, Logging Industry" },
         ],
         description: `
-            This handmade coir rope features a soft, loose twist – ideal for craft lovers, 
-            eco-conscious decorators, and gentle binding. Lightweight and flexible, it brings 
-            a natural touch to every project, from rustic wrapping to boho décor.
+            Our Loose Twisted Spooling Coir Yarn blends natural beauty with gentle functionality. 
+            Made from 100% coconut coir, this yarn features a soft, loose twist—ideal for delicate 
+            tasks like garden tying, floristry, DIY crafts, or eco-friendly packaging.<br /><br />
+            Its rustic look and handmade charm add warmth to any décor or gift wrap. 
+            Flexible, biodegradable, and easy to spool, it’s a must-have for conscious creators, artisans, and green brands.
         `,
         benefits: [
-            "🎨 Artisanal Feel – Handmade texture adds charm to every use",
-            "🌿 Eco-Friendly & Biodegradable – 100% natural coconut fiber",
-            "✋ Soft & Flexible – Easy to knot, tie, and shape",
-            "🎁 Perfect for Crafts & Gifts – Rustic, elegant, and reusable",
-            "🔄 Versatile Use – From floral wrapping to creative home décor",
+            "🎨 Rustic & Elegant – Adds natural charm to décor and packaging",
+            "🪴 Plant-Friendly – Gentle for soft tying in gardens & nurseries",
+            "♻️ 100% Eco-Friendly – Plastic-free, biodegradable, and sustainable",
+            "✂️ Flexible & Easy to Use/Cut – Great for spooling, crafts, or quick wraps",
+            "🤲 Soft & Handmade – Comfortable to handle, crafted by skilled hands",
         ]
     },
-
     {
         section: "Coir Rope",
         name: "8 Ply / 10 Ply (Vadam)",
@@ -560,40 +562,6 @@ export const productDetails = [
             "🌀 Non-slip Texture – Strong hold, even when wet",
             "🌿 Eco-Friendly – 100% biodegradable coconut fiber",
             "🛕 Culturally Trusted – Used in temple chariots & rural crafts",
-        ]
-    },
-    {
-        section: "Coir Rope",
-        name: "Loose Twisted Spooling",
-        price: "₹ 40/kg",
-        minOrder: "2000 Kg",
-        brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
-        video: "https://www.youtube.com/shorts/BHHvU8mgan8",
-        specification: [
-            { label: "Length", value: "Spool-ready, custom lengths available" },
-            { label: "Rope Type", value: "Loose Twisted | Handmade | Spool-Ready" },
-            { label: "Strand Structure", value: "Loose Twisted Spooling" },
-            { label: "Diameter", value: "4 mm" },
-            { label: "Twist", value: "Loose & flexible" },
-            { label: "Construction", value: "Handmade / Soft twist" },
-            { label: "Material", value: "100% Natural Coconut Coir Fiber" },
-            { label: "Color", value: "Light Brown to Golden" },
-            { label: "Packaging", value: "Roll / Coil / Bundle" },
-            { label: "Usage", value: "Handicrafts, Decorative Binding, Garden Tying, Craft, Home décor, Soft tying needs, Floristry, Eco-Packaging, Logging Industry" }
-        ],
-        description: `
-            Our Loose Twisted Spooling Coir Rope blends natural beauty with gentle functionality. 
-            Made from 100% coconut coir, this rope features a soft, loose twist—ideal for delicate 
-            tasks like garden tying, floristry, DIY crafts, or eco-friendly packaging.<br /><br />
-            Its rustic look and handmade charm add warmth to any décor or gift wrap. 
-            Flexible, biodegradable, and easy to spool, it’s a must-have for conscious creators, artisans, and green brands.
-        `,
-        benefits: [
-            "🎨 Rustic & Elegant – Adds natural charm to décor and packaging",
-            "🪴 Plant-Friendly – Gentle for soft tying in gardens & nurseries",
-            "♻️ 100% Eco-Friendly – Plastic-free, biodegradable, and sustainable",
-            "✂️ Flexible & Easy to Use/Cut – Great for spooling, crafts, or quick wraps",
-            "🤲 Soft & Handmade – Comfortable to handle, crafted by skilled hands",
         ]
     },
     {
