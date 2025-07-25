@@ -47,10 +47,32 @@ function FooterContact() {
                             </Row>
                         </Container>
                     </div>
-                    <div className="col-lg-4 wow fadeInRight" data-wow-delay=".3s" style={{ padding: '10px' }}>
+                    <div className="col-lg-4 wow fadeInRight" data-wow-delay=".3s" style={{ paddingTop: '10px' }}>
                         <h2>Get in touch</h2>
                         <p>We are always ready to answer any questions you may have or help you select healthy products.</p>
-                        <strong>Contact us anytime!</strong>
+                        <p>Contact us anytime!</p>
+                        <div className="gst-iec-box">
+                            <span style={{marginRight: 8}}>
+                                <svg width="22" height="22" fill="none" stroke="#43a047" strokeWidth="2" style={{marginBottom: -4}}>
+                                    <rect x="3" y="5" width="16" height="12" rx="3" />
+                                    <line x1="7" y1="9" x2="15" y2="9" />
+                                    <line x1="7" y1="13" x2="15" y2="13" />
+                                </svg>
+                            </span>
+                            <a
+                                href="/AboutUs#certifications"
+                                style={{marginLeft: 8, cursor: "pointer"}}
+                            >
+                                GSTIN: <span>33AEKPH7496H1Z5</span>
+                            </a>
+                            <br />
+                            <a
+                                href="/AboutUs#certifications"
+                                style={{marginLeft: 8,cursor: "pointer"}}
+                            >
+                                IEC: <span>AEKPH7496H</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
