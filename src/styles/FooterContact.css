@@ -60,3 +60,9 @@ footer {
 .gst-iec-box span {
   font-weight: 700;
 }
+
+@media (max-width: 600px) {
+  .container {
+    margin-bottom: 16px;
+  }
+}
