@@ -637,7 +637,113 @@ export const productDetails = [
             "🔄 Long Shelf Life – Use when ready, no spoilage"
         ]
 
-    }
+    },
+    {
+        section: "Organic Fertilizers",
+        name: "Vermicompost",
+        specification: [
+            { label: "📦 Form", value: "Solid (granular or powder form)" },
+            { label: "🌰 Source", value: "Processed organic waste using earthworms (Eisenia fetida)" },
+            { label: "🌡️ pH Range", value: "6.5 – 7.5 (neutral to mildly alkaline)" },
+            { label: "🌡️ Nitrogen (N)", value: "1.5–2% (approx.)" },
+            { label: "🧬 Nutrient Content",  value: "High in NPK, beneficial microbes, humic acids, enzymes, and micronutrients" },
+            { label: "🐛 Natural Pest Control", value: "Improves plant resistance to pests and diseases naturally" },
+            { label: "🌱 Application", value: "Mixed into soil, top dressing, potting mix, or compost blend" },
+            { label: "🌾 Usage", value: "Ideal for vegetables, fruits, flowering plants, indoor plants, and field crops" },
+        ],
+        description: `
+            Vermicompost is a powerhouse of nutrients and beneficial microbes that enrich your soil and enhance plant growth. 
+            It’s completely natural, eco-friendly, and safe for all types of crops. <br /><br />
+            Whether you're a home gardener or a professional farmer, vermicompost gives your plants the best organic start. 
+            Consistent use improves soil fertility, water retention, and root strength.
+        `,
+        benefits: [
+            "🌱 Boosts plant growth with essential nutrients.",
+            "🌿 Improves soil structure and aeration.",
+            "💧 Enhances moisture retention for healthier roots.",
+            "🌍 Eco-friendly and chemical-free – safe for people and planet."
+        ]
+    },
+    {
+        section: "Organic Fertilizers",
+        name: "Fish Amino Acid",
+        specification: [
+            { label: "📦Appearance", value: "Brownish liquid" },
+            { label: "🌊pH Level", value: "4.0 – 6.5" },
+            { label: "🧪Nutrient Content", value: "High in Nitrogen, Amino Acids, and Trace Elements" },
+            { label: "Dilution Ratio",  value: "1:100 to 1:200 with water" },
+            { label: "Storage", value: "Cool, Dry Place, Away from Direct Sunlight" },
+            { label: "💧Shelf Life", value: "6 months when stored properly" },
+            { label: "🧑‍🌾Shelf Life", value: "6–12 months (cool, dark storage)" },
+            { label: "Packaging", value: "Available in 1L, 5L, and 20L containers" },
+            { label: "🧴Application Method", value: "2–5 ml per liter of water (Foliar Spray or Soil Drench)" },
+            { label: "Country of Origin", value: "Made in India" }  
+        ],
+        description: `
+            Fish Amino Acid (FAA) is a natural liquid fertilizer made from fermented fish waste and a sustainable alternative to chemical fertilizers, 
+            rich in amino acids, vitamins, enzymes, and trace minerals.<br /><br />
+            It can be used as a foliar spray or soil drench, providing essential nutrients directly to plants.
+            This natural fertilizer is ideal for organic farming, hydroponics, and home gardening.
+            It is safe for all types of plants, including vegetables, fruits, and ornamental plants.
+        `,
+        benefits: [
+            "🌱 Boosts plant growth – Enhances cell division and protein synthesis.",
+            "💧 Improves soil health – Stimulates microbial activity and soil structure.",
+            "🌿 Enhances nutrient uptake – Amino acids improve absorption efficiency.",
+            "🌍 Eco-friendly & cost-effective – Sustainable alternative to chemical fertilizers.",
+        ]
+    },
+    {
+        section: "Organic Fertilizers",
+        name: "Neem Cake Powder",
+        specification: [
+            { label: "📦 Form", value: "Powder" },
+            { label: "🌰 Source", value: "Residue from cold-pressed neem seed kernels" },
+            { label: "🌡️ Nitrogen (N)", value: "2–5% (approx.)" },
+            { label: "🔬 Other Nutrients",  value: "Contains phosphorus, potassium, sulfur & organic carbon" },
+            { label: "🐛 Natural Pest Control", value: "Acts as an organic pesticide and soil conditioner" },
+            { label: "🌱 Application", value: "Used in soil mixing or as a top dressing" },
+        ],
+        description: `
+            Neem Cake Powder is an organic by-product of neem oil extraction, rich in nutrients and natural pest-repelling compounds.
+            It improves soil fertility and protects crops from harmful pests and nematodes.<br /><br />
+            Widely used in organic farming and home gardening as a dual-purpose input.
+            Ideal for vegetables, fruits, flowers, and field crops.
+        `,
+        benefits: [
+            "🐛 Natural Pest Control – Repels soil-borne insects and nematodes",
+            "🌿 Improves Soil Fertility – Enriches soil with slow-release nutrients",
+            "🌾 Enhances Plant Immunity – Boosts resistance to diseases and stress",
+            "♻️ Eco-Friendly & Sustainable – 100% organic and safe for all crops"
+        ]
+    },
+    {
+        section: "Organic Fertilizers",
+        name: "Panchagavya",
+        specification: [
+            { label: "📦 Form", value: "Liquid" },
+            { label: "🌰 Source", value: "Cow dung, cow urine, milk, curd, and ghee" },
+            { label: "🌡️ pH Range", value: "5.0 – 6.5" },
+            { label: "🌡️ Nitrogen (N)", value: "0.5–1% (approx.)" },
+            { label: "🧬 Nutrient Content",  value: "Rich in beneficial microbes, enzymes, and growth-promoting substances" },
+            { label: "🐛 Natural Pest Control", value: "Acts as a bio-pesticide and promotes beneficial microbes" },
+            { label: "🌱 Application", value: "Foliar spray, soil drench, or seed treatment" },
+            { label: "🌾 Usage", value: "Suitable for all crops, including vegetables, fruits, cereals, and flowers" },
+        ],
+        description: `
+            Panchagavya is a traditional Indian organic fertilizer made from five cow-derived products.
+            It is rich in nutrients and beneficial microorganisms, promoting healthy plant growth and soil fertility.<br /><br />
+            It acts as a natural growth enhancer and immune booster for plants.
+            Widely used in organic farming for promoting healthy and high-yield crops.
+        `,
+        benefits: [
+            "🌾 Boosts Plant Growth – Enhances root and shoot development.",
+            "🌸 Increases Flowering & Yield – Promotes more blooms and fruits.",
+            "🌍 Improves Soil Fertility – Enriches microbes and organic matter.",
+            "💧 Enhances Water Retention – Helps soil hold moisture longer."
+        ]
+    },
+
     // {
     //     section: "Coco Pith Blocks", Blocks",
     //     name: "25 Kg Bale",ale",

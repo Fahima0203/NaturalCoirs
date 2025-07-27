@@ -292,6 +292,10 @@ export const productSections = [
             "We at Natural Coirs offer a range of organic fertilizers, including Fish Amino Acid, Neem Cake Powder, Panchagavya, and Vermicompost. These fertilizers are made from natural ingredients and are designed to enhance soil fertility, promote healthy plant growth, and improve crop yields. Our products are eco-friendly, sustainable, and suitable for various agricultural and horticultural applications.",
         products: [
             {
+                name: "Vermicompost",
+                images: [vermicompost, vermicompost2, vermicompost3],
+            },
+            {
                 name: "Fish Amino Acid",
                 images: [fishAminoAcid, fishAminoAcid2, fishAminoAcid3, fishAminoAcid4, fishAminoAcid5, fishAminoAcid6, fishAminoAcid7, fishAminoAcid8, fishAminoAcid9, fishAminoAcid10],
             },
@@ -302,10 +306,6 @@ export const productSections = [
             {
                 name: "Panchagavya",
                 images: [panchagavya, panchagavya2, panchagavya3],
-            },
-            {
-                name: "Vermicompost",
-                images: [vermicompost, vermicompost2, vermicompost3],
             },
         ],
     },
