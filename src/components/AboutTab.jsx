@@ -126,6 +126,7 @@ function AboutTab() {
                 /* ...existing code or import your AboutTab.css... */
                 @media (max-width: 700px) {
                     .tabs-custom .nav.nav-tabs.row {
+                        margin-left: 2px;
                         display: flex !important;
                         gap: 0 !important;
                         align-items: stretch !important;
@@ -149,7 +150,6 @@ function AboutTab() {
                         padding: 10px 0 !important;
                         display: block !important;
                         width: 100% !important;
-                        text-align: left !important;
                         white-space: normal !important;
                     }
                     .tabs-custom .tab-pane hr {

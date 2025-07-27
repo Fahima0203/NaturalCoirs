@@ -10,8 +10,8 @@ import ply7mm30_1 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inc
 import ply7mm30_3 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 1.jpg";
 import ply7mm30_4 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 2.jpg";
 import ply7mm30_5 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 3.jpg";
-import gstImg from "../assets/docs/gst.png";
-import iecImg from "../assets/docs/iec1.png";
+import gstImg from "../assets/docs/gst1.png";
+import iecImg from "../assets/docs/iec.png";
 
 const runningText = "🌿 Welcome to the Global Leader in Cocopeat Solutions | 🌱 Trusted by Farmers & Growers Worldwide | 🚚 Fast Shipping & Custom Packaging Available | 💡 24/7 Expert Advisory for Your Success | 🌍 Sustainable, High-Performance Cocopeat Exports";
 
@@ -134,19 +134,6 @@ const About = () => {
             }, 100); // slight delay for page render
         }
     }, []);
-
-    const styles = {
-        
-        sectionTitle: {
-            color: "#2d2d8c",
-            fontWeight: "bold",
-            fontSize: "1.3rem",
-            margin: 0,
-            display: "flex",
-            alignItems: "center",
-            gap: "8px"
-        },
-    };
 
     return (
         <>

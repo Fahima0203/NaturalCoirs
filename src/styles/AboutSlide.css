@@ -24,8 +24,8 @@
 
   .slideshowDot {
     display: inline-block;
-    height: 15px;
-    width: 15px;
+    height: 11px;
+    width: 11px;
     border-radius: 50%;
 
     cursor: pointer;
