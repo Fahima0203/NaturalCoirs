@@ -5,9 +5,8 @@ import ProductSidebar from "../components/ProductSidebar";
 import { useNavigate } from "react-router-dom";
 import { productSections } from "../data/productSections";
 
-const pageTitle = "Our Products";
 const pageDescription =
-    "Explore our range of premium coir products, including coco peat blocks, coir fibre, and coir yarn, sourced and manufactured with the highest quality standards. Use the search box to quickly find products by name, description, or section. 🌱 Whether you are a home gardener, commercial grower, or wholesaler, we have the perfect solution for your needs. Discover best sellers, eco-friendly options, and innovative coir solutions for every application.";
+    "Explore our premium range of eco-friendly agricultural products, including coir-based items like coco peat blocks, coir fibre, and coir yarn, as well as organic fertilizers such as vermicompost, fish amino acid, panchagavya, and neem cake powder. Use the search box to quickly find products by name, description, or category. 🌿 Whether you're a home gardener, commercial farmer, or bulk buyer, we offer reliable, sustainable solutions to meet your growing needs. Discover best sellers, natural inputs, and innovative products designed for healthy plants and better yields.";
 
 const Products = () => {
     const [search, setSearch] = useState("");

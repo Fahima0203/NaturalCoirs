@@ -10,8 +10,14 @@ import ply7mm30_1 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inc
 import ply7mm30_3 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 1.jpg";
 import ply7mm30_4 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 2.jpg";
 import ply7mm30_5 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 3.jpg";
-import gstImg from "../assets/docs/gst.png";
-import iecImg from "../assets/docs/iec1.png";
+import gstImg1 from "../assets/docs/gst1.png";
+import gstImg2 from "../assets/docs/gst2.png";
+import gstImg3 from "../assets/docs/gst3.png";
+import iecImg from "../assets/docs/iec.png";
+import msme1 from "../assets/docs/msme1.png";
+import msme2 from "../assets/docs/msme2.png";
+import msme3 from "../assets/docs/msme3.png";
+import msme4 from "../assets/docs/msme4.png";
 
 const runningText = "🌿 Welcome to the Global Leader in Cocopeat Solutions | 🌱 Trusted by Farmers & Growers Worldwide | 🚚 Fast Shipping & Custom Packaging Available | 💡 24/7 Expert Advisory for Your Success | 🌍 Sustainable, High-Performance Cocopeat Exports";
 
@@ -124,6 +130,108 @@ const RunningBadge = () => {
     );
 };
 
+const certificates = [
+    {
+        key: "gst",
+        label: "GST Certificate",
+        icon: "🧾",
+        images: [gstImg1, gstImg2, gstImg3],
+    },
+    {
+        key: "iec",
+        label: "IEC Certificate",
+        icon: "🧾",
+        images: [iecImg],
+    },
+    {
+        key: "msme",
+        label: "MSME Certificate",
+        icon: "🏢",
+        images: [msme1, msme2, msme3, msme4],
+    }
+    // Add more certificates as needed
+];
+
+const CertificateCard = ({ cert }) => {
+    const [page, setPage] = React.useState(0);
+    const totalPages = cert.images.length;
+
+    return (
+        <div style={{
+            flex: "1 1 320px",
+            minWidth: "260px",
+            maxWidth: "420px",
+            background: "#f8f8fa",
+            borderRadius: "12px",
+            padding: "1.2rem",
+            border: "1.5px solid #e0f2f1",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+        }}>
+            <div style={{
+                fontWeight: 700,
+                color: "#43a047",
+                fontSize: "1.13rem",
+                marginBottom: "0.7rem",
+            }}>
+                <span role="img" aria-label={cert.key}>{cert.icon}</span> {cert.label}
+            </div>
+            <img
+                src={cert.images[page]}
+                alt={`${cert.label} Page ${page + 1}`}
+                style={{
+                    width: "100%",
+                    maxWidth: "320px",
+                    borderRadius: "10px",
+                    boxShadow: "0 2px 12px #00968822",
+                    border: "2px solid #b2dfdb",
+                    background: "#fafbfc",
+                }}
+            />
+            {totalPages > 1 && (
+                <div style={{ marginTop: "0.7rem", display: "flex", gap: "8px", alignItems: "center" }}>
+                    <button
+                        style={{
+                            padding: "4px 12px",
+                            borderRadius: "6px",
+                            border: "1px solid #43a047",
+                            background: "#e0f2f1",
+                            color: "#00695c",
+                            fontWeight: 600,
+                            cursor: page > 0 ? "pointer" : "not-allowed",
+                            opacity: page > 0 ? 1 : 0.5
+                        }}
+                        onClick={() => setPage(page - 1)}
+                        disabled={page === 0}
+                    >
+                        Prev
+                    </button>
+                    <span style={{fontWeight: 600, color: "#1976d2"}}>
+                        Page {page + 1} / {totalPages}
+                    </span>
+                    <button
+                        style={{
+                            padding: "4px 12px",
+                            borderRadius: "6px",
+                            border: "1px solid #43a047",
+                            background: "#e0f2f1",
+                            color: "#00695c",
+                            fontWeight: 600,
+                            cursor: page < totalPages - 1 ? "pointer" : "not-allowed",
+                            opacity: page < totalPages - 1 ? 1 : 0.5
+                        }}
+                        onClick={() => setPage(page + 1)}
+                        disabled={page === totalPages - 1}
+                    >
+                        Next
+                    </button>
+                </div>
+            )}
+        </div>
+    );
+};
+
 const About = () => {
     const certRef = useRef(null);
 
@@ -134,19 +242,6 @@ const About = () => {
             }, 100); // slight delay for page render
         }
     }, []);
-
-    const styles = {
-        
-        sectionTitle: {
-            color: "#2d2d8c",
-            fontWeight: "bold",
-            fontSize: "1.3rem",
-            margin: 0,
-            display: "flex",
-            alignItems: "center",
-            gap: "8px"
-        },
-    };
 
     return (
         <>
@@ -313,72 +408,9 @@ const About = () => {
                         </h2>
                     </div>
                     <div style={{display: "flex", flexWrap: "wrap", gap: "2rem"}}>
-                        <div style={{
-                            flex: "1 1 320px",
-                            minWidth: "260px",
-                            maxWidth: "420px",
-                            background: "#f8f8fa",
-                            borderRadius: "12px",
-                            padding: "1.2rem",
-                            border: "1.5px solid #e0f2f1",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center"
-                        }}>
-                            <div style={{
-                                fontWeight: 700,
-                                color: "#43a047",
-                                fontSize: "1.13rem",
-                                marginBottom: "0.7rem",
-                            }}>
-                                <span role="img" aria-label="gst">🧾</span> GST Certificate
-                            </div>
-                            <img
-                                src={gstImg}
-                                alt="GST Certificate"
-                                style={{
-                                    width: "100%",
-                                    maxWidth: "320px",
-                                    borderRadius: "10px",
-                                    boxShadow: "0 2px 12px #00968822",
-                                    border: "2px solid #b2dfdb",
-                                    background: "#fafbfc",
-                                }}
-                            />
-                        </div>
-                        <div style={{
-                            flex: "1 1 320px",
-                            minWidth: "260px",
-                            maxWidth: "420px",
-                            background: "#f8f8fa",
-                            borderRadius: "12px",
-                            padding: "1.2rem",
-                            border: "1.5px solid #e0f2f1",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center"
-                        }}>
-                            <div style={{
-                                fontWeight: 700,
-                                color: "#43a047",
-                                fontSize: "1.13rem",
-                                marginBottom: "0.7rem",
-                            }}>
-                                <span role="img" aria-label="iec">🧾</span> IEC Certificate
-                            </div>
-                            <img
-                                src={iecImg}
-                                alt="IEC Certificate"
-                                style={{
-                                    width: "100%",
-                                    maxWidth: "320px",
-                                    borderRadius: "10px",
-                                    boxShadow: "0 2px 12px #00968822",
-                                    border: "2px solid #b2dfdb",
-                                    background: "#fafbfc",
-                                }}
-                            />
-                        </div>
+                        {certificates.map(cert => (
+                            <CertificateCard cert={cert} key={cert.key} />
+                        ))}
                     </div>
                 </section>
                 <p className="about-cta-final">

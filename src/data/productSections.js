@@ -151,6 +151,37 @@ import cocopeatPowder25Kg2 from "../assets/products/Cocopeat Powder/25 Kg Bale/i
 import cocopeatPowder25Kg3 from "../assets/products/Cocopeat Powder/25 Kg Bale/image3.jpg";
 import cocopeatPowder25Kg4 from "../assets/products/Cocopeat Powder/25 Kg Bale/image4.jpg";
 
+//Organic Fertilizers - Fish Amino Acid
+import fishAminoAcid from "../assets/products/Organic Fertilizers/Fish Amino Acid/image1.png";
+import fishAminoAcid2 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image2.png";
+import fishAminoAcid3 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image3.png";
+import fishAminoAcid4 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image4.png";
+import fishAminoAcid5 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image5.png";
+import fishAminoAcid6 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image6.png";
+import fishAminoAcid7 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image7.png";
+import fishAminoAcid8 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image8.png";
+import fishAminoAcid9 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image9.png";
+import fishAminoAcid10 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image10.png";
+
+//Organic Fertilizers - Neem Cake Powder
+import neemCakePowder from "../assets/products/Organic Fertilizers/Neem Cake Powder/image1.png";
+import neemCakePowder2 from "../assets/products/Organic Fertilizers/Neem Cake Powder/image2.png";
+import neemCakePowder3 from "../assets/products/Organic Fertilizers/Neem Cake Powder/image3.png";
+import neemCakePowder3a from "../assets/products/Organic Fertilizers/Neem Cake Powder/image3a.png";
+import neemCakePowder4 from "../assets/products/Organic Fertilizers/Neem Cake Powder/image4.png";
+import neemCakePowder5 from "../assets/products/Organic Fertilizers/Neem Cake Powder/image5.png";
+
+//Organic Fertilizers - Panchagavya
+import panchagavya from "../assets/products/Organic Fertilizers/Panchagavya/image1.png";
+import panchagavya2 from "../assets/products/Organic Fertilizers/Panchagavya/image2.png";
+import panchagavya3 from "../assets/products/Organic Fertilizers/Panchagavya/image3.png";
+
+//Organic Fertilizers - Vermicompost
+import vermicompost from "../assets/products/Organic Fertilizers/Vermicompost/image1.png";
+import vermicompost2 from "../assets/products/Organic Fertilizers/Vermicompost/image2.png";
+import vermicompost3 from "../assets/products/Organic Fertilizers/Vermicompost/image3.png";
+
+
 export const productSections = [
     {
         title: "Cocopeat Blocks",
@@ -252,6 +283,29 @@ export const productSections = [
             {
                 name: "25 Kg Bale",
                 images: [cocopeatPowder25Kg1, cocopeatPowder25Kg2, cocopeatPowder25Kg3, cocopeatPowder25Kg4],
+            },
+        ],
+    },
+    {
+        title: "Organic Fertilizers",
+        description:
+            "We at Natural Coirs offer a range of organic fertilizers, including Fish Amino Acid, Neem Cake Powder, Panchagavya, and Vermicompost. These fertilizers are made from natural ingredients and are designed to enhance soil fertility, promote healthy plant growth, and improve crop yields. Our products are eco-friendly, sustainable, and suitable for various agricultural and horticultural applications.",
+        products: [
+            {
+                name: "Vermicompost",
+                images: [vermicompost, vermicompost2, vermicompost3],
+            },
+            {
+                name: "Fish Amino Acid",
+                images: [fishAminoAcid, fishAminoAcid2, fishAminoAcid3, fishAminoAcid4, fishAminoAcid5, fishAminoAcid6, fishAminoAcid7, fishAminoAcid8, fishAminoAcid9, fishAminoAcid10],
+            },
+            {
+                name: "Neem Cake Powder",
+                images: [neemCakePowder, neemCakePowder2, neemCakePowder3, neemCakePowder3a, neemCakePowder4, neemCakePowder5],
+            },
+            {
+                name: "Panchagavya",
+                images: [panchagavya, panchagavya2, panchagavya3],
             },
         ],
     },
