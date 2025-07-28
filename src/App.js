@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:section/:product" element={<ProductDetails />} />
-        <Route path="/AboutOurCocoProducts" element={<Info />} />
+        <Route path="/WhyUs" element={<Info />} />
         <Route path="/AboutUs" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         {/* Add more routes as needed */}

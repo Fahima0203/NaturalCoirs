@@ -15,9 +15,9 @@ export const productDetails = [
         video: "https://www.youtube.com/watch?v=XaRSPjKTw0A",
         specification: [
             { label: "Packaging Size", value: "5 Kg (±5%)" },
-            { label: "Dimensions", value: "30 x 30 x 12 cm (±5%)" },
+            { label: "Dimensions", value: "30 x 30 x 11 cm (±5%)" },
             { label: "Shape", value: "Cube/Cuboid" },
-            { label: "Product Type", value: "Coir Pith" },
+            { label: "Product Type", value: "Cocopeat" },
             { label: "Moisture Content", value: "10% - 20%" },
             { label: "Electrical Conductivity", value: "0.2 to 3.0 mS/cm" },
             { label: "pH Level", value: "5.5 - 6.5" },
@@ -52,7 +52,7 @@ export const productDetails = [
                 {
                     product_code: "210",
                     product_name: "5Kg Chips Unwashed Regular",
-                    size: "30 x 30 x 12",
+                    size: "30 x 30 x 11",
                     particle_size: "4-14 or 10-20 mm",
                     mixture: "100% Husk Chips",
                     expansion_volume: "upto 65 liters"
@@ -60,18 +60,18 @@ export const productDetails = [
                 {
                     product_code: "211",
                     product_name: "5Kg Chips washed",
-                    size: "30 x 30 x 12",
+                    size: "30 x 30 x 11",
                     particle_size: "4-14 or 10-20 mm",
                     mixture: "100% Husk Chips",
-                    expansion_volume: "upto 65 liters"
+                    expansion_volume: "upto 70 liters"
                 },
                 {
                     product_code: "212",
                     product_name: "5Kg Chips Buffered",
-                    size: "30 x 30 x 12",
+                    size: "30 x 30 x 11",
                     particle_size: "4-14 or 10-20 mm",
                     mixture: "100% Husk Chips",
-                    expansion_volume: "upto 65 liters"
+                    expansion_volume: "upto 70 liters"
                 }
             ]
         }
@@ -85,7 +85,7 @@ export const productDetails = [
         video: "https://www.youtube.com/shorts/Mgd8mD9srT8",
         specification: [
             { label: "Packaging Size", value: "2 kg (±5%)" },
-            { label: "Dimensions", value: "30 x 15 x 12 cm (±5%)" },
+            { label: "Dimensions", value: "30 x 15 x 11 cm (±5%)" },
             { label: "Shape", value: "Cube/Cuboid" },
             { label: "Product Type", value: "Coir Pith" },
             { label: "Moisture Content", value: "10% - 20%" },
@@ -228,22 +228,13 @@ export const productDetails = [
             { label: "Bale Size", value: "120 x 60 x 60 cm (± 5%)" },
             { label: "Bale Weight", value: "120 Kg (± 5%)" },
             { label: "Moisture", value: " < 15 %" },
-            { label: "Packing", value: "Steel Strap" },
+            { label: "Packing", value: "Steel Strap (Green, Red color)" },
             { label: "Min. Order", value: "1 × 20 HC" },
             { label: "Manufacturing Capacity", value: "8 × 40 HC per month" },
             { label: "Own Production Capacity", value: "9Mt tones / day" },
             { label: "Loadability of 40Hc", value: "200 bales" },
             { label: "Colour", value: "Brown / white" },
             { label: "Impurities", value: "<5%" },
-            { label: "Length", value: "7 - 10cm 20%" },
-            { label: "Random EC", value: "0.21, 0.43" },
-            { label: "Individual EC", value: "0.23, 0.47" },
-            { label: "Moisture Before Blocking", value: "35-37%" },
-            { label: "Moisture After Blocking", value: "40%" },
-            { label: "Expansion", value: "9.5+ L / Kg" },
-            { label: "Fiber", value: "250 ml / Kg" },
-            { label: "Sand", value: "1.384% (18 gm) / Kg" },
-            { label: "UV Bag", value: "550gg (Inner Black color, Outer White Color)" },
             { label: "Country of Origin", value: "Made in India" },
 
         ],
@@ -267,37 +258,20 @@ export const productDetails = [
         section: "Coir Fibre",
         name: "30 Kg Bale",
         price: "₹ 19/kg",
-        minOrder: "22000 Kg",
+        minOrder: "7000 Kg",
         brochure: "#",
         video: "#",
         specification: [
             { label: "Bale Size", value: "120 x 60 x 60 cm" },
-            { label: "Bale Weight (± 5%)", value: "120 Kg" },
-            { label: "Moisture", value: "15-20%" },
-            { label: "pH Level", value: "5.5 to 6.5" },
-            { label: "Electro Conductivity", value: ">1.0 ms/cm (High EC block) & < 0.5 ms/cm (Low EC block)" },
-            { label: "Hydrated Yield (Liters)", value: "900 to 1000 liters" },
-            { label: "Min. Order", value: "1×40 HC" },
+            { label: "Bale Weight", value: "30 Kg (± 5%)" },
+            { label: "Min. Order", value: "1×20 HC" },
             { label: "Manufacturing Capacity", value: "8×40 HC per month" },
-            { label: "Country of Origin", value: "Made in India" },
             { label: "Own Production Capacity", value: "9Mt tones / day" },
             { label: "Loadability of 40Hc", value: "200 bales" },
-            { label: "Moisture", value: "< 20%" },
             { label: "Colour", value: "Brown / white" },
             { label: "Impurities", value: "<5%" },
-            { label: "Length", value: "7 - 10cm 20%" },
-            { label: "10-25cm", value: "80%" },
-            { label: "Packing", value: "Steel Strap" },
-            { label: "Random EC", value: "0.21, 0.43" },
-            { label: "Individual EC", value: "0.23, 0.47" },
-            { label: "Moisture Before Blocking", value: "35-37%" },
-            { label: "Moisture After Blocking", value: "40%" },
             { label: "Expansion", value: "9.5+ L/ Kg" },
-            { label: "Bale Weight (Approx)", value: "23 Kg" },
-            { label: "Fiber", value: "250 ml / Kg" },
-            { label: "Sand", value: "1.384% (18 gm) / Kg" },
-            { label: "UV Bag", value: "550gg (Inner Black color, Outer White Color)" },
-            { label: "Dimensions", value: "30 x 35 x 65 cm" },
+            { label: "Country of Origin", value: "Made in India" },
         ],
         description: `
             Coir Fibre is a tough, biodegradable fiber extracted from coconut husks. 
@@ -568,19 +542,22 @@ export const productDetails = [
         section: "Cocopeat Powder",
         name: "Loose Powder",
         price: "₹ 20/kg",
-        minOrder: "2000 Kg",
+        minOrder: "7000 Kg",
         brochure: "https://pdf.indiamart.com/impdf/2855465090948/MY-186662221/cocopeat-powder-high-ec.pdf",
         video: "https://www.youtube.com/watch?v=jDu_-xBgFrM",
         specification: [
-            { label: "Packaging Size", value: "25 Kg" },
+            { label: "Packaging Size", value: "15 Kg (± 5%)" },
             { label: "Packing Type", value: "Available in loose form and bagged" },
             { label: "Moisture Content", value: "10% - 20%"},
             { label: "Electrical Conductivity", value: "As per request" },
             { label: "pH Level", value: "5.5 - 6.5" },
-            { label: "Particulate Size", value: "Fine to Coarse" },
+            { label: "Particule Size", value: "Coarse" },
+            { label: "Fiber", value: "250 ml / Kg" },
+            { label: "Sand", value: "Less than 1.384% (18 gm) / Kg" },
             { label: "Water Holding Capacity", value: "Holds up to 8-10 times its weight in water" },
             { label: "Air Porosity", value: "High, allowing for good aeration" },
-            { label: "Physical Appearance", value: "Brown, fibrous texture, free from foreign matter" },
+            { label: "Physical Appearance", value: "Brown, free from foreign matter" },
+            { label: "Packing", value: "Virgin PP Bags" },
             { label: "Usage", value: "Nurseries, home gardens, grow bags, greenhouse cultivation, pots, and large farms." },
             { label: "Country of Origin", value: "Made in India" }
         ],
@@ -595,7 +572,7 @@ export const productDetails = [
             "🌬️ Fluffy & Airy – Prevents root suffocation",
             "🌱 Plant-Friendly pH (5.5–6.5) – Ideal for most crops",
             "🌿 100% Natural & Clean – No pests, no chemicals",
-            "👜 Lightweight & Easy to Carry – Available loose or in 25 Kg bags",
+            "👜 Lightweight & Easy to Carry – Available loose or in 15 Kg bags",
             "🌻 Perfect for All Setups – Home gardens, greenhouses, farms"
         ]
     },
@@ -607,7 +584,7 @@ export const productDetails = [
         brochure: "https://pdf.indiamart.com/impdf/2855465090948/MY-186662221/cocopeat-powder-high-ec.pdf",
         video: "https://www.youtube.com/watch?v=jDu_-xBgFrM",
         specification: [
-            { label: "Bale Weight", value: "25 Kg (± 5%)" },
+            { label: "Bale Weight", value: "25 Kg (± 10%)" },
             { label: "Dimensions", value: "30 x 35 x 65 cm (± 5%)" },
             { label: "Random EC", value: "0.21, 0.43" },
             { label: "Individual EC", value: "0.23, 0.47" },
@@ -615,15 +592,15 @@ export const productDetails = [
             { label: "Moisture After Blocking", value: "40%" },
             { label: "Expansion", value: "9.5+ L/ Kg" },
             { label: "Fiber", value: "250 ml / Kg" },
-            { label: "Sand", value: "1.384% (18 gm) / Kg" },
+            { label: "Sand", value: "Less than 1.384% (18 gm) / Kg" },
             { label: "UV Bag", value: "550gg (Inner Black color, Outer White Color)" },
-            { label: "Water Retention", value: "Expands up to 3x–5x in volume" },
+            { label: "Water Retention", value: "Expands up to 9–10x in volume" },
             { label: "Usage", value: "Greenhouses, farms, nurseries, potting media, hydroponics" },
             { label: "Country of Origin", value: "Made in India" },
         ],
         description: `
             Our 25 Kg Cocopeat Bale is a high-performance, space-saving growing medium — perfect for greenhouses, nurseries, and large farms. 
-            Compact for shipping, it expands 3–5x when hydrated, delivering fluffy, rich cocopeat that improves soil texture, moisture retention, and root health.<br /><br />
+            Compact for shipping, it expands 9–10x when hydrated, delivering fluffy, rich cocopeat that improves soil texture, moisture retention, and root health.<br /><br />
             Whether you're growing in pots, beds, or hydroponics — this bale delivers results.
         `,
         benefits: [

@@ -215,7 +215,7 @@ const Info = () => (
         <section className="info-hero">
             <div className="info-hero-content">
                 <h1>
-                    <span role="img" aria-label="coconut">🥥</span> About Our Coco Products
+                    <span role="img" aria-label="coconut">🥥</span> About Our Products
                 </h1>
                 <p>
                     Discover the next generation of sustainable, high-performance cocopeat products for agriculture, horticulture, and beyond.<br />
@@ -388,7 +388,7 @@ const Info = () => (
                     We offer a wide range of cocopeat varieties:
                 </h3>
                 <ul style={{ fontSize: "1.05rem", lineHeight: 2 }}>
-                    <li><b>High EC (Electrical Conductivity)</b> – ideal for specific industrial or non-agricultural uses.</li>
+                    <li><b>High EC (Electrical Conductivity)</b> – ideal for specific nutrient rich environmental crops.</li>
                     <li><b>Low EC</b> – perfect for sensitive crops and food production.</li>
                     <li><b>Washed Cocopeat</b> – free from excess salts, ideal for vegetables and fruits.</li>
                     <li><b>Buffered Cocopeat</b> – treated to remove potassium and sodium, ensuring nutrient stability.</li>
@@ -399,8 +399,6 @@ const Info = () => (
                 </h3>
                 <ul style={{ fontSize: "1.05rem", lineHeight: 2 }}>
                     <li>Cocopeat Blocks (5 kg & 650g)</li>
-                    <li>Cocopeat Bricks</li>
-                    <li>Cocopeat Briquettes</li>
                     <li>Cocopeat Discs</li>
                     <li>Grow Bags/Slabs (ideal for greenhouse farming)</li>
                     <li>Coir Pots (biodegradable nursery pots)</li>
@@ -510,7 +508,7 @@ const Info = () => (
                         </div>
                     </div>
                     <div className="info-packaging-card">
-                        <span className="info-packaging-icon">🪵</span>
+                        <span className="info-packaging-icon">📦</span>
                         <div>
                             <b>Pallet Packing</b>
                             <p>Optimized for container shipping and bulk orders worldwide.</p>
