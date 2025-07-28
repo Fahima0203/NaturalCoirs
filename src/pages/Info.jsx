@@ -215,10 +215,10 @@ const Info = () => (
         <section className="info-hero">
             <div className="info-hero-content">
                 <h1>
-                    <span role="img" aria-label="coconut">🥥</span> About Our Products
+                    <span role="img" aria-label="coconut">🪴</span> About Our Products
                 </h1>
                 <p>
-                    Discover the next generation of sustainable, high-performance cocopeat products for agriculture, horticulture, and beyond.<br />
+                    Discover the next generation of sustainable, high-performance cocopeat products and organic fertilizers for agriculture, horticulture, and beyond.<br />
                     <span style={{ color: "#009688", fontWeight: 600 }}>Boost your yields. Protect the planet. Grow with confidence.</span>
                 </p>
                 <a href="/contact" className="info-cta-btn">Request a Free Sample</a>
@@ -508,7 +508,7 @@ const Info = () => (
                         </div>
                     </div>
                     <div className="info-packaging-card">
-                        <span className="info-packaging-icon">📦</span>
+                        <span className="info-packaging-icon">🚛</span>
                         <div>
                             <b>Pallet Packing</b>
                             <p>Optimized for container shipping and bulk orders worldwide.</p>

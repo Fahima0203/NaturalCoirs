@@ -186,7 +186,7 @@ export const productSections = [
     {
         title: "Cocopeat Blocks",
         description:
-            "We at Natural Coirs manufacture and market Cocopeat various sizes according to customer's requirement. CoirPith / Cocopeat is washed, heat-treated, screened and graded before being processed into cocopeat products of various granularity and density.",
+            "We at Natural Coirs manufacture and market Cocopeat in various sizes according to customer's requirement. CoirPith / Cocopeat is washed, heat-treated, screened and graded before being processed into cocopeat products of various granularity and density.",
             //"Pioneers in the industry, we offer 5 Kg High Ec Cocopeat Block, 5kg Low EC Coir Pith Block, Coco Peat 650 Grams Low EC, Coco Peat 650 Grams High EC and High ec Coco Peat 5kg block (Unseived) from India.",
             products: [
             {
