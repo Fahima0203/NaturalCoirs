@@ -84,7 +84,7 @@ function FooterContact() {
                         <img src={paypal} alt="" width="50" height="25" style={{ padding: '0px 3px', borderRadius: '2px' }} />
                     </div>
                 </div>
-                <div className="col-sm-auto col-lg-4" style={{ paddingBottom: '15px' }}>
+                <div className="col-sm-auto col-lg-4" style={{ paddingBottom: '10px' }}>
                     <p style={{margin: "0px 0px 5px 0px"}}>Share us on</p>
                     <style>
                         {`a { all: unset; }`}
@@ -117,7 +117,7 @@ function FooterContact() {
                     <p className="rights">
                         <span>©&nbsp; </span>
                         <span className="copyright-year">2025</span>
-                        <span>&nbsp;</span><span>Cocopeat Global Leader</span>
+                        <span>&nbsp;</span><span>Natural Coirs</span>
                         <span>.&nbsp; All rights reserved.</span>
                         <span>&nbsp;</span>
                         {/* <h4 href="privacy-policy.html">Privacy Policy</h4> */}

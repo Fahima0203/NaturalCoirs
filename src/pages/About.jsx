@@ -19,7 +19,7 @@ import msme2 from "../assets/docs/msme2.png";
 import msme3 from "../assets/docs/msme3.png";
 import msme4 from "../assets/docs/msme4.png";
 
-const runningText = "🌿 Welcome to the Global Leader in Cocopeat Solutions | 🌱 Trusted by Farmers & Growers Worldwide | 🚚 Fast Shipping & Custom Packaging Available | 💡 24/7 Expert Advisory for Your Success | 🌍 Sustainable, High-Performance Cocopeat Exports";
+const runningText = "🌿 Welcome to the Global Leader in Cocopeat and Organic Fertilizers Solutions | 🌱 Trusted by Farmers & Growers Worldwide | 🚚 Fast Shipping & Custom Packaging Available | 💡 24/7 Expert Advisory for Your Success | 🌍 Sustainable, High-Performance Cocopeat and Organic Fertilizers Manufacturing and Exports";
 
 const AboutSlider = () => {
     const images = [img1, img3, ply7mm22_8, ply7mm22_10, ply7mm30_1, ply7mm30_3, ply7mm30_4, ply7mm30_5];
@@ -250,10 +250,10 @@ const About = () => {
             <section className="about-hero">
                 <div className="about-hero-content">
                     <h1>
-                        <span role="img" aria-label="leaf">🌿</span> Global Leader in Cocopeat Solutions
+                        <span role="img" aria-label="leaf">🌍</span> A Global Leader in Cocopeat and Organic Fertilizer Solutions
                     </h1>
                     <p>
-                        Premium, Sustainable, and High-Performance Cocopeat for Modern Agriculture.<br />
+                        Premium, Sustainable, and High-Performance Cocopeat and Organic Fertilizer for Diverse Eco-Friendly Cultivation.<br />
                         <span style={{ color: "#009688", fontWeight: 600 }}>Grow More. Waste Less. Go Green.</span>
                     </p>
                     <a href="/contact" className="about-cta-btn">Get a Free Consultation</a>
@@ -271,13 +271,13 @@ const About = () => {
                     {/* Left: Content */}
                     <div style={{ flex: 1 }}>
                         <h2 style={{ color: "#00695c", fontWeight: 700, marginBottom: 16, fontSize: "1.45rem" }}>
-                            🌿 Welcome to the Global Leader in Cocopeat Solutions
+                            🌿 Welcome to the Global Leader in Cocopeat and Organic Fertilizer Solutions
                         </h2>
                         <p style={{margin: "1rem 0 2rem 0", textAlign: "justify", textIndent: "4em", fontSize: "1.1rem" }}>
-                            With decades of hands-on experience in agriculture and coir-based products since the 1970s, we are proud to stand as a global leader in the manufacturing and export of premium quality cocopeat. As pioneers in modern agriculture solutions, we cater to a worldwide clientele spanning Saudi Arabia, UAE (Dubai), Qatar, Kuwait, Oman, USA, Canada, Germany, China, Japan, UK, Iran, and many more.
+                            With decades of hands-on experience in agriculture, coco products since the 1970s, we are proud to stand as a global leader in the manufacturing and export of premium quality cocopeat and organic fertilizer. As pioneers in modern agriculture solutions, we cater to a worldwide clientele spanning Saudi Arabia, UAE (Dubai), Qatar, Kuwait, Oman, USA, Canada, Germany, China, Japan, UK, Iran, and many more.
                         </p>
                         <p style={{ margin: "1rem 0 2rem 0", textAlign: "justify", textIndent: "4em", fontSize: "1.1rem" }}>
-                            Our passion lies in providing sustainable and effective growing mediums that significantly enhance agricultural productivity while remaining environmentally conscious. We combine deep-rooted traditional expertise with cutting-edge production processes to deliver high-quality cocopeat that meets international standards for performance, purity, and consistency.
+                            Our passion lies in providing sustainable and effective growing mediums that significantly enhance agricultural productivity while remaining environmentally conscious. We combine deep-rooted traditional expertise with cutting-edge production processes to deliver high-quality cocopeat and organic fertilizer that meets international standards for performance, purity, and consistency.
                         </p>
                         {/* AboutSlider for mobile */}
                         <div className="about-slider-mobile">
@@ -289,65 +289,6 @@ const About = () => {
                         <AboutSlider />
                     </div>
                 </div>
-                {/* Section Divider */}
-                <div className="about-divider"></div>
-                {/* Why Choose Our Cocopeat Section */}
-                <section className="about-why-section">
-                    <h2>
-                        <span role="img" aria-label="star">🌟</span> Why Choose Our Cocopeat?
-                    </h2>
-                    <div className="about-why-cards">
-                        <div className="about-why-card">
-                            <span className="about-why-icon">🥥</span>
-                            <div>
-                                <b>Raw Materials</b>
-                                <p>Extracted only from handpicked, mature coconut husks for optimum fiber and peat content.</p>
-                            </div>
-                        </div>
-                        <div className="about-why-card">
-                            <span className="about-why-icon">🧹</span>
-                            <div>
-                                <b>Purity Guaranteed</b>
-                                <p>Washed with clean water, filtered with 6 mm mesh, and double-sieved to eliminate sand, fine dust, and fiber contaminants.</p>
-                            </div>
-                        </div>
-                        <div className="about-why-card">
-                            <span className="about-why-icon">📈</span>
-                            <div>
-                                <b>High Expansion Ratio</b>
-                                <p>1 kg yields up to 15 liters of ready-to-use growing medium.</p>
-                            </div>
-                        </div>
-                        <div className="about-why-card">
-                            <span className="about-why-icon">🛡️</span>
-                            <div>
-                                <b>Sterile &amp; Safe</b>
-                                <p>Naturally sterilized by solar drying; free from chemical additives.</p>
-                            </div>
-                        </div>
-                        <div className="about-why-card">
-                            <span className="about-why-icon">🔬</span>
-                            <div>
-                                <b>Consistent Quality</b>
-                                <p>Every batch is tested for EC, pH, moisture, and impurities.</p>
-                            </div>
-                        </div>
-                        <div className="about-why-card">
-                            <span className="about-why-icon">🚚</span>
-                            <div>
-                                <b>Global Logistics</b>
-                                <p>Ability to ship over 1000+ tonnes/month with on-time delivery.</p>
-                            </div>
-                        </div>
-                        <div className="about-why-card">
-                            <span className="about-why-icon">🎯</span>
-                            <div>
-                                <b>Tailored Solutions</b>
-                                <p>Mixtures, sizes, and packaging customized for retail, greenhouse, or commercial farms.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 {/* Section Divider */}
                 <div className="about-divider"></div>
                 {/* Vision Section */}
@@ -369,7 +310,7 @@ const About = () => {
                         <li>Prevent <b>desertification</b> and restore green cover across the globe.</li>
                     </ul>
                     <p>
-                        We are dedicated to making <b>premium cocopeat accessible, affordable, and adaptable</b> for every grower, from a home gardener to an international agribusiness.
+                        We are dedicated to making <b>premium cocopeat & bio-fertilizer accessible, affordable, and adaptable</b> for every grower, from a home gardener to an international agribusiness.
                     </p>
                 </section>
                 {/* Section Divider */}
@@ -476,55 +417,6 @@ const About = () => {
                     margin: 2.5rem 0;
                     border-radius: 2px;
                 }
-                /* Why Choose Cards */
-                .about-why-section h2 {
-                    color: #388e3c;
-                    font-weight: 700;
-                    margin-bottom: 1.2rem;
-                    font-size: 1.35rem;
-                    letter-spacing: 0.5px;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                }
-                .about-why-cards {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 18px;
-                }
-                .about-why-card {
-                    background: #fff;
-                    border-radius: 12px;
-                    box-shadow: 0 1px 8px rgba(8,108,92,0.07);
-                    padding: 1.1rem 1.2rem;
-                    flex: 1 1 260px;
-                    min-width: 220px;
-                    max-width: 320px;
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 14px;
-                    transition: box-shadow 0.2s, transform 0.2s;
-                    cursor: pointer;
-                }
-                .about-why-card:hover {
-                    box-shadow: 0 4px 18px rgba(8,108,92,0.13);
-                    transform: translateY(-4px) scale(1.03);
-                }
-                .about-why-icon {
-                    font-size: 2rem;
-                    margin-top: 2px;
-                    color: #009688;
-                    flex-shrink: 0;
-                }
-                .about-why-card b {
-                    color: #1976d2;
-                    font-size: 1.07rem;
-                }
-                .about-why-card p {
-                    margin: 0.2rem 0 0 0;
-                    color: #234;
-                    font-size: 1.01rem;
-                }
                 /* Vision & Advisory */
                 .about-vision-section h2,
                 .about-advisory-section h2 {
@@ -576,13 +468,6 @@ const About = () => {
                     .about-slider-mobile {
                         display: block !important;
                         margin-top: 18px;
-                    }
-                    .about-why-cards {
-                        flex-direction: column;
-                        gap: 12px;
-                    }
-                    .about-why-card {
-                        max-width: 100%;
                     }
                 }
                 @media (min-width: 901px) {
@@ -655,9 +540,6 @@ const About = () => {
                     }
                     .about-advisory-section ol li{
                         margin-bottom: 0rem !important;
-                    }
-                    .about-why-card{
-                        flex: 1 1 0px !important;
                     }
                 }
                 `}
