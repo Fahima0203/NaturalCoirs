@@ -353,10 +353,10 @@ const ProductDetails = () => {
                         <span style={{ fontWeight: 600 }}>Minimum Order Quantity:</span>{" "}
                         <span style={{ fontWeight: 700, color: "#009688" }}>{minOrder}</span>
                     </div>
-                    <div style={{ display: "flex", gap: 18, marginBottom: 16 }}>
+                    {/* <div style={{ display: "flex", gap: 18, marginBottom: 16 }}>
                         <a href={brochure} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "#e0f2f1", color: "#1976d2", fontWeight: 600, borderRadius: 6, padding: "5px 14px", textDecoration: "none", cursor: "pointer" }}>Product Brochure</a>
                         <a href={video} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "#e0f2f1", color: "#1976d2", fontWeight: 600, borderRadius: 6, padding: "5px 14px", textDecoration: "none", cursor: "pointer" }}>Watch Video</a>
-                    </div>
+                    </div> */}
                     {/* --- Show sub-variants for Coir Yarn --- */}
                     {section.title === "Coir Yarn" && coirYarnVariants[product.name] && (
                         <div style={{

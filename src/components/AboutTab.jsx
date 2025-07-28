@@ -104,10 +104,10 @@ function AboutTab() {
                                 </ul>
                                 <div className="tab-content" >
                                     <div className={toggleState === 1 ? "tab-pane fade active show" : "tab-pane fade"}>
-                                        <p>With over 40 years of expertise in agriculture and coir products, we are proud global leaders in premium cocopeat manufacturing and export, trusted by customers across the Middle East, USA, Canada, Europe, and Asia.</p>
+                                        <p>With over 40 years of expertise in agriculture and coco products, we are proud global leaders in premium cocopeat and organic fertilizers manufacturing and export, trusted by customers across the Middle East, USA, Canada, Europe, and Asia.</p>
                                     </div>
                                     <div className={toggleState === 2 ? "tab-pane fade active show" : "tab-pane fade"}>
-                                        <p>To make premium cocopeat accessible and affordable for all, empowering farmers and growers worldwide to fight poverty, famine, water scarcity, and soil degradation with eco-friendly, high-yield solutions.</p>
+                                        <p>To make premium coco products and organic fertilizers accessible and affordable for all, empowering farmers and growers worldwide to fight poverty, famine, water scarcity, and soil degradation with eco-friendly, high-yield solutions.</p>
                                     </div>
                                     <div className={toggleState === 3 ? "tab-pane fade active show" : "tab-pane fade"}>
                                         <p>To create a greener, healthier planet by promoting sustainable farming that restores soil, conserves water, and boosts global food security. We strive to make every land bloom through eco-friendly, high-yield solutions.</p>

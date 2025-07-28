@@ -21,17 +21,31 @@ function Nbar() {
 
     const [showProducts, setShowProducts] = useState(false);
     const [hoveredSection, setHoveredSection] = useState(null);
+    const closeTimeout = React.useRef();
 
-    const showDropdown = useCallback(() => setShowProducts(true), []);
-    const hideDropdown = useCallback(() => setShowProducts(false), []);
+    const showDropdown = useCallback(() => {
+        if (closeTimeout.current) clearTimeout(closeTimeout.current);
+        setShowProducts(true);
+    }, []);
+
+    const hideDropdown = useCallback(() => {
+        closeTimeout.current = setTimeout(() => {
+            setShowProducts(false);
+            setHoveredSection(null);
+        }, 360);
+    }, []);
 
     const showNestedDropdown = useCallback((section) => {
+        if (closeTimeout.current) clearTimeout(closeTimeout.current);
         setHoveredSection(section);
         setShowProducts(true);
     }, []);
+
     const hideNestedDropdown = useCallback(() => {
-        setHoveredSection(null);
-        setShowProducts(false);
+        closeTimeout.current = setTimeout(() => {
+            setHoveredSection(null);
+            setShowProducts(false);
+        }, 360);
     }, []);
 
     const navigate = useNavigate();
@@ -129,7 +143,7 @@ function Nbar() {
                                 )}
                             </div>
 
-                            <Link to="/AboutOurCocoProducts" onClick={toggleMobileMenu} className="mobile-link">About Our Coco Products</Link>
+                            <Link to="/WhyUs" onClick={toggleMobileMenu} className="mobile-link">Why Us?</Link>
                             <Link to="/AboutUs" onClick={toggleMobileMenu} className="mobile-link">About Us</Link>
                             <Link to="/Contact" onClick={toggleMobileMenu} className="mobile-link">Contact</Link>
                         </div>
@@ -206,10 +220,10 @@ function Nbar() {
                         </NavDropdown>
                         <Nav.Link
                             as={Link}
-                            to="/AboutOurCocoProducts"
-                            className={isActive("/AboutOurCocoProducts") ? "nav-link-active" : ""}
+                            to="/WhyUs"
+                            className={isActive("/WhyUs") ? "nav-link-active" : ""}
                         >
-                            About Our Coco Products
+                            Why Us?
                         </Nav.Link>
                         <Nav.Link
                             as={Link}

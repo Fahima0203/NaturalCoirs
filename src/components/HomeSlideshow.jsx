@@ -2,13 +2,13 @@ import React from 'react';
 import "../styles/HomeSlideshow.css";
 
 import img1 from '../assets/coco_peat/home1.mp4';
-import img1a from '../assets/coco_peat/home1a.mp4';
 import img2 from '../assets/coco_peat/home2.mp4';
 import img3 from '../assets/coco_peat/home3.mp4';
-import img3a from '../assets/coco_peat/home3a.mp4';
 import img4 from '../assets/coco_peat/home4.mp4';
 
-const colors = [img1, img1a, img2, img3, img3a, img4];
+// const colors = [img1, img2, img3, img4];
+const colors = [
+    img1,]
 const delay = 10000;
 
 function HomeSlideshow() {
