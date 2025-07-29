@@ -1,15 +1,17 @@
 import FooterContact from "../components/FooterContact";
 import { useRef, useEffect } from "react";
 import React from 'react'
-import img1 from "../assets/coco_peat/image2.png";
-import img2 from "../assets/coco_peat/image4.png";
-import img3 from "../assets/coco_peat/image8.jpg";
+import img1 from "../assets/coco_peat/image4.png";
+
+import soil1 from "../assets/coco_peat/image2.png";
+import block from "../assets/coco_peat/load image/image.png";
+import load1 from "../assets/coco_peat/load image/image2.png";
+import load2 from "../assets/coco_peat/load image/image3.png";
 import ply7mm22_8 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 28.jpg";
-import ply7mm22_10 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 31.jpg";
 import ply7mm30_1 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches (HALF Kg PCS) 7.jpg";
 import ply7mm30_3 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 1.jpg";
-import ply7mm30_4 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 2.jpg";
 import ply7mm30_5 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 3.jpg";
+//certificates
 import gstImg1 from "../assets/docs/gst1.png";
 import gstImg2 from "../assets/docs/gst2.png";
 import gstImg3 from "../assets/docs/gst3.png";
@@ -22,7 +24,7 @@ import msme4 from "../assets/docs/msme4.png";
 const runningText = "🌿 Welcome to the Global Leader in Cocopeat and Organic Fertilizers Solutions | 🌱 Trusted by Farmers & Growers Worldwide | 🚚 Fast Shipping & Custom Packaging Available | 💡 24/7 Expert Advisory for Your Success | 🌍 Sustainable, High-Performance Cocopeat and Organic Fertilizers Manufacturing and Exports";
 
 const AboutSlider = () => {
-    const images = [img1, img3, ply7mm22_8, ply7mm22_10, ply7mm30_1, ply7mm30_3, ply7mm30_4, ply7mm30_5];
+    const images = [soil1, block, load1, load2, ply7mm22_8, ply7mm30_1, ply7mm30_3, ply7mm30_5];
     const [index, setIndex] = React.useState(0);
     const timeoutRef = React.useRef(null);
 
@@ -259,7 +261,7 @@ const About = () => {
                     <a href="/contact" className="about-cta-btn">Get a Free Consultation</a>
                 </div>
                 <div className="about-hero-img">
-                    <img src={img2} alt="Premium Cocopeat" />
+                    <img src={img1} alt="Premium Cocopeat" />
                 </div>
             </section>
             <div style={{ padding: "2rem" }} className="about-main-content">
