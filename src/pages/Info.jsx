@@ -1,5 +1,5 @@
 import FooterContact from "../components/FooterContact";
-import image1 from "../assets/coco_peat/image7.png";
+import image1 from "../assets/products/Cocopeat Blocks/5Kg/rows.png";
 const Info = () => (
     <>
         {/* Responsive styles for mobile and enhanced business look */}

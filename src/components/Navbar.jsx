@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../assets/nc_logo.png';
+import logo from '../assets/nc_logo5.png';
 import '../styles/Navbar.css';
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { productSections } from "../data/productSections";
