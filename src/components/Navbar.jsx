@@ -71,7 +71,7 @@ function Nbar() {
                         src={logo}
                         style={{
                             height: "48px",
-                            marginRight: "16px",
+                            margin: "0 16px",
                         }}
                         alt="Natural Cocos Logo"
                     />
