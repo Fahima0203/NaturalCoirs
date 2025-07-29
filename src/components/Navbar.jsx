@@ -73,7 +73,7 @@ function Nbar() {
                             height: "48px",
                             marginRight: "16px",
                         }}
-                        alt="Natural Coirs Logo"
+                        alt="Natural Cocos Logo"
                     />
                     <Navbar.Brand
                         as="span"
@@ -85,7 +85,7 @@ function Nbar() {
                             textShadow: "0 2px 8px #00968833"
                         }}
                     >
-                        Natural Coirs
+                        Natural Cocos
                     </Navbar.Brand>
                 </Link>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" style={{border: "none", background: "#fff", color: "#009688"}} /> */}

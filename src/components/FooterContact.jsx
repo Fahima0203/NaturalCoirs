@@ -117,7 +117,7 @@ function FooterContact() {
                     <p className="rights">
                         <span>©&nbsp; </span>
                         <span className="copyright-year">2025</span>
-                        <span>&nbsp;</span><span>Natural Coirs</span>
+                        <span>&nbsp;</span><span>Natural Cocos</span>
                         <span>.&nbsp; All rights reserved.</span>
                         <span>&nbsp;</span>
                         {/* <h4 href="privacy-policy.html">Privacy Policy</h4> */}

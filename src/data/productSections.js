@@ -186,7 +186,7 @@ export const productSections = [
     {
         title: "Cocopeat Blocks",
         description:
-            "We at Natural Coirs manufacture and market Cocopeat in various sizes according to customer's requirement. CoirPith / Cocopeat is washed, heat-treated, screened and graded before being processed into cocopeat products of various granularity and density.",
+            "We at Natural Cocos manufacture and market Cocopeat in various sizes according to customer's requirement. CoirPith / Cocopeat is washed, heat-treated, screened and graded before being processed into cocopeat products of various granularity and density.",
             //"Pioneers in the industry, we offer 5 Kg High Ec Cocopeat Block, 5kg Low EC Coir Pith Block, Coco Peat 650 Grams Low EC, Coco Peat 650 Grams High EC and High ec Coco Peat 5kg block (Unseived) from India.",
             products: [
             {
@@ -210,7 +210,7 @@ export const productSections = [
     {
         title: "Coir Fibre",
         description:
-            "We at Natural Coirs manufacture and supply high-quality Coir Fibre in various grades and bale sizes as per customer requirements. Our Coir Fibre is extracted from matured coconut husks, thoroughly cleaned, and processed to ensure strength, durability, and consistency. It is widely used in rope making, mattress and brush manufacturing, erosion control, and as a natural soil amendment for horticulture and agriculture.",
+            "We at Natural Cocos manufacture and supply high-quality Coir Fibre in various grades and bale sizes as per customer requirements. Our Coir Fibre is extracted from matured coconut husks, thoroughly cleaned, and processed to ensure strength, durability, and consistency. It is widely used in rope making, mattress and brush manufacturing, erosion control, and as a natural soil amendment for horticulture and agriculture.",
         products: [
             {
                 name: "120 Kg Bale",
@@ -225,7 +225,7 @@ export const productSections = [
     {
         title: "Coir Yarn",
         description:
-            "We at Natural Coirs manufacture and supply a wide range of Coir Yarn products, crafted from high-quality coconut coir fiber. Our coir yarns are available in various ply, thicknesses, and lengths to suit diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir yarn is an eco-friendly solution for tying, binding, weaving, and more.",
+            "We at Natural Cocos manufacture and supply a wide range of Coir Yarn products, crafted from high-quality coconut coir fiber. Our coir yarns are available in various ply, thicknesses, and lengths to suit diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir yarn is an eco-friendly solution for tying, binding, weaving, and more.",
         products: [
             {
                 name: "2 Ply 7 mm",
@@ -263,7 +263,7 @@ export const productSections = [
     {
         title: "Coir Rope",
         description:
-            "We at Natural Coirs manufacture and supply high-quality Coir Rope, crafted from natural coconut coir fiber. Our coir ropes are available in various thicknesses and lengths, suitable for diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir rope is an eco-friendly solution for tying, binding, weaving, and more.",
+            "We at Natural Cocos manufacture and supply high-quality Coir Rope, crafted from natural coconut coir fiber. Our coir ropes are available in various thicknesses and lengths, suitable for diverse applications in agriculture, packaging, crafts, marine, and construction. Naturally strong, flexible, and biodegradable, our coir rope is an eco-friendly solution for tying, binding, weaving, and more.",
         products: [
             {
                 name: "8 Ply / 10 Ply (Vadam)",
@@ -289,7 +289,7 @@ export const productSections = [
     {
         title: "Organic Fertilizers",
         description:
-            "We at Natural Coirs offer a range of organic fertilizers, including Fish Amino Acid, Neem Cake Powder, Panchagavya, and Vermicompost. These fertilizers are made from natural ingredients and are designed to enhance soil fertility, promote healthy plant growth, and improve crop yields. Our products are eco-friendly, sustainable, and suitable for various agricultural and horticultural applications.",
+            "We at Natural Cocos offer a range of organic fertilizers, including Fish Amino Acid, Neem Cake Powder, Panchagavya, and Vermicompost. These fertilizers are made from natural ingredients and are designed to enhance soil fertility, promote healthy plant growth, and improve crop yields. Our products are eco-friendly, sustainable, and suitable for various agricultural and horticultural applications.",
         products: [
             {
                 name: "Vermicompost",

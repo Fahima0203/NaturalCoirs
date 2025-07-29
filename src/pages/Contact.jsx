@@ -133,7 +133,7 @@ const Contact = () => {
                             {/* Map */}
                             <div style={{ borderRadius: "8px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", width: "100%", maxWidth: 350 }}>
                                 <iframe
-                                    title="Natural Coirs Location"
+                                    title="Natural Cocos Location"
                                     src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d125034.05751044782!2d78.11625939912227!3d11.672123441354502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s33%2F1%2C2%2C3%2C%20Dharmanagar%203rd%20Street%2C%20Suramangalam%2C%20Salem-636005%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1750177834565!5m2!1sen!2sin"
                                     width="300"
                                     height="200"

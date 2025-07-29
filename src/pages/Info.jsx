@@ -240,7 +240,7 @@ const Info = () => (
                     What is Cocopeat?
                 </h2>
                 <p style={{ fontSize: "1.08rem", textAlign: "justify", marginBottom: 16 }}>
-                    Cocopeat, also known as coir pith or coir dust, is a 100% organic, biodegradable, and renewable by-product derived from coconut husks. It is widely recognized as a superior alternative to soil or peat moss, offering high porosity, excellent water-holding capacity, and optimal air circulation. These unique features make cocopeat ideal for seed germination, hydroponics, nursery plantations, and large-scale agriculture.
+                    Cocopeat, also known as coco pith or coir dust, is a 100% organic, biodegradable, and renewable by-product derived from coconut husks. It is widely recognized as a superior alternative to soil or peat moss, offering high porosity, excellent water-holding capacity, and optimal air circulation. These unique features make cocopeat ideal for seed germination, hydroponics, nursery plantations, and large-scale agriculture.
                 </p>
                 {/* --- Cocopeat vs Soil Table Section --- */}
                 <section className="info-section" style={{ margin: "2.2rem 0 1.5rem 0" }}>

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { productSections } from "../data/productSections";
 
 const pageDescription =
-    "Explore our premium range of eco-friendly agricultural products — including coir-based items such as cocopeat blocks, coir fibre, and coir yarn — along with organic fertilizers like vermicompost, fish amino acid, panchagavya, and neem cake powder. Use the search box to quickly find products by name, description, or category. 🌿 Whether you're a home gardener, commercial farmer, or bulk buyer, we offer reliable, sustainable solutions to meet your growing needs. Discover best sellers, natural inputs, and innovative products designed for healthy plants and better yields.";
+    "Explore our premium range of eco-friendly agricultural products such as Coco products and Organic Fertilizers. Use the search box to quickly find products by name, description, or category. 🌿 Whether you're a home gardener, commercial farmer, or bulk buyer, we offer reliable, sustainable solutions to meet your growing needs. Discover best sellers, natural inputs, and innovative products designed for healthy plants and better yields.";
 
 const Products = () => {
     const [search, setSearch] = useState("");
