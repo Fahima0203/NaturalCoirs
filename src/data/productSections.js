@@ -1,5 +1,3 @@
-import image1 from "../assets/coco_peat/image1.png";
-import image7 from "../assets/coco_peat/image7.png";
 
 //Cocopeat Blocks 5Kg
 import block5a from "../assets/products/Cocopeat Blocks/5Kg/3inarow.png";
@@ -78,11 +76,11 @@ import ply7mm30_4 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inc
 import ply7mm30_5 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 3.jpg";
 
 // Coir Yarn - 2 Ply 5 mm
-import ply5mm_1 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 2.jpg";
-import ply5mm_2 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 3.jpg";
-import ply5mm_3 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 5.jpg";
-import ply5mm_4 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 7.jpg";
-import ply5mm_5 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet.jpg";
+import ply5mm_1 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet.jpg";
+import ply5mm_2 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 2.jpg";
+import ply5mm_3 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 3.jpg";
+import ply5mm_4 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 5.jpg";
+import ply5mm_5 from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet 7.jpg";
 
 // Coir Yarn - 2 Ply 4 mm
 import ply4mm_1 from "../assets/products/Coir Yarn/2 Ply 4 mm/2 Ply 4mm 18 Inches 40 Feet 1.jpg";
@@ -177,7 +175,8 @@ import panchagavya2 from "../assets/products/Organic Fertilizers/Panchagavya/ima
 import panchagavya3 from "../assets/products/Organic Fertilizers/Panchagavya/image3.png";
 
 //Organic Fertilizers - Vermicompost
-import vermicompost from "../assets/products/Organic Fertilizers/Vermicompost/image1.png";
+import vermicompost from "../assets/products/Organic Fertilizers/Vermicompost/image.png";
+import vermicompost1 from "../assets/products/Organic Fertilizers/Vermicompost/image1.png";
 import vermicompost2 from "../assets/products/Organic Fertilizers/Vermicompost/image2.png";
 import vermicompost3 from "../assets/products/Organic Fertilizers/Vermicompost/image3.png";
 
@@ -191,7 +190,7 @@ export const productSections = [
             products: [
             {
                 name: "5 Kg", //husk chips blocks
-                images: [image1, block5a, block5b, block5c, block5d, block5e, block5f, block5g, block5h, block5i, block5j, chips1, chips2, chips3, chips4, chips5, chips6],
+                images: [block5a, block5b, block5c, block5d, block5e, block5f, block5g, block5h, block5i, block5j, chips1, chips2, chips3, chips4, chips5, chips6],
             },
             {
                 name: "2 Kg",
@@ -199,7 +198,7 @@ export const productSections = [
             },
             {
                 name: "1 Kg",
-                images: [image7, block1a, block1b, block1c, block1d, block1e],
+                images: [block1a, block1b, block1c, block1d, block1e],
             },
             {
                 name: "650g", //similar to 5Kg
@@ -255,7 +254,7 @@ export const productSections = [
                 images: [ply3_15_18_1, ply3_15_18_2, ply3_15_18_3, ply3_15_18_4, ply3_15_18_5, ply3_15_18_6],
             },
             {
-                name: "Hand Made Coir Yarn Loose Twisted Spooling",
+                name: "Loose Twisted Spooling Coir Yarn",
                 images: [looseTwisted1, looseTwisted2, looseTwisted3],
             },
         ],
@@ -293,7 +292,7 @@ export const productSections = [
         products: [
             {
                 name: "Vermicompost",
-                images: [vermicompost, vermicompost2, vermicompost3],
+                images: [vermicompost, vermicompost1, vermicompost2, vermicompost3],
             },
             {
                 name: "Fish Amino Acid",

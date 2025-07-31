@@ -463,7 +463,7 @@ export const productDetails = [
     },
     {
         section: "Coir Yarn",
-        name: "Hand Made Coir Yarn Loose Twisted Spooling",
+        name: "Loose Twisted Spooling Coir Yarn",
         price: "₹ 40/kg",
         minOrder: "2000 Kg",
         brochure: "https://www.youtube.com/shorts/dXkw9veuG4Q",
@@ -471,7 +471,7 @@ export const productDetails = [
         specification: [
             { label: "Length", value: "Spool-ready, custom lengths available" },
             { label: "Yarn Type", value: "Loose Twisted | Handmade | Spool-Ready" },
-            { label: "Strand Structure", value: "Hand Made Coir Yarn Loose Twisted Spooling" },
+            { label: "Strand Structure", value: "Loose Twisted Spooling Coir Yarn" },
             { label: "Diameter", value: "4 mm" },
             { label: "Color", value: "Natural Light Brown" },
             { label: "Type", value: "Handcrafted, Loose Twisted" },

@@ -23,7 +23,7 @@ const Contact = () => {
                             We'd love to hear from you! Please fill out the form below.
                         </p>
                         <form
-                            action="https://formspree.io/f/mvonbjbb"
+                            action="https://formspree.io/f/mkgzzzoz"
                             method="POST"
                             style={styles.form}
                         >
@@ -78,21 +78,21 @@ const Contact = () => {
                             <div style={{ display: "flex", alignItems: "center"}}>
                                 <a href="tel:+919445676371"> <span style={iconStyle} role="img" aria-label="phone">📞</span> </a>
                                 <span style={contactTextStyle}>
-                                    English Support: <a href="tel:+919445676371" style={iconLinkStyle}><strong>+91 94456 76371</strong></a>
+                                    Tamil, English Support: <a href="tel:+919445676371" style={iconLinkStyle}><strong>+91 94456 76371</strong></a>
                                 </span>
                             </div>
                             {/* Arabic, Hindi, Urdu Support */}
                             <div style={{ display: "flex", alignItems: "center"}}>
                                 <a href="tel:+919445071614"> <span style={iconStyle} role="img" aria-label="phone">📞</span> </a>
                                 <span style={contactTextStyle}>
-                                    Arabic, Hindi, Urdu Support: <a href="tel:+919445071614" style={iconLinkStyle}><strong>+91 94450 71614</strong></a>
+                                    Tamil, Arabic, Hindi, Urdu Support: <a href="tel:+919445071614" style={iconLinkStyle}><strong>+91 94450 71614</strong></a>
                                 </span>
                             </div>
                             {/* Email */}
                             <div style={{ display: "flex", alignItems: "center"}}>
-                                <a href="mailto:naturalcoirs786@gmail.com"> <span style={iconStyle} role="img" aria-label="email">✉️</span> </a>
+                                <a href="mailto:naturalcocos786@gmail.com"> <span style={iconStyle} role="img" aria-label="email">✉️</span> </a>
                                 <span style={contactTextStyle}>
-                                    <a href="mailto:naturalcoirs786@gmail.com" style={iconLinkStyle}><strong>naturalcoirs786@gmail.com</strong></a>
+                                    <a href="mailto:naturalcocos786@gmail.com" style={iconLinkStyle}><strong>naturalcocos786@gmail.com</strong></a>
                                 </span>
                             </div>
                             {/* Social Networks */}
