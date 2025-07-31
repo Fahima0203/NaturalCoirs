@@ -98,6 +98,7 @@ const ProductDetails = () => {
 
     const coirYarnVariants = {
         "2 Ply 7 mm": [
+            "2 Ply 7 mm (ONE Kg PCS)",
             "2 Ply 7 mm 22 Inches (HALF Kg PCS)",
             "2 Ply 7 mm 30 Inches (HALF Kg PCS)",
             "2 Ply 7 mm 15 inches (250g PCS)"
