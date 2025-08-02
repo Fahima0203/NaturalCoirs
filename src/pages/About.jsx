@@ -498,9 +498,6 @@ const About = () => {
                         font-size: 0.97rem !important;
                         padding: 0.5rem 1.1rem !important;
                     }
-                    .about-hero-img img {
-                        max-width: 120px !important;
-                    }
                     .about-company-row {
                         gap: 10px !important;
                     }
@@ -538,7 +535,7 @@ const About = () => {
                     }
                     .about-slider-mobile img,
                     .about-slider-desktop img {
-                        height: 120px !important;
+                        height: 200px !important;
                     }
                     .about-advisory-section ol li{
                         margin-bottom: 0rem !important;
