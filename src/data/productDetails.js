@@ -636,6 +636,7 @@ export const productDetails = [
     {
         section: "Organic Fertilizers",
         name: "Fish Amino Acid",
+        minOrder: "1000 L",
         specification: [
             { label: "📦Appearance", value: "Brownish liquid" },
             { label: "🌊pH Level", value: "4.0 – 6.5" },
@@ -665,6 +666,7 @@ export const productDetails = [
     {
         section: "Organic Fertilizers",
         name: "Neem Cake Powder",
+        minOrder: "1000 Kg",
         specification: [
             { label: "📦 Form", value: "Powder" },
             { label: "🌰 Source", value: "Residue from cold-pressed neem seed kernels" },
@@ -689,6 +691,7 @@ export const productDetails = [
     {
         section: "Organic Fertilizers",
         name: "Panchagavya",
+        minOrder: "1000 L",
         specification: [
             { label: "📦 Form", value: "Liquid" },
             { label: "🌰 Source", value: "Cow dung, cow urine, milk, curd, and ghee" },
