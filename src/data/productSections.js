@@ -150,7 +150,6 @@ import cocopeatPowder25Kg3 from "../assets/products/Cocopeat Powder/25 Kg Bale/i
 import cocopeatPowder25Kg4 from "../assets/products/Cocopeat Powder/25 Kg Bale/image4.jpg";
 
 //Organic Fertilizers - Fish Amino Acid
-import faa1 from "../assets/products/Organic Fertilizers/Fish Amino Acid/faa1.jpg";
 import fishAminoAcid from "../assets/products/Organic Fertilizers/Fish Amino Acid/image1.png";
 import fishAminoAcid2 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image2.png";
 import fishAminoAcid3 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image3.png";
@@ -163,6 +162,7 @@ import fishAminoAcid9 from "../assets/products/Organic Fertilizers/Fish Amino Ac
 import fishAminoAcid10 from "../assets/products/Organic Fertilizers/Fish Amino Acid/image10.png";
 
 //Organic Fertilizers - Neem Cake Powder
+import ncp1 from "../assets/products/Organic Fertilizers/Neem Cake Powder/ncp1.jpg";
 import neemCakePowder from "../assets/products/Organic Fertilizers/Neem Cake Powder/image1.png";
 import neemCakePowder2 from "../assets/products/Organic Fertilizers/Neem Cake Powder/image2.png";
 import neemCakePowder3 from "../assets/products/Organic Fertilizers/Neem Cake Powder/image3.png";
@@ -297,11 +297,11 @@ export const productSections = [
             },
             {
                 name: "Fish Amino Acid",
-                images: [faa1, fishAminoAcid, fishAminoAcid2, fishAminoAcid3, fishAminoAcid4, fishAminoAcid5, fishAminoAcid6, fishAminoAcid7, fishAminoAcid8, fishAminoAcid9, fishAminoAcid10],
+                images: [fishAminoAcid, fishAminoAcid2, fishAminoAcid3, fishAminoAcid4, fishAminoAcid5, fishAminoAcid6, fishAminoAcid7, fishAminoAcid8, fishAminoAcid9, fishAminoAcid10],
             },
             {
                 name: "Neem Cake Powder",
-                images: [neemCakePowder, neemCakePowder2, neemCakePowder3, neemCakePowder3a, neemCakePowder4, neemCakePowder5],
+                images: [ncp1, neemCakePowder, neemCakePowder2, neemCakePowder3, neemCakePowder3a, neemCakePowder4, neemCakePowder5],
             },
             {
                 name: "Panchagavya",
