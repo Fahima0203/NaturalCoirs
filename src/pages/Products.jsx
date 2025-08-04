@@ -1,5 +1,5 @@
 import FooterContact from "../components/FooterContact";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RunningBadge } from "../pages/About";
 import ProductSidebar from "../components/ProductSidebar";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,10 @@ const pageDescription =
 const Products = () => {
     const [search, setSearch] = useState("");
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = "Products | Natural Cocos";
+    }, []);
 
     // Filter logic: match in section title, section description, or product name
     const filteredSections = productSections

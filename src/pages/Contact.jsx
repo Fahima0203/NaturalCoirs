@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FooterContact from "../components/FooterContact";
 import { YouTube, Directions } from '@mui/icons-material';
 
 const Contact = () => {
+    useEffect(() => {
+        document.title = "Contact | Natural Cocos";
+    }, []);
+
     const [form, setForm] = useState({
         name: "",
         email: "",

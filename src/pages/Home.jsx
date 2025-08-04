@@ -3,8 +3,13 @@ import HomeSlideshow from "../components/HomeSlideshow";
 import HomeSlider from "../components/HomeSlider";
 import FooterContact from "../components/FooterContact";
 import AboutTab from "../components/AboutTab";
+import { useEffect } from "react";
 
 const Home = () => {
+    useEffect(() => {
+        document.title = "Home | Natural Cocos";
+    }, []);
+
     return (
         <div>
             <RunningBadge />
