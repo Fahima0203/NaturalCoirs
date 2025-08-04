@@ -238,6 +238,7 @@ const About = () => {
     const certRef = useRef(null);
 
     useEffect(() => {
+        document.title = "About Us | Natural Cocos";
         if (window.location.hash === "#certifications" && certRef.current) {
             setTimeout(() => {
                 certRef.current.scrollIntoView({ behavior: "smooth", block: "start" });

@@ -7,7 +7,20 @@ import About from './pages/About';
 import Info from './pages/Info';
 import Contact from './pages/Contact';
 import WhatsappCall from './components/WatsappCall';
+import { useEffect } from "react";
+
 function App() {
+  useEffect(() => {
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+      window.alert("Sorry, right-click has been disabled.");
+    };
+    document.addEventListener("contextmenu", handleContextMenu);
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
+
   return (
     <Router>
         <Navbar />
