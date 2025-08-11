@@ -249,7 +249,7 @@ const ProductDetails = () => {
                                 <img
                                     key={img}
                                     src={img}
-                                    alt=""
+                                    alt="premium quality cocopeat"
                                     style={{
                                         width: 64,
                                         height: 64,

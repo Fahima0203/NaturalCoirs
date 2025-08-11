@@ -3,10 +3,10 @@ import { useRef, useEffect } from "react";
 import React from 'react'
 import img1 from "../assets/coco_peat/image4.png";
 
-import soil1 from "../assets/coco_peat/image2.png";
+import soil1 from "../assets/coco_peat/horticulture.png";
 import block from "../assets/coco_peat/load image/image.png";
 import load1 from "../assets/coco_peat/load image/image2.png";
-import load2 from "../assets/coco_peat/load image/image3.png";
+import load2 from "../assets/coco_peat/load image/best_cocopeat.png";
 import ply7mm22_8 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 22Inches (HALF Kg PCS) 28.jpg";
 import ply7mm30_1 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches (HALF Kg PCS) 7.jpg";
 import ply7mm30_3 from "../assets/products/Coir Yarn/2 Ply 7 mm/2 Ply 7mm 30 Inches(HALF Kg PCS) 1.jpg";
@@ -45,7 +45,7 @@ const AboutSlider = () => {
         <div style={{position: "relative"}}>
             <img
                 src={images[index]}
-                alt=""
+                alt="premium quality cocopeat"
                 style={{
                     width: "100%",
                     height: "350px",
@@ -253,7 +253,7 @@ const About = () => {
             <section className="about-hero">
                 <div className="about-hero-content">
                     <h1>
-                        <span role="img" aria-label="leaf">🌍</span> A Global Leader in Cocopeat and Organic Fertilizer Solutions
+                        <span role="A Global Leader in Cocopeat and Organic Fertilizer Solutions" aria-label="A Global Leader in Cocopeat and Organic Fertilizer Solutions">🌍</span> A Global Leader in Cocopeat and Organic Fertilizer Solutions
                     </h1>
                     <p>
                         Premium, Sustainable, and High-Performance Cocopeat and Organic Fertilizer for Diverse Eco-Friendly Cultivation.<br />

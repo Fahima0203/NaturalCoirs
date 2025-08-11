@@ -222,7 +222,7 @@ const Info = () => {
             <section className="info-hero">
                 <div className="info-hero-content">
                     <h1>
-                        <span role="img" aria-label="coconut">🪴</span> About Our Products
+                        <span role="About Our Products" aria-label="About Our Products">🪴</span> About Our Products
                     </h1>
                     <p>
                         Discover the next generation of sustainable, high-performance cocopeat products and organic fertilizers for agriculture, horticulture, and beyond.<br />
@@ -231,7 +231,7 @@ const Info = () => {
                     <a href="/contact" className="info-cta-btn">Request a Free Sample</a>
                 </div>
                 <div className="info-hero-img">
-                    <img src={image1} alt="Coco Products" style={{maxWidth: 320, borderRadius: 14, boxShadow: "0 2px 12px rgba(8,108,92,0.13)"}} />
+                    <img src={image1} alt="Premium Coco Products" style={{maxWidth: 320, borderRadius: 14, boxShadow: "0 2px 12px rgba(8,108,92,0.13)"}} />
                 </div>
             </section>
             <div className="info-root" style={{padding: "2rem"}}>

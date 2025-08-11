@@ -4,9 +4,9 @@ import "../styles/AboutTab.css";
 import "../styles/AboutSlide.css";
 import { Container, Row, Col } from 'react-grid-system';
 
-import img1 from '../assets/coco_peat/image2.png';
+import img1 from '../assets/coco_peat/horticulture.png';
 import img2 from '../assets/coco_peat/image4.png';
-import img3 from '../assets/coco_peat/image8.jpg';
+import img3 from '../assets/coco_peat/best_supplier.jpg';
 
 const colors = [img1, img2, img3]
 const delay = 3000;
@@ -43,7 +43,7 @@ function Slideshow() {
                 style={{ transform: `translate3d(${-index * 100}%, 0, 0)`, height: "250px", }}
             >
                 {colors.map((home, index) => (
-                    <img className="slide fade-in-image" src={home} key={index} alt="" />
+                    <img className="slide fade-in-image" src={home} key={index} alt="premium quality cocopeat" />
                 ))}
             </div>
 
