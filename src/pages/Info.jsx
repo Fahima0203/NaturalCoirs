@@ -231,7 +231,7 @@ const Info = () => {
                     <a href="/contact" className="info-cta-btn">Request a Free Sample</a>
                 </div>
                 <div className="info-hero-img">
-                    <img src={image1} alt="Coco Products" style={{maxWidth: 320, borderRadius: 14, boxShadow: "0 2px 12px rgba(8,108,92,0.13)"}} />
+                    <img src={image1} alt="Premium Coco Products" style={{maxWidth: 320, borderRadius: 14, boxShadow: "0 2px 12px rgba(8,108,92,0.13)"}} />
                 </div>
             </section>
             <div className="info-root" style={{padding: "2rem"}}>

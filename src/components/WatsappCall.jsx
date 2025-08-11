@@ -38,7 +38,7 @@ const WhatsappCall = ({ message }) => {
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                    alt="WhatsApp"
+                    alt="premium quality cocopeat WhatsApp"
                     style={{ width: 24, height: 24, marginRight: 8 }}
                     className="whatsapp-icon"
                 />

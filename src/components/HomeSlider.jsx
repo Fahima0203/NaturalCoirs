@@ -48,9 +48,6 @@ function HomeSlider() {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-        {/* <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide> */}
         <SwiperSlide>
           <img src={plants} alt="Premium Cocopeat Blocks Manufacturer India" />
           <div className="slide-caption">Premium Cocopeat Blocks Manufacturer & Exporter in India</div>

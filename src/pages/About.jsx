@@ -45,7 +45,7 @@ const AboutSlider = () => {
         <div style={{position: "relative"}}>
             <img
                 src={images[index]}
-                alt=""
+                alt="premium quality cocopeat"
                 style={{
                     width: "100%",
                     height: "350px",
