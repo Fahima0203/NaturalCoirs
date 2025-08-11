@@ -9,14 +9,12 @@ import '../styles/HomeSlider.css'
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
-// import slide_image_1 from '../assets/coco_peat/image1.png';
-import plants from '../assets/coco_peat/image3.png';
-import organic_product from '../assets/coco_peat/image6.png';
-import best_cocopeat from '../assets/coco_peat/load image/image3.png';
-import best_supplier from '../assets/coco_peat/image8.jpg';
+import plants from '../assets/coco_peat/plants.png';
+import organic_product from '../assets/coco_peat/organic_product.png';
+import best_cocopeat from '../assets/coco_peat/load image/best_cocopeat.png';
+import best_supplier from '../assets/coco_peat/best_supplier.jpg';
 import block5b from "../assets/coco_peat/load image/row_no_watermark.png";
 import chips6 from "../assets/products/Coco Chips Blocks/packed.jpg"; 
-import ply_5mm from "../assets/products/Coir Yarn/2 Ply 5 mm/2 Ply 5mm 48 Inches 40 Feet.jpg";
 import block5a from "../assets/products/Cocopeat Blocks/5Kg/3inarow.png";
 import block650g8 from "../assets/products/Cocopeat Blocks/650g/image8.png";
 import coirFibre30Kg from "../assets/products/Coir Fibre/30 Kg Bale/image1.jpg";
@@ -97,9 +95,6 @@ function HomeSlider() {
           <img src={ply4mm_6} alt="Coir Yarn & Rope for Agriculture" />
           <div className="slide-caption">Coir Yarn & Rope for Agriculture, Packaging & Crafts</div>
         </SwiperSlide>
-        {/* <SwiperSlide>
-          <img src={ply_5mm} alt="slide_image" />
-        </SwiperSlide> */}
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
             <West style={{ width: '2.2rem', color: '#fff' }}/>
