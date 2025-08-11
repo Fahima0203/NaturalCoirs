@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/(.*)", "destination": "https://www.naturalcocos.com/$1", "permanent": true }
+  ]
+}
