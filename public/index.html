@@ -2,42 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    <!-- Favicon & Touch Icons -->
     <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link href="/styles/tailwind.css" rel="stylesheet">
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="theme-color" content="#006400" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <!-- Responsive & Mobile Friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO Title & Meta Description -->
     <title>Natural Cocos | Buy Cocopeat Blocks, Coir Products & Organic Fertilizers</title>
-    <meta name="description" content="Natural Cocos offers premium coco peat blocks, coir pith, and organic fertilizers sourced directly from South India. Eco-friendly, export-quality, and trusted by growers worldwide.">
-    <meta name="keywords" content="cocopeat, coir products, coir pith, organic fertilizers, cocopeat India, supplier, manufacturer">
-    <link rel="canonical" href="https://www.naturalcocos.com/">
+    <meta name="description" content="Buy premium cocopeat blocks, coir pith, and organic fertilizers from Natural Cocos, South India. Eco-friendly, export-quality, and trusted by growers worldwide." />
+    <meta name="keywords" content="cocopeat, coco peat blocks, coir products, coir pith, organic fertilizers, cocopeat supplier India, cocopeat manufacturer" />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.naturalcocos.com/" />
 
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Natural Cocos | Premium Cocopeat & Coir Products" />
+    <meta property="og:description" content="Eco-friendly coco peat, coir pith, and organic fertilizers from South India. Trusted by growers worldwide." />
+    <meta property="og:image" content="https://www.naturalcocos.com/images/cocopeat-block.png" />
+    <meta property="og:url" content="https://www.naturalcocos.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Natural Cocos | Premium Cocopeat & Coir Products" />
+    <meta name="twitter:description" content="Eco-friendly coco peat, coir pith, and organic fertilizers from South India. Trusted by growers worldwide." />
+    <meta name="twitter:image" content="https://www.naturalcocos.com/images/cocopeat-block.png" />
+
+    <!-- Styles -->
+    <link href="/styles/tailwind.css" rel="stylesheet">
+
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Natural Cocos",
+      "url": "https://www.naturalcocos.com",
+      "logo": "https://www.naturalcocos.com/images/logo.jpg",
+      "description": "Natural Cocos offers premium coco peat, coir pith, and organic fertilizers from South India. Eco-friendly and export-quality.",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+91-9445676371",
+        "contactType": "Customer Service",
+        "areaServed": "Worldwide",
+        "availableLanguage": "English"
+      }],
+      "sameAs": [
+        "https://facebook.com/NaturalCocos",
+        "https://instagram.com/NaturalCocos"
+      ]
+    }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-       5. Improve Page Content for Ranking
-        Use relevant keywords on your homepage (e.g., "buy coco peat", "organic coir", "natural coco products").
-
-        Use H1, H2, H3 tags correctly for headings.
-
-        Add alt text for all images.
-    -->
   </body>
 </html>
