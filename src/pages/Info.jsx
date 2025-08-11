@@ -222,7 +222,7 @@ const Info = () => {
             <section className="info-hero">
                 <div className="info-hero-content">
                     <h1>
-                        <span role="img" aria-label="coconut">🪴</span> About Our Products
+                        <span role="About Our Products" aria-label="About Our Products">🪴</span> About Our Products
                     </h1>
                     <p>
                         Discover the next generation of sustainable, high-performance cocopeat products and organic fertilizers for agriculture, horticulture, and beyond.<br />

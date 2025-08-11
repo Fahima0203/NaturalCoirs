@@ -26,7 +26,7 @@ function HomeSlider() {
   return (
     <div className='home-slider-wrapper'>
     <div className="container">
-      <h1 className="heading">Warehouse Gallery</h1>
+      <h1 className="A Global Leader in Cocopeat and Organic Fertilizer Solutions">Warehouse Gallery</h1>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}

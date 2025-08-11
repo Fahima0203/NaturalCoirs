@@ -253,7 +253,7 @@ const About = () => {
             <section className="about-hero">
                 <div className="about-hero-content">
                     <h1>
-                        <span role="img" aria-label="leaf">🌍</span> A Global Leader in Cocopeat and Organic Fertilizer Solutions
+                        <span role="A Global Leader in Cocopeat and Organic Fertilizer Solutions" aria-label="A Global Leader in Cocopeat and Organic Fertilizer Solutions">🌍</span> A Global Leader in Cocopeat and Organic Fertilizer Solutions
                     </h1>
                     <p>
                         Premium, Sustainable, and High-Performance Cocopeat and Organic Fertilizer for Diverse Eco-Friendly Cultivation.<br />
