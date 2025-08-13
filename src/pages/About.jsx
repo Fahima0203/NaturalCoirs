@@ -45,7 +45,7 @@ const AboutSlider = () => {
         <div style={{position: "relative"}}>
             <img
                 src={images[index]}
-                alt="premium quality cocopeat"
+                loading="lazy" alt="premium quality cocopeat"
                 style={{
                     width: "100%",
                     height: "350px",
@@ -261,7 +261,7 @@ const About = () => {
                     <a href="/contact" className="about-cta-btn">Get a Free Consultation</a>
                 </div>
                 <div className="about-hero-img">
-                    <img src={img1} alt="Premium Cocopeat" />
+                    <img src={img1} loading="lazy" alt="Premium Cocopeat" />
                 </div>
             </section>
             <div style={{ padding: "2rem" }} className="about-main-content">

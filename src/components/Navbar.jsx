@@ -73,7 +73,7 @@ function Nbar() {
                             height: "48px",
                             margin: "0 16px",
                         }}
-                        alt="Natural Cocos"
+                        loading="lazy" alt="Natural Cocos"
                     />
                     <Navbar.Brand
                         as="span"

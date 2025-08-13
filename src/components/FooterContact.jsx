@@ -79,9 +79,9 @@ function FooterContact() {
             <div className="row row-10 row-sm-30 align-items-center justify-content-sm-between">
                 <div className="col-sm-auto col-lg-4 text-lg-left">
                     <div className="group-xs group-middle fade-in-image">
-                        <img src={visa} alt="premium quality cocopeat" width="50" height="25" style={{ padding: '0px 4px' }} />
-                        <img src={mastercard} alt="premium quality cocopeat" width="50" height="25" style={{ padding: '0px 3px', borderRadius: '3px' }} />
-                        <img src={paypal} alt="premium quality cocopeat" width="50" height="25" style={{ padding: '0px 3px', borderRadius: '2px' }} />
+                        <img src={visa} loading="lazy" alt="premium quality cocopeat" width="50" height="25" style={{ padding: '0px 4px' }} />
+                        <img src={mastercard} loading="lazy" alt="premium quality cocopeat" width="50" height="25" style={{ padding: '0px 3px', borderRadius: '3px' }} />
+                        <img src={paypal} loading="lazy" alt="premium quality cocopeat" width="50" height="25" style={{ padding: '0px 3px', borderRadius: '2px' }} />
                     </div>
                 </div>
                 <div className="col-sm-auto col-lg-4" style={{ paddingBottom: '10px' }}>
