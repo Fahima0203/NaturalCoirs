@@ -26,7 +26,7 @@ function HomeSlider() {
   return (
     <div className='home-slider-wrapper'>
     <div className="container">
-      <h1 className="A Global Leader in Cocopeat and Organic Fertilizer Solutions">Warehouse Gallery</h1>
+      <h1 className="heading">Warehouse Gallery</h1>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -49,47 +49,47 @@ function HomeSlider() {
         className="swiper_container"
       >
         <SwiperSlide>
-          <img src={plants} alt="Premium Cocopeat Blocks Manufacturer India" />
+          <img src={plants} loading="lazy" alt="Premium Cocopeat Blocks Manufacturer India" />
           <div className="slide-caption">Premium Cocopeat Blocks Manufacturer & Exporter in India</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={organic_product} alt="Buy Organic Products" />
+          <img src={organic_product} loading="lazy" alt="Buy Organic Products" />
           <div className="slide-caption">Buy Organic Products – Natural Cocos</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={best_cocopeat} alt="Best Cocopeat Supplier South India" />
+          <img src={best_cocopeat} loading="lazy" alt="Best Cocopeat Supplier South India" />
           <div className="slide-caption">Best Cocopeat Supplier in South India</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={best_supplier} alt="Eco-Friendly Cocopeat Exporter" />
+          <img src={best_supplier} loading="lazy" alt="Eco-Friendly Cocopeat Exporter" />
           <div className="slide-caption">Eco-Friendly Cocopeat Exporter – Trusted by Growers Worldwide</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={block5b} alt="Cocopeat Blocks for Hydroponics" />
+          <img src={block5b} loading="lazy" alt="Cocopeat Blocks for Hydroponics" />
           <div className="slide-caption">Cocopeat Blocks for Hydroponics & Greenhouse Farming</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={chips6} alt="Coconut Husk Chips Bulk Export" />
+          <img src={chips6} loading="lazy" alt="Coconut Husk Chips Bulk Export" />
           <div className="slide-caption">Coconut Husk Chips – Bulk Export & Custom Mixes</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={block5a} alt="Low EC & High EC Cocopeat" />
+          <img src={block5a} loading="lazy" alt="Low EC & High EC Cocopeat" />
           <div className="slide-caption">Low EC & High EC Cocopeat – Quality Guaranteed</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={block650g8} alt="650g Cocopeat Bricks Wholesale" />
+          <img src={block650g8} loading="lazy" alt="650g Cocopeat Bricks Wholesale" />
           <div className="slide-caption">650g Cocopeat Bricks – Wholesale & Retail Supply</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={coirFibre30Kg} alt="Coir Fibre Bales for Export" />
+          <img src={coirFibre30Kg} loading="lazy" alt="Coir Fibre Bales for Export" />
           <div className="slide-caption">Coir Fibre Bales – Export Quality for Mattress & Rope</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={coirFibre120Kg3} alt="Natural Coir Rope Manufacturer" />
+          <img src={coirFibre120Kg3} loading="lazy" alt="Natural Coir Rope Manufacturer" />
           <div className="slide-caption">Natural Coir Rope Manufacturer – Eco-Friendly Solutions</div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={ply4mm_6} alt="Coir Yarn & Rope for Agriculture" />
+          <img src={ply4mm_6} loading="lazy" alt="Coir Yarn & Rope for Agriculture" />
           <div className="slide-caption">Coir Yarn & Rope for Agriculture, Packaging & Crafts</div>
         </SwiperSlide>
         <div className="slider-controler">

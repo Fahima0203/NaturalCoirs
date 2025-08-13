@@ -43,7 +43,7 @@ function Slideshow() {
                 style={{ transform: `translate3d(${-index * 100}%, 0, 0)`, height: "250px", }}
             >
                 {colors.map((home, index) => (
-                    <img className="slide fade-in-image" src={home} key={index} alt="premium quality cocopeat" />
+                    <img className="slide fade-in-image" src={home} key={index} loading="lazy" alt="premium quality cocopeat" />
                 ))}
             </div>
 

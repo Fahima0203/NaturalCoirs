@@ -45,7 +45,7 @@ const AboutSlider = () => {
         <div style={{position: "relative"}}>
             <img
                 src={images[index]}
-                alt="premium quality cocopeat"
+                loading="lazy" alt="premium quality cocopeat"
                 style={{
                     width: "100%",
                     height: "350px",
@@ -238,7 +238,6 @@ const About = () => {
     const certRef = useRef(null);
 
     useEffect(() => {
-        document.title = "About Us | Natural Cocos";
         if (window.location.hash === "#certifications" && certRef.current) {
             setTimeout(() => {
                 certRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -253,7 +252,7 @@ const About = () => {
             <section className="about-hero">
                 <div className="about-hero-content">
                     <h1>
-                        <span role="A Global Leader in Cocopeat and Organic Fertilizer Solutions" aria-label="A Global Leader in Cocopeat and Organic Fertilizer Solutions">🌍</span> A Global Leader in Cocopeat and Organic Fertilizer Solutions
+                        <span role="img" aria-label="A Global Leader in Cocopeat and Organic Fertilizer Solutions">🌍</span> A Global Leader in Cocopeat and Organic Fertilizer Solutions
                     </h1>
                     <p>
                         Premium, Sustainable, and High-Performance Cocopeat and Organic Fertilizer for Diverse Eco-Friendly Cultivation.<br />
@@ -262,7 +261,7 @@ const About = () => {
                     <a href="/contact" className="about-cta-btn">Get a Free Consultation</a>
                 </div>
                 <div className="about-hero-img">
-                    <img src={img1} alt="Premium Cocopeat" />
+                    <img src={img1} loading="lazy" alt="Premium Cocopeat" />
                 </div>
             </section>
             <div style={{ padding: "2rem" }} className="about-main-content">

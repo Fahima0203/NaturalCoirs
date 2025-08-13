@@ -11,6 +11,7 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
+    document.title = "Natural Cocos | Premium Cocopeat & Coir Products";
     const handleContextMenu = (e) => {
       e.preventDefault();
       window.alert("Sorry, right-click has been disabled.");
