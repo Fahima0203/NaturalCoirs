@@ -1,11 +1,7 @@
 import FooterContact from "../components/FooterContact";
 import image1 from "../assets/products/Cocopeat Blocks/5Kg/rows.png";
-import { useEffect } from "react";
 
 const Info = () => {
-    useEffect(() => {
-        document.title = "Why Us? | Natural Cocos";
-    }, []);
 
     return (
         <>
@@ -222,7 +218,7 @@ const Info = () => {
             <section className="info-hero">
                 <div className="info-hero-content">
                     <h1>
-                        <span role="About Our Products" aria-label="About Our Products">🪴</span> About Our Products
+                        <span role="img" aria-label="About Our Products">🪴</span> About Our Products
                     </h1>
                     <p>
                         Discover the next generation of sustainable, high-performance cocopeat products and organic fertilizers for agriculture, horticulture, and beyond.<br />
