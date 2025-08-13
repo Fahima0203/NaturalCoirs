@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Analytics from "./pages/Analytics";
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <Router>
+        <Analytics />
         <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
