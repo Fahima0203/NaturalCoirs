@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import visa from '../assets/visa.png'
 import paypal from '../assets/paypal.webp'
 import mastercard from '../assets/mastercard.png'
-import {AccessTime, LocationOn, Facebook, YouTube, Twitter, Instagram, LinkedIn, WhatsApp, Telegram } from '@mui/icons-material';
+import {AccessTime, LocationOn, Facebook, YouTube, X, Instagram, LinkedIn, WhatsApp, Telegram } from '@mui/icons-material';
 
 const quickLinkStyle = {
     textDecoration: "none",
@@ -18,8 +18,9 @@ function FooterContact() {
                     <div className="col-sm-6 col-lg-4 wow fadeInRight" style={{ padding: '10px' }}>
                         <h2>Visit Us</h2>
                         <p style={quickLinkStyle}> 
-                            <a target="_blank" rel="noreferrer" href="https://www.google.co.in/maps/dir//11.671988,78.116388/@11.6719763,78.0339861,12z?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D">
-                            <LocationOn /> 33/1,2,3, Dharmanagar 3rd Street,<br /> Suramangalam, Salem-636005, <br />Tamil Nadu, India</a></p>
+                            <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/NATURAL+COCOS/@11.6702021,78.0800378,17z/data=!3m1!4b1!4m6!3m5!1s0x3babfb00342cac0f:0x4315726befb96990!8m2!3d11.6702021!4d78.0800378!16s%2Fg%2F11xwbjf_34?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D">
+                            {/* <LocationOn /> 33/1,2,3, Dharmanagar 3rd Street,<br /> Suramangalam, Salem-636005, <br />Tamil Nadu, India</a></p> */}
+                            <LocationOn /> 4, Steel Plant Road,<br /> Talaopatti, Salem, <br />Tamil Nadu-636302, India</a></p>
                         <div style={{ marginTop: '10px' }}>
                             <h4>Business Hours</h4>
                             <ul style={{ listStyle: 'none', paddingLeft: 0, marginBottom: 0 }}>
@@ -63,7 +64,7 @@ function FooterContact() {
                                 href="/AboutUs#certifications"
                                 style={{marginLeft: 8, cursor: "pointer"}}
                             >
-                                GSTIN: <span>33AEKPH7496H1Z5</span>
+                                GSTIN: <span>33EGCPA9831H1ZL</span>
                             </a>
                             <br />
                             <a
@@ -85,21 +86,21 @@ function FooterContact() {
                     </div>
                 </div>
                 <div className="col-sm-auto col-lg-4" style={{ paddingBottom: '10px' }}>
-                    <p style={{margin: "0px 0px 5px 0px"}}>Share us on</p>
+                    <p style={{margin: "0px 0px 5px 0px"}}>Follow us on</p>
                     <style>
                         {`a { all: unset; }`}
                     </style>
                         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-                            <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.facebook.com/profile.php?id=61585344706653" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                                 <Facebook style={{...quickLinkStyle, height: '30px', width: '30px' }} />
                             </a>
-                            <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.youtube.com/@NaturalCocos-c9t" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
                                 <YouTube style={{...quickLinkStyle, height: '30px', width: '30px' }} />
                             </a>
-                            <a href="https://www.twitter.com/" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                                <Twitter style={{...quickLinkStyle, height: '30px', width: '30px' }} />
+                            <a href="https://x.com/NaturalCocos" aria-label="X" target="_blank" rel="noopener noreferrer">
+                                <X style={{...quickLinkStyle, height: '30px', width: '30px' }} />
                             </a>
-                            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/natural_cocos_/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                                 <Instagram style={{...quickLinkStyle, height: '30px', width: '30px' }} />
                             </a>
                             <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
