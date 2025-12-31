@@ -101,7 +101,7 @@ const Contact = () => {
                                 Follow us on Social Networks to stay in touch with us
                             </div>
                             <div style={{ display: "flex", alignItems: "center", gap: 18}}>
-                                <a href="https://www.youtube.com/@NaturalCoirs" aria-label="YouTube" target="_blank" rel="noopener noreferrer" style={{ ...iconLinkStyle, color: "#FF0000" }}>
+                                <a href="https://www.youtube.com/@NaturalCocos-c9t" aria-label="YouTube" target="_blank" rel="noopener noreferrer" style={{ ...iconLinkStyle, color: "#FF0000" }}>
                                     <YouTube style={{ height: '35px', width: '35px', color: "#FF0000" }} />
                                 </a>
                                 <a href="https://www.indiamart.com/naturalcoirs" aria-label="IndiaMart" target="_blank" rel="noopener noreferrer" style={iconLinkStyle}>

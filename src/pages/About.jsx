@@ -18,8 +18,8 @@ import gstImg3 from "../assets/docs/gst3.png";
 import iecImg from "../assets/docs/iec.png";
 import msme1 from "../assets/docs/msme1.png";
 import msme2 from "../assets/docs/msme2.png";
-import msme3 from "../assets/docs/msme3.png";
-import msme4 from "../assets/docs/msme4.png";
+// import msme3 from "../assets/docs/msme3.png";
+// import msme4 from "../assets/docs/msme4.png";
 
 const runningText = "🌿 Welcome to the Global Leader in Cocopeat and Organic Fertilizers Solutions | 🌱 Trusted by Farmers & Growers Worldwide | 🚚 Fast Shipping & Custom Packaging Available | 💡 24/7 Expert Advisory for Your Success | 🌍 Sustainable, High-Performance Cocopeat and Organic Fertilizers Manufacturing and Exports";
 
@@ -149,7 +149,7 @@ const certificates = [
         key: "msme",
         label: "MSME Certificate",
         icon: "🏢",
-        images: [msme1, msme2, msme3, msme4],
+        images: [msme1, msme2],
     }
     // Add more certificates as needed
 ];
