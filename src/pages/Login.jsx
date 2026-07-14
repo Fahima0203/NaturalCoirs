@@ -257,7 +257,7 @@ export default function Login() {
                   Check your inbox!
                 </p>
                 <p style={{ color: "#555", fontSize: "0.9rem", marginBottom: "1.4rem" }}>
-                  A password reset link has been sent to <strong>{resetEmail}</strong>
+                  If an account with this email exists, a password reset link has been sent to <strong>{resetEmail}</strong>
                 </p>
                 <button
                   onClick={closeModal}
