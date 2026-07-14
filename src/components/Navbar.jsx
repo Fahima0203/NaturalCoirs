@@ -8,6 +8,8 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { productSections } from "../data/productSections";
 import React, { useState, useCallback } from 'react';
 import LaunchIcon from '@mui/icons-material/Launch';
+import { useAuth } from '../context/AuthContext';
+import { useCart } from '../context/CartContext';
 
 function Nbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,6 +19,9 @@ function Nbar() {
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
     const toggleMobileProduct = () => setMobileProductOpen(!mobileProductOpen);
+
+    const { currentUser, logout } = useAuth();
+    const { totalItems }          = useCart();
 
 
     const [showProducts, setShowProducts] = useState(false);
@@ -146,6 +151,44 @@ function Nbar() {
                             <Link to="/WhyUs" onClick={toggleMobileMenu} className="mobile-link">Why Us?</Link>
                             <Link to="/AboutUs" onClick={toggleMobileMenu} className="mobile-link">About Us</Link>
                             <Link to="/Contact" onClick={toggleMobileMenu} className="mobile-link">Contact</Link>
+
+                            {currentUser ? (
+                                <>
+                                    <Link to="/cart" onClick={toggleMobileMenu} className="mobile-link" style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                                        🛒 Cart
+                                        {totalItems > 0 && (
+                                            <span style={{
+                                                background: "#ff5722",
+                                                color: "#fff",
+                                                borderRadius: "50%",
+                                                minWidth: 20,
+                                                height: 20,
+                                                fontSize: "0.72rem",
+                                                display: "inline-flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                fontWeight: 800,
+                                                padding: "0 3px",
+                                            }}>
+                                                {totalItems > 99 ? "99+" : totalItems}
+                                            </span>
+                                        )}
+                                    </Link>
+                                    <Link to="/order-history" onClick={toggleMobileMenu} className="mobile-link">Order History</Link>
+                                    <button
+                                        className="mobile-link"
+                                        style={{ background: "none", border: "none", textAlign: "left", padding: "0.5rem 0", color: "#c62828", fontWeight: 600, cursor: "pointer" }}
+                                        onClick={() => { logout(); toggleMobileMenu(); }}
+                                    >
+                                        Logout
+                                    </button>
+                                </>
+                            ) : (
+                                <>
+                                    <Link to="/login" onClick={toggleMobileMenu} className="mobile-link">Login</Link>
+                                    <Link to="/signup" onClick={toggleMobileMenu} className="mobile-link">Sign Up</Link>
+                                </>
+                            )}
                         </div>
                     </div>
                 )}
@@ -239,6 +282,87 @@ function Nbar() {
                         >
                             Contact
                         </Nav.Link>
+
+                            {currentUser ? (
+                                <>
+                                    <Nav.Link
+                                        as={Link}
+                                        to="/cart"
+                                        className={isActive("/cart") ? "nav-link-active" : ""}
+                                        style={{ position: "relative" }}
+                                    >
+                                        🛒
+                                        {totalItems > 0 && (
+                                            <span style={{
+                                                position: "absolute",
+                                                top: "-2px",
+                                                right: "-6px",
+                                                background: "#ff5722",
+                                                color: "#fff",
+                                                borderRadius: "50%",
+                                                minWidth: 18,
+                                                height: 18,
+                                                fontSize: "0.68rem",
+                                                display: "inline-flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                fontWeight: 800,
+                                                padding: "0 3px",
+                                                lineHeight: 1,
+                                            }}>
+                                                {totalItems > 99 ? "99+" : totalItems}
+                                            </span>
+                                        )}
+                                    </Nav.Link>
+                                <Nav.Link
+                                    as={Link}
+                                    to="/order-history"
+                                    className={isActive("/order-history") ? "nav-link-active" : ""}
+                                >
+                                    Orders
+                                </Nav.Link>
+                                <button
+                                    onClick={logout}
+                                    style={{
+                                        background: "none",
+                                        border: "1.5px solid #fff",
+                                        color: "#fff",
+                                        borderRadius: "6px",
+                                        padding: "0.3rem 0.85rem",
+                                        fontWeight: 600,
+                                        cursor: "pointer",
+                                        fontSize: "0.95rem",
+                                    }}
+                                >
+                                    Logout
+                                </button>
+                            </>
+                        ) : (
+                            <>
+                                <Nav.Link
+                                    as={Link}
+                                    to="/login"
+                                    className={isActive("/login") ? "nav-link-active" : ""}
+                                >
+                                    Login
+                                </Nav.Link>
+                                <Link
+                                    to="/signup"
+                                    style={{
+                                        background: "#fff",
+                                        color: "#00695c",
+                                        borderRadius: "6px",
+                                        padding: "0.35rem 0.95rem",
+                                        fontWeight: 700,
+                                        textDecoration: "none",
+                                        fontSize: "0.95rem",
+                                        marginLeft: "4px",
+                                    }}
+                                >
+                                    Sign Up
+                                </Link>
+                            </>
+                        )}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

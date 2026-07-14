@@ -85,19 +85,19 @@ function AboutTab() {
                                 <ul className="nav nav-tabs row">
                                     <button onClick={() => toggleTab(1)} className='col'>
                                         <li>
-                                            <a className="nav-link">About</a>
+                                            <span className="nav-link">About</span>
                                             <p className={toggleState === 1 ? "tab-pane fade active show" : "tab-pane fade"}> <hr /> </p>
                                         </li>
                                     </button>
                                     <button onClick={() => toggleTab(2)} className='col'>
                                         <li>
-                                            <a className="nav-link col">🎯 Our mission</a>
+                                            <span className="nav-link col">🎯 Our mission</span>
                                             <p className={toggleState === 2 ? "tab-pane fade active show" : "tab-pane fade"}> <hr /> </p>
                                         </li>
                                     </button>
                                     <button onClick={() => toggleTab(3)} className='col'>
                                         <li>
-                                            <a className="nav-link col">🌱 Our vision</a>
+                                            <span className="nav-link col">🌱 Our vision</span>
                                             <p className={toggleState === 3 ? "tab-pane fade active show" : "tab-pane fade"}> <hr /> </p>
                                         </li>
                                     </button>
