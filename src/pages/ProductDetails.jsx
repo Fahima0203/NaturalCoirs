@@ -1,8 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import FooterContact from "../components/FooterContact";
 import { productSections } from "../data/productSections";
 import { productDetails } from "../data/productDetails";
 import { useState, useRef, useEffect } from "react";
+import { useAuth } from "../context/AuthContext";
+import { useCart } from "../context/CartContext";
 
 const ProductDetails = () => {
     const { section: sectionParam, product: productParam } = useParams();
@@ -77,6 +79,15 @@ const ProductDetails = () => {
         };
     }, [product?.images?.length]);
 
+    // ── Auth / Cart hooks (must be before any early return) ─────────────────
+    const { currentUser } = useAuth();
+    const { addToCart }   = useCart();
+    const navigate        = useNavigate();
+    const location        = useLocation();
+    const [addedToCart, setAddedToCart] = useState(false);
+    const [cartBusy, setCartBusy]       = useState(false);
+    // ────────────────────────────────────────────────────────────────────────
+
     if (!section || !product) {
         return <div style={{ padding: 40 }}>Product not found.</div>;
     }
@@ -120,6 +131,24 @@ const ProductDetails = () => {
             "Double Piece 24 Feet"
         ]
     };
+
+    // ── Add to Cart ──────────────────────────────────────────────────────────
+    const handleAddToCart = async () => {
+        if (!currentUser) {
+            navigate('/login', { state: { from: location } });
+            return;
+        }
+        setCartBusy(true);
+        try {
+            await addToCart(section.title, product.name, price);
+            setAddedToCart(true);
+            setTimeout(() => setAddedToCart(false), 2000);
+        } catch (err) {
+            console.error('Add to cart failed:', err);
+        }
+        setCartBusy(false);
+    };
+    // ────────────────────────────────────────────────────────────────────────
 
     return (
         <>
@@ -555,7 +584,34 @@ const ProductDetails = () => {
                         </a>
                     </div>
                     {/* Yes, I am interested button */}
-                    <div style={{ marginTop: 32, display: "flex", justifyContent: "flex-end" }}>
+                    <div style={{ marginTop: 32, display: "flex", justifyContent: "flex-end", gap: 12, flexWrap: "wrap" }}>
+                        {/* Add to Cart */}
+                        <button
+                            onClick={handleAddToCart}
+                            disabled={cartBusy}
+                            style={{
+                                background: addedToCart
+                                    ? "linear-gradient(90deg, #388e3c 0%, #2e7d32 100%)"
+                                    : "linear-gradient(90deg, #ff6f00 0%, #ffa000 100%)",
+                                color: "#fff",
+                                fontWeight: 800,
+                                fontSize: "1.1rem",
+                                border: "none",
+                                borderRadius: 9,
+                                padding: "1.05rem 2rem",
+                                boxShadow: "0 2px 12px rgba(255,111,0,0.18)",
+                                cursor: cartBusy ? "not-allowed" : "pointer",
+                                opacity: cartBusy ? 0.75 : 1,
+                                transition: "background 0.25s",
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 8,
+                            }}
+                            className="yes-interested-btn"
+                        >
+                            {addedToCart ? "✓ Added to Cart" : "🛒 Add to Cart"}
+                        </button>
+                        {/* WhatsApp CTA */}
                         <a
                             href={whatsappLink}
                             target="_blank"

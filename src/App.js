@@ -16,6 +16,7 @@ import Payment from './pages/Payment';
 import OrderHistory from './pages/OrderHistory';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
 import { useEffect } from "react";
 
 function App() {
@@ -34,9 +35,10 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <Analytics />
-        <Navbar />
-        <Routes>
+        <CartProvider>
+          <Analytics />
+          <Navbar />
+          <Routes>
           {/* Public routes */}
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
@@ -53,7 +55,8 @@ function App() {
           <Route path="/payment" element={<ProtectedRoute><Payment /></ProtectedRoute>} />
           <Route path="/order-history" element={<ProtectedRoute><OrderHistory /></ProtectedRoute>} />
         </Routes>
-        <WhatsappCall message="Hi, I would like to order a custom product!" />
+          <WhatsappCall message="Hi, I would like to order a custom product!" />
+        </CartProvider>
       </AuthProvider>
     </Router>
   );

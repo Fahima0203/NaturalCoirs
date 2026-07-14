@@ -9,6 +9,7 @@ import { productSections } from "../data/productSections";
 import React, { useState, useCallback } from 'react';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { useAuth } from '../context/AuthContext';
+import { useCart } from '../context/CartContext';
 
 function Nbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,6 +21,7 @@ function Nbar() {
     const toggleMobileProduct = () => setMobileProductOpen(!mobileProductOpen);
 
     const { currentUser, logout } = useAuth();
+    const { totalItems }          = useCart();
 
 
     const [showProducts, setShowProducts] = useState(false);
@@ -152,7 +154,26 @@ function Nbar() {
 
                             {currentUser ? (
                                 <>
-                                    <Link to="/cart" onClick={toggleMobileMenu} className="mobile-link">Cart</Link>
+                                    <Link to="/cart" onClick={toggleMobileMenu} className="mobile-link" style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                                        🛒 Cart
+                                        {totalItems > 0 && (
+                                            <span style={{
+                                                background: "#ff5722",
+                                                color: "#fff",
+                                                borderRadius: "50%",
+                                                minWidth: 20,
+                                                height: 20,
+                                                fontSize: "0.72rem",
+                                                display: "inline-flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                fontWeight: 800,
+                                                padding: "0 3px",
+                                            }}>
+                                                {totalItems > 99 ? "99+" : totalItems}
+                                            </span>
+                                        )}
+                                    </Link>
                                     <Link to="/order-history" onClick={toggleMobileMenu} className="mobile-link">Order History</Link>
                                     <button
                                         className="mobile-link"
@@ -262,15 +283,37 @@ function Nbar() {
                             Contact
                         </Nav.Link>
 
-                        {currentUser ? (
-                            <>
-                                <Nav.Link
-                                    as={Link}
-                                    to="/cart"
-                                    className={isActive("/cart") ? "nav-link-active" : ""}
-                                >
-                                    Cart
-                                </Nav.Link>
+                            {currentUser ? (
+                                <>
+                                    <Nav.Link
+                                        as={Link}
+                                        to="/cart"
+                                        className={isActive("/cart") ? "nav-link-active" : ""}
+                                        style={{ position: "relative" }}
+                                    >
+                                        🛒
+                                        {totalItems > 0 && (
+                                            <span style={{
+                                                position: "absolute",
+                                                top: "-2px",
+                                                right: "-6px",
+                                                background: "#ff5722",
+                                                color: "#fff",
+                                                borderRadius: "50%",
+                                                minWidth: 18,
+                                                height: 18,
+                                                fontSize: "0.68rem",
+                                                display: "inline-flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                fontWeight: 800,
+                                                padding: "0 3px",
+                                                lineHeight: 1,
+                                            }}>
+                                                {totalItems > 99 ? "99+" : totalItems}
+                                            </span>
+                                        )}
+                                    </Nav.Link>
                                 <Nav.Link
                                     as={Link}
                                     to="/order-history"
