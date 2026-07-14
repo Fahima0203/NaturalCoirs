@@ -97,8 +97,8 @@ const ProductDetails = () => {
     const description = detailsData?.description || ``;
     const benefits = detailsData?.benefits || [];
     const chipsBlocks = detailsData?.chips_blocks || null;
-    const brochure = detailsData?.brochure || "#";
-    const video = detailsData?.video || "#";
+    // const brochure = detailsData?.brochure || "#";
+    // const video = detailsData?.video || "#";
 
     // Example values, you can fetch from detailsData if available
     const price = detailsData?.price || "₹ 26/kg";

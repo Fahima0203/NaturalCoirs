@@ -35,9 +35,9 @@ function FooterContact() {
                             <Row>
                                 <Col>
                                     <li>
-                                        <a style={quickLinkStyle} href="#" onClick={e => { e.preventDefault(); window.history.back(); }}>
+                                        <span style={quickLinkStyle} onClick={e => { e.preventDefault(); window.history.back(); }}>
                                             History
-                                        </a>
+                                        </span>
                                     </li>
                                     <li><a href="/" style={quickLinkStyle}>Home</a></li>
                                     <li><a href="/products" style={quickLinkStyle}>Products</a></li>
