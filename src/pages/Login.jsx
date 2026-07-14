@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-function getErrorMessage(code) {
+function getLoginError(code) {
   switch (code) {
     case "auth/user-not-found":
     case "auth/wrong-password":
@@ -17,16 +17,79 @@ function getErrorMessage(code) {
   }
 }
 
+function getResetError(code) {
+  switch (code) {
+    case "auth/user-not-found":
+      return "No account found with this email address.";
+    case "auth/invalid-email":
+      return "Please enter a valid email address.";
+    case "auth/too-many-requests":
+      return "Too many requests. Please wait a moment and try again.";
+    default:
+      return "Failed to send reset email. Please try again.";
+  }
+}
+
+// ── Inline input style shared across both forms ───────────────────────────
+const inputStyle = {
+  width: "100%",
+  padding: "0.65rem 0.9rem",
+  borderRadius: "8px",
+  border: "1.5px solid #b2dfdb",
+  outline: "none",
+  fontSize: "1rem",
+  boxSizing: "border-box",
+  transition: "border-color 0.2s",
+};
+
 export default function Login() {
   const emailRef    = useRef();
   const passwordRef = useRef();
-  const { login }   = useAuth();
+  const { login, resetPassword } = useAuth();
   const [error, setError]     = useState("");
   const [loading, setLoading] = useState(false);
   const navigate  = useNavigate();
   const location  = useLocation();
 
   const from = location.state?.from?.pathname || "/";
+
+  // ── Forgot-password modal state ──────────────────────────────────────────
+  const [showModal,    setShowModal]    = useState(false);
+  const [resetEmail,   setResetEmail]   = useState("");
+  const [resetLoading, setResetLoading] = useState(false);
+  const [resetError,   setResetError]   = useState("");
+  const [resetSuccess, setResetSuccess] = useState(false);
+
+  function openModal() {
+    setResetEmail(emailRef.current?.value || "");
+    setResetError("");
+    setResetSuccess(false);
+    setShowModal(true);
+  }
+
+  function closeModal() {
+    setShowModal(false);
+    setResetError("");
+    setResetSuccess(false);
+  }
+
+  async function handleReset(e) {
+    e.preventDefault();
+    if (!resetEmail.trim()) {
+      setResetError("Please enter your email address.");
+      return;
+    }
+    setResetError("");
+    setResetLoading(true);
+    try {
+      await resetPassword(resetEmail.trim());
+      setResetSuccess(true);
+    } catch (err) {
+      setResetError(getResetError(err.code));
+    }
+    setResetLoading(false);
+  }
+  // ─────────────────────────────────────────────────────────────────────────
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -36,132 +99,242 @@ export default function Login() {
       await login(emailRef.current.value, passwordRef.current.value);
       navigate(from, { replace: true });
     } catch (err) {
-      setError(getErrorMessage(err.code));
+      setError(getLoginError(err.code));
     }
     setLoading(false);
   }
 
   return (
-    <div style={{
-      minHeight: "100vh",
-      background: "linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%)",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "1rem",
-    }}>
+    <>
+      {/* ── Page ── */}
       <div style={{
-        background: "#fff",
-        borderRadius: "16px",
-        boxShadow: "0 8px 32px #00968822",
-        padding: "2.5rem 2rem",
-        width: "100%",
-        maxWidth: "420px",
+        minHeight: "100vh",
+        background: "linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "1rem",
       }}>
-        <h2 style={{
-          color: "#00695c",
-          fontWeight: 800,
-          fontSize: "1.8rem",
-          marginBottom: "0.4rem",
-          textAlign: "center",
+        <div style={{
+          background: "#fff",
+          borderRadius: "16px",
+          boxShadow: "0 8px 32px #00968822",
+          padding: "2.5rem 2rem",
+          width: "100%",
+          maxWidth: "420px",
         }}>
-          Welcome Back
-        </h2>
-        <p style={{ textAlign: "center", color: "#777", marginBottom: "1.8rem", fontSize: "0.95rem" }}>
-          Sign in to your account
-        </p>
+          <h2 style={{ color: "#00695c", fontWeight: 800, fontSize: "1.8rem", marginBottom: "0.4rem", textAlign: "center" }}>
+            Welcome Back
+          </h2>
+          <p style={{ textAlign: "center", color: "#777", marginBottom: "1.8rem", fontSize: "0.95rem" }}>
+            Sign in to your account
+          </p>
 
-        {error && (
-          <div style={{
-            background: "#fdecea",
-            color: "#c62828",
-            borderRadius: "8px",
-            padding: "0.75rem 1rem",
-            marginBottom: "1.2rem",
-            fontSize: "0.92rem",
-            border: "1px solid #ef9a9a",
-          }}>
-            {error}
-          </div>
-        )}
+          {error && (
+            <div style={{ background: "#fdecea", color: "#c62828", borderRadius: "8px", padding: "0.75rem 1rem", marginBottom: "1.2rem", fontSize: "0.92rem", border: "1px solid #ef9a9a" }}>
+              {error}
+            </div>
+          )}
 
-        <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: "1.1rem" }}>
-            <label style={{ display: "block", fontWeight: 600, marginBottom: "0.35rem", color: "#444", fontSize: "0.95rem" }}>
-              Email address
-            </label>
-            <input
-              ref={emailRef}
-              type="email"
-              required
-              placeholder="you@example.com"
+          <form onSubmit={handleSubmit}>
+            <div style={{ marginBottom: "1.1rem" }}>
+              <label style={{ display: "block", fontWeight: 600, marginBottom: "0.35rem", color: "#444", fontSize: "0.95rem" }}>
+                Email address
+              </label>
+              <input
+                ref={emailRef}
+                type="email"
+                required
+                placeholder="you@example.com"
+                style={inputStyle}
+                onFocus={e => (e.target.style.borderColor = "#00897b")}
+                onBlur={e  => (e.target.style.borderColor = "#b2dfdb")}
+              />
+            </div>
+
+            <div style={{ marginBottom: "0.5rem" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.35rem" }}>
+                <label style={{ fontWeight: 600, color: "#444", fontSize: "0.95rem" }}>
+                  Password
+                </label>
+                <button
+                  type="button"
+                  onClick={openModal}
+                  style={{ background: "none", border: "none", color: "#009688", fontWeight: 600, fontSize: "0.85rem", cursor: "pointer", padding: 0, textDecoration: "underline" }}
+                >
+                  Forgot password?
+                </button>
+              </div>
+              <input
+                ref={passwordRef}
+                type="password"
+                required
+                placeholder="••••••••"
+                style={inputStyle}
+                onFocus={e => (e.target.style.borderColor = "#00897b")}
+                onBlur={e  => (e.target.style.borderColor = "#b2dfdb")}
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
               style={{
                 width: "100%",
-                padding: "0.65rem 0.9rem",
-                borderRadius: "8px",
-                border: "1.5px solid #b2dfdb",
-                outline: "none",
+                padding: "0.75rem",
+                marginTop: "1.2rem",
+                background: "linear-gradient(90deg, #00695c 0%, #43a047 100%)",
+                color: "#fff",
+                fontWeight: 700,
                 fontSize: "1rem",
-                boxSizing: "border-box",
-                transition: "border-color 0.2s",
-              }}
-              onFocus={e => (e.target.style.borderColor = "#00897b")}
-              onBlur={e  => (e.target.style.borderColor = "#b2dfdb")}
-            />
-          </div>
-
-          <div style={{ marginBottom: "1.6rem" }}>
-            <label style={{ display: "block", fontWeight: 600, marginBottom: "0.35rem", color: "#444", fontSize: "0.95rem" }}>
-              Password
-            </label>
-            <input
-              ref={passwordRef}
-              type="password"
-              required
-              placeholder="••••••••"
-              style={{
-                width: "100%",
-                padding: "0.65rem 0.9rem",
+                border: "none",
                 borderRadius: "8px",
-                border: "1.5px solid #b2dfdb",
-                outline: "none",
-                fontSize: "1rem",
-                boxSizing: "border-box",
-                transition: "border-color 0.2s",
+                cursor: loading ? "not-allowed" : "pointer",
+                opacity: loading ? 0.7 : 1,
+                letterSpacing: "0.03em",
               }}
-              onFocus={e => (e.target.style.borderColor = "#00897b")}
-              onBlur={e  => (e.target.style.borderColor = "#b2dfdb")}
-            />
-          </div>
+            >
+              {loading ? "Signing in…" : "Sign In"}
+            </button>
+          </form>
 
-          <button
-            type="submit"
-            disabled={loading}
-            style={{
-              width: "100%",
-              padding: "0.75rem",
-              background: "linear-gradient(90deg, #00695c 0%, #43a047 100%)",
-              color: "#fff",
-              fontWeight: 700,
-              fontSize: "1rem",
-              border: "none",
-              borderRadius: "8px",
-              cursor: loading ? "not-allowed" : "pointer",
-              opacity: loading ? 0.7 : 1,
-              letterSpacing: "0.03em",
-            }}
-          >
-            {loading ? "Signing in…" : "Sign In"}
-          </button>
-        </form>
-
-        <p style={{ textAlign: "center", marginTop: "1.4rem", color: "#555", fontSize: "0.95rem" }}>
-          Don't have an account?{" "}
-          <Link to="/signup" style={{ color: "#00695c", fontWeight: 700, textDecoration: "none" }}>
-            Create one
-          </Link>
-        </p>
+          <p style={{ textAlign: "center", marginTop: "1.4rem", color: "#555", fontSize: "0.95rem" }}>
+            Don't have an account?{" "}
+            <Link to="/signup" style={{ color: "#00695c", fontWeight: 700, textDecoration: "none" }}>
+              Create one
+            </Link>
+          </p>
+        </div>
       </div>
-    </div>
+
+      {/* ── Forgot-password modal ── */}
+      {showModal && (
+        <div
+          onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}
+          style={{
+            position: "fixed", inset: 0,
+            background: "rgba(0,0,0,0.45)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            zIndex: 1000,
+            padding: "1rem",
+          }}
+        >
+          <div style={{
+            background: "#fff",
+            borderRadius: "16px",
+            boxShadow: "0 8px 40px rgba(0,0,0,0.18)",
+            padding: "2rem 1.8rem",
+            width: "100%",
+            maxWidth: "400px",
+            position: "relative",
+          }}>
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              aria-label="Close"
+              style={{
+                position: "absolute", top: 14, right: 16,
+                background: "none", border: "none",
+                fontSize: "1.4rem", color: "#aaa",
+                cursor: "pointer", lineHeight: 1,
+              }}
+            >
+              ×
+            </button>
+
+            <h3 style={{ color: "#00695c", fontWeight: 800, fontSize: "1.35rem", marginBottom: "0.35rem" }}>
+              Reset Password
+            </h3>
+            <p style={{ color: "#777", fontSize: "0.9rem", marginBottom: "1.4rem" }}>
+              Enter your email and we'll send you a link to reset your password.
+            </p>
+
+            {/* Success state */}
+            {resetSuccess ? (
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: "2.8rem", marginBottom: "0.75rem" }}>📧</div>
+                <p style={{ fontWeight: 700, color: "#2e7d32", fontSize: "1rem", marginBottom: "0.4rem" }}>
+                  Check your inbox!
+                </p>
+                <p style={{ color: "#555", fontSize: "0.9rem", marginBottom: "1.4rem" }}>
+                  A password reset link has been sent to <strong>{resetEmail}</strong>
+                </p>
+                <button
+                  onClick={closeModal}
+                  style={{
+                    background: "linear-gradient(90deg,#00695c 0%,#43a047 100%)",
+                    color: "#fff", fontWeight: 700, fontSize: "0.95rem",
+                    border: "none", borderRadius: "8px",
+                    padding: "0.65rem 2rem", cursor: "pointer",
+                  }}
+                >
+                  Back to Sign In
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleReset}>
+                {resetError && (
+                  <div style={{ background: "#fdecea", color: "#c62828", borderRadius: "8px", padding: "0.65rem 0.9rem", marginBottom: "1rem", fontSize: "0.9rem", border: "1px solid #ef9a9a" }}>
+                    {resetError}
+                  </div>
+                )}
+
+                <div style={{ marginBottom: "1.2rem" }}>
+                  <label style={{ display: "block", fontWeight: 600, marginBottom: "0.35rem", color: "#444", fontSize: "0.9rem" }}>
+                    Email address
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={resetEmail}
+                    onChange={e => setResetEmail(e.target.value)}
+                    placeholder="you@example.com"
+                    style={inputStyle}
+                    onFocus={e => (e.target.style.borderColor = "#00897b")}
+                    onBlur={e  => (e.target.style.borderColor = "#b2dfdb")}
+                    autoFocus
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={resetLoading}
+                  style={{
+                    width: "100%",
+                    padding: "0.72rem",
+                    background: "linear-gradient(90deg,#00695c 0%,#43a047 100%)",
+                    color: "#fff",
+                    fontWeight: 700,
+                    fontSize: "0.97rem",
+                    border: "none",
+                    borderRadius: "8px",
+                    cursor: resetLoading ? "not-allowed" : "pointer",
+                    opacity: resetLoading ? 0.7 : 1,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.5rem",
+                  }}
+                >
+                  {resetLoading && (
+                    <span style={{
+                      width: 16, height: 16,
+                      border: "2.5px solid rgba(255,255,255,0.4)",
+                      borderTop: "2.5px solid #fff",
+                      borderRadius: "50%",
+                      display: "inline-block",
+                      animation: "spin 0.7s linear infinite",
+                    }} />
+                  )}
+                  {resetLoading ? "Sending…" : "Send Reset Link"}
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      )}
+
+      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+    </>
   );
 }
