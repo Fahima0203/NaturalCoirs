@@ -18,7 +18,7 @@ import OrderSuccess from './pages/OrderSuccess';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 function App() {
   // useEffect(() => {
