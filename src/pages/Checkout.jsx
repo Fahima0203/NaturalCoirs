@@ -100,6 +100,18 @@ function validate(f) {
   return e;
 }
 
+// ── Razorpay checkout.js script loader ───────────────────────────────────────
+function loadRazorpayScript() {
+  return new Promise((resolve) => {
+    if (window.Razorpay) { resolve(true); return; }
+    const s = document.createElement("script");
+    s.src     = "https://checkout.razorpay.com/v1/checkout.js";
+    s.onload  = () => resolve(true);
+    s.onerror = () => resolve(false);
+    document.body.appendChild(s);
+  });
+}
+
 // ── Main component ────────────────────────────────────────────────────────────
 export default function Checkout() {
   const { currentUser }  = useAuth();
@@ -118,8 +130,9 @@ export default function Checkout() {
     postalCode: "",
   });
   const [errors,     setErrors]     = useState({});
-  const [placing,    setPlacing]    = useState(false);
-  const [placeError, setPlaceError] = useState("");
+  const [placing,     setPlacing]     = useState(false);
+  const [placingStep, setPlacingStep] = useState(""); // "payment" | "verifying" | "saving"
+  const [placeError,  setPlaceError]  = useState("");
 
   // Clear field error on change
   function handleChange(e) {
@@ -161,7 +174,7 @@ export default function Checkout() {
   const grandTotal   = subtotal + shippingCost;
   const totalQty     = cartItems.reduce((s, i) => s + i.quantity, 0);
 
-  async function handlePlaceOrder(e) {
+  async function handleProceedToPayment(e) {
     e.preventDefault();
     const errs = validate(form);
     if (Object.keys(errs).length > 0) {
@@ -170,35 +183,140 @@ export default function Checkout() {
     }
     setPlaceError("");
     setPlacing(true);
-    try {
-      const orderId = await createOrder(currentUser.uid, {
-        userEmail:       currentUser.email,
-        shippingAddress: { ...form },
-        items: cartItems.map((item) => ({
-          id:           item.id,
-          section:      item.section,
-          name:         item.name,
-          price:        item.price,
-          priceValue:   item.priceValue,
-          quantity:     item.quantity,
-          itemSubtotal: item.priceValue * item.quantity,
-        })),
-        subtotal,
-        shippingCost,
-        totalAmount:   grandTotal,
-        orderStatus:   "Pending",
-        paymentStatus: "Pending",
-      });
-      await clearUserCart(currentUser.uid, cartItems);
-      navigate("/order-success", {
-        state:   { orderId, email: currentUser.email },
-        replace: true,
-      });
-    } catch (err) {
-      console.error("Place order error:", err);
-      setPlaceError("Failed to place your order. Please try again.");
+    setPlacingStep("payment");
+
+    // Guard: REACT_APP_RAZORPAY_KEY_ID must be set in .env.local
+    if (!process.env.REACT_APP_RAZORPAY_KEY_ID) {
+      setPlaceError(
+        "Payment gateway is not configured. " +
+        "Add REACT_APP_RAZORPAY_KEY_ID to your .env.local file and restart the dev server."
+      );
       setPlacing(false);
+      return;
     }
+
+    // 1. Ensure Razorpay checkout.js is loaded
+    const loaded = await loadRazorpayScript();
+    if (!loaded) {
+      setPlaceError(
+        "Razorpay payment gateway could not be loaded. " +
+        "If you have an ad blocker or content-blocking extension enabled, " +
+        "please disable it for this page and try again."
+      );
+      setPlacing(false);
+      return;
+    }
+
+    // 2. Create Razorpay order on the server (amount in ₹; server converts to paise)
+    let rzpOrder;
+    try {
+      const res = await fetch("/api/create-razorpay-order", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify({
+          amount:   grandTotal,
+          currency: "INR",
+          receipt:  `rcpt_${Date.now()}`,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Server error");
+      rzpOrder = data;
+    } catch (err) {
+      console.error("Create Razorpay order error:", err);
+      setPlaceError("Could not initiate payment. Please try again.");
+      setPlacing(false);
+      return;
+    }
+
+    // 3. Open Razorpay checkout popup
+    const options = {
+      key:         process.env.REACT_APP_RAZORPAY_KEY_ID,
+      amount:      rzpOrder.amount,
+      currency:    rzpOrder.currency,
+      name:        "Natural Coirs",
+      description: `Order — ${totalQty} item${totalQty !== 1 ? "s" : ""}`,
+      order_id:    rzpOrder.orderId,
+      prefill: {
+        name:    form.fullName,
+        email:   currentUser.email,
+        contact: form.phone,
+      },
+      theme: { color: "#00695c" },
+
+      // 4. On successful payment: verify on server → save to Firestore → clear cart → redirect
+      handler: async function (response) {
+        setPlacingStep("verifying");
+        try {
+          const verifyRes = await fetch("/api/verify-razorpay-payment", {
+            method:  "POST",
+            headers: { "Content-Type": "application/json" },
+            body:    JSON.stringify({
+              razorpay_order_id:   response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature:  response.razorpay_signature,
+            }),
+          });
+          const verifyData = await verifyRes.json();
+          if (!verifyRes.ok || !verifyData.verified) {
+            throw new Error(verifyData.error || "Signature verification failed");
+          }
+
+          // Save confirmed order to Firestore
+          setPlacingStep("saving");
+          const orderId = await createOrder(currentUser.uid, {
+            userEmail:         currentUser.email,
+            shippingAddress:   { ...form },
+            items: cartItems.map((item) => ({
+              id:           item.id,
+              section:      item.section,
+              name:         item.name,
+              price:        item.price,
+              priceValue:   item.priceValue,
+              quantity:     item.quantity,
+              itemSubtotal: item.priceValue * item.quantity,
+            })),
+            subtotal,
+            shippingCost,
+            totalAmount:       grandTotal,
+            orderStatus:       "Confirmed",
+            paymentStatus:     "Paid",
+            razorpayOrderId:   response.razorpay_order_id,
+            razorpayPaymentId: response.razorpay_payment_id,
+          });
+
+          await clearUserCart(currentUser.uid, cartItems);
+          navigate("/order-success", {
+            state:   { orderId, email: currentUser.email },
+            replace: true,
+          });
+        } catch (err) {
+          console.error("Payment verify/save error:", err);
+          setPlaceError(
+            `Payment received but order confirmation failed. ` +
+            `Please contact support with Payment ID: ${response.razorpay_payment_id}`
+          );
+          setPlacing(false);
+        }
+      },
+
+      modal: {
+        ondismiss: function () {
+          setPlaceError("Payment was cancelled. Your order has not been placed.");
+          setPlacing(false);
+        },
+      },
+    };
+
+    const rzp = new window.Razorpay(options);
+    rzp.on("payment.failed", function (response) {
+      setPlaceError(
+        `Payment failed: ${response.error?.description || "Please try again."}`
+      );
+      setPlacing(false);
+    });
+    rzp.open();
+    // placing remains true while popup is active — reset in handler, ondismiss, or payment.failed
   }
 
   // ── Render ────────────────────────────────────────────────────────────────
@@ -229,7 +347,7 @@ export default function Checkout() {
           </div>
         )}
 
-        <form onSubmit={handlePlaceOrder} noValidate style={{
+        <form onSubmit={handleProceedToPayment} noValidate style={{
           display: "flex", gap: "1.5rem",
           alignItems: "flex-start", flexWrap: "wrap",
         }}>
@@ -419,8 +537,10 @@ export default function Checkout() {
                 }} />
               )}
               {placing
-                ? "Placing Order…"
-                : `Place Order — ₹ ${grandTotal.toLocaleString("en-IN")}`}
+                ? (placingStep === "verifying" ? "Verifying Payment…"
+                  : placingStep === "saving"   ? "Saving Order…"
+                  : "Preparing Payment…")
+                : `Proceed to Payment — ₹ ${grandTotal.toLocaleString("en-IN")}`}
             </button>
 
             <p style={{ textAlign: "center", marginTop: "0.8rem", fontSize: "0.82rem", color: "#aaa" }}>

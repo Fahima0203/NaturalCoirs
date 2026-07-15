@@ -21,17 +21,17 @@ import { CartProvider } from './context/CartContext';
 import { useEffect } from "react";
 
 function App() {
-  useEffect(() => {
-    document.title = "Natural Cocos | Premium Cocopeat & Coir Products";
-    const handleContextMenu = (e) => {
-      e.preventDefault();
-      window.alert("Sorry, right-click has been disabled.");
-    };
-    document.addEventListener("contextmenu", handleContextMenu);
-    return () => {
-      document.removeEventListener("contextmenu", handleContextMenu);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.title = "Natural Cocos | Premium Cocopeat & Coir Products";
+  //   const handleContextMenu = (e) => {
+  //     e.preventDefault();
+  //     window.alert("Sorry, right-click has been disabled.");
+  //   };
+  //   document.addEventListener("contextmenu", handleContextMenu);
+  //   return () => {
+  //     document.removeEventListener("contextmenu", handleContextMenu);
+  //   };
+  // }, []);
 
   return (
     <Router>
