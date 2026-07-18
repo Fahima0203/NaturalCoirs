@@ -3,7 +3,7 @@
 // to the browser.
 //
 // Required env vars (set in Vercel dashboard, NOT prefixed with REACT_APP_):
-//   RAZORPAY_KEY_ID
+//   REACT_APP_RAZORPAY_KEY_ID
 //   RAZORPAY_KEY_SECRET
 
 const Razorpay = require('razorpay');
@@ -31,7 +31,7 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'Invalid amount.' });
   }
 
-  const keyId     = process.env.RAZORPAY_KEY_ID;
+  const keyId     = process.env.REACT_APP_RAZORPAY_KEY_ID;
   const keySecret = process.env.RAZORPAY_KEY_SECRET;
 
   if (!keyId || !keySecret) {
