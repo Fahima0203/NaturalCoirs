@@ -134,8 +134,8 @@ export const productDetails = [
             This Coco peat is Compressed in 1:5 or 1:6 ratio to form 1 Kg (±5%) blocks of bearing measurement 15 x 15 x 12 cm (±5%).<br /><br />
             This compression is done for the convenience of transportation. 
             Coco peat has an unique future to with stand high compaction without changing its properties. 
-            One kg of this block is hydrated with 4 liters of water, so approximately you will get a yield of 18 liters and above, 
-            which can be mixed with soil or without any soil as growing media for flowers, vegetables and fruits etc.,<br /><br />
+            One kg of this block is hydrated with 4 liters of water, so approximately you will get a yield of 17 liters and above, 
+            which can be mixed with soil or without any soil as growing media for vegetables, fruits and flowers etc.,<br /><br />
         `,
         benefits: [
             "💧 High Water Retention – Holds up to 8–9× its weight in water.",

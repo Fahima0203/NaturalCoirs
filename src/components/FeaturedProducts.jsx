@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
 import { productSections } from "../data/productSections";
@@ -13,13 +13,13 @@ const FEATURED = [
     section:     "Cocopeat Blocks",
     name:        "5 Kg",
     badge:       "Best Seller",
-    description: "Expands to ~85 L of growing medium. Ideal for greenhouses, farms & hydroponics.",
+    description: "Expands upto ~85 L of growing medium. Ideal for horticulture, farms & hydroponics.",
   },
   {
     section:     "Cocopeat Blocks",
     name:        "1 Kg",
     badge:       "Retail Pack",
-    description: "Compact block that yields ~18 L. Perfect for home gardens & potted plants.",
+    description: "Compact block that yields ~17 L. Perfect for home gardens & potted plants.",
   },
 ];
 
@@ -147,7 +147,7 @@ export default function FeaturedProducts() {
             );
             const img        = prod?.images?.[0];
             const price      = detail?.price || "Contact for price";
-            // const productUrl = `/products/${encodeURIComponent(sectionTitle)}/${encodeURIComponent(name)}`;
+            const productUrl = `/products/${encodeURIComponent(sectionTitle)}/${encodeURIComponent(name)}`;
             const isBusy     = busyId === name || busyId === `buy_${name}`;
             const isAdded    = addedId === name;
 
@@ -293,8 +293,9 @@ export default function FeaturedProducts() {
                   </div>
 
                   {/* View full details */}
-                  {/* <Link
+                  <Link
                     to={productUrl}
+                    state={{ fromHome: true }}
                     style={{
                       cursor: "pointer",
                       display: "block",
@@ -307,7 +308,7 @@ export default function FeaturedProducts() {
                     }}
                   >
                     View Full Details →
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
             );

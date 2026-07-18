@@ -2,10 +2,11 @@ import { useParams, useNavigate, useLocation } from "react-router-dom";
 import FooterContact from "../components/FooterContact";
 import { productSections } from "../data/productSections";
 import { productDetails } from "../data/productDetails";
-import { isCartEnabled } from "../data/cartConfig";
+// import { isCartEnabled } from "../data/cartConfig";
 import { useState, useRef, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
+import QuantitySelector from "../components/QuantitySelector";
 
 const ProductDetails = () => {
     const { section: sectionParam, product: productParam } = useParams();
@@ -87,6 +88,9 @@ const ProductDetails = () => {
     const location        = useLocation();
     const [addedToCart, setAddedToCart] = useState(false);
     const [cartBusy, setCartBusy]       = useState(false);
+    // true when user navigated here from the Home page FeaturedProducts section
+    const fromHome = !!location.state?.fromHome;
+    const [qty, setQty] = useState(1);
     // ────────────────────────────────────────────────────────────────────────
 
     if (!section || !product) {
@@ -141,13 +145,29 @@ const ProductDetails = () => {
         }
         setCartBusy(true);
         try {
-            await addToCart(section.title, product.name, price);
+            await addToCart(section.title, product.name, price, qty);
             setAddedToCart(true);
             setTimeout(() => setAddedToCart(false), 2000);
         } catch (err) {
             console.error('Add to cart failed:', err);
         }
         setCartBusy(false);
+    };
+
+    // ── Buy Now (home flow) ──────────────────────────────────────────────────
+    const handleBuyNow = async () => {
+        if (!currentUser) {
+            navigate('/login', { state: { from: location } });
+            return;
+        }
+        setCartBusy(true);
+        try {
+            await addToCart(section.title, product.name, price, qty);
+            navigate('/checkout');
+        } catch (err) {
+            console.error('Buy now failed:', err);
+            setCartBusy(false);
+        }
     };
     // ────────────────────────────────────────────────────────────────────────
 
@@ -346,44 +366,105 @@ const ProductDetails = () => {
                     }}>
                         {product.name} {section.title ? <span style={{fontWeight: 500, color: "#009688"}}>- {section.title}</span> : ""}
                     </h2>
-                    {/* Price, Get Latest Price, MOQ */}
-                    <div style={{
-                        fontSize: "1.22rem",
-                        marginBottom: 8,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 18
-                    }}>
-                        {/* <span style={{ fontWeight: 600, color: "#222" }}>{price}</span> */}
-                        <a
-                            href={whatsappLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                                color: "#fff",
-                                background: "#009688",
-                                fontWeight: 700,
+                    {/* Price / purchase controls — layout depends on navigation source */}
+                    {fromHome ? (
+                        /* ── Home flow: actual price + qty selector + Add to Cart + Buy Now ── */
+                        <>
+                            <div style={{ fontSize: "1.3rem", fontWeight: 800, color: "#00695c", marginBottom: 10 }}>
+                                {price}
+                            </div>
+                            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
+                                <span style={{ fontSize: "0.95rem", color: "#555", fontWeight: 600 }}>Qty:</span>
+                                <QuantitySelector
+                                    quantity={qty}
+                                    onDecrease={() => setQty(q => Math.max(1, q - 1))}
+                                    onIncrease={() => setQty(q => q + 1)}
+                                    decreaseDisabled={qty <= 1}
+                                    size="sm"
+                                />
+                            </div>
+                            <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 18 }}>
+                                <button
+                                    onClick={handleAddToCart}
+                                    disabled={cartBusy}
+                                    style={{
+                                        background: addedToCart
+                                            ? "linear-gradient(90deg, #388e3c 0%, #2e7d32 100%)"
+                                            : "linear-gradient(90deg, #ff6f00 0%, #ffa000 100%)",
+                                        color: "#fff",
+                                        fontWeight: 800,
+                                        fontSize: "1rem",
+                                        border: "none",
+                                        borderRadius: 9,
+                                        padding: "0.75rem 1.5rem",
+                                        cursor: cartBusy ? "not-allowed" : "pointer",
+                                        opacity: cartBusy ? 0.75 : 1,
+                                        transition: "background 0.25s",
+                                    }}
+                                >
+                                    {addedToCart ? "✓ Added!" : cartBusy ? "Adding…" : "🛒 Add to Cart"}
+                                </button>
+                                <button
+                                    onClick={handleBuyNow}
+                                    disabled={cartBusy}
+                                    style={{
+                                        background: "linear-gradient(90deg, #00695c 0%, #43a047 100%)",
+                                        color: "#fff",
+                                        fontWeight: 800,
+                                        fontSize: "1rem",
+                                        border: "none",
+                                        borderRadius: 9,
+                                        padding: "0.75rem 1.5rem",
+                                        cursor: cartBusy ? "not-allowed" : "pointer",
+                                        opacity: cartBusy ? 0.75 : 1,
+                                        transition: "opacity 0.2s",
+                                    }}
+                                >
+                                    {cartBusy ? "Please wait…" : "⚡ Buy Now"}
+                                </button>
+                            </div>
+                        </>
+                    ) : (
+                        /* ── Default flow: Get Latest Price button + MOQ ── */
+                        <>
+                            <div style={{
+                                fontSize: "1.22rem",
+                                marginBottom: 8,
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 18
+                            }}>
+                                <a
+                                    href={whatsappLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{
+                                        color: "#fff",
+                                        background: "#009688",
+                                        fontWeight: 700,
+                                        fontSize: "1.09rem",
+                                        textDecoration: "none",
+                                        borderRadius: 6,
+                                        padding: "6px 18px",
+                                        cursor: "pointer",
+                                        boxShadow: "0 2px 8px #00968822",
+                                        transition: "background 0.18s"
+                                    }}
+                                >
+                                    Get Latest Price
+                                </a>
+                            </div>
+                            <div style={{
                                 fontSize: "1.09rem",
-                                textDecoration: "none",
-                                borderRadius: 6,
-                                padding: "6px 18px",
-                                cursor: "pointer",
-                                boxShadow: "0 2px 8px #00968822",
-                                transition: "background 0.18s"
-                            }}
-                        >
-                            Get Latest Price
-                        </a>
-                    </div>
-                    <div style={{
-                        fontSize: "1.09rem",
-                        color: "#222",
-                        marginBottom: 10,
-                        fontWeight: 500
-                    }}>
-                        <span style={{ fontWeight: 600 }}>Minimum Order Quantity:</span>{" "}
-                        <span style={{ fontWeight: 700, color: "#009688" }}>{minOrder}</span>
-                    </div>
+                                color: "#222",
+                                marginBottom: 10,
+                                fontWeight: 500
+                            }}>
+                                <span style={{ fontWeight: 600 }}>Minimum Order Quantity:</span>{" "}
+                                <span style={{ fontWeight: 700, color: "#009688" }}>{minOrder}</span>
+                            </div>
+                        </>
+                    )}
                     {/* <div style={{ display: "flex", gap: 18, marginBottom: 16 }}>
                         <a href={brochure} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "#e0f2f1", color: "#1976d2", fontWeight: 600, borderRadius: 6, padding: "5px 14px", textDecoration: "none", cursor: "pointer" }}>Product Brochure</a>
                         <a href={video} target="_blank" rel="noopener noreferrer" style={{ border: "none", background: "#e0f2f1", color: "#1976d2", fontWeight: 600, borderRadius: 6, padding: "5px 14px", textDecoration: "none", cursor: "pointer" }}>Watch Video</a>
@@ -470,8 +551,8 @@ const ProductDetails = () => {
                             )}
                         </div>
                     )}
-                    {/* Collapsible Chips Blocks */}
-                    {chipsBlocks && (chipsBlocks.text || (chipsBlocks.table && chipsBlocks.table.length > 0)) && (
+                    {/* Collapsible Chips Blocks — hidden in home flow */}
+                    {!fromHome && chipsBlocks && (chipsBlocks.text || (chipsBlocks.table && chipsBlocks.table.length > 0)) && (
                         <div className="collapsible-section">
                             <button
                                 onClick={() => setOpenChipsBlocks((v) => !v)}
@@ -558,6 +639,9 @@ const ProductDetails = () => {
                             )}
                         </div>
                     )}
+                    {/* Interested / action bar — hidden in home flow (controls shown at top) */}
+                    {!fromHome && (
+                    <>
                     <div style={{
                         marginTop: 22,
                         fontSize: "1.13rem",
@@ -588,7 +672,7 @@ const ProductDetails = () => {
                     <div style={{ marginTop: 32, display: "flex", justifyContent: "flex-end", gap: 12, flexWrap: "wrap" }}>
                         {/* Add to Cart — only enabled for products listed in src/data/cartConfig.js
                             To enable for more products, add their { section, name } to CART_ENABLED_PRODUCTS */}
-                        {isCartEnabled(section.title, product.name) && (
+                        {/* {isCartEnabled(section.title, product.name) && (
                         <button
                             onClick={handleAddToCart}
                             disabled={cartBusy}
@@ -614,7 +698,7 @@ const ProductDetails = () => {
                         >
                             {addedToCart ? "✓ Added to Cart" : "🛒 Add to Cart"}
                         </button>
-                        )}
+                        )} */}
                         {/* WhatsApp CTA */}
                         <a
                             href={whatsappLink}
@@ -638,6 +722,8 @@ const ProductDetails = () => {
                             Yes, I am interested!
                         </a>
                     </div>
+                    </>
+                    )}
                 </div>
             </div>
             <FooterContact />
