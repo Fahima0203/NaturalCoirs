@@ -2,7 +2,7 @@ export const productDetails = [
     {
         section: "Cocopeat Blocks",
         name: "5 Kg",
-        price: "₹ 28/kg",
+        price: "₹ 299",
         minOrder: "5000 Kg",
         brochure: "https://pdf.indiamart.com/impdf/2855083288212/MY-186662221/5-kg-high-ec-cocopeat-block.pdf",
         video: "https://www.youtube.com/watch?v=XaRSPjKTw0A",
@@ -110,7 +110,7 @@ export const productDetails = [
     {
         section: "Cocopeat Blocks",
         name: "1 Kg",
-        price: "₹ 24/kg",
+        price: "₹ 119",
         minOrder: "5000 Kg",
         brochure: "#",
         video: "#",
