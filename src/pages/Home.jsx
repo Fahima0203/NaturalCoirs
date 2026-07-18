@@ -11,8 +11,8 @@ const Home = () => {
         <div>
             <RunningBadge />
             <HomeSlideshow />
-            <HomeSlider />
             <FeaturedProducts />
+            <HomeSlider />
             <AboutTab />
             <FooterContact />
         </div>

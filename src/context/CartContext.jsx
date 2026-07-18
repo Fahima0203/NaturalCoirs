@@ -69,15 +69,6 @@ export function CartProvider({ children }) {
     [currentUser, cartItems]
   );
 
-  // ── Set quantity for an existing item ─────────────────────────────────────
-  const updateQuantity = useCallback(
-    async (itemId, quantity) => {
-      if (!currentUser || quantity < 1) return;
-      await updateCartQty(currentUser.uid, itemId, quantity);
-    },
-    [currentUser]
-  );
-
   // ── Remove an item ────────────────────────────────────────────────────────
   const removeFromCart = useCallback(
     async (itemId) => {
@@ -85,6 +76,21 @@ export function CartProvider({ children }) {
       await removeCartItem(currentUser.uid, itemId);
     },
     [currentUser]
+  );
+
+  // ── Set quantity for an existing item ─────────────────────────────────────
+  const updateQuantity = useCallback(
+    async (itemId, quantity) => {
+      if (!currentUser) return;
+      // If requested quantity is less than 1, remove the item using the
+      // centralized remove function so behavior stays consistent.
+      if (quantity < 1) {
+        await removeFromCart(itemId);
+        return;
+      }
+      await updateCartQty(currentUser.uid, itemId, quantity);
+    },
+    [currentUser, removeFromCart]
   );
 
   const totalItems = cartItems.reduce((sum, i) => sum + i.quantity, 0);

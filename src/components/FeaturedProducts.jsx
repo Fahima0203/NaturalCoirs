@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
 import { productSections } from "../data/productSections";
 import { productDetails } from "../data/productDetails";
+import QuantitySelector from "./QuantitySelector";
 
 // ── Products shown in the featured section on the Home page ──────────────────
 // Add more objects here when you want to feature additional products.
@@ -12,13 +13,13 @@ const FEATURED = [
     section:     "Cocopeat Blocks",
     name:        "5 Kg",
     badge:       "Best Seller",
-    description: "Expands to ~85 L of growing medium. Ideal for greenhouses, farms & hydroponics.",
+    description: "Expands upto ~85 L of growing medium. Ideal for horticulture, farms & hydroponics.",
   },
   {
     section:     "Cocopeat Blocks",
     name:        "1 Kg",
     badge:       "Retail Pack",
-    description: "Compact block that yields ~18 L. Perfect for home gardens & potted plants.",
+    description: "Compact block that yields ~17 L. Perfect for home gardens & potted plants.",
   },
 ];
 
@@ -31,16 +32,25 @@ export default function FeaturedProducts() {
   // Track loading / success state per product
   const [busyId,  setBusyId]  = useState(null); // product name (or "buy_<name>")
   const [addedId, setAddedId] = useState(null); // product name just added
+  // Per-product local quantity (used before adding to cart)
+  const [localQty, setLocalQty] = useState({}); // { [productName]: number }
+
+  function getQty(name) { return localQty[name] ?? 1; }
+  function setQty(name, val) {
+    setLocalQty(prev => ({ ...prev, [name]: Math.max(1, val) }));
+  }
 
   async function handleAddToCart(sectionTitle, name, price) {
     if (!currentUser) {
       navigate("/login", { state: { from: location } });
       return;
     }
+    const qty = getQty(name);
     setBusyId(name);
     try {
-      await addToCart(sectionTitle, name, price);
+      await addToCart(sectionTitle, name, price, qty);
       setAddedId(name);
+      setQty(name, 1); // reset local qty after adding
       setTimeout(() => setAddedId(null), 2000);
     } catch (err) {
       console.error("FeaturedProducts — addToCart failed:", err);
@@ -53,9 +63,10 @@ export default function FeaturedProducts() {
       navigate("/login", { state: { from: location } });
       return;
     }
+    const qty = getQty(name);
     setBusyId(`buy_${name}`);
     try {
-      await addToCart(sectionTitle, name, price);
+      await addToCart(sectionTitle, name, price, qty);
       navigate("/checkout");
     } catch (err) {
       console.error("FeaturedProducts — buyNow failed:", err);
@@ -217,6 +228,18 @@ export default function FeaturedProducts() {
                     {price}
                   </div>
 
+                  {/* ── Quantity selector ── */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <span style={{ fontSize: "0.9rem", color: "#555", fontWeight: 600 }}>Qty:</span>
+                    <QuantitySelector
+                      quantity={getQty(name)}
+                      onDecrease={() => setQty(name, getQty(name) - 1)}
+                      onIncrease={() => setQty(name, getQty(name) + 1)}
+                      decreaseDisabled={getQty(name) <= 1}
+                      size="sm"
+                    />
+                  </div>
+
                   {/* ── Action buttons ── */}
                   <div style={{ display: "flex", gap: 10, marginTop: 4, flexWrap: "wrap" }}>
                     {/* Add to Cart */}
@@ -272,6 +295,7 @@ export default function FeaturedProducts() {
                   {/* View full details */}
                   <Link
                     to={productUrl}
+                    state={{ fromHome: true }}
                     style={{
                       cursor: "pointer",
                       display: "block",

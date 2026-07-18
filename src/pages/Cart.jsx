@@ -1,7 +1,9 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { productSections } from "../data/productSections";
+import QuantitySelector from "../components/QuantitySelector";
 
 // Look up the first product image from the local import map
 function getProductImage(section, name) {
@@ -118,24 +120,12 @@ export default function Cart() {
                     </div>
 
                     {/* Quantity controls */}
-                    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                      <button
-                        onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        disabled={item.quantity <= 1}
-                        style={qtyBtnStyle(item.quantity <= 1)}
-                      >
-                        −
-                      </button>
-                      <span style={{ minWidth: 28, textAlign: "center", fontWeight: 700, fontSize: "1.05rem" }}>
-                        {item.quantity}
-                      </span>
-                      <button
-                        onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        style={qtyBtnStyle(false)}
-                      >
-                        +
-                      </button>
-                    </div>
+                    <QuantitySelector
+                      quantity={item.quantity}
+                      onDecrease={() => updateQuantity(item.id, item.quantity - 1)}
+                      onIncrease={() => updateQuantity(item.id, item.quantity + 1)}
+                      decreaseDisabled={false}
+                    />
 
                     {/* Subtotal */}
                     <div style={{ minWidth: 90, textAlign: "right" }}>
@@ -156,11 +146,12 @@ export default function Cart() {
                         padding: "0.2rem 0.4rem",
                         borderRadius: 6,
                         transition: "background 0.15s",
+                        display: 'flex', alignItems: 'center', justifyContent: 'center'
                       }}
                       onMouseEnter={e => (e.currentTarget.style.background = "#fdecea")}
                       onMouseLeave={e => (e.currentTarget.style.background = "none")}
                     >
-                      ✕
+                      <DeleteOutlineIcon style={{ fontSize: 20 }} />
                     </button>
                   </div>
                 );
@@ -247,19 +238,3 @@ export default function Cart() {
     </div>
   );
 }
-
-function qtyBtnStyle(disabled) {
-  return {
-    width: 32, height: 32,
-    border: "1.5px solid #b2dfdb",
-    borderRadius: 6,
-    background: disabled ? "#f5f5f5" : "#fff",
-    color: disabled ? "#bbb" : "#00695c",
-    fontWeight: 800,
-    fontSize: "1.1rem",
-    cursor: disabled ? "not-allowed" : "pointer",
-    display: "flex", alignItems: "center", justifyContent: "center",
-    transition: "border-color 0.15s",
-  };
-}
-
