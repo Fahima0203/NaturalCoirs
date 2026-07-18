@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
 import { productSections } from "../data/productSections";
@@ -147,7 +147,7 @@ export default function FeaturedProducts() {
             );
             const img        = prod?.images?.[0];
             const price      = detail?.price || "Contact for price";
-            const productUrl = `/products/${encodeURIComponent(sectionTitle)}/${encodeURIComponent(name)}`;
+            // const productUrl = `/products/${encodeURIComponent(sectionTitle)}/${encodeURIComponent(name)}`;
             const isBusy     = busyId === name || busyId === `buy_${name}`;
             const isAdded    = addedId === name;
 
