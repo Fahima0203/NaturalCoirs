@@ -185,11 +185,11 @@ export default function Checkout() {
     setPlacing(true);
     setPlacingStep("payment");
 
-    // Guard: RAZORPAY_KEY_ID must be set in .env.local
-    if (!process.env.RAZORPAY_KEY_ID) {
+    // Guard: REACT_APP_RAZORPAY_KEY_ID must be set in .env.local
+    if (!process.env.REACT_APP_RAZORPAY_KEY_ID) {
       setPlaceError(
         "Payment gateway is not configured. " +
-        "Add RAZORPAY_KEY_ID to your .env.local file and restart the dev server."
+        "Add REACT_APP_RAZORPAY_KEY_ID to your .env.local file and restart the dev server."
       );
       setPlacing(false);
       return;
@@ -231,7 +231,7 @@ export default function Checkout() {
 
     // 3. Open Razorpay checkout popup
     const options = {
-      key:         process.env.RAZORPAY_KEY_ID,
+      key:         process.env.REACT_APP_RAZORPAY_KEY_ID,
       amount:      rzpOrder.amount,
       currency:    rzpOrder.currency,
       name:        "Natural Coirs",

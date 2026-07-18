@@ -2,6 +2,7 @@ import { useParams, useNavigate, useLocation } from "react-router-dom";
 import FooterContact from "../components/FooterContact";
 import { productSections } from "../data/productSections";
 import { productDetails } from "../data/productDetails";
+import { isCartEnabled } from "../data/cartConfig";
 import { useState, useRef, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
@@ -585,7 +586,9 @@ const ProductDetails = () => {
                     </div>
                     {/* Yes, I am interested button */}
                     <div style={{ marginTop: 32, display: "flex", justifyContent: "flex-end", gap: 12, flexWrap: "wrap" }}>
-                        {/* Add to Cart */}
+                        {/* Add to Cart — only enabled for products listed in src/data/cartConfig.js
+                            To enable for more products, add their { section, name } to CART_ENABLED_PRODUCTS */}
+                        {isCartEnabled(section.title, product.name) && (
                         <button
                             onClick={handleAddToCart}
                             disabled={cartBusy}
@@ -611,6 +614,7 @@ const ProductDetails = () => {
                         >
                             {addedToCart ? "✓ Added to Cart" : "🛒 Add to Cart"}
                         </button>
+                        )}
                         {/* WhatsApp CTA */}
                         <a
                             href={whatsappLink}

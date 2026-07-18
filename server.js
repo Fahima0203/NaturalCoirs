@@ -26,7 +26,7 @@
  * --------
  * Loaded automatically from .env.local (same file CRA uses for REACT_APP_*).
  * Required keys:
- *   RAZORPAY_KEY_ID
+ *   REACT_APP_RAZORPAY_KEY_ID
  *   RAZORPAY_KEY_SECRET
  */
 
@@ -34,7 +34,7 @@ const express  = require('express');
 const Razorpay = require('razorpay');
 const crypto   = require('crypto');
 
-// Load .env.local — picks up RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET, etc.
+// Load .env.local — picks up REACT_APP_RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET, etc.
 require('dotenv').config({ path: '.env.local' });
 
 const app  = express();
@@ -51,18 +51,18 @@ app.post('/api/create-razorpay-order', async (req, res) => {
     return res.status(400).json({ error: 'Invalid amount.' });
   }
 
-  const keyId     = process.env.RAZORPAY_KEY_ID;
+  const keyId     = process.env.REACT_APP_RAZORPAY_KEY_ID;
   const keySecret = process.env.RAZORPAY_KEY_SECRET;
 
   if (!keyId || !keySecret) {
     console.error(
-      '\n[server.js] ✗ RAZORPAY_KEY_ID or RAZORPAY_KEY_SECRET missing.\n' +
+      '\n[server.js] ✗ REACT_APP_RAZORPAY_KEY_ID or RAZORPAY_KEY_SECRET missing.\n' +
       '  Add them to your .env.local file:\n' +
-      '  RAZORPAY_KEY_ID=rzp_test_...\n' +
+      '  REACT_APP_RAZORPAY_KEY_ID=rzp_test_...\n' +
       '  RAZORPAY_KEY_SECRET=your_secret\n'
     );
     return res.status(500).json({
-      error: 'Razorpay credentials not set. Add RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET to .env.local',
+      error: 'Razorpay credentials not set. Add REACT_APP_RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET to .env.local',
     });
   }
 
